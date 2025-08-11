@@ -1,0 +1,23 @@
+Question
+========
+When describing the motion of an object, displacement is
+
+Answerlist
+----------
+* the direction in which the object moves.
+* the scalar of the object's velocity.
+* how far and in which direction the object ends up relative to its starting position.
+* the amount of ground covered by the moving object.
+
+Solution
+========
+Displacement is a vector that describes how far and in which direction an object
+ends up relative to its starting position. It is not always the same as the distance because distance is a scalar.
+
+
+Meta-information
+================
+exname: what is displacement
+extype: schoice
+exsolution: 0010
+exshuffle: 4

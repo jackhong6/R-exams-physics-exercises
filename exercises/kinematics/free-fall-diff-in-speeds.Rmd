@@ -1,0 +1,28 @@
+Question
+========
+Ball 1 is dropped from the top of a building. One second later, ball 2 is dropped from the same building. If air resistance can be ignored, then as time progresses (and while the balls are still in free fall), the difference in their speeds
+
+
+Answerlist
+----------
+* increases.
+* remains constant.
+* decreases.
+* cannot be determined from the given information.
+
+
+Solution
+========
+Since both balls are accelerating at the same rate, the difference in their velocities will remain constant. Using the formula $v_f = v_i + a t$, with $a = g$ and $v_i = 0$, we see that
+
+$$\Delta v = v_1 - v_2 = g t_1 - g t_2 = g (t_1 - t_2)$$
+and both $g = 9.8$ m/s$^2$ and $(t_1 - t_2) = 1$ s remain constant.
+
+Note that if air resistance is an important factor, then the difference would change until both balls are falling at their terminal velocity.
+
+
+Meta-information
+================
+exname: free fall compare difference in velocities of two balls dropped at different times
+extype: schoice
+exsolution: 0100

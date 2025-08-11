@@ -1,0 +1,23 @@
+Question
+========
+What is the magnitude of the slope of a position-time graph?
+
+Answerlist
+----------
+* speed
+* distance
+* acceleration
+* displacement
+* velocity
+* rate
+
+Solution
+========
+The magnitude of the slope of a position-time graph is the speed of the object.
+
+Meta-information
+================
+exname: slope of position-time graph
+extype: schoice
+exsolution: 100000
+exshuffle: 4

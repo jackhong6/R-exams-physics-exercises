@@ -1,0 +1,35 @@
+Question
+========
+Which choice best matches the given position-time graph? 
+Assume that position is increasing to the right.
+
+```{r p-t-graph-slowing-down-to-the-right, echo=FALSE, fig.cap="", fig.height=1.5, fig.path="", results="hide"}
+t <- seq(0, 1, by=0.01)
+p <- 1-(t-1)^2
+par(mar=c(1,1,1,1), pty="s", xaxt="n", yaxt="n")
+plot(t, p, type="l", lwd=2, col="red", xlab="", ylab="")
+title(xlab="time", ylab="position", line=0.2)
+dev.off()
+```
+
+Answerlist
+----------
+* moving to the right and speeding up.
+* moving to the right and slowing down.
+* moving to the left and speeding up.
+* moving to the left and slowing down.
+
+
+Solution
+========
+The object is moving to the right if its position is increasing and moving to the left if its position is decreasing. 
+The object is speeding up if the tangent line is becoming more vertical and slowing down if the tangent line is becoming more horizontal.
+
+This graph describes an object that is moving to the right and slowing down.
+
+
+Meta-information
+================
+exname: position-time graph slowing down to the right
+extype: schoice
+exsolution: 0100

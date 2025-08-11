@@ -1,0 +1,32 @@
+```{r calculate-t-given-vi-projectile-1d, echo = FALSE, results = "hide"}
+sf <- 3 # significant digits to use
+vi <- signif(runif(1, 10, 40), sf) # initial speed in m/s
+
+g <- 9.8 # gravitational acceleration in m/s^2
+t <- 2 * vi / g
+
+sc <- num_to_schoice(t, delta = 0.1, range = c(t/10, 2*t), format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+```
+
+Question
+========
+A ball is thrown straight up with an initial velocity of `r vi` m/s. How long does it take the ball to return to its starting point?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for constant acceleration motion using $a = g = -9.8$ m/s$^2$. Also, since the motion is symmetric, the final speed is equal to the initial speed so $v_f = -v_i$.
+
+$$t = \frac{v_f - v_i}{a} = \frac{-v_i - v_i}{g} = \frac{-`r vi` \text{ m/s} -`r vi` \text{ m/s}}{`r -g` \text{ m/s}^2} = `r signif(t, 3)` \text{ s}$$
+
+Meta-information
+================
+exname: calculate t given initial velocity of a ball thrown straight up
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,0 +1,20 @@
+Question
+========
+You hit a volley ball over the net. When the ball reaches its maximum height, its speed is
+
+Answerlist
+----------
+* zero.
+* less than its initial speed.
+* equal to its initial speed.
+* greater than its initial speed.
+
+Solution
+========
+The vertical velocity is zero at the top while the horizontal velocity remains constant throughout. Therefore, the total speed at the top is less than the initial speed, but not zero.
+
+Meta-information
+================
+exname: velocity at top of 2d projectile
+extype: schoice
+exsolution: 0100

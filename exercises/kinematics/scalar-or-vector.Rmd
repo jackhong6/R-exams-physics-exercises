@@ -1,0 +1,30 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(0:1, 1)
+scalars <- c("50 km", "9.8 m/s/s", "50 km/h", "28 degrees Celsius")
+vectors <- c("50 km, North", "9.8 m/s/s, down", "50 km/h, East", "37 N, right")
+```
+
+Question
+========
+Identify the following quantity as being either a scalar or a vector:
+**`r ifelse(n == 0, sample(scalars, 1), sample(vectors, 1))`**
+
+Answerlist
+----------
+* scalar
+* vector
+* both scalar and vector
+* neither scalar nor vector
+
+
+Solution
+========
+A scalar has only magnitude (a number with units). A vector has both magnitude
+and direction.
+
+
+Meta-information
+================
+exname: scalar or vector
+extype: schoice
+exsolution: `r ifelse(n == 0, "1000", "0100")`

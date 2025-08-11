@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+sf <- 3 # significant digits to use
+t <- sample(2:6, 1) # time to stop in seconds
+v_avg <- sample(30:60, 1) # initial speed in km/h
+
+a <- -2 * v_avg / t
+dis <- c(-v_avg / t)
+
+sc <- num_to_schoice(a, wrong = dis, format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ km/h/s}$", sep = "")
+```
+
+Question
+========
+A car decelerates uniformly and comes to a stop after `r t` seconds. The car's average velocity during the deceleration was `r v_avg` km/h. What was the car's acceleration while slowing down?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Since the car's acceleration was uniform and the final velocity was zero, the initial velocity is double the average velocity.
+
+$$v_{avg} = \frac{v_i + v_f}{2} = \frac{v_i}{2}$$
+$$v_i = 2 v_{avg} = `r 2*v_avg` \text{ km/h}$$
+
+The acceleration is the change in speed divided by the time.
+$$a = \frac{v_f - v_i}{t} = \frac{0 - `r 2*v_avg`\text{ km/h}}{`r t`\text{ s}} = `r signif(a, 3)` \text{ km/h/s}$$
+
+Meta-information
+================
+exname: calculate acceleration given time and average velocity of a car stopping
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

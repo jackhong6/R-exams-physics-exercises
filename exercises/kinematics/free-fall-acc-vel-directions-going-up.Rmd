@@ -1,0 +1,20 @@
+Question
+========
+A ball is thrown straight up, reaches a maximum height, then falls back down to its initial height. Which of the following is true while the ball is going up?
+
+Answerlist
+----------
+* Its velocity and acceleration both point up.
+* Its velocity and acceleration both point down.
+* Its velocity points up while its acceleration points down.
+* Its velocity points down while its acceleration points up.
+
+Solution
+========
+The velocity points up while the ball is going up. The acceleration always points down.
+
+Meta-information
+================
+exname: projectile 1d acceleration and velocity directions going up
+extype: schoice
+exsolution: 0010

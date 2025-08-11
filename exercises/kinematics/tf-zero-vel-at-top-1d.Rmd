@@ -1,0 +1,18 @@
+Question
+========
+True or false? When a ball is thrown straight up, its velocity at the top is zero.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. The velocity must be zero for an instant at the top as the velocity changes from up to down.
+
+Meta-information
+================
+exname: true or false zero velocity at top
+extype: schoice
+exsolution: 10

@@ -1,0 +1,34 @@
+```{r calculate-t-given-a-vi-vf, echo = FALSE, results = "hide"}
+sf <- 3 # significant digits to use
+a <- sample(2:10, 1) # acceleration in m/s/s
+vi <- sample(100:150, 1) # initial speed in m/s
+vf <- sample(200:250, 1) # final speed in m/s
+
+ans <- (vf - vi) / a
+dis <- c(a / (vf - vi), a * (vf - vi))
+
+sc <- num_to_schoice(ans, wrong = dis, delta = 0.5, format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+```
+
+Question
+========
+An airplane increases its speed from `r vi` m/s to `r vf` m/s, at an average rate of `r a` m/s$^2$. How much time does it take to complete this speed increase?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for constant acceleration motion.
+
+$$t = \frac{v_f - v_i}{a} = \frac{`r vf` \text{ m/s} - `r vi` \text{ m/s}}{`r a` \text{ m/s}^2} = `r signif(ans, 3)` \text{ s}$$
+
+Meta-information
+================
+exname: calculate t given a, vi, and vf
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

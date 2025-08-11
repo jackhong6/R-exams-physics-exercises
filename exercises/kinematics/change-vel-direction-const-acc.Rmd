@@ -1,0 +1,20 @@
+Question
+========
+Can an object's velocity change direction when its acceleration is constant?
+
+Answerlist
+----------
+* No, because the object is always speeding up.
+* No, because the object is always speeding up or slowing down, but it can never turn around.
+* Yes, a rock thrown straight up is an example.
+* Yes, a car that starts from rest, speeds up, slows to a stop, and then backs up is an example.
+
+Solution
+========
+The direction of the rock's velocity changes from up to down and its acceleration is always $9.8$ m/s$^2$ down.
+
+Meta-information
+================
+exname: change velocity direction with constant acceleration
+extype: schoice
+exsolution: 0010

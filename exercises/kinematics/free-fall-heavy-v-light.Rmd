@@ -1,0 +1,23 @@
+Question
+========
+A 5 kg ball and a 10 kg ball are both dropped off a cliff at the same time. If air drag can be ignored, then the 10 kg ball falls
+
+
+Answerlist
+----------
+* **50% faster** than the 5 kg ball.
+* with **double the velocity** of the 5 kg ball.
+* with **double the acceleration** of the 5 kg ball.
+* with the **same acceleration** as the 5 kg ball.
+
+
+Solution
+========
+The acceleration due to gravity on the surface of the Earth does not depend on the object's mass. All objects in free fall move with the same acceleration if air drag can be ignored.
+
+
+Meta-information
+================
+exname: freefall heavy v light
+extype: schoice
+exsolution: 0001

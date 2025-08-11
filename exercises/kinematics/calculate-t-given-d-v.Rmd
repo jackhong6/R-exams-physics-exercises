@@ -1,0 +1,33 @@
+```{r calculate-t-given-d-v, echo = FALSE, results = "hide"}
+sf <- 3 # significant digits to use
+v <- signif(runif(1, 0.1, 9.9), sf) # speed in m/s
+d <- signif(runif(1, 10, 99), sf) # distance in m
+
+ans <- d/v
+dis <- c(v/d, v*d)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = 0.5, format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+```
+
+Question
+========
+Suppose an object travels at a constant velocity of `r v` m/s. How much time would it take for the object to travel a distance of `r d` m?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for constant velocity motion.
+
+$$ t = \frac{d}{v} = \frac{`r d` \text{ m}}{`r v` \text{ m/s}} = `r signif(d/v, 3)` \text{ s}$$ 
+
+Meta-information
+================
+exname: calculate t given d and v
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

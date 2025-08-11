@@ -1,0 +1,18 @@
+Question
+========
+True or false? It is possible to have zero acceleration and still be moving.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. An object moving with constant velocity has zero acceleration and is still moving.
+
+Meta-information
+================
+exname: tf zero acceleration and moving
+extype: schoice
+exsolution: 10

@@ -1,0 +1,21 @@
+Question
+========
+What is the magnitude of the average **velocity** of a runner who completes one lap around an outdoor track (400 m) in 100 s?
+
+Answerlist
+----------
+* $0$ m/s
+* $4.0$ m/s
+* $0.25$ m/s
+* $4.0 \times 10^4$ m/s
+
+Solution
+========
+The average velocity is a vector quantity defined as the total displacement divided by the time interval. Since the runner returns to their starting position after running one lap, the total displacement is zero and the average velocity is also zero.
+
+Meta-information
+================
+exname: average velocity running around track
+extype: schoice
+exsolution: 1000
+exshuffle: 4

@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+sf <- 3 # number of significant figures to use
+vf <- signif(runif(1, 200, 300), sf) # final launch speed in km/h
+t <- signif(runif(1, 2, 3), sf) # time in s
+
+d <- (vf / 3.6) / 2 * t
+distractors <- c(vf / 3.6 * t, vf / 2 * t)
+
+sc <- num_to_schoice(d, wrong = distractors, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m}$", sep = "")
+```
+
+Question
+========
+A fighter plane is launched from a catapult on an aircraft carrier. Starting from rest, it reaches a speed of `r vf` km/h in `r t` seconds. Assuming constant acceleration, what is the length of the aircraft catapult?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+First, convert the final speed to m/s:
+
+$$v_f = `r vf` \text{ km/h} \times \frac{1000 \text{ m}}{1 \text{ km}} \times \frac{1 \text{ h}}{3600 \text{ s}} = `r signif(vf/3.6, sf)` \text{ m/s}$$
+Then, use the formula for constant acceleration:
+$$d = \frac{1}{2}(v_i + v_f)t = \frac{1}{2} (0 + `r signif(vf/3.6, sf)` \text{ m/s})(`r t` \text{ s}) = `r signif(d, sf)` \text{ m}$$ 
+
+Meta-information
+================
+exname: calculate d given initial and final velocities on an aircraft carrier
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

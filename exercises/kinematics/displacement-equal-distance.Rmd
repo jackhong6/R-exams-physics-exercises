@@ -1,0 +1,30 @@
+Question
+========
+For which of the following is the magnitude of the displacement equal to the distance traveled? *Select all that apply.*
+
+Answerlist
+----------
+* A car speeding up in a straight line.
+* A car coming to a stop in a straight line.
+* A train moving with constant velocity.
+* An apple falling straight down to the ground.
+* An athlete running a lap around the track.
+* A pendulum swinging back and forth.
+* A car driving around the block.
+* A student pacing back and forth thinking about physics.
+
+
+Solution
+========
+The magnitude of the displacement is equal to the distance traveled when the 
+motion is in a straight line because then the vectors all point in the same
+direction. Note that "constant velocity" implies that the motion is in a 
+straight line.
+
+
+Meta-information
+================
+exname: displacement equal distance
+extype: mchoice
+exsolution: 11110000
+exshuffle: 4

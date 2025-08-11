@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(c(-1,1), 1)
+a <- sample(c(-1,1), 1)
+ans <- if (v==1) {
+    ifelse(a==1, "0010", "1000")
+} else {
+    ifelse(a==1, "0100", "0001")
+}
+```
+
+Question
+========
+An object is moving to the `r ifelse(v==1, "right", "left")` and 
+`r ifelse(a==v, "speeding up", "slowing down")`. Which choice best describes its
+velocity and acceleration? (Assume right is positive.)
+
+Answerlist
+----------
+* velocity is positive; acceleration is negative.
+* velocity is negative; acceleration is positive.
+* velocity and acceleration are both positive.
+* velocity and acceleration are both negative.
+
+
+Solution
+========
+Velocity is positive if the object is moving to the right.   
+Velocity is negative if the object is moving to the left.  
+Acceleration is positive if the object is moving to the right and speeding up or
+moving to the left and slowing down.  
+Acceleration is negative if the object is moving to the right and slowing down
+or moving to the left and speeding up.
+
+
+Meta-information
+================
+exname: sign of velocity and acceleration moving left or right
+extype: schoice
+exsolution: `r ans`

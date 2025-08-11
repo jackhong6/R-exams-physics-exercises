@@ -1,0 +1,25 @@
+Question
+========
+Ball 1 is dropped from the top of a building. One second later, ball 2 is dropped from the same building. If air resistance can be ignored, then as time progresses (and while the balls are still in free fall), the distance between them
+
+
+Answerlist
+----------
+* increases.
+* remains constant.
+* decreases.
+* cannot be determined from the given information.
+
+
+Solution
+========
+The distance between the two balls increases over time since distance increases with time squared when acceleration is constant. Using the distance formula for constant acceleration, we see that
+$$\Delta d = d_1 - d_2 = \frac{1}{2} g (t_1^2 - t_2^2) = \frac{1}{2}g(t_1 - t_2)(t_1 + t_2)$$
+So even though $(t_1 - t_2)$ will remain constant at 1 second, $(t_1 + t_2)$ increases as time progresses.
+
+
+Meta-information
+================
+exname: free fall compare distance between two balls dropped at different times
+extype: schoice
+exsolution: 1000

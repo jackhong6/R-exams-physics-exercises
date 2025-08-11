@@ -1,0 +1,20 @@
+Question
+========
+Which of the following is an accurate statement about motion with constant acceleration?
+
+Answerlist
+----------
+* In equal times, speed increases by equal amounts.
+* In equal times, displacement changes by equal amounts.
+* In equal times, velocity changes by equal amounts.
+* In equal times, acceleration changes by equal amounts.
+
+Solution
+========
+Acceleration is the change in velocity over time. If acceleration is constant, then the velocity changes by equal amounts in equal times.
+
+Meta-information
+================
+exname: constant acceleration description
+extype: schoice
+exsolution: 0010

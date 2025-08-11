@@ -1,0 +1,20 @@
+Question
+========
+A vector quantity is fully described by
+
+Answerlist
+----------
+* magnitude alone
+* direction alone
+* both magnitude and direction
+* none of these
+
+Solution
+========
+A vector quantity is fully described by both magnitude and direction.
+
+Meta-information
+================
+exname: what is vector
+extype: schoice
+exsolution: 0010

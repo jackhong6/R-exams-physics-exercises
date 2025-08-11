@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+sf <- 3 # number of significant figures to use
+v <- signif(runif(1, 1, 100), sf) # speed in m/s
+t <- signif(runif(1, 1, 100), sf) # time in s
+
+while (abs(v - t) < 20) {
+    t <- signif(runif(1, 1, 100), sf)
+}
+
+answer <- v*t
+distractors <- c(v/t, t/v)
+sc <- num_to_schoice(answer, wrong = distractors, delta = 0.5, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m}$", sep = "")
+```
+
+Question
+========
+Suppose an object travels at a constant velocity of `r v` m/s. What distance would it travel in `r t` s?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for constant velocity motion.
+
+$$ d = vt = (`r v` \text{ m/s})(`r t` \text{ s}) = `r signif(v*t, 3)` \text{ m}$$ 
+
+Meta-information
+================
+exname: calculate d given v and t
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

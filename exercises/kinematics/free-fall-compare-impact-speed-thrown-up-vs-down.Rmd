@@ -1,0 +1,23 @@
+Question
+========
+Two balls are thrown from the top of a building. One is thrown straight up while the other is thrown straight down, both with same initial speed. If air resistance can be ignored, how do their speeds compare when they hit the ground?
+
+
+Answerlist
+----------
+* The ball thrown up is going faster.
+* The ball thrown down is going faster.
+* Both balls are going the same speed.
+* It is impossible to determine with the given information.
+
+
+Solution
+========
+The ball thrown straight up will have the same speed when it returns to the initial height. Therefore, both balls will be going the same speed when they hit the ground. (The ball thrown downward would hit the ground first because it did not travel the path up and back to the initial height. However, both balls still hit the ground with the same speed.)
+
+
+Meta-information
+================
+exname: free fall compare impact speed for balls thrown straight up vs down
+extype: schoice
+exsolution: 0010

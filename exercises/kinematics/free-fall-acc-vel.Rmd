@@ -1,0 +1,20 @@
+Question
+========
+An object is released from rest and falls straight down without friction. Which of the following is true concerning its motion?
+
+Answerlist
+----------
+* Its acceleration is constant.
+* Its velocity is constant.
+* Neither its acceleration nor its velocity is constant.
+* Both its acceleration and its velocity are constant.
+
+Solution
+========
+Only acceleration is constant for an object in free fall.
+
+Meta-information
+================
+exname: free fall acceleration and velocity
+extype: schoice
+exsolution: 1000

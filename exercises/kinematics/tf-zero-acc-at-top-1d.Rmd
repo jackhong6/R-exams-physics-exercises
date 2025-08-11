@@ -1,0 +1,18 @@
+Question
+========
+True or false? When a ball is thrown straight up, its acceleration at the top is zero.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. The acceleration of the ball is always $9.8$ m/s$^2$ down. 
+
+Meta-information
+================
+exname: true or false zero acceleration at top
+extype: schoice
+exsolution: 01

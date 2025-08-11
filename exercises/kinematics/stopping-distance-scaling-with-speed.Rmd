@@ -1,0 +1,28 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(2:10, 1)
+```
+
+Question
+========
+A car traveling at speed $v$ is able to stop in a distance $d$. Assuming the same constant acceleration, what distance does this car require to stop when it is traveling at speed $`r n`v$?
+
+Answerlist
+----------
+* $d$
+* $\sqrt{`r n`} d$
+* $`r n` d$
+* $`r n^2` d$
+
+Solution
+========
+Solve $v_f^2 = v_i^2 + 2ad$ for $d$ and set $v_f = 0$ to get
+
+$$d = -\frac{v_i^2}{2a}$$ 
+Therefore, the braking distance is proportional to the square of the initial velocity. If the initial velocity is multiplied by `r n`, then the car would need `r n`$^2$ times the distance to stop.
+
+Meta-information
+================
+exname: stopping distance scaling with speed
+extype: schoice
+exsolution: 0001
+exshuffle: 4

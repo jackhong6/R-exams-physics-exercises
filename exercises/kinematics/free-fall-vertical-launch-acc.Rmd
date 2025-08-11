@@ -1,0 +1,20 @@
+Question
+========
+Consider a ball that is thrown upwards and which then falls back down. If up is the positive direction, then the ball's acceleration
+
+Answerlist
+----------
+* is always positive.
+* is always negative.
+* starts positive, then becomes negative.
+* starts negative, then becomes positive.
+
+Solution
+========
+The acceleration due to gravity is always downwards, which is the negative direction.
+
+Meta-information
+================
+exname: vertical launch acceleration
+extype: schoice
+exsolution: 0100

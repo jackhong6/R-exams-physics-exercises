@@ -1,0 +1,32 @@
+Question
+========
+Which of the following are scalars? *Select all that apply.*
+
+Answerlist
+----------
+* distance
+* speed
+* time
+* acceleration
+* displacement
+* velocity
+
+Solution
+========
+A scalar quantity is fully described by magnitude only. A vector quantity is fully described by both magnitude and direction. Distance, speed, and time are scalars. Acceleration, displacement, and velocity are vectors.
+
+Answerlist
+----------
+* scalar
+* scalar
+* scalar
+* vector
+* vector
+* vector
+
+Meta-information
+================
+exname: which are scalars
+extype: mchoice
+exsolution: 111000
+exshuffle: 4

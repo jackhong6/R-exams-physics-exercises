@@ -1,0 +1,71 @@
+```{r p-t-graph-obj-at-rest, echo = FALSE, results = "hide"}
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+# tikz velocity-time graph
+tikz_graph_A <- "\\begin{tikzpicture} 
+                        \\draw[->] (0,-1.5) node[anchor=east] {$0$} -- (3, -1.5) node[anchor=west] {$t$};
+                        \\draw[->] (0,-1.5) -- (0,1.5) node[anchor=east] {$x$};,
+                        \\draw[red, ultra thick] (0,0) -- (3, 0);),
+                \\end{tikzpicture}"
+
+tikz_graph_B <- "\\begin{tikzpicture}
+                        \\draw[->] (0,-1.5) node[anchor=east] {$0$} -- (3, -1.5) node[anchor=west] {$t$};
+                        \\draw[->] (0,-1.5) -- (0,1.5) node[anchor=east] {$x$};
+                        \\draw[red, ultra thick] (1.5,-1.5) -- (1.5, 1.5);
+                \\end{tikzpicture}"
+
+tikz_graph_C <- "\\begin{tikzpicture}
+                        \\draw[->] (0,-1.5) node[anchor=east] {$0$} -- (3, -1.5) node[anchor=west] {$t$};
+                        \\draw[->] (0,-1.5) -- (0,1.5) node[anchor=east] {$x$};
+                        \\draw[red, ultra thick] (0,-1.5) -- (3, 1.5);
+                \\end{tikzpicture}"
+
+tikz_graph_D <- "\\begin{tikzpicture}
+                        \\draw[->] (0,-1.5) node[anchor=east] {$0$} -- (3,-1.5) node[anchor=west] {$t$};
+                        \\draw[->] (0,-1.5) -- (0,1.5) node[anchor=east] {$x$};
+                        \\draw[red, ultra thick] (0,1.2) -- (2.7, -1.5);
+                \\end{tikzpicture}"
+
+choices <- c("Graph A", "Graph B", "Graph C", "Graph D")
+
+# Generate all graphs
+graphs <- c(
+  include_tikz(tikz_graph_A, name = "p-t-graph-obj-at-rest-A", markup = "none", format = typ),
+  include_tikz(tikz_graph_B, name = "p-t-graph-obj-at-rest-B", markup = "none", format = typ),
+  include_tikz(tikz_graph_C, name = "p-t-graph-obj-at-rest-C", markup = "none", format = typ),
+  include_tikz(tikz_graph_D, name = "p-t-graph-obj-at-rest-D", markup = "none", format = typ)
+)
+
+# Randomize graphs and find the correct answer (original graph A)
+rand_ord <- sample(1:4)
+graphs <- graphs[rand_ord]
+sol <- c(TRUE, rep(FALSE, 3))
+sol <- sol[rand_ord]
+```
+
+Question
+========
+
+Which position-time graph represents an object at rest?
+
+|            Graph A            |             Graph B           |             Graph C           |             Graph D           |
+|:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
+| ![](`r graphs[1]`){width=3cm} | ![](`r graphs[2]`){width=3cm} | ![](`r graphs[3]`){width=3cm} | ![](`r graphs[4]`){width=3cm} |
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(choices, markup = "markdown")
+```
+
+
+Solution
+========
+An object at rest has zero velocity so the slope of its position-time graph must have a slope of zero (horizontal line).
+
+
+Meta-information
+================
+exname: position time graph object at rest
+extype: schoice
+exsolution: `r mchoice2string(sol)`

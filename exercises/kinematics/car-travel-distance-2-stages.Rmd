@@ -1,0 +1,23 @@
+Question
+========
+A car travels at $50$ km/h for 30 minutes and $80$ km/h for 1 hour and 15 minutes. How far does it travel in this time?
+
+Answerlist
+----------
+* $125$ km
+* $130$ km
+* $113.75$ km
+* $117$ km
+
+Solution
+========
+Use the formula for constant velocity motion for each part and add the two distances together.
+
+$$ d = v_1 t_1 + v_2 t_2 = (50 \text{ km/h})(0.5 \text{ h}) + (80 \text{ km/h})(1.25 \text{ h}) = 125 \text{ km}$$
+
+Meta-information
+================
+exname: car travel distance 2 stages
+extype: schoice
+exsolution: 1000
+exshuffle: 4

@@ -1,0 +1,18 @@
+Question
+========
+True or false? When you throw a ball to your friend, the ball's acceleration is zero when it reaches its maximum height.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. The acceleration of the ball is always $9.8$ m/s$^2$ down. 
+
+Meta-information
+================
+exname: true or false zero acceleration at top of toss (2d projectile)
+extype: schoice
+exsolution: 01

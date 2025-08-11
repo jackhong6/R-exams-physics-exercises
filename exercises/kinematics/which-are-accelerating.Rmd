@@ -1,0 +1,37 @@
+Question
+========
+Which of the following objects are accelerating? *Select all that apply.*
+
+Answerlist
+----------
+* A car slowing down in a straight line.
+* A car speeding up in a straight line.
+* A car turning at constant speed.
+* An apple falling straight down.
+* A thrown ball following a parabolic path.
+* A man jogging at constant speed in a straight line.
+* An apple at rest in a fruit bowl.
+* A laptop cart moving up a ramp at constant speed.
+
+Solution
+========
+An object is accelerating if its speed changes (speeding up or slowing down) or
+if the direction of the velocity is changing.
+
+Answerlist
+----------
+* accelerating (slowing down)
+* accelerating (speeding up)
+* accelerating (changing direction)
+* accelerating (speeding up)
+* accelerating (slowing down then speeding up/changing direction)
+* not accelerating
+* not accelerating
+* not accelerating
+
+Meta-information
+================
+exname: which are accelerating
+extype: mchoice
+exsolution: 11111000
+exshuffle: 4

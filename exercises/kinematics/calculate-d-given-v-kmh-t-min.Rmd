@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+# Generate random question parameters
+sf <- 3 # Number of significant figures to use
+v <- signif(sample(10:99, 1), sf) # speed in km/h
+t <- signif(sample(10:99, 1), sf) # time in minutes
+
+# Calculate the correct answer and distractors
+answer <- signif(v*(t/60), sf)
+distractors <- c(signif(v*t, 3))
+sc <- num_to_schoice(answer, wrong = distractors, range = c(answer/10, v*t), delta = 0.05*answer, format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+
+# Format numbers
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ km}$", sep = "")
+v <- format(v, digits=sf, nsmall = 1)
+t <- format(t, digits=sf, nsmall = 1)
+```
+
+Question
+========
+Suppose an object travels at a constant velocity of `r v` km/h. What distance would it travel in `r t` minutes?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for constant velocity motion making sure to convert to the proper units.
+
+$$ d = vt = (`r v` \text{ km/h})(`r t` \text{ min})\left(\frac{1 \text{ h}}{60 \text{ min}} \right) = `r answer` \text{ km}$$ 
+
+Meta-information
+================
+exname: calculate d given v in km/h and t in minutes
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

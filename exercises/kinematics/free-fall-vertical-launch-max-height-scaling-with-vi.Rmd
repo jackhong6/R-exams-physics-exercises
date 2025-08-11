@@ -1,0 +1,29 @@
+```{r, echo = FALSE, results = "hide"}
+x <- sample(2:9, 1)
+```
+
+Question
+========
+Two balls are launched straight up. The first ball is launched with `r x` times the initial speed of the second. Ignore air resistance. How many times higher does the first ball rise compared to the second?
+
+
+Answerlist
+----------
+* $\sqrt{`r x`}$ times as high
+* $`r x`$ times as high
+* $`r x`^2$ times as high
+* Impossible to determine without knowing the initial speeds
+
+
+Solution
+========
+Use the formula $v_f^2 = v_i^2 + 2ad$ with $v_f = 0$ and solve for $d$:
+
+$$d = -\frac{v_i^2}{2a}$$
+The distance scales with the square of the initial velocity. Therefore, the first ball rises $`r x`^2 = `r x^2`$ times as high as the second ball.
+
+Meta-information
+================
+exname: free fall vertical launch max height scaling with initial velocity
+extype: schoice
+exsolution: 0010

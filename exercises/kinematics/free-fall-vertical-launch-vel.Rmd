@@ -1,0 +1,20 @@
+Question
+========
+Consider a ball that is thrown upwards and which then falls back down. If up is the positive direction, then the ball's velocity
+
+Answerlist
+----------
+* is always positive.
+* is always negative.
+* starts positive, then becomes negative.
+* starts negative, then becomes positive.
+
+Solution
+========
+When the ball is moving upwards, its velocity is positive. When the ball is moving downwards, its velocity is negative.
+
+Meta-information
+================
+exname: vertical launch velocity
+extype: schoice
+exsolution: 0010

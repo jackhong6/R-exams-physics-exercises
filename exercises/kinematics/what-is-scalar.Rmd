@@ -1,0 +1,20 @@
+Question
+========
+A scalar quantity is fully described by
+
+Answerlist
+----------
+* magnitude alone
+* direction alone
+* both magnitude and direction
+* none of these
+
+Solution
+========
+A scalar quantity is fully described by magnitude alone.
+
+Meta-information
+================
+exname: what is scalar
+extype: schoice
+exsolution: 1000

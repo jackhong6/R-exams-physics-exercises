@@ -1,0 +1,45 @@
+```{r, echo = FALSE, results = "hide"}
+sf <- 3 # significant digits to use
+a <- sample(1:6, 1) # acceleration in m/s/s
+vi <- sample(10:50, 1) # initial speed in km/h
+vf <- sample(80:120, 1) # final speed in km/h
+
+ans <- (vf - vi) / 3.6 / a
+dis <- c((vf - vi) / a)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = 0.1, range(ans/10, ans*10), format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+```
+
+Question
+========
+A car accelerates from `r vi` km/h to `r vf` km/h, at an average rate of `r a` m/s$^2$. How much time does it take to complete this speed increase?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+First, convert the speeds from km/h to m/s.
+
+```{r, echo = FALSE, results = "hide"}
+vi_kmh <- signif(vi / 3.6, sf)
+vf_kmh <- signif(vf / 3.6, sf)
+```
+
+$$v_i = `r vi`\text{ km/h} \times \frac{1 \text{ h}}{3600 \text{ s}} \times \frac{1000 \text{ m}}{1 \text{ km}} = `r vi_kmh` \text{ m/s}$$
+$$v_f = `r vf`\text{ km/h} \times \frac{1 \text{ h}}{3600 \text{ s}} \times \frac{1000 \text{ m}}{1 \text{ km}} = `r vf_kmh` \text{ m/s}$$
+
+
+Then, use the formula for constant acceleration motion.
+
+$$t = \frac{v_f - v_i}{a} = \frac{`r vf_kmh` \text{ m/s} - `r vi_kmh` \text{ m/s}}{`r a` \text{ m/s}^2} = `r signif(ans, 3)` \text{ s}$$
+
+Meta-information
+================
+exname: calculate t given a, vi, and vf in km/h
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

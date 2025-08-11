@@ -1,0 +1,18 @@
+Question
+========
+True or false? When you throw a ball over to your friend, the ball's velocity is zero when it reaches its maximum height.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. The velocity in the vertical direction is zero, but the total velocity is not zero.
+
+Meta-information
+================
+exname: true or false zero velocity at top (2d projectile)
+extype: schoice
+exsolution: 01

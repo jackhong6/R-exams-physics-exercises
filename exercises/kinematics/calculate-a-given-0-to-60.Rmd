@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+# Generate random question parameters
+sf <- 3 # Number of significant figures to use
+t <- signif(runif(1, 2, 3), sf) # 0 to 60 mph time in seconds
+
+vf <- 60 * 1609.34 / 3600 # 60 mph in m/s
+
+# Calculate the correct answer and distractors
+a <- signif(vf / t, sf)
+distractors <- c(signif(60 / t, 3))
+sc <- num_to_schoice(a, wrong = distractors, format = FALSE)
+sc$questions <- sapply(sc$questions, signif, sf)
+
+# Format numbers
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m/s}^2$", sep = "")
+```
+
+Question
+========
+An F1 car accelerates from 0 to 60 miles per hour in `r t` seconds. What is the acceleration of the car in SI base units? (1 mile = 1609.34 metres)
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+First, convert 60 mph to m/s.
+
+$$60 \text{ mph} \times \frac{1609.34 \text{ m}}{1 \text{ mi}} \times \frac{1 \text{ h}}{3600 \text{ s}} = 26.8223 \text{ m/s}$$
+Then, divide by the time.
+
+$$a = \frac{v_f - v_i}{t} = \frac{26.8223 \text{ m/s} - 0}{`r t` \text{ s}} = `r a` \text{ m/s}^2$$
+
+Meta-information
+================
+exname: calculate acceleration given the 0 to 60 time
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

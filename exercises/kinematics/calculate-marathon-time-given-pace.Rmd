@@ -1,0 +1,42 @@
+```{r, echo = FALSE, results = "hide"}
+pace_minutes <- sample(3:8, 1) # minutes part of pace per kilometre
+pace_seconds <- sample(1:59, 1) # seconds part of pace per kilometre
+d <- 42.195 # marathon distance in km
+
+t <- round(d * (pace_minutes * 60 + pace_seconds)) # time in seconds to finish the marathon
+#t_h <- t %/% 3600 # number of hours to finish the marathon
+#t_m <- t %/% 60 # number of minutes to finish the marathon
+#t_s <- t %% 60 # number of seconds to finish the marathon
+
+sc <- num_to_schoice(t, delta = 10, format = FALSE)
+sc$questions <- sapply(sc$questions, round)
+sc$questions <- sprintf("%02d:%02d:%02d", sc$questions %/% 3600, (sc$questions %/% 60) %% 60, sc$questions %% 60)
+```
+
+Question
+========
+A runner finishes a marathon (42.195 km) with an average pace of `r pace_minutes` minutes and `r pace_seconds` seconds per kilometre. What is the runner's time? (Answers are formatted as hours:minutes:seconds)
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+First, calculate the speed in kilometres per second.
+```{r, echo = FALSE, results = "asis"}
+v <- signif(1 / (pace_minutes * 60 + pace_seconds), 5)
+```
+$$v = \frac{1 \text{ km}}{`r pace_minutes*60` \text{ s} + `r pace_seconds` \text{ s}} = `r v` \text{ km/s}$$
+Then, calculate the time using the formula for constant velocity motion.
+$$ t = \frac{d}{v} = \frac{`r d` \text{ km}}{`r v` \text{ km/s}} = `r format(t, scientific = FALSE)` \text{ s}$$
+Finally, convert the number of seconds into hours, minutes, and seconds. (60 seconds = 1 minute and 60 minutes = 1 hour)
+
+$`r format(t, scientific = FALSE)`$ s = $`r t %/% 3600`$ hours, $`r (t %/% 60) %% 60`$ minutes, and $`r t %% 60`$ seconds
+
+Meta-information
+================
+exname: calculate marathon time given pace
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
