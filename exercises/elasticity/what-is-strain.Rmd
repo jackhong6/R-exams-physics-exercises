@@ -1,0 +1,23 @@
+Question
+========
+What is stress?
+
+Answerlist
+----------
+* The strain per unit length.
+* The same as force.
+* The ratio of the change in length to the original length.
+* The applied force per cross-sectional area.
+
+Solution
+========
+Strain is the ratio of the change in length to the original length. 
+
+strain = $\frac{\Delta L}{L_0}$
+
+Meta-information
+================
+exname: what is strain
+extype: schoice
+exsolution: 1000
+exshuffle: 4

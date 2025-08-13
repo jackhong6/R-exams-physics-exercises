@@ -1,7 +1,7 @@
 library("exams")
 
 # Include all the questions in the kinematics folder in the exam.
-my_exam <- dir(path = "exercises/kinematics")
+my_exam <- dir(path = "exercises/elasticity")
 my_exam <- sample(my_exam, 45) # randomize
 
 
@@ -25,5 +25,5 @@ exams2pdf(my_exam, edir = "exercises", template = "solution.tex")
 exams2nops(my_exam, edir = "exercises")
 
 # Stress test an exercise
-st_results <- stresstest_exercise("C:/Users/jackh/OneDrive/Documents/GitHub/R-exams-physics-problems/exercises/kinematics/calculate-a-given-0-to-60.Rmd")
+st_results <- stresstest_exercise("C:/Users/jackh/OneDrive/Documents/GitHub/R-exams-physics-problems/exercises/statics/calculate-balance-position-on-massless-seesaw.Rmd")
 plot(st_results)

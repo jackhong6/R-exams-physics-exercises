@@ -1,0 +1,28 @@
+Question
+========
+A heavy seesaw is balanced with no one sitting on it. Then, a lightweight child sits on one side and a heavy child sits on the other side. They sit at different distances from the pivot so that the seesaw remains balanced. Now, if both children move forward so that they are at half of their original distance from the pivot, what will happen to the seesaw?
+
+
+Answerlist
+----------
+* The side the heavy child is sitting on will tilt downward.
+* The side the lightweight child sitting on will tilt downward.
+* The seesaw will still be balanced.
+* It is impossible to determine without knowing the masses and distances.
+
+
+Solution
+========
+Since the torque on the seesaw is balanced, we must have $\tau_{net} = (m_{1} d_{1} + \tau_s) - (m_{2} d_{2} + \tau_s) = m_1 d_1 - m_2 d_2 = 0$, where $\tau_s$ is the torque from weight of the seesaw, $m_1$ and $d_1$ are the mass and distance of the lighter child, and $m_2$ an $d_2$ are the mass and distance of the heavier child. 
+
+Note that since the seesaw is balanced when no one is sitting on it, the two torques from either side of the seesaw cancel out when calculating the net torque.
+
+Halving both distances will result in $\tau_{net} = (m_1 (d_1/2) + \tau_s) - (m_2 (d_2/2) + \tau_s) = \frac{1}{2}(m_1 d_1 - m_2 d_2) = 0$. Therefore, the seesaw will still be balanced.
+
+
+Meta-information
+================
+exname: moving forward on massive balanced seesaw
+extype: schoice
+exsolution: 0010
+exshuffle: 4

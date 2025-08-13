@@ -1,0 +1,21 @@
+Question
+========
+What is stress?
+
+Answerlist
+----------
+* The strain per unit length.
+* The same as force.
+* The ratio of the change in length to the original length.
+* The applied force per cross-sectional area.
+
+Solution
+========
+Stress is the applied force per cross-sectional area.
+
+Meta-information
+================
+exname: what is stress
+extype: schoice
+exsolution: 0001
+exshuffle: 4

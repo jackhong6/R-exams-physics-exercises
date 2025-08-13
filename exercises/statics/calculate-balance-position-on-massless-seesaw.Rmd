@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+m_girl <- sample(20:60, 1) # mass of girl in kg
+m_boy <- m_girl + sample(5:20, 1) # mass of boy in kg
+d_boy <- signif(runif(1, 1, 3), 2) # distance of boy from pivot in metres
+d_girl <- signif(m_boy / m_girl * d_boy, 2) # distance of girl from pivot in metres
+
+sc <- num_to_schoice(d_girl, delta = 0.1, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, 2)
+sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m}$", sep = "")
+```
+Question
+========
+A boy and a girl are balanced on a seesaw. The seesaw has negligible mass. The boy's mass is `r m_boy` kg and the girl's mass is `r m_girl` kg. If the boy sits `r d_boy` m from the pivot, how far from the pivot must the girl sit on the other side of the seesaw?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Since the torque on the seesaw is balanced, we must have $m_{b} d_{b} = m_{g} d_{g}$ where $m_b$ is the mass of the boy, $d_b$ is the distance of the boy from the pivot, and $m_g$ and $d_g$ are corresponding quantities for the girl. Solving for $d_g$ gives:
+
+$$d_g = \left(\frac{m_b}{m_g} \right) d_b = \left(\frac{`r m_boy` \text{ kg}}{`r m_girl` \text{ kg}} \right) `r d_boy` \text{ m} = `r d_girl` \text{ m}$$
+
+Meta-information
+================
+exname: calculate balance position on massless seesaw
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

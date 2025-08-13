@@ -1,0 +1,24 @@
+Question
+========
+A heavy child and a lightweight child are balanced on a massless seesaw. If both children move forward so that they are at half of their original distance from the pivot, what will happen to the seesaw?
+
+
+Answerlist
+----------
+* The side the heavy child is sitting on will tilt downward.
+* The side the lightweight child is sitting on will tilt downward.
+* The seesaw will still be balanced.
+* It is impossible to determine without knowing the masses and distances.
+
+
+Solution
+========
+Since the seesaw is initially balanced, we must have $\tau_{net} = m_{1} d_{1} - m_{2} d_{2} = 0$. Halving both distances will result in $\tau_{net} = m_1 (d_1/2) - m_2 (d_2/2) = \frac{1}{2}(m_1 d_1 - m_2 d_2) = \frac{1}{2}(0) = 0$. Therefore, the seesaw will remain balanced.
+
+
+Meta-information
+================
+exname: moving forward on massless seesaw
+extype: schoice
+exsolution: 0010
+exshuffle: 4

@@ -1,0 +1,26 @@
+Question
+========
+What is the slope of a stress versus strain graph?
+
+Answerlist
+----------
+* Young's modulus
+* Elastic modulus
+* Bulk modulus
+* Spring constant
+* Compressibility
+* Pressure
+
+Solution
+========
+The slope of a stress versus strain graph is called the **elastic modulus** or **Young's modulus**.
+
+$$E=\frac{F/A}{\Delta L / L_0} = \frac{\text{stress}}{\text{strain}}$$
+
+
+Meta-information
+================
+exname: slope of stress v strain
+extype: schoice
+exsolution: 110000
+exshuffle: 4

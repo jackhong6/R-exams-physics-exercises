@@ -1,0 +1,20 @@
+Question
+========
+What conditions are necessary for a body to be in **translational** equilibrium? Note that $\sum \boldsymbol{\vec{F}}$ is the net force on the body and $\sum \boldsymbol{\vec{\tau}}$ is the net torque on the body.
+
+Answerlist
+----------
+* $\sum \boldsymbol{\vec{F}} = 0$
+* $\sum \boldsymbol{\vec{\tau}} = 0$
+* $\sum \boldsymbol{\vec{F}} = 0$ and $\sum \boldsymbol{\vec{\tau}} = 0$
+* None of the above
+
+Solution
+========
+A body is in translational equilibrium if the net force on the body is zero ($\sum \boldsymbol{\vec{F}} = 0$).
+
+Meta-information
+================
+exname: conditions for translational equilibrium
+extype: schoice
+exsolution: 1000
