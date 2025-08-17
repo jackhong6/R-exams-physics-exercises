@@ -1,0 +1,56 @@
+```{r, echo = FALSE, results = "hide"}
+angle <- sample(20:60, 1) # angle PQR in degrees
+mass <- sample(10:99, 1) # weight of load hanging at point Q in kg
+tension <- 9.8 * mass / tan(angle * pi / 180) # tension in wire PQ in Newtons
+
+sc <- num_to_schoice(tension, range = c(0.1, 2) * tension, format = FALSE)
+sc$questions <- sprintf("$\\SI{%.0f}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+qx <- 3 / tan(angle * pi / 180)
+beam <- c("\\begin{tikzpicture}",
+    "\\coordinate (P) at (0, 3);",
+    sprintf("\\coordinate (Q) at (%f,3);", qx),
+    "\\coordinate (R) at (0,0);",
+    sprintf("\\pic[draw, \"$\\ang{%d}$\"scale=0.8, angle eccentricity = %f, 
+            angle radius=%fcm] {angle={P--Q--R}};", 
+            angle, -.1/40 * (angle - 20) + 0.8, -1.2/40 * (angle - 20) + 2.2),
+    "\\pic[draw, angle radius=3mm] {right angle = {Q--P--R}};",
+    "\\fill[yellow!33] (0,3.5) rectangle (-.4,-1);",
+    "\\draw (0,3.5) -- (0,-1);",
+    "\\draw (P) node[above right] {$P$} -- (Q);",
+    "\\draw (Q) node[above right] {$Q$} -- ++(0,-2.6);",
+    sprintf("\\draw[fill=gray!33] (Q)+(-.5,-2) rectangle +(.5,-2.7) node[midway, scale=0.8] {$\\SI{%d}{\\kg}$};", mass),
+    "\\draw[double, line cap=round, double distance=6pt] (R) -- (Q);",
+    "\\draw[fill] (R) circle[radius=1pt] node[below right] {$R$};",
+    "\\draw[fill] (Q) circle[radius=1pt];",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A uniform beam $QR$, 2.0 metres long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load hanging vertically down from point $Q$. What is the tension in the supporting wire $PQ$?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The answer is the answer.
+
+
+Meta-information
+================
+exname: calculate tension angled beam with load
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

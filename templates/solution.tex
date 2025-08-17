@@ -1,22 +1,49 @@
-\documentclass[10pt]{article}
+\documentclass{article}
 
 %% packages
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx,xcolor,verbatim,url,fancyvrb,xargs,amsmath,amssymb,booktabs,longtable,textcomp,eurosym,latexsym}
+\usepackage{graphicx,xcolor,verbatim,url,fancyvrb,fancyhdr,xargs}
+\usepackage{amsmath,amssymb,booktabs,longtable,textcomp,eurosym,latexsym,siunitx}
+
+%% new commands
+\makeatletter
+\newcommand{\Course}[1]{\def\@Course{#1}}
+\newcommand{\Title}[1]{\def\@Title{#1}}
+\Course{Physics}
+\Title{Practice Problem Solutions}
+
+%% \exinput{header}
+\newcommand{\myCourse}{\@Course}
+\newcommand{\myTitle}{\@Title}
+\makeatother
+
+%% headings
+\pagestyle{fancy}
+\fancyhead{} \fancyfoot{}
+\fancyhead[L]{\myCourse}
+\fancyhead[C]{\myTitle}
+\fancyhead[R]{\thepage}
+
+%% fonts: Helvetica
+\usepackage{helvet}
+\IfFileExists{sfmath.sty}{
+  \RequirePackage[helvet]{sfmath}
+}{}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{phv}
 
 %% new environments
 \newenvironment{question}{\item \textbf{Problem}\newline}{}
 \newenvironment{solution}{\textbf{Solution}\newline}{}
-\newenvironment{answerlist}{\renewcommand{\labelenumii}{(\alph{enumii})}\begin{enumerate}}{\end{enumerate}}
+\newenvironment{answerlist}{\renewcommand{\labelenumii}{\alph{enumii}.}\begin{enumerate}}{\end{enumerate}}
 
 %% Sweave style
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{}
 \DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
 \newenvironment{Schunk}{}{}
-%\setkeys{Gin}{width=0.8\textwidth}
 
 %% paragraphs
 \setlength{\parskip}{0.7ex plus0.1ex minus0.1ex}
@@ -26,14 +53,6 @@
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \providecommand{\pandocbounded}[1]{#1}
 \setkeys{Gin}{keepaspectratio}
-
-%% fonts: Helvetica
-\usepackage{helvet}
-\IfFileExists{sfmath.sty}{
-  \RequirePackage[helvet]{sfmath}
-}{}
-\renewcommand{\sfdefault}{phv}
-\renewcommand{\rmdefault}{phv}
 
 \newcommand{\extext}[1]{\textbf{\large #1}}
 \newcommandx{\exmchoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{%
@@ -74,16 +93,21 @@
   \mbox{\framebox[0.9\textwidth][l]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
 }
 
-
 \begin{document}
 
 %% title page
 \thispagestyle{empty}
-{\sf
-\textbf{\LARGE{Exam Solutions}}
+
+\textbf{\Huge{\myCourse}}
+
+\vspace*{0.5cm}
+
+\textbf{\huge{\myTitle}}
+
+\vspace*{2cm}
 
 %% \exinput{questionnaire}
-}
+
 \newpage
 
 \begin{enumerate}

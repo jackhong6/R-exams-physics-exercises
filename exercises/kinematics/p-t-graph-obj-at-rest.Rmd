@@ -6,7 +6,7 @@ typ <- match_exams_device()
 tikz_graph_A <- "\\begin{tikzpicture} 
                         \\draw[->] (0,-1.5) node[anchor=east] {$0$} -- (3, -1.5) node[anchor=west] {$t$};
                         \\draw[->] (0,-1.5) -- (0,1.5) node[anchor=east] {$x$};,
-                        \\draw[red, ultra thick] (0,0) -- (3, 0);),
+                        \\draw[red, ultra thick] (0,0) -- (3, 0);
                 \\end{tikzpicture}"
 
 tikz_graph_B <- "\\begin{tikzpicture}
