@@ -1,23 +1,24 @@
 Question
 ========
-How many seconds would it take the Sun's light to reach Earth? The speed of light in vacuum is $3.0 \times 10^8$ m/s. The Sun is $1.5 \times 10^{11}$ m from the Earth.
+How many seconds would it take the Sun's light to reach Earth? The speed of light in vacuum is \SI{3E8}{m/s}. The Sun is \SI{1.5E11}{m} from the Earth.
+
 
 Answerlist
 ----------
-* $5.0 \times 10^2$ s
-* $0$ s
-* $4.5 \times 10^{19}$ s
-* $2.0 \times 10^{-3}$ s
+* \SI{0}{s}
+* \SI{2.0E-3}{s}
+* \SI{5.0E2}{s}
+* \SI{4.5E19}{s}
+
 
 Solution
 ========
 Use the formula for constant velocity motion.
 
-$$ t = \frac{d}{v} = \frac{1.5 \times 10^{11} \text{ m}}{3.0 \times 10^8 \text{ m/s}} = 5.0 \times 10^2 \text{ s}$$
+$$ t = \frac{d}{v} = \frac{\SI{1.5E11}{m}}{\SI{3E8}{m/s}} = \SI{5.0E2}{s}$$
 
 Meta-information
 ================
 exname: car travel distance two stages
 extype: schoice
 exsolution: 1000
-exshuffle: 4

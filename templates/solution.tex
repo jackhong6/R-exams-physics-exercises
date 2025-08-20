@@ -12,7 +12,7 @@
 \newcommand{\Course}[1]{\def\@Course{#1}}
 \newcommand{\Title}[1]{\def\@Title{#1}}
 \Course{Physics}
-\Title{Practice Problem Solutions}
+\Title{Solutions}
 
 %% \exinput{header}
 \newcommand{\myCourse}{\@Course}
@@ -36,8 +36,8 @@
 
 %% new environments
 \newenvironment{question}{\item \textbf{Problem}\newline}{}
-\newenvironment{solution}{\textbf{Solution}\newline}{}
-\newenvironment{answerlist}{\renewcommand{\labelenumii}{\alph{enumii}.}\begin{enumerate}}{\end{enumerate}}
+\newenvironment{solution}{\textbf{Solution}\newline}{\vspace{0.5cm}}
+\newenvironment{answerlist}{\begin{samepage}\renewcommand{\labelenumii}{\alph{enumii}.}\begin{enumerate}}{\end{enumerate}\end{samepage}}
 
 %% Sweave style
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
@@ -56,15 +56,15 @@
 
 \newcommand{\extext}[1]{\textbf{\large #1}}
 \newcommandx{\exmchoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{%
-                \mbox{(a) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
-  \if #2- \else \mbox{(b) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}} \hspace*{2mm}} \fi%
-  \if #3- \else \mbox{(c) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}} \hspace*{2mm}} \fi%
-  \if #4- \else \mbox{(d) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}} \hspace*{2mm}} \fi%
-  \if #5- \else \mbox{(e) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}} \hspace*{2mm}} \fi%
-  \if #6- \else \mbox{(f) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}} \hspace*{2mm}} \fi%
-  \if #7- \else \mbox{(g) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}} \hspace*{2mm}} \fi%
-  \if #8- \else \mbox{(h) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}} \hspace*{2mm}} \fi%
-  \if #9- \else \mbox{(i) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}} \hspace*{2mm}} \fi%
+                \mbox{a. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#1}} \hspace*{4mm}}%
+  \if #2- \else \mbox{b. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#2}} \hspace*{4mm}} \fi%
+  \if #3- \else \mbox{c. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#3}} \hspace*{4mm}} \fi%
+  \if #4- \else \mbox{d. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#4}} \hspace*{4mm}} \fi%
+  \if #5- \else \mbox{e. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#5}} \hspace*{4mm}} \fi%
+  \if #6- \else \mbox{f. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#6}} \hspace*{4mm}} \fi%
+  \if #7- \else \mbox{g. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#7}} \hspace*{4mm}} \fi%
+  \if #8- \else \mbox{h. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#8}} \hspace*{4mm}} \fi%
+  \if #9- \else \mbox{i. \framebox[6mm]{\rule{0mm}{3.5mm} \hspace*{-1.5mm} \extext{#9}} \hspace*{4mm}} \fi%
 }
 \newcommandx{\exclozechoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{\setcounter{enumiii}{1}%
                 \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}\stepcounter{enumiii}}%
@@ -98,13 +98,13 @@
 %% title page
 \thispagestyle{empty}
 
-\textbf{\Huge{\myCourse}}
+\textbf{\huge{\myCourse}}
 
-\vspace*{0.5cm}
+\vspace*{0.1cm}
 
-\textbf{\huge{\myTitle}}
+\textbf{\LARGE{\myTitle}}
 
-\vspace*{2cm}
+\vspace*{0.3cm}
 
 %% \exinput{questionnaire}
 

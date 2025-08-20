@@ -5,17 +5,15 @@ d1 <- sample(10:50, 1) # distance of first phase in km
 v2 <- sample(80:120, 1) # speed of second phase in km/h
 d2 <- sample(100:300, 1) # distance of second phase in km
 
-ans <- (d1 + d2)/(d1/v1 + d2/v2)
-alts <- c((v1*d1 + v2*d2)/(d1 + d2))
-sc <- num_to_schoice(ans, wrong = alts, delta = 0.5, range = c(v1, v2), format = FALSE)
+ans <- signif((d1 + d2)/(d1/v1 + d2/v2), 2)
+sc <- num_to_schoice(ans, delta = 2, digits = 0, range = c(v1, v2), format = FALSE)
 
-sc$questions <- sapply(sc$questions, signif, 3)
-sc$questions <- paste("$", gsub("^ +", "", formatC(sc$questions, digits=3, format="fg")), "\\text{ km/h}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{km/h}", sc$questions)
 ```
 
 Question
 ========
-A car travels $`r formatC(signif(d1, 3), digits=3, format="fg", flag="#")`$ km at $`r formatC(signif(v1, 3), digits=3, format="fg", flag="#")`$ km/h and $`r formatC(signif(d2, 3), digits=3, format="fg", flag="#")`$ km at $`r formatC(signif(v2, 3), digits=3, format="fg", flag="#")`$ km/h. What is the average speed for this trip?
+A car travels \SI{`r d1`}{km} at \SI{`r v1`}{km/h} and \SI{`r d2`}{km} at \SI{`r v2`}{km/h}. What is the average speed for this trip?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -25,7 +23,7 @@ Solution
 ========
 The average speed is the total distance divided by the total time.
 
-$$ v_{avg} = \frac{d_{total}}{t_{total}} = \frac{d_1 + d_2}{d_1/v_1 + d_2/v_2}$$
+$$ v_{avg} = \frac{d_{total}}{t_{total}} = \frac{d_1 + d_2}{d_1/v_1 + d_2/v_2} = \frac{\SI{`r d1`}{km} + \SI{`r d2`}{km}}{\frac{\SI{`r d1`}{km}}{\SI{`r v1`}{km/h}} + \frac{\SI{`r d2`}{km}}{\SI{`r v2`}{km/h}}} = \SI{`r ans`}{km/h}$$
 
 Meta-information
 ================

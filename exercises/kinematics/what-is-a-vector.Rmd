@@ -1,6 +1,6 @@
 Question
 ========
-A scalar quantity is fully described by
+A vector quantity is fully described by
 
 Answerlist
 ----------
@@ -11,10 +11,10 @@ Answerlist
 
 Solution
 ========
-A scalar quantity is fully described by magnitude alone.
+A vector quantity is fully described by both magnitude and direction.
 
 Meta-information
 ================
-exname: what is scalar
+exname: what is a vector
 extype: schoice
-exsolution: 1000
+exsolution: 0010

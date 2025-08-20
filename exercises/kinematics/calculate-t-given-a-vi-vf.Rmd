@@ -9,12 +9,12 @@ dis <- c(a / (vf - vi), a * (vf - vi))
 
 sc <- num_to_schoice(ans, wrong = dis, delta = 0.5, format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
 ```
 
 Question
 ========
-An airplane increases its speed from `r vi` m/s to `r vf` m/s, at an average rate of `r a` m/s$^2$. How much time does it take to complete this speed increase?
+An airplane increases its speed from \SI{`r vi`}{m/s} to \SI{`r vf`}{m/s}, at an average rate of \SI{`r a`}{m/s^2}. How much time does it take to complete this speed increase?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -24,7 +24,7 @@ Solution
 ========
 Use the formula for constant acceleration motion.
 
-$$t = \frac{v_f - v_i}{a} = \frac{`r vf` \text{ m/s} - `r vi` \text{ m/s}}{`r a` \text{ m/s}^2} = `r signif(ans, 3)` \text{ s}$$
+$$t = \frac{v_f - v_i}{a} = \frac{\SI{`r vf`}{m/s} - \SI{`r vi`}{m/s}}{\SI{`r a`}{m/s^2}} = \SI{`r signif(ans, 3)`}{s}$$
 
 Meta-information
 ================

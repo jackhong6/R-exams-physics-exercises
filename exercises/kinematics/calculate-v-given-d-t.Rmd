@@ -8,12 +8,12 @@ dis <- c(t/d, d*t)
 
 sc <- num_to_schoice(ans, wrong = dis, delta = 0.005, range = c(0, d*t), format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m/s}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{m/s}", sc$questions)
 ```
 
 Question
 ========
-Suppose an object travels `r d` metres in `r t` seconds. What is its average speed?
+Suppose an object travels \SI{`r d`}{m} in \SI{`r t`}{s}. What is its average speed?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -23,7 +23,7 @@ Solution
 ========
 Use the formula for constant velocity motion.
 
-$$ v = \frac{d}{t} = \frac{`r d` \text{ m}}{`r t` \text{ s}} = `r signif(d/t, 3)` \text{ m/s}$$ 
+$$ v = \frac{d}{t} = \frac{\SI{`r d`}{m}}{\SI{`r t`}{s}} = \SI{`r signif(d/t, 3)`}{m/s}$$ 
 
 Meta-information
 ================

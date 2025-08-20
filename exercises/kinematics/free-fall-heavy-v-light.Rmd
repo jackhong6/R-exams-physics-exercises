@@ -1,14 +1,14 @@
 Question
 ========
-A 5 kg ball and a 10 kg ball are both dropped off a cliff at the same time. If air drag can be ignored, then the 10 kg ball falls
+A \SI{5}{kg} ball and a \SI{10}{kg} ball are both dropped off a cliff at the same time. If air drag can be ignored, then the \SI{10}{kg} ball falls
 
 
 Answerlist
 ----------
-* **50% faster** than the 5 kg ball.
-* with **double the velocity** of the 5 kg ball.
-* with **double the acceleration** of the 5 kg ball.
-* with the **same acceleration** as the 5 kg ball.
+* \SI{50}{\percent} faster than the \SI{5}{kg} ball.
+* with double the velocity of the \SI{5}{kg} ball.
+* with double the acceleration of the \SI{5}{kg} ball.
+* with the same acceleration as the \SI{5}{kg} ball.
 
 
 Solution

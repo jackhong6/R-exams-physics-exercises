@@ -7,11 +7,11 @@ d_girl <- signif(m_boy / m_girl * d_boy, 2) # distance of girl from pivot in met
 sc <- num_to_schoice(d_girl, delta = 0.1, format = FALSE)
 
 sc$questions <- sapply(sc$questions, signif, 2)
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m}$", sep = "")
+sc$questions <- sprintf("$\\SI{%.1f}{m}$", sc$questions)
 ```
 Question
 ========
-A boy and a girl are balanced on a seesaw. The seesaw has negligible mass. The boy's mass is `r m_boy` kg and the girl's mass is `r m_girl` kg. If the boy sits `r d_boy` m from the pivot, how far from the pivot must the girl sit on the other side of the seesaw?
+A boy and a girl are balanced on a massless seesaw. The boy's mass is $\SI{`r m_boy`}{kg}$ and the girl's mass is $\SI{`r m_girl`}{kg}$. If the boy is sitting $\SI{`r d_boy`}{m}$ from the pivot, how far from the pivot must the girl be sitting on the other side of the seesaw?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

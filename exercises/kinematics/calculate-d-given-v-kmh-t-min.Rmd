@@ -11,14 +11,14 @@ sc <- num_to_schoice(answer, wrong = distractors, range = c(answer/10, v*t), del
 sc$questions <- sapply(sc$questions, signif, sf)
 
 # Format numbers
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ km}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{km}", sc$questions)
 v <- format(v, digits=sf, nsmall = 1)
 t <- format(t, digits=sf, nsmall = 1)
 ```
 
 Question
 ========
-Suppose an object travels at a constant velocity of `r v` km/h. What distance would it travel in `r t` minutes?
+Suppose an object travels at a constant velocity of $\SI{`r v`}{km/h}$. What distance would it travel in $\SI{`r t`}{minutes}$?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -28,7 +28,7 @@ Solution
 ========
 Use the formula for constant velocity motion making sure to convert to the proper units.
 
-$$ d = vt = (`r v` \text{ km/h})(`r t` \text{ min})\left(\frac{1 \text{ h}}{60 \text{ min}} \right) = `r answer` \text{ km}$$ 
+$$ d = vt = (\SI{`r v`}{km/h})(\SI{`r t`}{min})\left(\frac{\SI{1}{h}}{\SI{60}{min}} \right) = \SI{`r answer`}{km}$$ 
 
 Meta-information
 ================

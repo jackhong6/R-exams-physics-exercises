@@ -1,19 +1,19 @@
 Question
 ========
-A car travels at $50$ km/h for 30 minutes and $80$ km/h for 1 hour and 15 minutes. How far does it travel in this time?
+A car travels at \SI{50}{km/h} for \SI{30}{minutes} and \SI{80}{km/h} for \SI{1}{hour} and \SI{15}{minutes}. How far does it travel in this time?
 
 Answerlist
 ----------
-* $125$ km
-* $130$ km
-* $113.75$ km
-* $117$ km
+* \SI{125}{km}
+* \SI{130}{km}
+* \SI{113.75}{km}
+* \SI{117}{km}
 
 Solution
 ========
 Use the formula for constant velocity motion for each part and add the two distances together.
 
-$$ d = v_1 t_1 + v_2 t_2 = (50 \text{ km/h})(0.5 \text{ h}) + (80 \text{ km/h})(1.25 \text{ h}) = 125 \text{ km}$$
+$$ d = v_1 t_1 + v_2 t_2 = (\SI{50}{km/h})(\SI{0.5}{h}) + (\SI{80}{km/h})(\SI{1.25}{h}) = \SI{125}{km}$$
 
 Meta-information
 ================

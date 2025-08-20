@@ -9,7 +9,7 @@ Answerlist
 
 Solution
 ========
-False. The acceleration of the ball is always $9.8$ m/s$^2$ down. 
+False. The acceleration of the ball is always \SI{9.8}{m/s^2} down. 
 
 Meta-information
 ================

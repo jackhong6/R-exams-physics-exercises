@@ -9,12 +9,12 @@ dis <- c((vf - vi) / a)
 
 sc <- num_to_schoice(ans, wrong = dis, delta = 0.1, range(ans/10, ans*10), format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ s}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
 ```
 
 Question
 ========
-A car accelerates from `r vi` km/h to `r vf` km/h, at an average rate of `r a` m/s$^2$. How much time does it take to complete this speed increase?
+A car accelerates from \SI{`r vi`}{km/h} to \SI{`r vf`}{km/h}, at an average rate of \SI{`r a`}{m/s^2}. How much time does it take to complete this speed increase?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -22,20 +22,20 @@ answerlist(sc$questions, markup = "markdown")
 
 Solution
 ========
-First, convert the speeds from km/h to m/s.
+First, convert the speeds from \unit{km/h} to \unit{m/s}.
 
 ```{r, echo = FALSE, results = "hide"}
-vi_kmh <- signif(vi / 3.6, sf)
-vf_kmh <- signif(vf / 3.6, sf)
+vi_ms <- signif(vi / 3.6, sf)
+vf_ms <- signif(vf / 3.6, sf)
 ```
 
-$$v_i = `r vi`\text{ km/h} \times \frac{1 \text{ h}}{3600 \text{ s}} \times \frac{1000 \text{ m}}{1 \text{ km}} = `r vi_kmh` \text{ m/s}$$
-$$v_f = `r vf`\text{ km/h} \times \frac{1 \text{ h}}{3600 \text{ s}} \times \frac{1000 \text{ m}}{1 \text{ km}} = `r vf_kmh` \text{ m/s}$$
+$$v_i = \SI{`r vi`}{km/h} \times \frac{\SI{1}{h}}{\SI{3600}{s}} \times \frac{\SI{1000}{m}}{\SI{1}{km}} = \SI{`r vi_ms`}{m/s}$$
+$$v_f = \SI{`r vf`}{km/h} \times \frac{\SI{1}{h}}{\SI{3600}{s}} \times \frac{\SI{1000}{m}}{\SI{1}{km}} = \SI{`r vf_ms`}{m/s}$$
 
 
 Then, use the formula for constant acceleration motion.
 
-$$t = \frac{v_f - v_i}{a} = \frac{`r vf_kmh` \text{ m/s} - `r vi_kmh` \text{ m/s}}{`r a` \text{ m/s}^2} = `r signif(ans, 3)` \text{ s}$$
+$$t = \frac{v_f - v_i}{a} = \frac{\SI{`r vf_ms`}{m/s} - \SI{`r vi_ms`}{m/s}}{\SI{`r a`}{m/s^2}} = \SI{`r signif(ans, 3)`}{s}$$
 
 Meta-information
 ================

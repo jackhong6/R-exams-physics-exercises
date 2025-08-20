@@ -3,21 +3,17 @@ sf <- 3 # number of significant figures to use
 v <- signif(runif(1, 1, 100), sf) # speed in m/s
 t <- signif(runif(1, 1, 100), sf) # time in s
 
-while (abs(v - t) < 20) {
-    t <- signif(runif(1, 1, 100), sf)
-}
-
 answer <- v*t
-distractors <- c(v/t, t/v)
-sc <- num_to_schoice(answer, wrong = distractors, delta = 0.5, format = FALSE)
+distractors <- c(v/t)
+sc <- num_to_schoice(answer, wrong = distractors, delta = 0.1, range = c(min(v/t, t/v), 2*v*t), format = FALSE)
 
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- paste("$", gsub("^ +", "", sc$questions), "\\text{ m}$", sep = "")
+sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
 ```
 
 Question
 ========
-Suppose an object travels at a constant velocity of `r v` m/s. What distance would it travel in `r t` s?
+Suppose an object travels at a constant velocity of $\SI{`r v`}{m/s}$. What distance would it travel in $\SI{`r t`}{s}$?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -27,7 +23,7 @@ Solution
 ========
 Use the formula for constant velocity motion.
 
-$$ d = vt = (`r v` \text{ m/s})(`r t` \text{ s}) = `r signif(v*t, 3)` \text{ m}$$ 
+$$ d = vt = (\SI{`r v`}{m/s})(\SI{`r t`}{s}) = \SI{`r signif(v*t, 3)`}{m}$$ 
 
 Meta-information
 ================

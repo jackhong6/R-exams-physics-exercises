@@ -10,12 +10,12 @@ t <- round(d * (pace_minutes * 60 + pace_seconds)) # time in seconds to finish t
 
 sc <- num_to_schoice(t, delta = 10, format = FALSE)
 sc$questions <- sapply(sc$questions, round)
-sc$questions <- sprintf("%02d:%02d:%02d", sc$questions %/% 3600, (sc$questions %/% 60) %% 60, sc$questions %% 60)
+sc$questions <- sprintf("\\si{%02d:%02d:%02d}", sc$questions %/% 3600, (sc$questions %/% 60) %% 60, sc$questions %% 60)
 ```
 
 Question
 ========
-A runner finishes a marathon (42.195 km) with an average pace of `r pace_minutes` minutes and `r pace_seconds` seconds per kilometre. What is the runner's time? (Answers are formatted as hours:minutes:seconds)
+A runner finishes a marathon (\SI{42.195}{km}) with an average pace of \SI{`r pace_minutes`}{minutes} and \SI{`r pace_seconds`}{seconds} per \si{kilometre}. What is the runner's time for the marathon? (Answers are formatted as \si{hours:minutes:seconds})
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -27,12 +27,12 @@ First, calculate the speed in kilometres per second.
 ```{r, echo = FALSE, results = "asis"}
 v <- signif(1 / (pace_minutes * 60 + pace_seconds), 5)
 ```
-$$v = \frac{1 \text{ km}}{`r pace_minutes*60` \text{ s} + `r pace_seconds` \text{ s}} = `r v` \text{ km/s}$$
+$$v = \frac{\SI{1}{km}}{\SI{`r pace_minutes*60`}{s} + \SI{`r pace_seconds`}{s}} = \SI{`r v`}{km/s}$$
 Then, calculate the time using the formula for constant velocity motion.
-$$ t = \frac{d}{v} = \frac{`r d` \text{ km}}{`r v` \text{ km/s}} = `r format(t, scientific = FALSE)` \text{ s}$$
-Finally, convert the number of seconds into hours, minutes, and seconds. (60 seconds = 1 minute and 60 minutes = 1 hour)
+$$ t = \frac{d}{v} = \frac{\SI{`r d`}{km}}{\SI{`r v`}{km/s}} = \SI{`r format(t, scientific = FALSE)`}{s}$$
+Finally, convert the number of seconds into hours, minutes, and seconds. (\SI{60}{s} = \SI{1}{minute} and \SI{60}{minutes} = \SI{1}{hour})
 
-$`r format(t, scientific = FALSE)`$ s = $`r t %/% 3600`$ hours, $`r (t %/% 60) %% 60`$ minutes, and $`r t %% 60`$ seconds
+$$\SI{`r format(t, scientific = FALSE)`}{s} = \SI{`r t %/% 3600`}{hours}, \SI{`r (t %/% 60) %% 60`}{minutes}, \SI{`r t %% 60`}{seconds}$$
 
 Meta-information
 ================

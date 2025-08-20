@@ -1,13 +1,13 @@
 ```{r, echo = FALSE, results = "hide"}
 n <- sample(0:1, 1)
-scalars <- c("50 km", "9.8 m/s/s", "50 km/h", "28 degrees Celsius")
-vectors <- c("50 km, North", "9.8 m/s/s, down", "50 km/h, East", "37 N, right")
+scalars <- c("\\SI{50}{km}", "\\SI{9.8}{m/s^2}", "\\SI{50}{km/h}", "\\SI{28}{\\celsius}")
+vectors <- c("\\SI{50}{km}, \\si{North}", "\\SI{9.8}{m/s^2}, \\si{down}", "\\SI{50}{km/h}, \\si{East}", "\\SI{37}{N}, \\si{right}")
 ```
 
 Question
 ========
 Identify the following quantity as being either a scalar or a vector:
-**`r ifelse(n == 0, sample(scalars, 1), sample(vectors, 1))`**
+`r ifelse(n == 0, sample(scalars, 1), sample(vectors, 1))`
 
 Answerlist
 ----------

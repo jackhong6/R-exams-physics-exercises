@@ -32,7 +32,7 @@ beam <- c("\\begin{tikzpicture}",
 
 Question
 ========
-A uniform beam $QR$, 2.0 metres long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load hanging vertically down from point $Q$. What is the tension in the supporting wire $PQ$?
+A uniform beam $QR$, $\SI{2.0}{\meter}$ long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load of mass $\SI{`r mass`}{\kg}$ hanging vertically down from point $Q$. What is the tension in the horizontal wire $PQ$?
 
 ```{r, echo = FALSE, results = "asis"}
 include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
@@ -45,12 +45,22 @@ answerlist(sc$questions, markup = "markdown")
 
 Solution
 ========
-The answer is the answer.
+Since the mass of the beam is negligible, only two forces apply a torque on the beam (about the hinge point $R$): the tension in the horizontal wire, $T_{PQ}$, and the force from the hanging load, $mg$. 
+
+To calculate the torque from these two forces, we need to calculate the component of the force that is perpendicular to the beam. For the horizontal wire, this means multiplying by $\sin(\ang{`r angle`})$ while for the vertical wire, this means multiplying by $\cos(\ang{`r angle`})$.
+
+The net torque must be zero since the beam is in static equilibrium. Therefore, the equation for the net torque is
+
+$$\tau_{net} = r T_{PQ} \sin(\ang{`r angle`}) - rmg \cos(\ang{`r angle`}) = 0$$
+
+The factors of $r$ cancel out (so the length of $\SI{2.0}{\meter}$ was not needed). Solving for $T_{PQ}$, we get
+
+$$T_{PQ} = \frac{(\SI{`r mass`}{\kg}) (\SI{9.8}{N/kg}) \cos(\ang{`r angle`})}{\sin(\ang{`r angle`})} = \SI{`r signif(tension, 3)`}{\N}$$
 
 
 Meta-information
 ================
-exname: calculate tension angled beam with load
+exname: calculate tension angled massless beam with load
 extype: schoice
 exsolution: `r mchoice2string(sc$solutions)`
 exshuffle: 4
