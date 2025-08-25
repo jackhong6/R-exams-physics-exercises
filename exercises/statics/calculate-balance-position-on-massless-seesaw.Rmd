@@ -22,7 +22,7 @@ Solution
 ========
 Since the torque on the seesaw is balanced, we must have $m_{b} d_{b} = m_{g} d_{g}$ where $m_b$ is the mass of the boy, $d_b$ is the distance of the boy from the pivot, and $m_g$ and $d_g$ are corresponding quantities for the girl. Solving for $d_g$ gives:
 
-$$d_g = \left(\frac{m_b}{m_g} \right) d_b = \left(\frac{`r m_boy` \text{ kg}}{`r m_girl` \text{ kg}} \right) `r d_boy` \text{ m} = `r d_girl` \text{ m}$$
+$$d_g = \left(\frac{m_b}{m_g} \right) d_b = \left(\frac{\SI{`r m_boy`}{kg}}{\SI{`r m_girl`}{kg}} \right) \SI{`r d_boy`}{m} = \SI{`r d_girl`}{m}$$
 
 Meta-information
 ================

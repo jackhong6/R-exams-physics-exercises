@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(100:250, 1) # speed of plane in m/s
+h <- sample(100:1000, 1) # altitude of plane in m
+td <- sample(1:9, 1) # time delay between packages in s
+g <- 9.8 # gravitational acceleration in m/s^2
+
+d <- v * td
+
+sc <- num_to_schoice(d, digits = 0, format = FALSE)
+sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+```
+
+Question
+========
+A plane flying with a horizontal velocity of \SI{`r v`}{m/s} and at an altitude of \SI{`r h`}{m} drops a package of supplies. A second package is dropped \SI{`r td`}{s} later. Ignoring air resistance, how far apart will the two packages land on the ground?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Since vertical acceleration does not affect horizontal velocity, the packages remain the same horizontal distance apart. Therefore, they would land the same distance apart as when they were dropped. The plane, traveling at a constant velocity, drops the second package at the following distance from the first package:
+
+$$d = vt = (\SI{`r v`}{m/s})(\SI{`r td`}{s})  = \SI{`r d`}{m}$$
+
+Meta-information
+================
+exname: calculate horizontal distance between two packages dropped from a plane
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

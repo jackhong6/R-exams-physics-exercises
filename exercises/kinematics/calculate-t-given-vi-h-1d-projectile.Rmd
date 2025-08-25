@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+vi <-signif(runif(1, 1, 40), 3) # speed in m/s
+h <- signif(runif(1, 1, 40), 3) # height of bridge in m
+g <- 9.8 # acceleration due to gravity in m/s^2
+
+# assigning down as positive
+a <- 0.5 * g
+b <- vi
+c <- -h
+
+t <- (-b + sqrt(b^2 - 4*a*c)) / (2 * a)
+
+sc <- num_to_schoice(t, delta = 0.01, digits = 2, format = FALSE)
+sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
+```
+
+Question
+========
+A person throws a rock straight down from a bridge with an initial speed of \SI{`r vi`}{m/s}. It falls \SI{`r h`}{m} to the water below. How much time does it take for the rock to hit the water?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the quadratic formula to solve the equation $h = \frac{1}{2} g t^2 + v_i t$ for $t$.
+
+$$\frac{1}{2} g t^2 + v_i t - h = 0$$
+$$a = \frac{1}{2} g = \frac{1}{2} (\SI{`r g`}{m/s^2}) = \SI{`r a`}{m/s^2}, b = v_i = \SI{`r vi`}{m/s}, c = -h = \SI{`r -h`}{m}$$
+
+$$t = \frac{-b + \sqrt{b^2 - 4ac}}{2a} = \SI{`r fmt(t)`}{s}$$
+
+
+Meta-information
+================
+exname: calculate time given initial velocity and height of a 1d projectile
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -11,7 +11,7 @@ Answerlist
 
 Solution
 ========
-The direction of the rock's velocity changes from up to down and its acceleration is always $9.8$ m/s$^2$ down.
+Yes, a rock thrown straight up is an example. The direction of the rock's velocity changes from up to down while its acceleration is always \SI{9.8}{m/s^2} down.
 
 Meta-information
 ================

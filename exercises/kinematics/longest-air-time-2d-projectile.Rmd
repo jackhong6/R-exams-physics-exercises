@@ -1,0 +1,23 @@
+Question
+========
+Suppose that several projectiles are launched. Which one will be in the air for the longest time? 
+
+
+Answerlist
+----------
+* The one with the furthest horizontal range.
+* The one with the greatest maximum height.
+* The one with the greatest initial speed.
+* None of the above.
+
+
+Solution
+========
+Since horizontal and vertical motions can be analyzed separately, only the vertical motion matters for the longest air time. The projectile with the greatest maximum height will stay up in the air for the longest time.
+
+
+Meta-information
+================
+exname: longest air time of 2d projectile
+extype: schoice
+exsolution: 0100

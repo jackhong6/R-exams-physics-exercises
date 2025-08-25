@@ -1,0 +1,21 @@
+Question
+========
+A package of supplies is dropped from a plane flying at a constant velocity. Five seconds later, a second package is dropped. Neglecting air resistance, the horizontal distance between the falling packages will
+
+Answerlist
+----------
+* increase
+* decrease
+* be constant
+* any of the above depending on the weight of the packages
+
+Solution
+========
+Since vertical acceleration does not affect horizontal velocity, the two packages with the same constant horizontal velocity will remain the same horizontal distance apart (although the vertical distance will increase). 
+
+
+Meta-information
+================
+exname: horizontal distance between packages dropped from a plane
+extype: schoice
+exsolution: 0010

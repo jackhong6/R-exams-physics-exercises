@@ -1,0 +1,39 @@
+```{r}
+options(scipen=999)
+```
+
+
+Question
+========
+A light-year (\si{ly}) is the distance that light travels in vacuum in one year.  
+The speed of light is \SI{3.00E8}{m/s}. How many miles are there in a light-year?
+
+($\SI{1}{mile} = \SI{1.609E3}{\meter}$, $\SI{1}{year} = \SI{365}{days}$)
+
+
+Answerlist
+----------
+* \SI{5.88E12}{mi}
+* \SI{9.46E12}{mi}
+* \SI{5.88E15}{mi}
+* \SI{9.46E15}{mi}
+
+
+Solution
+========
+Use the formula for constant velocity motion and convert to the desired units.
+
+```{r, echo=FALSE}
+t <- 365*24*60*60
+d <- 3E8 * t
+```
+$$(\SI{1}{yr}) \left(\frac{\SI{365}{days}}{\SI{1}{yr}}\right) \left(\frac{\SI{24}{h}}{\SI{1}{day}}\right) \left(\frac{\SI{60}{min}}{\SI{1}{h}}\right) \left(\frac{\SI{60}{s}}{\SI{1}{min}}\right) = \SI{`r sprintf("%g", t)`}{s}$$
+
+$$ d = vt = (\SI{3.00E8}{m/s})(\SI{`r sprintf("%g", t)`}{s}) = \SI{`r sprintf("%g", d)`}{m}$$
+$$(\SI{`r sprintf("%g", d)`}{m}) \left(\frac{\SI{1}{mi}}{\SI{1.609E3}{m}}\right) = \SI{`r sprintf("%g", signif(d/1.609E3, 3))`}{mi}$$
+
+Meta-information
+================
+exname: light year distance in miles
+extype: schoice
+exsolution: 0100

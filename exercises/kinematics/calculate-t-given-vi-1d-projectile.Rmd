@@ -1,4 +1,4 @@
-```{r calculate-t-given-vi-projectile-1d, echo = FALSE, results = "hide"}
+```{r, echo = FALSE, results = "hide"}
 sf <- 3 # significant digits to use
 vi <- signif(runif(1, 10, 40), sf) # initial speed in m/s
 

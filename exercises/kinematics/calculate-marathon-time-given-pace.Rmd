@@ -15,7 +15,7 @@ sc$questions <- sprintf("\\si{%02d:%02d:%02d}", sc$questions %/% 3600, (sc$quest
 
 Question
 ========
-A runner finishes a marathon (\SI{42.195}{km}) with an average pace of \SI{`r pace_minutes`}{minutes} and \SI{`r pace_seconds`}{seconds} per \si{kilometre}. What is the runner's time for the marathon? (Answers are formatted as \si{hours:minutes:seconds})
+A runner completes a marathon (\SI{42.195}{km}) with an average pace of \SI{`r pace_minutes`}{minutes} and \SI{`r pace_seconds`}{seconds} per \si{kilometre}. What is the runner's time for the marathon? (Answers are formatted as \si{hours:minutes:seconds})
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

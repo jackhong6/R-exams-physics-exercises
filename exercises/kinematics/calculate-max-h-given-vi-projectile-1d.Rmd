@@ -1,0 +1,30 @@
+```{r, echo = FALSE, results = "hide"}
+vi <- signif(runif(1, 10, 40), 3) # initial speed in m/s
+
+g <- 9.8 # gravitational acceleration in m/s^2
+h_max <- signif(vi^2 / 2 / g, 3)
+
+sc <- num_to_schoice(h_max, delta = 0.1, range = c(h_max/2, 2*h_max), digits = 1, format = FALSE)
+sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+```
+
+Question
+========
+What is the maximum height reached by a ball thrown straight up with an initial velocity of \SI{`r vi`}{m/s}? Assume that the ball is thrown on the surface of the Earth and that it undergoes constant acceleration due to gravity (ignore air resistance).
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula $v_f^2=v_i^2 + 2ad$ with $a = g = \SI{-9.8}{m/s^2}$ and $v_f = 0$ (the velocity of the ball at its maximum height is zero). Solve for $d$:
+
+$$d = \frac{- v_i}{2a} = \frac{\SI{-`r vi`}{m/s}}{2(\SI{`r -g`}{m/s^2})} = \SI{`r h_max`}{m}$$
+
+Meta-information
+================
+exname: calculate max height given initial velocity of a ball thrown straight up
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

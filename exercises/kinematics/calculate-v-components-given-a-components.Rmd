@@ -1,0 +1,25 @@
+Question
+========
+A particle initially moving with a velocity of \SI{2}{m/s} in the $x$-direction experiences a constant acceleration of \SI{1}{m/s^2} in the $x$-direction and \SI{-2}{m/s^2} in the $y$-direction. What are the velocity components of the particle after \SI{4}{s}?
+
+Answerlist
+----------
+* $v_x = \SI{6}{m/s}, v_y = \SI{-8}{m/s}$
+* $v_x = \SI{-6}{m/s}, v_y = \SI{4}{m/s}$
+* $v_x = \SI{3}{m/s}, v_y = \SI{-2}{m/s}$
+* $v_x = \SI{4}{m/s}, v_y = \SI{-8}{m/s}$
+
+Solution
+========
+The velocities can be calculated separately.
+
+$$v_x = \SI{2}{m/s} + (\SI{1}{m/s^2})(\SI{4}{s}) = \SI{6}{m/s}$$
+$$v_y = \SI{0}{m/s} + (\SI{-2}{m/s^2})(\SI{4}{s}) = \SI{8}{m/s}$$
+
+
+Meta-information
+================
+exname: calculate velocity components given acceleration components
+extype: schoice
+exsolution: 1000
+exshuffle: 4

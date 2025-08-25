@@ -1,0 +1,41 @@
+Question
+========
+An athlete throws a javelin at four different angles above the horizontal, each with the same speed: \ang{30}, \ang{40}, \ang{60}, \ang{80}. Which two throws cause the javelin to land the same distance away?
+
+Answerlist
+----------
+* \ang{30} and \ang{80}
+* \ang{40} and \ang{60}
+* \ang{40} and \ang{80}
+* \ang{30} and \ang{60}
+
+Solution
+========
+The range of a projectile can be calculated by first finding the time using the vertical velocity, and then using that time to find the horizontal range. The time can be found using the formula $v_{f, y} = v_{i, y} + at$ with $v_{f, y} = -v_{i, y}$
+
+$$t = \frac{-2v_{i, y}}{a} = \frac{-2 v_i \sin(\theta)}{g}$$
+The horizontal velocity is constant, so the horizontal distance (i.e. range) is
+
+$$d = v_x t = v_i \cos(\theta) \left( \frac{-2 v_i \sin(\theta)}{g} \right) = \frac{-2 v_i^2 \cos(\theta) \sin(\theta)}{g}$$
+Therefore, the range would be the same for two angles $\theta_1$ and $\theta_2$ if $\cos(\theta_1)\sin(\theta_1) = \cos(\theta_2)\sin(\theta_2)$. Performing the calculations, we get:
+$$\cos(\ang{30})\sin(\ang{30}) = `r cos(30 * pi / 180) * sin(30 * pi / 180)`$$
+$$\cos(\ang{40})\sin(\ang{40}) = `r cos(40 * pi / 180) * sin(40 * pi / 180)`$$
+$$\cos(\ang{60})\sin(\ang{60}) = `r cos(60 * pi / 180) * sin(60 * pi / 180)`$$
+$$\cos(\ang{80})\sin(\ang{80}) = `r cos(80 * pi / 180) * sin(80 * pi / 180)`$$
+Since $\cos(\theta) \sin(\theta)$ are the same for \ang{30} and \ang{60}, the range is the same for these two angles.
+
+
+Alternatively, we can use the complementary angle identity ($\cos(\theta) = \sin(\ang{90} - \theta)$) to get:
+$$\cos(\theta)\sin(\theta) = \sin(\ang{90} - \theta) \sin(\theta)$$
+and notice that the expression would be equal for complementary angles (angles that sum to \ang{90}). For example, if $\theta_1 = \ang{30}$ and $\theta_2 = \ang{60}$, then 
+
+$$\sin(\ang{90} - \theta_1) \sin(\theta_1) = \sin(\ang{90} - \ang{30}) \sin(\ang{30}) = \sin(\ang{60}) \sin(\ang{30})$$
+$$\sin(\ang{90} - \theta_2) \sin(\theta_2) = \sin(\ang{90} - \ang{60}) \sin(\ang{60}) = \sin(\ang{30}) \sin(\ang{60})$$
+
+
+Meta-information
+================
+exname: compare range at different angles
+extype: schoice
+exsolution: 0001
+exshuffle: 4

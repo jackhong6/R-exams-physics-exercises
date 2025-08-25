@@ -1,6 +1,6 @@
 Question
 ========
-A heavy seesaw is out of balance. A lightweight child sits on the end that is tilted downward, and a heavy child sits on the other side so that the seesaw now balances. If both children move forward so that they are at half of their original distance from the pivot, what will happen to the seesaw?
+A heavy seesaw is out of balance. A lightweight child sits on the end that is tilted downward, and a heavy child sits on the other side so that the seesaw now balances. If both children then move forward so that they are at half of their original distance from the pivot, what will happen to the seesaw?
 
 
 Answerlist
@@ -17,10 +17,10 @@ Since the heavy child sits on the side that initially had less torque (so that i
 
 For example, if the left side of the seesaw is initially tilted downward and  
 
- * the left side of the seesaw applies +3 Nm of torque.
- * the right side of the seesaw applies -1 Nm of torque.
- * the lightweight child sits on the left and applies +8 Nm of torque.
- * the heavy child sits on the right side and applies -10 Nm of torque.
+ * the left side of the seesaw applies \SI{+3}{Nm} of torque.
+ * the right side of the seesaw applies \SI{-1}{Nm} of torque.
+ * the lightweight child sits on the left and applies \SI{+8}{Nm} of torque.
+ * the heavy child sits on the right side and applies \SI{-10}{Nm} of torque.
  
 Then the net torque when the seesaw is balanced is:
 $$\tau_{net} = (3 + 8) - (1 + 10) = 0$$
@@ -29,11 +29,11 @@ In the calculations above, we used the convention that counterclockwise rotation
 
 When the children move to half their original distance, the torque they provide will also be halved  
 
- * the lightweight child sits at half the original distance and now applies +4 Nm of torque
- * the heavy child sits at half the original distance and now applies -5 Nm of torque
+ * the lightweight child sits at half the original distance and now applies \SI{+4}{Nm} of torque
+ * the heavy child sits at half the original distance and now applies \SI{-5}{Nm} of torque
   
 The net torque is now:
-$$\tau_{net} = (3 + 4) \text{ Nm} - (1 + 5) \text{ Nm} = 1 \text{ Nm}$$
+$$\tau_{net} = (3 + 4) \si{Nm} - (1 + 5) \si{Nm} = \SI{1}{Nm}$$
 Since the net torque is positive, the seesaw is rotating counterclockwise. In other words, the left side (where the lightweight child is sitting) will once again tilt downward.
 
 

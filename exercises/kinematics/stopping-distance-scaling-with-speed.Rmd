@@ -18,7 +18,7 @@ Solution
 Solve $v_f^2 = v_i^2 + 2ad$ for $d$ and set $v_f = 0$ to get
 
 $$d = -\frac{v_i^2}{2a}$$ 
-Therefore, the braking distance is proportional to the square of the initial velocity. If the initial velocity is multiplied by `r n`, then the car would need `r n`$^2$ times the distance to stop.
+Therefore, the braking distance is proportional to the square of the initial velocity. If the initial velocity is multiplied by $`r n`$, then the car would need $`r n`^2$ times the distance to stop.
 
 Meta-information
 ================

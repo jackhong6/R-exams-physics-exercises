@@ -1,0 +1,34 @@
+```{r calculate-v-given-d-t, echo = FALSE, results = "hide"}
+sf <- 3 # significant figures to use
+t <- signif(runif(1, 1, 9), 3) # time in s
+g <- 9.8 # acceleration due to gravity in m/s^2
+
+vi <- g * t / 2
+
+sc <- num_to_schoice(vi, format = FALSE, digits = 1)
+sc$questions <- sprintf("\\SI{%g}{m/s}", sc$questions)
+```
+
+Question
+========
+A ball tossed straight up returns to its starting point in \SI{`r t`}{s}. What was its initial speed? Ignore air resistance.
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The final velocity is equal to the initial velocity, but in the opposite direction ($v_f = -v_i$). Substitute this into the equation $v_f = v_i + at$ and solve for $vi$:
+
+$$-v_i = v_i + at$$
+$$-2v_i = at$$
+$$vi = -\frac{at}{2} = -\frac{(\SI{-9.8}{m/s^2})(\SI{`r t`}{s})}{2} = \SI{`r signif(vi, 3)`}{m/s}$$
+
+
+Meta-information
+================
+exname: calculate initial velocity given time 1d projectile
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

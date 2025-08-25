@@ -1,0 +1,28 @@
+Question
+========
+The acceleration of gravity on the Moon is one-sixth of that on Earth. If you hit a baseball on the Moon with the same speed and angle that you would on Earth, the ball would land
+
+Answerlist
+----------
+* the same distance away
+* one-sixth as far
+* 6 times as far
+* 36 times as far
+
+Solution
+========
+The air time of the ball can be calculated from the formula $v_f = v_i + at$ with $v_f = -v_i$. 
+
+$$t = -\frac{2v_i}{a}$$
+On Earth, the time is $t_{Earth} = -2 v_i / g_{Earth}$. On the Moon, $g_{Moon} = g_{Earth} / 6$ so
+
+$$t_{Moon} = -\frac{2 v_i}{g_{Earth} / 6} = 6 \times \frac{-2 v_i}{g_{Earth}} = 6 t_{Earth}$$
+
+The air time of the ball is 6 times greater on the Moon than on Earth. Since the horizontal velocity is the same, the ball will travel six times as far.
+
+
+Meta-information
+================
+exname: range on the Moon
+extype: schoice
+exsolution: 0010

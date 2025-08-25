@@ -9,7 +9,7 @@ Answerlist
 
 Solution
 ========
-False. The velocity in the vertical direction is zero, but the total velocity is not zero.
+False. The vertical velocity is zero at the maximum height, but the horizontal velocity is not.
 
 Meta-information
 ================

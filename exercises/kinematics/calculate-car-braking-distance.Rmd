@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+vi <- sample(30:120, 1) # initial speed in km/h
+a <- 5 # acceleration is m/s^2
+
+d <- (vi / 3.6) ^ 2 / 2 / a
+distractors <- c(vi / 3.6 / 2 / a, vi^2 / 2 / a)
+
+sc <- num_to_schoice(d, wrong = distractors, digits = 0, format = FALSE)
+
+sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+```
+
+Question
+========
+A car with good tires on a dry road can decelerate at about \SI{5.0}{m/s^2} when braking. If the car travels with an initial velocity of \SI{`r vi`}{km/h} and brakes under such conditions, what distance would it travel before it stops?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+First, convert the initial velocity to \si{m/s}.
+
+$$\SI{`r vi`}{km/h} \times \frac{\SI{1000}{m}}{\SI{1}{km}} \times \frac{\SI{1}{h}}{\SI{3600}{s}} = \SI{`r vi/3.6`}{m/s}$$
+
+Then, use the formula $v_f^2 = v_i^2 + 2ad$ with $v_f = 0$ and $a = \SI{-5}{m/s^2}$.
+
+$$d = \frac{-v_i^2}{2a} = \frac{-(\SI{`r vi/3.6`}{m/s})^2}{2(\SI{-5.0}{m/s^2})} = \SI{`r signif(d, 2)`}{m}$$
+
+Meta-information
+================
+exname: calculate car braking distance
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

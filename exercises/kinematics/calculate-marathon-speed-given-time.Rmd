@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+th <- sample(2:5, 1) # hours
+tm <- sample(0:59, 1) # minutes
+ts <- sample(0:59, 1) # seconds
+d <- 42.195 # marathon distance in km
+
+v <- signif(d * 1000 / (th*3600 + tm*60 + ts), 3)
+
+sc <- num_to_schoice(v, delta = 0.1, range = c(0, 2*v), format = FALSE)
+sc$questions <- sprintf("\\SI{%g}{m/s}", sc$questions)
+```
+
+Question
+========
+A runner completes a marathon (\SI{42.195}{km}) in \SI{`r th`}{hours}, \SI{`r tm`}{minutes}, and \SI{`r ts`}{seconds}. What is the runner's average speed for the marathon in \si{m/s}?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The average speed is the total distance divided by the total time.
+
+$$d = (\SI{42.195}{km})(\SI{1000}{m} / \si{km}) = \SI{42195}{m}$$
+$$t = (\SI{`r th`}{h} \times \SI{3600}{s/h}) + (\SI{`r tm`}{min} \times \SI{60}{s/min}) + \SI{`r ts`}{s} = \SI{`r th*3600 + tm*60 + ts`}{s}$$
+$$v = \frac{d}{t} = \frac{\SI{42195}{m}}{\SI{`r th*3600 + tm*60 + ts`}{s}} = \SI{`r v`}{m/s}$$
+
+
+Meta-information
+================
+exname: calculate marathon speed given time
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,0 +1,25 @@
+Question
+========
+Two displacement vectors have magnitudes of \SI{5}{m} and \SI{7}{m}, respectively. When these two vectors are added, the magnitude of the sum
+
+Answerlist
+----------
+* is \SI{12}{m}
+* could be as small as \SI{2}{m}, or as large as \SI{12}{m}
+* is \SI{2}{m}
+* is larger than \SI{12}{m}
+
+
+Solution
+========
+If the two vectors point in the same direction, then the magnitude of their sum is \SI{12}{m}.
+If the two vectors point in opposite directions, then the magnitude of their sum is \SI{2}{m}.
+Otherwise the magnitude of their sum is somewhere between \SI{2}{m} and \SI{12}{m}
+
+
+Meta-information
+================
+exname: add vectors possibilities
+extype: schoice
+exsolution: 0100
+exshuffle: 4
