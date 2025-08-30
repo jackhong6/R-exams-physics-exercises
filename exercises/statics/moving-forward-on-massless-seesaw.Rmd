@@ -13,7 +13,13 @@ Answerlist
 
 Solution
 ========
-Since the seesaw is initially balanced, we must have $\tau_{net} = m_{1} d_{1} - m_{2} d_{2} = 0$. Halving both distances will result in $\tau_{net} = m_1 (d_1/2) - m_2 (d_2/2) = \frac{1}{2}(m_1 d_1 - m_2 d_2) = \frac{1}{2}(0) = 0$. Therefore, the seesaw will remain balanced.
+Since the seesaw is initially balanced, we must have 
+$$\tau_{net} = m_{1} d_{1} - m_{2} d_{2} = 0$$
+
+Halving both distances will result in 
+$$\tau_{net} = m_1 (d_1/2) - m_2 (d_2/2) = \frac{1}{2}(m_1 d_1 - m_2 d_2) = \frac{1}{2}(0) = 0$$
+
+Therefore, the seesaw will remain balanced.
 
 
 Meta-information

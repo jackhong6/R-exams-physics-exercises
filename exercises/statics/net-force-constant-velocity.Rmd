@@ -1,0 +1,21 @@
+Question
+========
+A rocket moves through outer space with a constant velocity of \SI{9.8}{m/s} toward the Andromeda galaxy. What is the net force acting on the rocket?
+
+Answerlist
+----------
+* A force equal to its weight on Earth, $mg$.
+* A force equal to the gravity acting on it.
+* The net force is zero.
+* Cannot be determined without more information.
+
+Solution
+========
+Since the rocket is moving with constant velocity, its acceleration is zero and the net force acting on the rocket must also be zero.
+
+Meta-information
+================
+exname: net force constant velocity
+extype: schoice
+exsolution: 0010
+exshuffle: 4

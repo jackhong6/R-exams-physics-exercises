@@ -9,7 +9,7 @@ Answerlist
 
 Solution
 ========
-True. An object moving with constant velocity has zero acceleration and is still moving.
+True. An object with a constant nonzero velocity has zero acceleration and is still moving.
 
 Meta-information
 ================

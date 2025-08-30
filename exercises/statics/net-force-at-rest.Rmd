@@ -1,0 +1,26 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(1:10, 1) # in Newtons
+```
+
+
+Question
+========
+A book weighs \SI{`r w`}{N} at the surface of the Earth. When held at rest on top of your head, the net force on the book is
+
+Answerlist
+----------
+* \SI{`r w`}{N}
+* \SI{`r -w`}{N}
+* \SI{9.8}{N}
+* \SI{0}{N}
+
+Solution
+========
+Since the book is at rest, its acceleration is zero and the net force acting on it must be zero.
+
+Meta-information
+================
+exname: net force at rest
+extype: schoice
+exsolution: 0001
+exshuffle: 4

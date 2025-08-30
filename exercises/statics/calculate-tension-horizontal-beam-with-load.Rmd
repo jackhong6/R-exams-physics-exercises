@@ -1,0 +1,63 @@
+```{r, echo = FALSE, results = "hide"}
+angle <- sample(20:60, 1) # angle PQR in degrees
+beam_length <- sample(1:9, 1) # in metres
+beam_mass <- sample(1:9, 1) # in kg
+load_mass <- sample(10:99, 1) # in kg
+
+tension <- 9.8 / sin(angle * pi / 180) * (beam_mass / 2 + load_mass)
+
+sc <- num_to_schoice(tension, range(c(0.1, 2) * tension), format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+qx <- 3 / tan(angle * pi / 180)
+beam <- c("\\begin{tikzpicture}",
+    "\\coordinate (P) at (0, 3);",
+    sprintf("\\coordinate (Q) at (%f,0);", qx),
+    "\\coordinate (R) at (0,0);",
+    sprintf("\\pic[draw, \"$\\ang{%.1f}$\"scale=0.7, angle eccentricity = %f, 
+            angle radius=%fcm] {angle={P--Q--R}};", 
+            angle, -.1/40 * (angle - 20) + 0.8, -1.2/40 * (angle - 20) + 2.2),
+    "\\pic[draw, angle radius=4mm] {right angle = {P--R--Q}};",
+    "\\fill[yellow!33] (0,3.5) rectangle (-.4,-1);",
+    "\\draw (0,3.5) -- (0,-1);",
+    "\\draw (P) node[above right] {$P$} -- (Q) node[right, xshift=0.1cm] {$Q$};",
+    "\\draw (Q) -- ++(0,-1);",
+    sprintf("\\draw[fill=gray!33] (Q)+(-0.6,-1) rectangle +(0.6,-1.8) node[midway, scale=0.8] {$\\SI{%.1f}{\\kg}$};", load_mass),
+    "\\draw[double, line cap=round, double distance=6pt] (R) -- (Q);",
+    "\\draw[fill] (R) circle[radius=1pt] node[below right, yshift=-0.1cm] {$R$};",
+    "\\draw[fill] (Q) circle[radius=1pt];",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A \SI{`r fmt(beam_length, 1)`}{m} long uniform beam of mass \SI{`r fmt(beam_mass, 2)`}{kg}, $QR$, is mounted by a hinge on a wall and held in a horizontal position by wire $PQ$, forming a \ang{`r fmt(angle, 1)`} angle at point $Q$ as shown in the figure. A load of mass \SI{`r fmt(load_mass, 1)`}{kg} hangs vertically down from point $Q$. What is the magnitude of the tension in wire $PQ$?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The net torque about the hinge point $R$ must be zero because the beam is in static equilibrium. The weight of the beam, the tension in the wire, and the hanging load each apply a torque to the beam. The force of gravity on a uniform beam can be modeled as a force, $F_g = mg$, acting on the centre of the beam. Let $l$ be the length of the beam, $\theta$ be the angle at point $Q$, $T$ be the tension in wire, $m$ be the mass of the beam, and $M$ be the mass of the hanging load.
+
+$$\tau_{net} = l T \sin(\theta) - \frac{lmg}{2} - lMg = 0$$
+Solving for $T$, we get
+$$T = \frac{g}{\sin(\theta)} \left(\frac{m}{2} + M \right) = \frac{\SI{9.80}{N/kg}}{\sin(\ang{`r fmt(angle,1)`})} \left(\frac{\SI{`r fmt(beam_mass, digits=2)`}{kg}}{2} + \SI{`r fmt(load_mass, digits=1)`}{kg} \right) = \SI{`r signif(tension, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: calculate tension horizontal beam with load
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,9 +1,10 @@
 ```{r, echo = FALSE, results = "hide"}
 angle <- sample(20:60, 1) # angle PQR in degrees
 mass <- sample(10:99, 1) # weight of load hanging at point Q in kg
-tension <- 9.8 * mass / tan(angle * pi / 180) # tension in wire PQ in Newtons
 
-sc <- num_to_schoice(tension, range = c(0.1, 2) * tension, format = FALSE)
+hinge_force <- mass * 9.8 / sin(angle * pi / 180)
+
+sc <- num_to_schoice(hinge_force, range = c(0.1, 10) * hinge_force, format = FALSE)
 sc$questions <- sprintf("$\\SI{%.0f}{\\N}$", signif(sc$questions, 3))
 
 # use the same graphics type (pdf, svg, png) as the current xweave() call
@@ -32,7 +33,7 @@ beam <- c("\\begin{tikzpicture}",
 
 Question
 ========
-A uniform beam $QR$, $\SI{2.0}{\meter}$ long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load of mass $\SI{`r mass`}{\kg}$ hanging vertically down from point $Q$. What is the tension in the horizontal wire $PQ$?
+A uniform beam $QR$, $\SI{1.0}{\meter}$ long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load of mass $\SI{`r mass`}{\kg}$ hanging vertically down from point $Q$. What is the magnitude of the net force on the hinge at point $R$?
 
 ```{r, echo = FALSE, results = "asis"}
 include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
@@ -55,12 +56,18 @@ $$\tau_{net} = r T_{PQ} \sin(\ang{`r angle`}) - rmg \cos(\ang{`r angle`}) = 0$$
 
 The factors of $r$ cancel out (so the length of $\SI{2.0}{\meter}$ was not needed). Solving for $T_{PQ}$, we get
 
-$$T_{PQ} = \frac{mg \cos\theta}{\sin\theta} = \frac{(\SI{`r mass`}{\kg}) (\SI{9.8}{N/kg}) \cos(\ang{`r angle`})}{\sin(\ang{`r angle`})} = \SI{`r signif(tension, 3)`}{\N}$$
+$$T_{PQ} = \frac{mg \cos(\theta)}{\sin(\theta)}$$
+To keep the beam in static equilibrium, the net force must also be zero. This means that the force on the hinge must be equal to the sum of the forces applied by the tension in the wire and the hanging mass. Since the two forces are perpendicular, we can use the Pythagorean theorem to calculate the magnitude of their sum.
 
+$$F_{hinge} = \sqrt{(mg)^2 + (mg)^2 \frac{\cos^2(\theta)}{\sin^2(\theta)}} = mg \sqrt{1 + \frac{\cos^2(\theta)}{\sin^2(\theta)}} = mg \sqrt{\frac{\sin^2(\theta)}{\sin^2(\theta)} + \frac{\cos^2(\theta)}{\sin^2(\theta)}}$$
+Using the Pythagorean identity ($\sin^2\theta + \cos^2\theta = 1$), we can simplify further:
+$$F_{hinge} = mg \sqrt{\frac{\sin^2(\theta) + \cos^2(\theta)}{\sin^2(\theta)}} = mg \sqrt{\frac{1}{\sin^2(\theta)}} = \frac{mg}{\sin(\theta)}$$
+Plugging in the numbers from the problem, we get:
+$$F_{hinge} = \frac{(\SI{`r mass`}{kg}) (\SI{9.8}{m/s^2})}{\sin(\ang{`r angle`})} = \SI{`r signif(hinge_force, 3)`}{N}$$
 
 Meta-information
 ================
-exname: calculate tension angled massless beam with load
+exname: calculate force on hinge angled massless beam with load
 extype: schoice
 exsolution: `r mchoice2string(sc$solutions)`
 exshuffle: 4

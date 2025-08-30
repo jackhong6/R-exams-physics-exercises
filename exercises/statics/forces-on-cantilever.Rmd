@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+    "\\filldraw[fill=yellow!33, thick] (0,2.3) rectangle (10,2);",
+    "\\filldraw[fill=yellow!33, thick] (0,2) rectangle (0.3,0);",
+    "\\filldraw[fill=yellow!33, thick] (3,2) rectangle (3.3,0);",
+    "\\node[anchor=south] at (0.15,2.3) {$\\mathbf{F_1}$};",
+    "\\node[anchor=south] at (3.15,2.3) {$\\mathbf{F_2}$};",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A cantilever is held in static equilibrium by two vertical supports as shown in the figure. The beam is fastened to the supports with screws so that each support could apply an upward or a downward force.
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "cantilever", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+Answerlist
+----------
+* A
+* B
+* C
+* D
+
+
+Solution
+========
+The answer is the answer.
+
+Meta-information
+================
+exname: Forces on cantilever
+extype: schoice
+exsolution: 1000
+exshuffle: 4

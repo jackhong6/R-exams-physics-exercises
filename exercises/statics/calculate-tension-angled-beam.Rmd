@@ -1,0 +1,60 @@
+```{r, echo = FALSE, results = "hide"}
+angle <- sample(20:60, 1) # angle PQR in degrees
+beam_length <- sample(1:6, 1) # in metres
+beam_mass <- sample(10:99, 1) # in kg
+
+tension <- beam_mass * 9.8 / 2 / tan(angle * pi / 180)
+
+sc <- num_to_schoice(tension, range(c(0.1, 10) * tension), format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+qx <- 3 / tan(angle * pi / 180)
+beam <- c("\\begin{tikzpicture}",
+    "\\coordinate (P) at (0, 3);",
+    sprintf("\\coordinate (Q) at (%f,3);", qx),
+    "\\coordinate (R) at (0,0);",
+    sprintf("\\pic[draw, \"$\\ang{%d}$\"scale=0.8, angle eccentricity = %f, 
+            angle radius=%fcm] {angle={P--Q--R}};", 
+            angle, -.1/40 * (angle - 20) + 0.8, -1.2/40 * (angle - 20) + 2.2),
+    "\\pic[draw, angle radius=3mm] {right angle = {Q--P--R}};",
+    "\\fill[yellow!33] (0,3.5) rectangle (-.4,-1);",
+    "\\draw (0,3.5) -- (0,-1);",
+    "\\draw (P) node[above right] {$P$} -- (Q) node[above right] {$Q$};",
+    "\\draw[double, line cap=round, double distance=6pt] (R) -- (Q);",
+    "\\draw[fill] (R) circle[radius=1pt] node[below right] {$R$};",
+    "\\draw[fill] (Q) circle[radius=1pt];",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A \SI{`r fmt(beam_length, 1)`}{m} long uniform beam of mass \SI{`r beam_mass`}{kg} ($QR$) is mounted by a hinge on a wall and held in position by a horizontal wire ($PQ$), forming a \ang{`r angle`} angle at point $Q$ as shown in the figure. What is the tension in the horizontal wire $PQ$?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The force of gravity on a uniform beam can be modeled as a force, $F_g = mg$, acting on the centre of the beam. The net torque about the hinge point $R$ must be zero because the beam is in static equilibrium. The weight of the beam and the tension in the wire are the two forces applying a torque to the beam. Let $l$ be the length of the beam, $\theta$ be the angle at point $Q$, and $T$ be the tension in wire.
+
+$$\tau_{net} = l T \sin(\theta) - \frac{1}{2} l m g \cos(\theta) = 0$$
+Solving for $T$, we get
+$$T = \frac{mg\cos(\theta)}{2 \sin(\theta)} = \frac{(\SI{`r beam_mass`}{kg}) (\SI{9.8}{m/s^2}) \cos(\ang{`r angle`})}{2 \sin(\ang{`r angle`})} = \SI{`r signif(tension, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: calculate tension angled beam
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

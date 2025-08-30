@@ -1,0 +1,26 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(500:1000, 1) # in Newtons
+```
+
+
+Question
+========
+A person weighing \SI{`r w`}{N} stands with one foot on each of two bathroom scales. Which statement is correct about this situation?
+
+Answerlist
+----------
+* Each scale should read \SI{`r w`}{N}
+* Each scale should read \SI{`r w/2`}{N}
+* The sum of the two scale readings should be \SI{`r w`}{N}
+* None of the other statements are true.
+
+Solution
+========
+Since the person is at rest, the net force on the person must be zero. The normal force on the person from the two scales must cancel out the person's weight. Therefore, the sum of the two scale readings should be equal to the person's weight.
+
+Meta-information
+================
+exname: standing on two scales
+extype: schoice
+exsolution: 0010
+exshuffle: 4

@@ -1,0 +1,65 @@
+```{r, echo = FALSE, results = "hide"}
+angle <- 50#sample(20:60, 1) # angle PQR in degrees
+beam_length <- sample(1:9, 1) # in metres
+beam_mass <- 30#sample(1:9, 1) # in kg
+
+hinge_force <- beam_mass * 9.8 / 2 / sin(angle * pi / 180)
+
+
+sc <- num_to_schoice(hinge_force, range(c(0.1, 2) * hinge_force), format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 2))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+qx <- 3 / tan(angle * pi / 180)
+beam <- c("\\begin{tikzpicture}",
+    "\\coordinate (P) at (0, 3);",
+    sprintf("\\coordinate (Q) at (%f,0);", qx),
+    "\\coordinate (R) at (0,0);",
+    sprintf("\\pic[draw, \"$\\ang{%d}$\"scale=0.8, angle eccentricity = %f, 
+            angle radius=%fcm] {angle={P--Q--R}};", 
+            angle, -.1/40 * (angle - 20) + 0.8, -1.2/40 * (angle - 20) + 2.2),
+    "\\pic[draw, angle radius=4mm] {right angle = {P--R--Q}};",
+    "\\fill[yellow!33] (0,3.5) rectangle (-.4,-1);",
+    "\\draw (0,3.5) -- (0,-1);",
+    "\\draw (P) node[above right] {$P$} -- (Q) node[right, xshift=0.1cm] {$Q$};",
+    "\\draw[double, line cap=round, double distance=6pt] (R) -- (Q);",
+    "\\draw[fill] (R) circle[radius=1pt] node[below right, yshift=-0.1cm] {$R$};",
+    "\\draw[fill] (Q) circle[radius=1pt];",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A \SI{`r fmt(beam_length, digits=1)`}{m} long uniform beam of mass \SI{`r fmt(beam_mass, digits=1)`}{kg}, $QR$, is mounted by a hinge on a wall and held in a horizontal position by wire $PQ$, forming a \ang{`r angle`} angle at point $Q$ as shown in the figure. What is the magnitude of the force that the hinge exerts on the beam at point $R$?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The net torque about the axis coming out of the page through point $Q$ is $\tau_{net} = \frac{mgl}{2} - F_y l = 0$.
+Solving for $F_y$,
+
+$$F_y = \frac{mg}{2}$$
+The $x$ component of the hinge force must be equal and opposite to the $x$ component of the tension.
+$$F_x = T \cos\theta = \frac{mg \cos\theta}{2 \sin\theta}$$
+
+The magnitude of the total force is $F = \sqrt{F_x^2 + F_y^2}$. After some algebra, this expression will work out to:
+
+$$F = \frac{mg}{2 \sin\theta} = \frac{(\SI{`r beam_mass`}{kg}) (\SI{9.8}{m/s^2})}{2 \sin(\ang{`r angle`})} = \SI{`r signif(hinge_force, 2)`}{N}$$
+
+Meta-information
+================
+exname: calculate force on hinge horizontal beam
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
