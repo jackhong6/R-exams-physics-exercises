@@ -1,0 +1,58 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d_load <- sample(2:5, 1) # distance from fulcrum to load in metres
+d_effort <- d_load + sample(1:5, 1) # distance from fulcrum to effort in metres
+load_weight <- 1000 * sample(1:9, 1) # newtons
+
+f_effort <- d_load / d_effort * load_weight
+
+s <- d_load + d_effort
+distractors <- c(d_effort / d_load, d_load / s, d_effort / s) * load_weight
+
+sc <- num_to_schoice(f_effort, wrong = distractors, delta = f_effort / 100, format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+    sprintf("\\draw[very thick] (0, 0.5) -- (%d, 0.5);", d_effort + d_load),
+    sprintf("\\draw[very thick] (%f, 0.5) -- (%f, 0) -- (%f, 0) -- cycle;", d_effort, d_effort + 0.5, d_effort - 0.5),
+    sprintf("\\draw[very thick] (%f, 1) rectangle (%f, 0.5);", s-0.25, s+0.25),
+    sprintf("\\draw[|<->|, thick] (%f, 0.75) -- node[midway, above, font=\\small]{\\SI{%d}{m}} (%f, 0.75);", d_effort, d_load, s),
+    sprintf("\\draw[|<->|, thick] (%f, 1.25) -- node[midway, above, font=\\small]{\\SI{%d}{m}} (%f, 1.25);", 0, s, s),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+
+A lever is \SI{`r d_effort + d_load`}{m} long. The distance from the fulcrum to the load to be lifted is \SI{`r d_load`}{m}. If a rock weighing \SI{`r load_weight`}{N} is to be lifted, how much force must be exerted on the lever?
+
+\vspace{1em}
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "lever", format = typ, packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The worker must generate a torque equal to the torque from the rock.
+$$F_{worder} d_{worker} = F_{load} d_{load}$$
+Where $d_{worker} = \SI{`r s`}{m} - \SI{`r d_load`}{m} = \SI{`r d_effort`}{m}$. Therefore, solving for $F_{worker}$:
+$$F_{worker} = \frac{d_{load}}{d_{worker}} F_{load} = \left(\frac{`r d_load`}{`r d_effort`}\right) \SI{`r load_weight`}{N} = \SI{`r signif(f_effort, 3)`}{N}$$
+
+
+
+Meta-information
+================
+exname: calculate lever force to lift weight
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

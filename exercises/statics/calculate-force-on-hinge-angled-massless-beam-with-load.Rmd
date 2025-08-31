@@ -33,10 +33,10 @@ beam <- c("\\begin{tikzpicture}",
 
 Question
 ========
-A uniform beam $QR$, $\SI{1.0}{\meter}$ long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load of mass $\SI{`r mass`}{\kg}$ hanging vertically down from point $Q$. What is the magnitude of the net force on the hinge at point $R$?
+A uniform beam $QR$, $\SI{1.0}{\meter}$ long with negligible mass, is mounted by a hinge on a wall and held in position by a horizontal wire $PQ$ as shown in the figure. The beam supports a load of mass $\SI{`r mass`}{\kg}$ hanging vertically down from point $Q$. What is the magnitude of the force on the hinge at point $R$?
 
 ```{r, echo = FALSE, results = "asis"}
-include_tikz(beam, name = "beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
+include_tikz(beam, name = "calculate-force-on-hinge-angled-beam", format = typ, library = c("angles", "quotes"), packages="siunitx")
 ```
 
 ```{r, echo = FALSE, results = "asis"}

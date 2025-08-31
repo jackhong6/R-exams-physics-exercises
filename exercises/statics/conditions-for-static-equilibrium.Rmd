@@ -7,7 +7,7 @@ Answerlist
 * $\sum \boldsymbol{\vec{F}} = 0$
 * $\sum \boldsymbol{\vec{\tau}} = 0$
 * $\sum \boldsymbol{\vec{F}} = 0$ and $\sum \boldsymbol{\vec{\tau}} = 0$
-* None of the above
+* $\sum \boldsymbol{\vec{F}} = 0$ or $\sum \boldsymbol{\vec{\tau}} = 0$ (but not both)
 
 Solution
 ========

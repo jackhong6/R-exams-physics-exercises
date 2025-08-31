@@ -1,0 +1,61 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d1 <- 6 # distance of 1st support from CG in metres
+d2 <- round(runif(1, 1, 5), 1) # distance of 2nd support from CG in metres
+m <- sample(10:99, 1) # mass of beam in kg
+
+F2 <- d1 / (d1 - d2) * m * 9.8
+
+sc <- num_to_schoice(F2, range(c(0.1, 2) * F2), delta = F2/10, format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 2))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+    sprintf("\\filldraw[fill=yellow!33, thick] (0,2.3) rectangle (%f,2);", 2*d1),
+    sprintf("\\draw[fill=black] (%f,2.15) circle (0.08);", d1),
+    sprintf("\\draw[-Stealth, thick] (%f, 2.15) node[above, yshift=0.1cm, font=\\small]{CG} -- (%f, 0.3);", d1, d1),
+    "\\filldraw[fill=yellow!33, thick] (0,2) rectangle (0.3,0);",
+    sprintf("\\filldraw[fill=yellow!33, thick] (%f,2) rectangle (%f,0);", d1 - d2, d1 + 0.3 - d2),
+    sprintf("\\node[anchor=south] at (%f,2.3) {$\\mathbf{F_2}$};", d1 - d2 + 0.15),
+    sprintf("\\draw[|<->|, thick] (0.15, 1.2) -- node[above, font=\\small] {\\SI{%g}{m}} (%f, 1.2);", d1 - d2, d1 - d2 + 0.15),
+    sprintf("\\draw[|<->|, thick] (%f, 1.2) -- node[above, font=\\small] {\\SI{%g}{m}} (%f, 1.2);", d1 - d2 + 0.15, d2, d1),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A cantilever beam is held in static equilibrium by two vertical supports separated by \SI{`r d1 - d2`}{m}. The beam's mass is \SI{`r m`}{kg} and its centre of gravity (CG) is \SI{`r d2`}{m} from the second support. What is the magnitude of the force applied by the second support, $\mathbf{F_2}$?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "calculate-F2-on-cantilever", format = typ, library = c("angles", "quotes", "arrows.meta"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The net force on the beam must be zero. Assuming that $F_1$ points down and $F_2$ points up:
+$$-F_1 + F_2 - mg = 0$$
+
+The net torque about the centre of gravity (CG) must be zero. Let $d_1 = \SI{`r d1`}{m}$ be the distance from the CG to the first support and $d_2 = \SI{`r d2`}{m}$ be the distance from the CG to the second support:
+$$d_1 F_1 - d_2 F_2 = 0$$
+Solving the above system of linear equations for $F_2$ (by substitution or elimination) gives:
+
+$$F_2 = \left(\frac{d_1}{d_1 - d_2} \right) mg = \left(\frac{`r d1`}{`r d1` - `r d2`} \right) (\SI{`r m`}{kg})(\SI{9.8}{N/kg}) = \SI{`r signif(F2, 2)`}{N}$$
+
+
+
+
+
+Meta-information
+================
+exname: calculate F2 on cantilever
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

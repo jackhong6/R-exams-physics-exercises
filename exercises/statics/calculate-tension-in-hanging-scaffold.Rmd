@@ -1,0 +1,53 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d1 <- sample(1:6, 1) # distance of box from left wire in metres
+d2 <- sample(1:6, 1) # distance of box from right wire in metres
+s <- d1 + d2 # total length of scaffold in metres
+m <- sample(10:99, 1) # mass of box in kilograms
+
+left_tension <- d2 / s * m * 9.8
+
+sc <- num_to_schoice(left_tension, range = c(0.1, m*9.8) * left_tension, delta = left_tension/100, format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 3) -- (0, 0);",
+  sprintf("\\draw[thick] (%d, 3) -- (%d, 0);", s, s),
+  sprintf("\\draw[thick] (0, 0) rectangle (%d, -0.2);", s),
+  sprintf("\\draw[thick] (%f, 0.75) rectangle node[midway]{\\SI{%d}{kg}} (%f, 0);", d1-0.75, m, d1+0.75),
+  sprintf("\\draw[|<->|, thick] (0, 2) -- node[midway, above]{\\SI{%d}{m}} (%d, 2);", s, s),
+  sprintf("\\draw[|<->|, thick] (0, 1) -- node[midway, above]{\\SI{%d}{m}} (%d, 1);", d1, d1),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A scaffold of negligible mass is hanging horizontally from wires on each end. The scaffold is \SI{`r s`}{m} long. A \SI{`r m`}{kg} box sits \SI{`r d1`}{m} from the left end. What is the tension in the left wire?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "scaffold", format = typ, packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+To avoid needing to know the tension in the right wire, we can calculate the torque about the rotation axis going through the right side of the scaffold. Let $T_1$ be the tension in the left wire, $d_B = \SI{`r d2`}{m}$, and $d_L = \SI{`r s`}{m}$. Then, 
+$$T_1 d_L = mg d_B$$
+Solving for $T_1$:
+$$T_1 = \left(\frac{d_B}{d_L} \right) mg = \left(\frac{`r d2`}{`r s`}\right) (\SI{`r m`}{kg}) (\SI{9.8}{N/kg}) = \SI{`r signif(left_tension, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: calculate tension in hanging scaffold
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

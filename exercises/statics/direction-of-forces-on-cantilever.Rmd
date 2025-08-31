@@ -1,0 +1,43 @@
+```{r, echo = FALSE, results = "hide"}
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+    "\\filldraw[fill=yellow!33, thick] (0,2.3) rectangle (10,2);",
+    "\\filldraw[fill=yellow!33, thick] (0,2) rectangle (0.3,0);",
+    "\\filldraw[fill=yellow!33, thick] (3,2) rectangle (3.3,0);",
+    "\\node[anchor=south] at (0.15,2.3) {$\\mathbf{F_1}$};",
+    "\\node[anchor=south] at (3.15,2.3) {$\\mathbf{F_2}$};",
+    "\\draw[fill=black] (5,2.15) node[above, yshift=0.1cm, font=\\small]{CG} circle (0.08);",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A cantilever is held in static equilibrium by two vertical supports as shown in the figure. The beam is fastened to the supports with screws so that each support could apply an upward or downward force. The centre of gravity (CG) of the beam is to the right of the second support. In which direction must $\mathbf{F_1}$ and $\mathbf{F_2}$ point to keep the beam in static equilibrium?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "cantilever", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+Answerlist
+----------
+* $\mathbf{F_1}$ and $\mathbf{F_2}$ both point upward
+* $\mathbf{F_1}$ and $\mathbf{F_2}$ both point downward
+* $\mathbf{F_1}$ points upward while $\mathbf{F_2}$ points downward
+* $\mathbf{F_1}$ points downward while $\mathbf{F_2}$ points upward
+
+
+Solution
+========
+The net force and the net torque (around any axis) on the beam must be zero in order for the beam to be in static equilibrium. 
+
+In order to oppose the downward force of gravity on the beam, the vector sum of $\mathbf{F_1}$ and $\mathbf{F_2}$ must point upward. Then, considering the torque about the centre of gravity of the beam, $\mathbf{F_1}$ and $\mathbf{F_2}$ must point in opposite directions and $\mathbf{F_2}$ must be greater than $\mathbf{F_1}$ for the torques to cancel out (since $\mathbf{F_2}$ is closer to the axis). Therefore, $\mathbf{F_2}$ must point up and $\mathbf{F_1}$ must point down.
+
+
+Meta-information
+================
+exname: Direction of forces on cantilever
+extype: schoice
+exsolution: 0001
