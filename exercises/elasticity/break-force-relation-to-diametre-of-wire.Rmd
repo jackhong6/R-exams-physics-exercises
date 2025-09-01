@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+break_tension <- 40 * sample(1:10, 1)
+```
+Question
+========
+A metal wire was found to break when subjected to a minimum tension of \SI{`r break_tension`}{N}. If the wire diametre were half as large, the thinner wire would be expected to break under a minimum tension of
+
+Answerlist
+----------
+* \SI{`r break_tension/4`}{N}
+* \SI{`r break_tension/2`}{N}
+* \SI{`r signif(break_tension/1.5, 2)`}{N}
+* \SI{`r break_tension`}{N}
+
+
+Solution
+========
+The equation below shows that the force required to break the wire is proportional to the area.
+$$F = E \frac{\Delta L}{L_0} A$$
+Since the area is proportional to the diametre squared, so is the force. With half the diametre, we have a quarter of the area since $(d/2)^2 = d^2 / 4$. Therefore, only a quarter of the original force is required to break the thinner wire with half the diametre.
+
+The answer is \SI{`r break_tension/4`}{N}.
+
+
+Meta-information
+================
+exname: break force relation to diametre of wire
+extype: schoice
+exsolution: 1000
+exshuffle: 4

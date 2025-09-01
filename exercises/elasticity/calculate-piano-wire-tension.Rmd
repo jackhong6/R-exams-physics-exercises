@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d <- signif(runif(1, 0.74, 1.3), 2) # diameter of wire in mm
+l <- signif(runif(1, 1, 2), 2) # length of wire in m
+dl <- signif(runif(1, 0.1, 1), 2) # Change in length in cm
+
+tension <- 200E9 * (dl/100) / l * pi * (d/1000)^2 / 4 # in newtons
+
+sc <- num_to_schoice(tension, delta = tension/10, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, 2)
+sc$questions <- sprintf("$\\SI{%g}{N}$", sc$questions)
+```
+Question
+========
+A steel piano wire of diameter \SI{`r d`}{mm} and length \SI{`r l`}{m} stretches \SI{`r dl`}{cm} when tightened. How great is the tension in the wire? The elastic modulus of steel is \SI{200E9}{N/m^2}.
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The tension can be calculated using the following equation. Make sure to convert the \si{mm} and \si{cm} to metres and to use the formula for the area of a circle to calculate the cross sectional area, $A = \pi r^2 = \pi \left(\frac{d}{2}\right)^2=\frac{\pi}{4} d^2$.
+
+
+$$F = E \frac{\Delta L}{L_0} A = (\SI{200E9}{N/m^2}) \left(\frac{\SI{`r dl/100`}{m}}{\SI{`r l`}{m}}\right) \left(\frac{\pi}{4} (\SI{`r d/1000`}{m})^2 \right) = \SI{`r signif(tension, 2)`}{N}$$
+
+
+Meta-information
+================
+exname: calculate piano wire tension
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

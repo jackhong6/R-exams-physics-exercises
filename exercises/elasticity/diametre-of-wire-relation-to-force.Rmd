@@ -1,0 +1,28 @@
+Question
+========
+The weight that will cause a wire of diameter $d$ to stretch a given distance, for a fixed length of wire, is
+
+Answerlist
+----------
+* proportional to $d$
+* proportional to $d^2$
+* inversely proportional to $d$
+* inversely proportional to $d^2$
+* independent of $d$
+
+Solution
+========
+The force required to stretch a wire a given distance, for a fixed length of wire is described by the equation
+
+$$F = E \frac{\Delta L}{L_0} A$$
+Where $A$ is the cross-sectional area of the wire. The area of a circle is
+$$A = \pi r^2 = \pi \left(\frac{d}{2}\right)^2 = \left(\frac{\pi}{4} \right) d^2$$
+So $F \propto A \propto d^2$ and we see that the weight that will cause a wire of diameter $d$ to stretch a given distance, for a fixed length of wire, is proportional to $d^2$.
+
+
+Meta-information
+================
+exname: diameter of wire relation to force
+extype: schoice
+exsolution: 01000
+exshuffle: 4

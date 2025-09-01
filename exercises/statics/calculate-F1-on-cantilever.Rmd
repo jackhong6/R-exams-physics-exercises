@@ -30,7 +30,7 @@ Question
 A cantilever beam is held in static equilibrium by two vertical supports separated by \SI{`r d1 - d2`}{m}. The beam's mass is \SI{`r m`}{kg} and its centre of gravity (CG) is \SI{`r d2`}{m} from the second support. What is the magnitude of the force applied by the first support, $\mathbf{F_1}$?
 
 ```{r, echo = FALSE, results = "asis"}
-include_tikz(tikz, name = "calculate-F1-on-cantilever", format = typ, library = c("angles", "quotes", "arrows.meta"), packages="siunitx")
+include_tikz(tikz, name = "calculate-F1-on-cantilever", format = typ, library = c("arrows.meta"), packages="siunitx")
 ```
 
 ```{r, echo = FALSE, results = "asis"}

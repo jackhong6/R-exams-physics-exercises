@@ -47,7 +47,7 @@ $$T_1 = \left(\frac{d_B}{d_L} \right) mg = \left(\frac{`r d2`}{`r s`}\right) (\S
 
 Meta-information
 ================
-exname: calculate tension in hanging scaffold
+exname: calculate left tension in hanging scaffold
 extype: schoice
 exsolution: `r mchoice2string(sc$solutions)`
 exshuffle: 4

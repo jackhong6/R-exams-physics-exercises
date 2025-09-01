@@ -6,7 +6,7 @@ my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calculate-tension-in-hanging-scaffold.Rmd")
+my_exam <- list("calculate-stress.Rmd", "calculate-piano-wire-tension.Rmd")
 
 # Generate different PDFs
 exams2pdf(my_exam, edir = "exercises", template = "templates/practice", 

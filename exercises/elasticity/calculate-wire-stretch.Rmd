@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:100, 1) # mass of hanging block in kg
+d <- signif(runif(1, 1, 5), 2) # diameter of wire in mm
+l <- signif(runif(1, 30, 100), 3) # length of wire in cm 
+
+stretch <- 9.8 * m * (l/100) / 200E9 / (pi * (d/2000)^2) * 1000 # mm
+
+sc <- num_to_schoice(stretch, delta = stretch/10, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, 2)
+sc$questions <- sprintf("$\\SI{%g}{mm}$", sc$questions)
+```
+Question
+========
+A mass of \SI{`r m`}{kg} is suspended from a steel wire of diameter \SI{`r d`}{mm} and length \SI{`r l`}{cm}. How much will the wire stretch? The elastic modulus of steel is \SI{200E9}{N/m^2}.
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The change in length can be calculated using the following equation. Make sure to convert the \si{mm} and \si{cm} to metres and to use the formula for the area of a circle to calculate the cross sectional area, $A = \pi r^2 = \pi \left(\frac{d}{2}\right)^2=\frac{\pi}{4} d^2$.
+
+
+$$\Delta L = \frac{1}{E} \frac{F}{A} L_0 = \left(\frac{1}{\SI{200E9}{N/m^2}}\right) \left(\frac{(\SI{`r m`}{kg})(\SI{9.8}{N/kg})}{\frac{\pi}{4} (\SI{`r d / 1000`}{m})^2}\right) (\SI{`r l/100`}{m}) = \SI{`r stretch/1000`}{m} = \SI{`r signif(stretch, 3)`}{mm}$$
+
+
+Meta-information
+================
+exname: calculate wire stretch
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

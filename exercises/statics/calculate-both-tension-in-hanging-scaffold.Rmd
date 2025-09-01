@@ -1,0 +1,57 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d1 <- sample(1:6, 1) # distance of box from left wire in metres
+d2 <- d1 + sample(1:6, 1) # distance of box from right wire in metres (always different from d1)
+s <- d1 + d2 # total length of scaffold in metres
+m <- sample(10:99, 1) # mass of box in kilograms
+
+left_tension <- signif(d2 / s * m * 9.8, 3)
+right_tension <- signif(d1 / s * m * 9.8, 3)
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 3) -- (0, 0);",
+  sprintf("\\draw[thick] (%d, 3) -- (%d, 0);", s, s),
+  sprintf("\\draw[thick] (0, 0) rectangle (%d, -0.2);", s),
+  sprintf("\\draw[thick] (%f, 0.75) rectangle node[midway]{\\SI{%d}{kg}} (%f, 0);", d1-0.75, m, d1+0.75),
+  sprintf("\\draw[|<->|, thick] (0, 2) -- node[midway, above]{\\SI{%d}{m}} (%d, 2);", s, s),
+  sprintf("\\draw[|<->|, thick] (0, 1) -- node[midway, above]{\\SI{%d}{m}} (%d, 1);", d1, d1),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A scaffold of negligible mass is hanging horizontally from wires on each end. The scaffold is \SI{`r s`}{m} long. A \SI{`r m`}{kg} box sits \SI{`r d1`}{m} from the left end. What is the tension in each wire?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "scaffold", format = typ, packages="siunitx")
+```
+
+Answerlist
+----------
+* left tension = \SI{`r left_tension`}{N}; right tension = \SI{`r right_tension`}{N}
+* left tension = \SI{`r right_tension`}{N}; right tension = \SI{`r left_tension`}{N}
+* left tension = \SI{`r signif(9.8 * m / 2, 3)`}{N}; right tension = \SI{`r signif(9.8 * m / 2, 3)`}{N}
+* left tension = \SI{`r signif(left_tension / 9.8, 3)`}{N}; right tension = \SI{`r signif(right_tension / 9.8, 3)`}{N}
+
+Solution
+========
+The net force on the scaffold must be zero. Let $T_1$ be the tension in the left wire and $T_2$ be the tension in the right wire:
+$$T_1 + T_2 - mg = 0$$
+
+The net torque about the axis going through the point in the platform right below the centre of the box must also be zero. We choose this axis to eliminate the torque from the weight of the box. Let $d_1 = \SI{`r d1`}{m}$ and $d_2 = \SI{`r d2`}{m}$:
+$$T_1 d_1 - T_2 d_2 = 0$$
+Solving the above system of linear equations by elimination or substitution gives:
+$$T_1 = \left(\frac{d_2}{d_1+d_2} \right) mg = \left(\frac{`r d2`}{`r s`}\right) (\SI{`r m`}{kg}) (\SI{9.8}{N/kg}) = \SI{`r signif(left_tension, 3)`}{N}$$
+$$T_2 = \left(\frac{d_1}{d_1+d_2} \right) mg = \left(\frac{`r d1`}{`r s`}\right) (\SI{`r m`}{kg}) (\SI{9.8}{N/kg}) = \SI{`r signif(right_tension, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: calculate both tensions in hanging scaffold
+extype: schoice
+exsolution: 1000
+exshuffle: 4

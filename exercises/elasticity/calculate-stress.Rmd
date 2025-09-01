@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+d <- signif(runif(1, 0.5, 2), 3) # diametre of bridge piling in metres
+w <- sample(1000:9999, 1) # weight of load in newtons
+
+A <- pi * (d / 2)^2
+stress <- w / A
+distractors <- c(w / d, w / (pi*d^2), w * 9.8 / A)
+
+sc <- num_to_schoice(stress, wrong=distractors, delta = stress/100, format = FALSE)
+
+sc$questions <- sapply(sc$questions, signif, 3)
+sc$questions <- sprintf("$\\SI{%g}{N/m^2}$", sc$questions)
+```
+Question
+========
+A cylindrical bridge piling (vertical column that supports a bridge) has a diametre of \SI{`r d`}{m}. It supports a weight of \SI{`r w`}{N}. What is the stress on the column?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The cross-sectional area of a cylinder is a circle:
+$$A = \pi r^2 = \pi \left(\frac{d}{2} \right)^2 = \pi \left(\frac{\SI{`r d`}{m}}{2} \right)^2 = \SI{`r signif(A, 3)`}{m^2}$$
+The stress is force per area:
+$$\text{stress} = \frac{\text{force}}{\text{area}} = \frac{\SI{`r w`}{N}}{\SI{`r signif(A, 3)`}{m^2}} = \SI{`r signif(stress, 3)`}{N/m^2}$$
+
+
+Meta-information
+================
+exname: calculate stress
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
