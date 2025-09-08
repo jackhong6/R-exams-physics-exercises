@@ -1,7 +1,7 @@
 ```{r, echo = FALSE, results = "hide"}
 options(scipen=999)
-d1 <- sample(1:6, 1) # distance of box from left wire in metres
-d2 <- d1 + sample(1:6, 1) # distance of box from right wire in metres (always different from d1)
+d1 <- sample(1:5, 1) # distance of box from left wire in metres
+d2 <- d1 + sample(1:5, 1) # distance of box from right wire in metres (always different from d1)
 s <- d1 + d2 # total length of scaffold in metres
 m <- sample(10:99, 1) # mass of box in kilograms
 

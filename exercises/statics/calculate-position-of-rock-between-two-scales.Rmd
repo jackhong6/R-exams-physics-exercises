@@ -27,7 +27,7 @@ $$m_{rock} = \SI{`r left_mass`}{kg} + \SI{`r right_mass`}{kg} - \SI{`r plank_mas
 The second condition for static equilibrium is that the net torque on the plank must be zero. You can choose any axis to calculate the torque. Let's arbitrarily choose the left scale as the pivot. Also, let $s$ be the separation between the two scales and $x$ be the distance of the rock from the left scale. Then,
 $$\frac{s}{2} m_{plank} + x m_{rock} - sm_{right} = 0$$
 Solving for $x$, we get:
-$$x = \frac{s}{m_{rock}} \left(m_{right} - \frac{m_{plank}}{2} \right) = \frac{\SI{`r sep`}{m}}{\SI{`r rock_mass`}{kg}} \left(\SI{`r right_mass`}{kg} - \frac{\SI{`r plank_mass`}{kg}}{2} \right) = \SI{`r signif(ans, 3)`}{m}$$
+$$x = \frac{s}{m_{rock}} \left(m_{right} - \frac{m_{plank}}{2} \right) = \frac{\SI{`r sep`}{m}}{\SI{`r rock_mass`}{kg}} \left(\SI{`r right_mass`}{kg} - \frac{\SI{`r plank_mass`}{kg}}{2} \right) = \SI{`r signif(ans, 2)`}{m}$$
 
 Meta-information
 ================

@@ -33,7 +33,7 @@ tikz <- c("\\begin{tikzpicture}",
 
 Question
 ========
-A box of mass \SI{`r box_mass`}{kg} hangs down from three attached cords secured to the ceiling and wall as shown in the diagram. Find the maximum tension in any of the three cords.
+A box of mass \SI{`r box_mass`}{kg} hangs down from three attached cords secured to the ceiling and wall as shown in the diagram. Find the maximum tension in any one of the three cords.
 
 \vspace*{0.5cm}
 
