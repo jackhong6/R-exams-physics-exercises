@@ -1,12 +1,12 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/kinematics"), dir("exercises/statics"), dir("exercises/elasticity"))
+my_exam <- c(dir("exercises/elasticity"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calculate-min-angle-ladder.Rmd")
+my_exam <- list("what-is-strain.Rmd")
 
 # Generate different PDFs
 exams2pdf(my_exam, edir = "exercises", template = "templates/practice", 
