@@ -1,0 +1,72 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+m <- sample(1:10, 1) # mass of ladder, kg
+d <- sample(2:9, 1) # length of ladder, m
+mu <- signif(runif(1, 0.2, 1), 2) # coefficient of static friction
+
+min_angle <- atan(1 / (2 * mu)) * 180 / pi
+
+sc <- num_to_schoice(min_angle, format = FALSE)
+sc$questions <- sprintf("$\\ang{%g}$", signif(sc$questions, 2))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+x <- 2 / tan(angle * pi / 180)
+tikz <- c("\\begin{tikzpicture}",
+  "\\coordinate (A) at (3, 4);",
+  "\\coordinate (B) at (1, 0);",
+  "\\coordinate (C) at (3, 0);",
+  "\\pic[draw, \"$\\theta$\"scale=0.8, angle radius = 1cm] {angle={C--B--A}};",
+  "\\draw[thick] (0, 0) -- (3, 0);",
+  "\\draw[thick] (3, 0) -- (3, 5);",
+  "\\fill[gray!50] (0, 0) rectangle (4, -1);",
+  "\\fill[gray!50] (3, 5) rectangle (4, 0);",
+  "\\draw[double, line cap=round, double distance=4pt] (1, 0.1) -- (2.9, 4);",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A uniform ladder of mass \SI{`r m`}{kg} and length \SI{`r d`}{m} leans against a frictionless wall. Let $\theta$ be the angle that the ladder makes with the ground. If the coefficient of static friction between the ladder and the ground is \num{`r mu`}, what is the minimum value of $\theta$ at which the ladder will not slip?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "fig", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Let $F_G$ be the force from the ground, $F_f$ be the force of friction that the ground exerts on the bottom of the ladder, and $\mu = `r mu`$ be the coefficient of static friction between the ladder and the ground.
+
+The horizontal component of $F_G$ comes from the friction between the ladder and the ground:
+$$F_f = F_{G,x}$$
+The vertical component of $F_G$ is the normal force used to calculate the friction force. It is also the only force that balances the vertical gravitational force on the ladder:
+$$F_f = \mu F_{normal} = \mu F_{G,y} = \mu mg$$
+Therefore, combining the two equations, we have:
+$$F_{G,x} = \mu mg$$
+To find the values of $F_{G,y}$, we need to consider the net torque about the axis passing through the bottom of the ladder. Let the weight of the ladder be $mg$, the force from the wall be $F_W$, and the length of the ladder be $d$.
+$$\tau_{net} = d F_W \sin\theta - \frac{d}{2} mg \cos\theta = 0$$
+Solving for $F_W$, we get:
+$$F_W = \frac{mg \cos\theta}{2 \sin\theta}$$
+Notice that as $\theta$ decreases, $F_W$ increases and the corresponding friction force has to increase as well to keep the ladder from slipping. Since the only horizontal forces are from the ground and the wall, we must have
+
+$$F_W = F_{G,x} = \mu mg = \frac{mg \cos\theta}{2\sin\theta}$$
+Some algebra to rearrange the equation so that we can solve for $\theta$:
+$$\frac{1}{2 \mu} = \frac{\sin\theta}{\cos\theta} = \tan\theta$$
+$$\theta = \tan^{-1}\left(\frac{1}{2 \mu} \right) = \tan^{-1}\left(\frac{1}{`r 2*mu`} \right) = \ang{`r signif(min_angle, 2)`}$$
+
+
+
+
+
+Meta-information
+================
+exname: calculate minimum angle ladder
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

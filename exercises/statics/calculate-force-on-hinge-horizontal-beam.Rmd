@@ -6,7 +6,7 @@ beam_mass <- 30#sample(1:9, 1) # in kg
 hinge_force <- beam_mass * 9.8 / 2 / sin(angle * pi / 180)
 
 
-sc <- num_to_schoice(hinge_force, range(c(0.1, 2) * hinge_force), format = FALSE)
+sc <- num_to_schoice(hinge_force, range(c(0.1, 2) * hinge_force), delta = 0.1*hinge_force, format = FALSE)
 sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 2))
 
 # use the same graphics type (pdf, svg, png) as the current xweave() call

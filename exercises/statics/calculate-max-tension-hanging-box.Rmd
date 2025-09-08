@@ -1,0 +1,67 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+box_mass <- sample(10:99, 1) # kg
+angle <- sample(20:70, 1) # deg
+
+max_tension <- 9.8 * box_mass / sin(angle * pi / 180)
+
+sc <- num_to_schoice(max_tension, delta = max_tension/100, format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz beam graphic
+x <- 2 / tan(angle * pi / 180)
+tikz <- c("\\begin{tikzpicture}",
+  "\\coordinate (A) at (0, 5);",
+  sprintf("\\coordinate (B) at (%f, 5);", x+2),
+  sprintf("\\coordinate (C) at (%f, 3);", x),
+  sprintf("\\coordinate (D) at (%f, 3);", x+2),
+  "\\draw[thick] (-1, 5) -- (B);",
+  sprintf("\\draw[thick] (%f, 5) -- (%f, 0);", x+2, x+2),
+  sprintf("\\fill[gray!50] (-1, 5.5) rectangle (%f, 5);", x+2.5),
+  sprintf("\\fill[gray!50] (%f, 5.5) rectangle (%f, 0);", x+2, x+2.5),
+  sprintf("\\draw[thick] (0, 5) -- (%f, 3);", x),
+  sprintf("\\draw[thick] (%f, 3) -- (%f, 3);", x, x+2),
+  sprintf("\\draw[thick] (%f, 3) -- (%f, 2);", x, x),
+  sprintf("\\draw[thick] (%f, 2) rectangle (%f, 1.2) node[midway, font=\\small]{\\SI{%d}{kg}};", x-0.6, x+0.6, box_mass),
+  "\\pic[draw, angle radius=3mm] {right angle = {B--D--C}};",
+  sprintf("\\pic[draw, \"$\\ang{%d}$\"scale=0.75, angle radius=%fcm, angle eccentricity = %f] {angle={C--A--B}};", angle, -1/50 * (angle - 20) + 2, -.1/40 * (angle - 20) + 0.8),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A box of mass \SI{`r box_mass`}{kg} hangs down from three attached cords secured to the ceiling and wall as shown in the diagram. Find the maximum tension in any of the three cords.
+
+\vspace*{0.5cm}
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "fig", format = typ, library = c("angles", "quotes"), packages="siunitx")
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The vertical cord can only apply a vertical force and the horizontal cord can only apply a horizontal cord. However, the angled cord must oppose both the vertical force and the horizontal forces from the other two cords. Therefore, the maximum tension is found in the angled cord.
+
+Let $T$ be the tension in the angled cord. The vertical component of this tension, $T_y$, must be equal to the weight of the box, $mg$.
+
+$$T_y = T \sin\theta = mg$$
+Solving for $T$:
+
+$$T = \frac{mg}{\sin\theta} = \frac{(\SI{`r box_mass`}{kg})(\SI{9.8}{N/kg})}{\sin(\ang{`r angle`})} = \SI{`r signif(max_tension, 3)`}{N}$$
+
+
+
+Meta-information
+================
+exname: calculate max tension hanging box
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

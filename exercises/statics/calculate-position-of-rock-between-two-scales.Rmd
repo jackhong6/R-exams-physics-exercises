@@ -8,7 +8,7 @@ rock_mass <- left_mass + right_mass - plank_mass
 
 ans <- sep / rock_mass * (right_mass - plank_mass / 2)
 sc <- num_to_schoice(ans, delta = 0.01, range = c(0.1*ans ,sep), format = FALSE)
-sc$questions <- sapply(sc$questions, signif, 3)
+sc$questions <- sapply(sc$questions, signif, 2)
 sc$questions <- sprintf("$\\SI{%g}{m}$", sc$questions)
 ```
 
@@ -23,7 +23,6 @@ answerlist(sc$questions, markup = "markdown")
 Solution
 ========
 The first condition for static equilibrium is that the net force on the plank must be zero. This implies that the mass of the rock is the sum of the two scale readings minus the plank's mass:
-
 $$m_{rock} = \SI{`r left_mass`}{kg} + \SI{`r right_mass`}{kg} - \SI{`r plank_mass`}{kg} = \SI{`r rock_mass`}{kg}$$
 The second condition for static equilibrium is that the net torque on the plank must be zero. You can choose any axis to calculate the torque. Let's arbitrarily choose the left scale as the pivot. Also, let $s$ be the separation between the two scales and $x$ be the distance of the rock from the left scale. Then,
 $$\frac{s}{2} m_{plank} + x m_{rock} - sm_{right} = 0$$
