@@ -36,4 +36,4 @@ Meta-information
 ================
 exname: light year distance in miles
 extype: schoice
-exsolution: 0100
+exsolution: 1000

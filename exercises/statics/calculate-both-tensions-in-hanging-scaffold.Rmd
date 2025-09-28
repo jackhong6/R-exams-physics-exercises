@@ -16,9 +16,9 @@ tikz <- c("\\begin{tikzpicture}",
   "\\draw[thick] (0, 3) -- (0, 0);",
   sprintf("\\draw[thick] (%d, 3) -- (%d, 0);", s, s),
   sprintf("\\draw[thick] (0, 0) rectangle (%d, -0.2);", s),
-  sprintf("\\draw[thick] (%f, 0.75) rectangle node[midway]{\\SI{%d}{kg}} (%f, 0);", d1-0.75, m, d1+0.75),
-  sprintf("\\draw[|<->|, thick] (0, 2) -- node[midway, above]{\\SI{%d}{m}} (%d, 2);", s, s),
-  sprintf("\\draw[|<->|, thick] (0, 1) -- node[midway, above]{\\SI{%d}{m}} (%d, 1);", d1, d1),
+  sprintf("\\draw[thick] (%f, 0.75) rectangle node[midway, font=\\small]{\\SI{%d}{kg}} (%f, 0);", d1-0.75, m, d1+0.75),
+  sprintf("\\draw[|<->|, thick] (0, 2) -- node[midway, above, font=\\small]{\\SI{%d}{m}} (%d, 2);", s, s),
+  sprintf("\\draw[|<->|, thick] (0, 1) -- node[midway, above, font=\\small]{\\SI{%d}{m}} (%d, 1);", d1, d1),
   "\\end{tikzpicture}")
 ```
 
@@ -27,7 +27,7 @@ Question
 A scaffold of negligible mass is hanging horizontally from wires on each end. The scaffold is \SI{`r s`}{m} long. A \SI{`r m`}{kg} box sits \SI{`r d1`}{m} from the left end. What is the tension in each wire?
 
 ```{r, echo = FALSE, results = "asis"}
-include_tikz(tikz, name = "scaffold", format = typ, packages="siunitx")
+include_tikz(tikz, name = "scaffold", format = typ, packages=c("siunitx", "eulervm"))
 ```
 
 Answerlist

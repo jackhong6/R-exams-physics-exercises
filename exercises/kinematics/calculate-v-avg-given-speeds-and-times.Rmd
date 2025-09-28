@@ -26,7 +26,7 @@ Solution
 ========
 The average speed is the total distance divided by the total time.
 
-$$ v_{avg} = \frac{d_{total}}{t_{total}} = \frac{v_1 t_1 + v_2 t_2}{t_1 + t_2} = \frac{(\SI{`r v1`}{km/h}) (\SI{`r t1`}{h}) + (\SI{`r v2`}{km/h})(\SI{`r t2`}{h})}{\SI{`r t1`}{h} + \SI{`r t2`}{h}} = \SI{`r ans`}{km/h}$$
+$$ v_{avg} = \frac{d_{total}}{t_{total}} = \frac{v_1 t_1 + v_2 t_2}{t_1 + t_2} = \frac{(\SI{`r v1`}{km/h}) (\SI{`r t1`}{h}) + (\SI{`r v2`}{km/h})(\SI{`r t2`}{h})}{\SI{`r t1`}{h} + \SI{`r t2`}{h}} = \SI{`r signif(ans, sf)`}{km/h}$$
 
 Meta-information
 ================

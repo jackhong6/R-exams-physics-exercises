@@ -13,7 +13,7 @@ sc$questions <- sprintf("$\\ang{%g}$", signif(sc$questions, 2))
 typ <- match_exams_device()
 
 ## tikz beam graphic
-x <- 2 / tan(angle * pi / 180)
+x <- 2 / tan(min_angle * pi / 180)
 tikz <- c("\\begin{tikzpicture}",
   "\\coordinate (A) at (3, 4);",
   "\\coordinate (B) at (1, 0);",

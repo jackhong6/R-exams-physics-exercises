@@ -1,6 +1,6 @@
 Question
 ========
-An object is released from rest and falls straight down without friction. Which of the following is true concerning its motion?
+An object is released from rest and falls straight down without air resistance. Which of the following is true concerning its motion?
 
 Answerlist
 ----------

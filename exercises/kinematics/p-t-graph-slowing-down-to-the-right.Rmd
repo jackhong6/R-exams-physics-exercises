@@ -1,7 +1,6 @@
 Question
 ========
 Which choice best matches the given position-time graph? 
-Assume that position is increasing to the right.
 
 ```{r p-t-graph-slowing-down-to-the-right, echo=FALSE, fig.cap="", fig.height=1.5, fig.path="", results="hide"}
 t <- seq(0, 1, by=0.01)

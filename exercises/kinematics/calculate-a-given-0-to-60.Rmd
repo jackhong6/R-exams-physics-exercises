@@ -17,7 +17,7 @@ sc$questions <- sprintf("\\SI{%g}{m/s^2}", sc$questions)
 
 Question
 ========
-An F1 car accelerates from $0$ to $60$ miles per hour in $\SI{`r t`}{s}$. What is the acceleration of the car in SI base units? ($\SI{1}{mile} = \SI{1609.34}{m}$)
+An F1 car accelerates from $0$ to $60$ miles per hour in $\SI{`r t`}{s}$. What is the acceleration of the car in SI units? ($\SI{1}{mile} = \SI{1609.34}{m}$)
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
