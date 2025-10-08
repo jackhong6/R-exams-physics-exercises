@@ -1,0 +1,18 @@
+Question
+========
+True or false? Kinetic energy is conserved in all collisions.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. Kinetic energy is only conserved in elastic collisions.
+
+Meta-information
+================
+exname: TF Kinetic Energy is Conserved
+extype: schoice
+exsolution: 01

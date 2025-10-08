@@ -1,0 +1,18 @@
+Question
+========
+True or false? If an object is moving to the right, then its acceleration must also be to the right.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. An object that is moving to the right at a constant speed has zero acceleration and an object that is moving right and slowing down has a leftward acceleration.
+
+Meta-information
+================
+exname: true or false acceleration in direction of motion
+extype: schoice
+exsolution: 01

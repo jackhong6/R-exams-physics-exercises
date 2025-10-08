@@ -1,0 +1,18 @@
+Question
+========
+True or false? If the velocity-time graph of an object is a horizontal line, then the object must be at rest.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. Unless the horizontal line is on the time axis, the object is moving with constant velocity.
+
+Meta-information
+================
+exname: true or false horizontal line on v-t graph
+extype: schoice
+exsolution: 01

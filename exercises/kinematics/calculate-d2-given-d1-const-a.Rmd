@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+d1 <- sample(100:999, 1) # displacement during first 10 seconds
+
+v <- 2 * d1 / 10 # velocity after the first 10 seconds
+
+d2 <- 10 * v + d1
+distractors <- c(d1, 2 * d1)
+
+sc <- num_to_schoice(d2, wrong = distractors, digits = 0, format = FALSE)
+sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+```
+
+Question
+========
+A car moves with constant acceleration starting from rest. If the car travels \SI{`r d1`}{m} during the first 10 seconds, how far would it travel during the next 10 seconds? Calculate only the distance traveled between $t=\SI{10}{s}$ and $t=\SI{20}{s}$, and not the total distance.
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The velocity after the first 10 seconds is
+$$v = \frac{2d}{t} = \frac{2(\SI{`r d1`}{m})}{\SI{10}{s}} = \SI{`r v`}{m/s}$$
+The distance for the next ten seconds is the distance of the first ten seconds (the triangle part of the velocity-time graph) plus the rectangle under the triangle.
+$$d = vt + \frac{1}{2} a t^2 = (\SI{`r v`}{m/s})(\SI{10}{s}) + \SI{`r d1`}{m} = \SI{`r fmt(d2,0)`}{m}$$
+
+Meta-information
+================
+exname: calculate d1 given d2 constant acceleration.
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

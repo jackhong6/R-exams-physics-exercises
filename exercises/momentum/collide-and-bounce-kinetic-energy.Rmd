@@ -1,0 +1,21 @@
+Question
+========
+Two objects collide and bounce apart. Kinetic energy is
+
+Answerlist
+----------
+* definitely conserved.
+* definitely not conserved.
+* conserved only if the collision is elastic.
+* conserved only if there is no friction.
+
+Solution
+========
+Kinetic energy is conserved only if the collision is elastic.
+
+Meta-information
+================
+exname: Collide and Bounce Kinetic Energy
+extype: schoice
+exsolution: 0010
+exshuffle: 4

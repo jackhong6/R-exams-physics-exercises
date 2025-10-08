@@ -1,0 +1,21 @@
+Question
+========
+The area under a force-time graph represents
+
+Answerlist
+----------
+* impulse
+* momentum
+* kinetic energy
+* work
+
+Solution
+========
+The area under a force-time graph represents impulse.
+
+Meta-information
+================
+exname: Area Under Force-Time Graph
+extype: schoice
+exsolution: 1000
+exshuffle: 4

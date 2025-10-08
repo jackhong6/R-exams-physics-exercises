@@ -1,0 +1,22 @@
+Question
+========
+What is the SI unit of impulse?
+
+Answerlist
+----------
+* \unit{\N.\s}
+* \unit{\kg.\m \per \s}
+* \unit{\kg.\m \per \s^2}
+* \unit{\N.\m}
+* \unit{\J.\s}
+
+Solution
+========
+The newton-second (\unit{\N.\s}) is the SI unit of impulse.
+
+Meta-information
+================
+exname: Unit of Impulse
+extype: schoice
+exsolution: 10000
+exshuffle: 4

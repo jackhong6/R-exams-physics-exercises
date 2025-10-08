@@ -1,0 +1,18 @@
+Question
+========
+True or false? If an object changes direction, then the line on its velocity-time graph must have a changing slope.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. An object that changes direction is represented by a line that crosses the time axis in a velocity-time graph.
+
+Meta-information
+================
+exname: true or false changing direction v-t graph
+extype: schoice
+exsolution: 01

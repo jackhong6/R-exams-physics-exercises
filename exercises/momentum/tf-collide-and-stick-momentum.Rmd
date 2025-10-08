@@ -1,0 +1,18 @@
+Question
+========
+True or false? Momentum is conserved when two objects collide and stick together.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. Momentum is conserved in all collisions.
+
+Meta-information
+================
+exname: TF Collide and Stick Momentum
+extype: schoice
+exsolution: 10

@@ -1,0 +1,22 @@
+Question
+========
+What is the SI unit of linear momentum?
+
+Answerlist
+----------
+* \unit{\kg.\m \per \s}
+* \unit{\kg.\m \per \s^2}
+* \unit{\N.\s}
+* \unit{\N.\m}
+* \unit{\J.\s}
+
+Solution
+========
+The kilogram metre per second (\unit{\kg.\m \per \s}) is the SI unit of momentum.
+
+Meta-information
+================
+exname: Unit of Momentum
+extype: schoice
+exsolution: 10000
+exshuffle: 4

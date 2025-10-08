@@ -1,0 +1,18 @@
+Question
+========
+True or false? The area under a velocity-time graph is the displacement.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. 
+
+Meta-information
+================
+exname: true or false area under velocity-time graph
+extype: schoice
+exsolution: 10

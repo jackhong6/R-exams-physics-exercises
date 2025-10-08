@@ -1,25 +1,25 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/statics"))
+my_exam <- c(dir("exercises/momentum"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("what-is-strain.Rmd")
+my_exam <- list("calculate-d2-given-d1-const-a.Rmd")
 
 # Generate different PDFs
 set.seed(1)
 exams2pdf(my_exam, edir = "exercises", template = "templates/practice", 
-          header = list(Course = "Physics 12", Title = "Statics Practice Test"))
+          header = list(Course = "Physics 11/12", Title = "Test"))
 set.seed(1)
 exams2pdf(my_exam, edir = "exercises", template = "templates/solution.tex", 
-          header = list(Course = "Physics 12", Title = "Solutions to Statics Practice Test"))
+          header = list(Course = "Physics 11/12", Title = "Test Solutions"))
 exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", blank = 0, samepage = TRUE,
            usepackage = c("newpxtext", "eulervm", "siunitx"))
 
 # Stress test an exercise
-st_results <- stresstest_exercise("~/Documents/GitHub/R-exams-physics-exercises/exercises/statics/calculate-tension-in-hanging-scaffold.Rmd")
+st_results <- stresstest_exercise("~/Documents/GitHub/R-exams-physics-exercises/exercises/kinematics/calculate-d2-given-d1-const-a.Rmd")
 plot(st_results)
 
 set.seed(1)

@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # kg
+v <- sample(10:99, 1) # m/s
+
+choices <- c(m*v, 0.5*m*v, m*v^2, 0.5*m*v^2, m/v, v/m)
+choices <- signif(choices, 2)
+choices <- sprintf("\\SI{%g}{\\kg.\\m / \\s}", choices)
+```
+
+Question
+========
+An object of mass \SI{`r m`}{kg} is moving with speed \SI{`r v`}{m/s}. How much momentum does the object have?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(choices, markup = "markdown")
+```
+
+
+Solution
+========
+The momentum of the object is the product of its mass and velocity.
+$$
+p = mv = (\SI{`r m`}{\kg})(\SI{`r v`}{\m/\s}) = `r choices[1]`
+$$
+
+
+Meta-information
+================
+exname: Calculate Momentum
+extype: schoice
+exsolution: 100000
+exshuffle: 4

@@ -1,0 +1,18 @@
+Question
+========
+True or false? An object which is slowing down is represented on a velocity-time graph by a line with a negative slope.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. An object that starts with a negative velocity is speeding up if the velocity-time graph has a negative slope.
+
+Meta-information
+================
+exname: true or false slowing down on v-t graph
+extype: schoice
+exsolution: 01

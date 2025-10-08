@@ -1,0 +1,23 @@
+Question
+========
+Two objects collide and stick together. Kinetic energy is
+
+Answerlist
+----------
+* definitely conserved.
+* definitely not conserved.
+* conserved only if the collision is elastic.
+* conserved only if there is no friction.
+
+Solution
+========
+Kinetic energy is conserved only if the collision is elastic. However, if the two
+objects stick together, then the collision is definitely inelastic. Therefore,
+kinetic energy is definitely not conserved.
+
+Meta-information
+================
+exname: Collide and Stick Kinetic Energy
+extype: schoice
+exsolution: 0100
+exshuffle: 4

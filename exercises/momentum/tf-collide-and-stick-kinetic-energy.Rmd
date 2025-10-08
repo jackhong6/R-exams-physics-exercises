@@ -1,0 +1,18 @@
+Question
+========
+True or false? Kinetic energy is conserved when two objects collide and stick together.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+False. Kinetic energy is not conserved during an inelastic collision. 
+
+Meta-information
+================
+exname: TF Collide and Stick Kinetic Energy
+extype: schoice
+exsolution: 01

@@ -1,0 +1,71 @@
+```{r v-t-graph-postive-acc, echo = FALSE, results = "hide"}
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+# tikz velocity-time graph
+tikz_graph_A <- "\\begin{tikzpicture}
+                        \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
+                        \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
+                        \\draw[red, ultra thick] (0,-1.4) -- (2.9, 1.4);
+                \\end{tikzpicture}"
+
+tikz_graph_B <- "\\begin{tikzpicture}
+                        \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
+                        \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
+                        \\draw[red, ultra thick] (0,1.4) -- (1.4, 0) -- (2.9, 1.4);
+                \\end{tikzpicture}"
+
+tikz_graph_C <- "\\begin{tikzpicture}
+                        \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
+                        \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
+                        \\draw[red, ultra thick] (0,-1.4) -- (1.4, 0) -- (2.9, -1.4);
+                \\end{tikzpicture}"
+
+tikz_graph_D <- "\\begin{tikzpicture}
+                        \\draw[->] node[anchor=east] {$0$} (0,0) -- (3,0) node[anchor=west] {$t$};
+                        \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
+                        \\draw[red, ultra thick] (0,0) .. controls (1,1.5) and (2,1.5) .. (2.9,0);
+                \\end{tikzpicture}"
+
+choices <- c("Graph A", "Graph B", "Graph C", "Graph D")
+
+# Generate all graphs
+graphs <- c(
+  include_tikz(tikz_graph_A, name = "v-t-graph-postive-acc-A", markup = "none", format = typ),
+  include_tikz(tikz_graph_B, name = "v-t-graph-postive-acc-B", markup = "none", format = typ),
+  include_tikz(tikz_graph_C, name = "v-t-graph-postive-acc-C", markup = "none", format = typ),
+  include_tikz(tikz_graph_D, name = "v-t-graph-postive-acc-D", markup = "none", format = typ)
+)
+
+# Randomize graphs and find the correct answer (original graph A)
+rand_ord <- sample(1:4)
+graphs <- graphs[rand_ord]
+sol <- c(TRUE, rep(FALSE, 3))
+sol <- sol[rand_ord]
+```
+
+Question
+========
+
+Which velocity-time graph represents the motion of an object that changes its direction? 
+
+|            Graph A            |             Graph B           |             Graph C           |             Graph D           |
+|:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
+| ![](`r graphs[1]`){width=3cm} | ![](`r graphs[2]`){width=3cm} | ![](`r graphs[3]`){width=3cm} | ![](`r graphs[4]`){width=3cm} |
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(choices, markup = "markdown")
+```
+
+
+Solution
+========
+Changing direction on a velocity-time graph is represented by a line that crosses the time axis.
+
+
+Meta-information
+================
+exname: velocity time graph changing direction
+extype: schoice
+exsolution: `r mchoice2string(sol)`

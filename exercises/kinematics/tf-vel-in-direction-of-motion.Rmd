@@ -1,0 +1,18 @@
+Question
+========
+True or false? If an object is moving to the right, then its velocity must also be to the right.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. The direction of velocity is always the same as the direction of motion.
+
+Meta-information
+================
+exname: true or false velocity in direction of motion
+extype: schoice
+exsolution: 10

@@ -26,13 +26,13 @@ calc <- list("calculate-balance-position-on-massless-seesaw.Rmd",
              "calculate-max-tension-hanging-box.Rmd",
              "calculate-min-angle-ladder.Rmd")
 
-set.seed(2025*9*29)
-statics_exam <- c(concept, calc)
+set.seed(2025*10*2)
+statics_exam <- sample(c(concept, calc))
 
-set.seed(2025*9*29)
-exams2nops(statics_exam, n = 2, date = as.Date("2025-09-29"), edir = "exercises", title = "Physics 12 Statics Unit Test", 
+set.seed(2025*10*2)
+exams2nops(statics_exam, n = 1, date = as.Date("2025-10-02"), edir = "exercises", title = "Physics 12 Statics Unit Test", 
            course = "Physics 12", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", 
-           blank = 0, samepage = TRUE, dir = "output", name = "phys12-statics-test", helvet = TRUE,
+           blank = 0, samepage = TRUE, dir = "output", name = "phys12-statics-test-3", helvet = TRUE,
            usepackage = c("siunitx", "eulervm"))
 set.seed(2025*9*29)
 exams2pdf(statics_exam, n = 2, edir = "exercises", template = "templates/solution.tex", header = list(Course = "Physics 12", Title = "Solutions to Physics 12 Statics Unit Test"),

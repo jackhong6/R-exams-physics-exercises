@@ -1,0 +1,18 @@
+Question
+========
+True or false? If the position-time graph of an object is a horizontal line, then the object must be at rest.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. The slope of the position time graph is the object's velocity and the slope of a horizontal line is zero. Therefore, the object must have a velocity of zero and be at rest.
+
+Meta-information
+================
+exname: true or false horizontal line on p-t graph
+extype: schoice
+exsolution: 10

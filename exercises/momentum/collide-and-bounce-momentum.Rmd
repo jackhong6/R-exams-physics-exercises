@@ -1,0 +1,21 @@
+Question
+========
+Two objects collide and bounce apart. Linear momentum is
+
+Answerlist
+----------
+* definitely conserved.
+* definitely not conserved.
+* conserved only if the collision is elastic.
+* conserved only if there is no friction.
+
+Solution
+========
+Linear momentum is conserved in all collisions.
+
+Meta-information
+================
+exname: Collide and Bounce Momentum
+extype: schoice
+exsolution: 1000
+exshuffle: 4

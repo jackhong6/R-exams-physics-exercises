@@ -1,0 +1,30 @@
+Question
+========
+A rubber ball and a lump of putty have equal mass. They are both thrown with 
+equal speed at a wall. The rubber ball bounces back with nearly the same speed 
+with which it hit the wall. The putty sticks to the wall. Which object 
+experiences the greater momentum change?
+
+Answerlist
+----------
+* The ball.
+* The putty.
+* Both experience the same momentum change.
+* Cannot be determined from the information given.
+
+Solution
+========
+The ball experiences the greater momentum change. The ball's change in velocity 
+is double the putty's and so the ball experiences double the momentum change.
+
+For the ball, the final velocity is nearly its initial velocity, but in the
+opposite direction:
+$$\Delta v = v_f - v_i = - v_i - v_i = -2vi$$
+For the putty, the final velocity is zero:
+$$\Delta v = v_f - v_i = 0 - v_i = -v_i$$
+
+Meta-information
+================
+exname: Ball vs Putty Momentum Change
+extype: schoice
+exsolution: 1000

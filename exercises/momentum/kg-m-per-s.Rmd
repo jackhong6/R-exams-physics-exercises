@@ -1,0 +1,21 @@
+Question
+========
+The kilogram metre per second (\unit{\kg.\m \per \s}) is SI unit of
+
+Answerlist
+----------
+* momentum
+* impulse
+* torque
+* energy
+
+Solution
+========
+The kilogram metre per second is the SI unit of momentum.
+
+Meta-information
+================
+exname: kilogram metre per second
+extype: schoice
+exsolution: 1000
+exshuffle: 4

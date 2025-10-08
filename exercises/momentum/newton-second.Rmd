@@ -1,0 +1,21 @@
+Question
+========
+The newton-second (\unit{\N.\s}) is the SI unit of
+
+Answerlist
+----------
+* momentum
+* impulse
+* torque
+* energy
+
+Solution
+========
+The newton-second is the SI unit of impulse.
+
+Meta-information
+================
+exname: newton-second
+extype: schoice
+exsolution: 0100
+exshuffle: 4
