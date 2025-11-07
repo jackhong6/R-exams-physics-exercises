@@ -1,0 +1,30 @@
+Question
+========
+The gravitational acceleration on the Moon is about one-sixth of that on Earth. If you
+throw a baseball straight up with the same speed on the Moon as you do on Earth, the ball
+would be in the air for
+
+Answerlist
+----------
+* the same amount of time as on Earth.
+* 6 times longer than on Earth
+* 12 times longer than on Earth
+* 36 times longer than on Earth
+
+Solution
+========
+The hang time of the ball can be calculated from the formula $v_f = v_i + at$ with $v_f = -v_i$. 
+
+$$t = -\frac{2v_i}{a}$$
+On Earth, the time is $t_{Earth} = -2 v_i / g_{Earth}$. On the Moon, $g_{Moon} = g_{Earth} / 6$ so
+
+$$t_{Moon} = -\frac{2 v_i}{g_{Earth} / 6} = 6 \times \frac{-2 v_i}{g_{Earth}} = 3 t_{Earth}$$
+
+The ball would be in the air 6 times longer on the Moon than on Earth.
+
+
+Meta-information
+================
+exname: Hang Time on the Moon
+extype: schoice
+exsolution: 0100

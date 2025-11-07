@@ -1,0 +1,29 @@
+Question
+========
+A very light ball and a very heavy ball move in opposite directions toward each 
+other with the same speed $v$. If the balls hit each other head on and the
+collision is elastic, then the speed of the lighter ball after the collision is approximately
+
+Answerlist
+----------
+* $0$
+* $v$
+* $2v$
+* $3v$
+
+Solution
+========
+Conservation of momentum and kinetic energy gives the general result for an
+elastic collision in 1 dimension
+
+$$v_1` = \frac{(r - 1)v_1 + 2v_2}{r + 1}$$
+where $r = m_1 / m_2$. Let $m_1$ be the mass of the very light ball and let 
+$v_1 = v$ be its velocity before the collision. Then $v_2 = -v$ and $m_2 \gg m_1$.
+This means that $r \approx 0$ and the above expression becomes $-3v$. Therefore,
+the speed of the lighter ball after the collision is approximately $3v$.
+
+Meta-information
+================
+exname: Elastic Collision Light and Heavy Same Speed
+extype: schoice
+exsolution: 0001

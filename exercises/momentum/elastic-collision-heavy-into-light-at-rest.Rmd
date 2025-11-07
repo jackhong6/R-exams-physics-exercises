@@ -1,0 +1,27 @@
+Question
+========
+A very heavy ball rolling with speed $v$ collides with a very light ball at 
+rest. If the collision is elastic, then the light ball's speed after the 
+collision is approximately
+
+Answerlist
+----------
+* $v/2$
+* $v$
+* $2v$
+* $3v$
+
+Solution
+========
+Conservation of momentum and kinetic energy with $v_2 = 0$ gives the velocity of
+the light ball after the collision
+
+$$v_2` = \left(\frac{2 m_1}{m_1 + m_2} \right) v_1$$
+When $m_1 \gg m_2$, the factor $2 m_1 / (m_1 + m_2)$ is approximately 
+$2$, which means that the light ball has about twice the velocity of the heavy ball.
+
+Meta-information
+================
+exname: Elastic Collision Heavy into Light at Rest
+extype: schoice
+exsolution: 0010

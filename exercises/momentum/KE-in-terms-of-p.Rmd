@@ -1,0 +1,27 @@
+Question
+========
+An object of mass $m$ is moving with momentum $p$. Which of the following
+represents its kinetic energy?
+
+Answerlist
+----------
+* $p^2 / (2m)$
+* $m p^2 / 2$
+* $mp$
+* $mp / 2$
+
+Solution
+========
+Momentum is 
+$$p = mv$$
+While kinetic energy is
+$$KE = \frac{1}{2} mv^2$$
+So in terms of momentum, kinetic energy is
+$$KE = \frac{p^2}{2m}$$
+
+
+Meta-information
+================
+exname: Kinetic Energy in Terms of Momentum
+extype: schoice
+exsolution: 1000

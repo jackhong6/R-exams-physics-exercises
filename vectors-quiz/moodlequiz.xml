@@ -11,7 +11,7 @@
 
 <question type="multichoice">
 <name>
-<text> Q01 : tf-zero-acc-at-top-1d </text>
+<text> Q01 : tf-normal-force-less-than-mg-on-incline </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -38,12 +38,15 @@
 }
 </style>
 <p>
-<p>True or false? When a ball is thrown straight up, its acceleration at the top is zero.</p>
+<p>True or false? The normal force on an object of mass <span class="math inline">\(M\)</span> at rest on an inclined
+plane is less than <span class="math inline">\(Mg\)</span>. Assume that the plane is inclined at a positive acute angle
+and that only gravity and the normal force act on the object.</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>False. The acceleration of the ball is always  down.</p>
+<p>True. The normal force on an inclined plane is <span class="math inline">\(Mg \cos \theta\)</span> and <span class="math inline">\(\cos \theta\)</span>
+is always less than one for positive acute angles.</p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -51,12 +54,12 @@
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="0" format="html">
+<answer fraction="100" format="html">
 <text><![CDATA[<p>
 True
 </p>]]></text>
 </answer>
-<answer fraction="100" format="html">
+<answer fraction="0" format="html">
 <text><![CDATA[<p>
 False
 </p>]]></text>
@@ -73,7 +76,7 @@ False
 
 <question type="multichoice">
 <name>
-<text> Q02 : tf-zero-acc-still-moving </text>
+<text> Q02 : tf-a-is-half-g-45-incline </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -100,12 +103,14 @@ False
 }
 </style>
 <p>
-<p>True or false? It is possible to have zero acceleration and still be moving.</p>
+<p>True or false? An object sliding down a 45 degree incline without friction is
+accelerating at half the acceleration of gravity.</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>True. An object with a constant nonzero velocity has zero acceleration and is still moving.</p>
+<p>False. The acceleration of an object on a frictionless inclined plane is given
+by the equation <span class="math inline">\(a = g \sin \theta\)</span> and <span class="math inline">\(\sin(\ang{45}) \neq 1/2\)</span>.</p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -113,12 +118,12 @@ False
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="100" format="html">
+<answer fraction="0" format="html">
 <text><![CDATA[<p>
 True
 </p>]]></text>
 </answer>
-<answer fraction="0" format="html">
+<answer fraction="100" format="html">
 <text><![CDATA[<p>
 False
 </p>]]></text>
@@ -135,7 +140,7 @@ False
 
 <question type="multichoice">
 <name>
-<text> Q03 : tf-zero-vel-at-top-1d </text>
+<text> Q03 : greater-static-friction </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -162,12 +167,18 @@ False
 }
 </style>
 <p>
-<p>True or false? When a ball is thrown straight up, its velocity at the top is zero.</p>
+<p>A student puts two objects on a physics book and carefully tilts the cover. At a
+small angle, object A starts to slide. At a larger angle, object B starts to
+slide. Which has the greater coefficient of static friction with the book cover?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>True. The velocity must be zero for an instant at the top as the velocity changes from up to down.</p>
+<p>As shown in the example on p. 126, the coefficient of static friction is equal
+to <span class="math inline">\(\tan \theta\)</span>, where <span class="math inline">\(\theta\)</span> is the angle at which the object starts to
+slide. The tangent function increases with the angle so it is greater for
+greater angles. Therefore, object B, which starts sliding at a greater angle,
+has the greater coefficient of static friction.</p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -175,14 +186,14 @@ False
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="100" format="html">
-<text><![CDATA[<p>
-True
-</p>]]></text>
-</answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-False
+Object A
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Object B
 </p>]]></text>
 </answer>
 </question>
@@ -197,7 +208,7 @@ False
 
 <question type="multichoice">
 <name>
-<text> Q04 : free-fall-acc-vel-directions-going-down </text>
+<text> Q04 : calc-net-force-magnitude-perp </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -224,12 +235,15 @@ False
 }
 </style>
 <p>
-<p>A ball is thrown straight up, reaches a maximum height, then falls back down to its initial height. Which of the following is true while the ball is going down?</p>
+<p>Adam pulls on a box with 8.0 N of force. Bob pulls on the the same box with
+11.0 N of force, at a right angle to Adam’s force. What is the magnitude of the
+net force on the box?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>Both velocity and acceleration point down when the ball is going down.</p>
+<p>Perpendicular forces are added using the Pythagorean theorem.
+<span class="math display">\[F_{net} = \sqrt{F_1^2 + F_2^2} = \sqrt{(8 N)^2 + (11 N)^2} = 13.6 \text{ N}\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -239,22 +253,22 @@ False
 <answernumbering>abc</answernumbering>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Its velocity and acceleration both point up.
+6.6 N
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+3 N
 </p>]]></text>
 </answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-Its velocity and acceleration both point down.
+13.6 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Its velocity points up while its acceleration points down.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-Its velocity points down while its acceleration points up.
+19 N
 </p>]]></text>
 </answer>
 </question>
@@ -269,7 +283,7 @@ Its velocity points down while its acceleration points up.
 
 <question type="multichoice">
 <name>
-<text> Q05 : free-fall-acc-vel </text>
+<text> Q05 : calc-f2-given-sum-of-perp-forces </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -296,12 +310,15 @@ Its velocity points down while its acceleration points up.
 }
 </style>
 <p>
-<p>An object is released from rest and falls straight down without air resistance. Which of the following is true concerning its motion?</p>
+<p>Carly pulls on a box with 13.0 N of force. Debby pulls on the the same box
+at a right angle to Carly. How hard must Debby pull to make the resultant force
+on the box 17.0 N?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>Only acceleration is constant for an object in free fall.</p>
+<p>Perpendicular forces are related by the Pythagorean theorem.
+<span class="math display">\[F_{Debby} = \sqrt{F_{net}^2 - F_{Carly}^2} = \sqrt{(17 N)^2 - (13 N)^2} = 11 \text{ N}\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -309,24 +326,24 @@ Its velocity points down while its acceleration points up.
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+18.7 N
+</p>]]></text>
+</answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-Its acceleration is constant.
+11.0 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Its velocity is constant.
+4.0 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Neither its acceleration nor its velocity is constant.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-Both its acceleration and its velocity are constant.
+30.0 N
 </p>]]></text>
 </answer>
 </question>
@@ -341,7 +358,7 @@ Both its acceleration and its velocity are constant.
 
 <question type="multichoice">
 <name>
-<text> Q06 : free-fall-heavy-v-light </text>
+<text> Q06 : calc-net-force-angle-perp </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -368,12 +385,14 @@ Both its acceleration and its velocity are constant.
 }
 </style>
 <p>
-<p>A  ball and a  ball are both dropped off a cliff at the same time. If air drag can be ignored, then the  ball falls</p>
+<p>Xavier pulls on a box with 14.0 N of force at <span class="math inline">\(0^\circ\)</span>. Yuri pulls on the the same box with
+14.0 N of force, at <span class="math inline">\(90^\circ\)</span>. What is the angle of the net force?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>The acceleration due to gravity on the surface of the Earth does not depend on the object’s mass. All objects in free fall move with the same acceleration if air drag can be ignored.</p>
+<p>The angle can be found using the arctangent.
+<span class="math display">\[\theta = \tan^{-1}(14 / 14) = 45^\circ\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -381,24 +400,24 @@ Both its acceleration and its velocity are constant.
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
- faster than the  ball.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-with double the velocity of the  ball.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-with double the acceleration of the  ball.
-</p>]]></text>
-</answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-with the same acceleration as the  ball.
+<span class="math inline">\(45.0^\circ\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(18.5^\circ\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(41.2^\circ\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(36.0^\circ\)</span>
 </p>]]></text>
 </answer>
 </question>
@@ -413,7 +432,7 @@ with the same acceleration as the  ball.
 
 <question type="multichoice">
 <name>
-<text> Q07 : free-fall-vertical-launch-vel </text>
+<text> Q07 : calc-equilibrant-angle </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -440,12 +459,22 @@ with the same acceleration as the  ball.
 }
 </style>
 <p>
-<p>Consider a ball that is thrown upwards and which then falls back down. If up is the positive direction, then the ball’s velocity</p>
+<p>Two forces act on an object. A <span class="math inline">\(83.0\)</span>-N force acts at <span class="math inline">\(-161^\circ\)</span>. A <span class="math inline">\(42.0\)</span>-N force acts at <span class="math inline">\(177^\circ\)</span>.
+What is the angle of their equilibrant?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>When the ball is moving upwards, its velocity is positive. When the ball is moving downwards, its velocity is negative.</p>
+<p>The sum of the horizontal components is
+<span class="math display">\[F_{net, x} = (83 N)\cos(-161^\circ) + (42 N)\cos(177^\circ) = -120.4204822 N\]</span>
+The sum of the vertical components is
+<span class="math display">\[F_{net, y} = (83 N)\sin(-161^\circ) + (42 N)\sin(177^\circ) = -24.8240467 N\]</span>
+The angle of the net force is
+<span class="math display">\[\theta_{net} = \tan^{-1}(-24.8240467 / -120.4204822)  = -168.4^\circ\]</span>
+The direction of the equilibrant is opposite that of the net force so we add or subtract <span class="math inline">\(180^\circ\)</span>.
+<span class="math display">\[\theta_{eq} = 11.6^\circ\]</span>
+Or
+<span class="math display">\[\theta_{eq} = -348.4^\circ\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -455,22 +484,22 @@ with the same acceleration as the  ball.
 <answernumbering>abc</answernumbering>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-is always positive.
+<span class="math inline">\(107.9^\circ\)</span>
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-is always negative.
+<span class="math inline">\(-151.2^\circ\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(-25.2^\circ\)</span>
 </p>]]></text>
 </answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-starts positive, then becomes negative.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-starts negative, then becomes positive.
+<span class="math inline">\(11.6^\circ\)</span>
 </p>]]></text>
 </answer>
 </question>
@@ -485,7 +514,7 @@ starts negative, then becomes positive.
 
 <question type="multichoice">
 <name>
-<text> Q08 : free-fall-acc-vel-directions-going-up </text>
+<text> Q08 : calc-equilibrant-magnitude-perp </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -512,12 +541,15 @@ starts negative, then becomes positive.
 }
 </style>
 <p>
-<p>A ball is thrown straight up, reaches a maximum height, then falls back down to its initial height. Which of the following is true while the ball is going up?</p>
+<p>Two forces act on an object. A 64-N force acts at <span class="math inline">\(0^\circ\)</span> and a 92-N force
+acts at <span class="math inline">\(90^\circ\)</span>. What is the magnitude of the equilibrant?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>The velocity points up while the ball is going up. The acceleration always points down.</p>
+<p>Perpendicular forces are added using the Pythagorean theorem. The equilibrant has
+the same magnitude as the sum of the two forces.
+<span class="math display">\[F_{eq} = \sqrt{64 N + 92 N} = 112 \text{ N}\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -527,22 +559,22 @@ starts negative, then becomes positive.
 <answernumbering>abc</answernumbering>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Its velocity and acceleration both point up.
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-Its velocity and acceleration both point down.
+124 N
 </p>]]></text>
 </answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-Its velocity points up while its acceleration points down.
+112 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-Its velocity points down while its acceleration points up.
+94.2 N
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+119 N
 </p>]]></text>
 </answer>
 </question>
@@ -557,7 +589,7 @@ Its velocity points down while its acceleration points up.
 
 <question type="multichoice">
 <name>
-<text> Q09 : free-fall-vertical-launch-max-height-scaling-with-vi </text>
+<text> Q09 : calc-net-force-angle </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -584,14 +616,19 @@ Its velocity points down while its acceleration points up.
 }
 </style>
 <p>
-<p>Two balls are launched straight up. The first ball is launched with 8 times the initial speed of the second. Ignore air resistance. How many times higher does the first ball rise compared to the second?</p>
+<p>Charlie pulls on a box with <span class="math inline">\(14.0\)</span> N of force at <span class="math inline">\(-138^\circ\)</span>.
+Dan pulls on the the same box with <span class="math inline">\(32.0\)</span> N of force at <span class="math inline">\(21^\circ\)</span>.
+What is the angle of the net force on the box?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>Use the formula <span class="math inline">\(v_f^2 = v_i^2 + 2ad\)</span> with <span class="math inline">\(v_f = 0\)</span> and solve for <span class="math inline">\(d\)</span>:</p>
-<p><span class="math display">\[d = -\frac{v_i^2}{2a}\]</span>
-The distance scales with the square of the initial velocity. Therefore, the first ball rises <span class="math inline">\(8^2 = 64\)</span> times as high as the second ball.</p>
+<p>The sum of the horizontal components is
+<span class="math display">\[F_{net, x} = (14 N)\cos(-138^\circ) + (32 N)\cos(21^\circ) = 19.4705461 N\]</span>
+The sum of the vertical components is
+<span class="math display">\[F_{net, y} = (14 N)\sin(-138^\circ) + (32 N)\sin(21^\circ) = 2.0999459 N\]</span>
+The angle of the net force is
+<span class="math display">\[\theta = \tan^{-1}(2.0999459 / 19.4705461)  = 6.2^\circ\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -601,22 +638,22 @@ The distance scales with the square of the initial velocity. Therefore, the firs
 <answernumbering>abc</answernumbering>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-<span class="math inline">\(\sqrt{8}\)</span> times as high
+<span class="math inline">\(-137.5^\circ\)</span>
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-<span class="math inline">\(8\)</span> times as high
+<span class="math inline">\(-87.6^\circ\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(34.8^\circ\)</span>
 </p>]]></text>
 </answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-<span class="math inline">\(8^2\)</span> times as high
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-Impossible to determine without knowing the initial speeds
+<span class="math inline">\(6.2^\circ\)</span>
 </p>]]></text>
 </answer>
 </question>
@@ -631,7 +668,7 @@ Impossible to determine without knowing the initial speeds
 
 <question type="multichoice">
 <name>
-<text> Q10 : calculate-vi-given-t-1d-projectile </text>
+<text> Q10 : calc-tension-hanging-sign </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -658,15 +695,17 @@ Impossible to determine without knowing the initial speeds
 }
 </style>
 <p>
-<p>A ball tossed straight up returns to its starting point in . What was its initial speed? Ignore air resistance.</p>
+<p>A sign that weighs <span class="math inline">\(510\)</span> N is supported by two ropes that each makes a <span class="math inline">\(32^\circ\)</span>
+angle with the horizontal. The sign is not moving. What is the magnitude of the
+force exerted by each rope?</p>
+<p></p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>The final velocity is equal to the initial velocity, but in the opposite direction (<span class="math inline">\(v_f = -v_i\)</span>). Substitute this into the equation <span class="math inline">\(v_f = v_i + at\)</span> and solve for <span class="math inline">\(vi\)</span>:</p>
-<p><span class="math display">\[-v_i = v_i + at\]</span>
-<span class="math display">\[-2v_i = at\]</span>
-<span class="math display">\[vi = -\frac{at}{2} = -\frac{(\SI{-9.8}{m/s^2})(\SI{6.82}{s})}{2} = \SI{33.4}{m/s}\]</span></p>
+<p>The horizontal components cancel out so the two vertical components must balance
+the weight of the sign. (See the example problem on p. 122.)
+<span class="math display">\[F = \frac{(510 N)}{2\sin(32^\circ)} = 481 \text{ N}\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -674,24 +713,24 @@ Impossible to determine without knowing the initial speeds
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+539 N
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+356 N
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+692 N
+</p>]]></text>
+</answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
+481 N
 </p>]]></text>
 </answer>
 </question>
@@ -706,7 +745,7 @@ Impossible to determine without knowing the initial speeds
 
 <question type="multichoice">
 <name>
-<text> Q11 : calculate-d-given-vi-vf-t-aircraft-carrier </text>
+<text> Q11 : adding-vectors-possibilities </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -733,15 +772,16 @@ Impossible to determine without knowing the initial speeds
 }
 </style>
 <p>
-<p>A fighter plane is launched from a catapult on an aircraft carrier. Starting from rest, it reaches a speed of  in . Assuming constant acceleration, what is the length of the aircraft catapult?</p>
+<p>Two forces have magnitudes of 5 N and 7 N, respectively. When these two
+forces are added, the magnitude of the sum</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>First, convert the final speed to :</p>
-<p><span class="math display">\[v_f = \SI{270}{km/h} \times \frac{\SI{1000}{m}}{\SI{1}{km}} \times \frac{\SI{1}{h}}{\SI{3600}{s}} = \SI{75}{m/s}\]</span>
-Then, use the formula for constant acceleration:
-<span class="math display">\[d = \frac{1}{2}(v_i + v_f)t = \frac{1}{2} (0 + \SI{75}{m/s})(\SI{2.28}{s}) = \SI{85.5}{m}\]</span></p>
+<p>If the two vectors point in the same direction, then the magnitude of their sum is 12 N.
+If the two vectors point in opposite directions, then the magnitude of their sum is 2 N.
+Otherwise, the magnitude of their sum is somewhere between 2 N and 12 N.
+The correct answer is “could be any value between 2 N and 12 N”.</p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -749,24 +789,24 @@ Then, use the formula for constant acceleration:
 <shuffleanswers>false</shuffleanswers>
 <single>true</single>
 <answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+must be 12 N
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+could be any value
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+must be either 2 N or 12 N
+</p>]]></text>
+</answer>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
-</p>]]></text>
-</answer>
-<answer fraction="0" format="html">
-<text><![CDATA[<p>
-
+could be any value between 2 N and 12 N (inclusive)
 </p>]]></text>
 </answer>
 </question>
@@ -781,7 +821,7 @@ Then, use the formula for constant acceleration:
 
 <question type="multichoice">
 <name>
-<text> Q12 : calculate-a-given-0-to-60 </text>
+<text> Q12 : calc-net-force-magnitude </text>
 </name>
 <questiontext format="html">
 <text><![CDATA[
@@ -808,15 +848,19 @@ Then, use the formula for constant acceleration:
 }
 </style>
 <p>
-<p>An F1 car accelerates from <span class="math inline">\(0\)</span> to <span class="math inline">\(60\)</span> miles per hour in <span class="math inline">\(\SI{2.14}{s}\)</span>. What is the acceleration of the car in SI units? (<span class="math inline">\(\SI{1}{mile} = \SI{1609.34}{m}\)</span>)</p>
+<p>Robert pulls on a box with 11.0 N of force at <span class="math inline">\(6^\circ\)</span>.
+Steve pulls on the the same box with 95.0 N of force at <span class="math inline">\(161^\circ\)</span>.
+What is the magnitude of the net force on the box?</p>
 </p>]]></text>
 </questiontext>
 <generalfeedback format="html">
 <text><![CDATA[<p>
-<p>First, convert  to .</p>
-<p><span class="math display">\[\SI{60}{mph} \times \frac{\SI{1609.34}{m}}{\SI{1}{mi}} \times \frac{\SI{1}{h}}{\SI{3600}{s}} = \SI{26.8223}{m/s}\]</span>
-Then, divide by the time.</p>
-<p><span class="math display">\[a = \frac{v_f - v_i}{t} = \frac{\SI{26.8223}{m/s} - 0}{\SI{2.14}{s}} = \SI{12.5}{m/s^2}\]</span></p>
+<p>The sum of the horizontal components is
+<span class="math display">\[F_{net, x} = (11 N)\cos(6^\circ) + (95 N)\cos(161^\circ) = -78.8845238 N\]</span>
+The sum of the vertical components is
+<span class="math display">\[F_{net, y} = (11 N)\sin(6^\circ) + (95 N)\sin(161^\circ) = 32.0787878 N\]</span>
+The magnitude of the net force is
+<span class="math display">\[F_{net} = \sqrt{(-78.8845238 N)^2 + (32.0787878 N)^2} = 85.2 \text{ N}\]</span></p>
 </p>]]></text>
 </generalfeedback>
 <penalty>0</penalty>
@@ -826,22 +870,22 @@ Then, divide by the time.</p>
 <answernumbering>abc</answernumbering>
 <answer fraction="100" format="html">
 <text><![CDATA[<p>
-
+85.2 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-
+88.7 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-
+123.6 N
 </p>]]></text>
 </answer>
 <answer fraction="0" format="html">
 <text><![CDATA[<p>
-
+95.2 N
 </p>]]></text>
 </answer>
 </question>

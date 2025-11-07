@@ -1,0 +1,30 @@
+```{r, echo = FALSE, results = "hide"}
+x <- sample(30:99, 2)
+m <- x[1]
+f <- x[2]
+```
+
+Question
+========
+A person of mass $`r m`$ kg pushes on a wall with $`r f`$ N of force. What is
+the magnitude of the force that the wall exerts on the person?
+
+Answerlist
+----------
+* $`r f`$ N
+* $`r signif(m * 9.8, 2)`$ N
+* $`r signif(f * 9.8, 2)`$ N
+* $`r signif(f / 9.8, 2)`$ N
+
+Solution
+========
+According to Newton's Third Law of Motion, the wall exerts an equal and opposite
+force on the person (the person's mass has nothing to do with the answer).
+
+
+Meta-information
+================
+exname: Force Pushing Against Wall
+extype: schoice
+exsolution: 1000
+exshuffle: 4

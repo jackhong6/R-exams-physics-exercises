@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+f1 <- sample(1:20, 1)
+fnet <- f1 + sample(1:10, 1)
+ans <- signif(sqrt(fnet^2 - f1^2), 3)
+
+distractors <- c(fnet - f1, f1 + fnet)
+sc <- num_to_schoice(ans, wrong = distractors, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.1f N", sc$questions)
+```
+
+Question
+========
+Carly pulls on a box with `r fmt(f1, 1)` N of force. Debby pulls on the the same box
+at a right angle to Carly. How hard must Debby pull to make the resultant force
+on the box `r fmt(fnet, 1)` N?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Perpendicular forces are related by the Pythagorean theorem.
+$$F_{Debby} = \sqrt{F_{net}^2 - F_{Carly}^2} = \sqrt{(`r fnet` N)^2 - (`r f1` N)^2} = `r ans` \text{ N}$$
+
+
+Meta-information
+================
+exname: Calculate F2 Given Sum of Perpendicular Forces
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

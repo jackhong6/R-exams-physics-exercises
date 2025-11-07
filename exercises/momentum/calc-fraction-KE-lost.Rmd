@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(1000:1500, 1) # car mass (kg)
+n <- sample(2:10, 1) # truck mass / car mass
+v <- sample(10:99, 1) # speed of car
+```
+
+Question
+========
+A car of mass $`r m`$ kg, traveling with a velocity $`r v`$ km/h, strikes a parked truck of mass $`r m*n`$ kg head-on. The bumpers lock together in this completely inelastic collision. What fraction of the initial
+kinetic energy is lost in the collision?
+
+Answerlist
+----------
+* $1 / `r n`$
+* $1 / `r n + 1`$
+* $1 / `r n^2`$
+* $`r n` / `r n+1`$
+
+Solution
+========
+Consevation of momentum for an inelastic collision in 1D with $v_2 = 0$
+$$m_1 v_1 = (m_1 + m_2) v'$$
+
+The fraction of kinetic energy lost is $\Delta KE / KE$
+$$\Delta KE / KE = \frac{m_1 v_1^2 / 2 - (m_1 + m_2) v'^2 / 2}{m_1 v_1^2/2} = \frac{m_2}{m_1 + m_2} = \frac{m_2/m_1}{1 + m_2/m_1}$$
+When $m_2 / m_1 = `r n`$, this simplifies to
+$$\frac{`r n`}{`r n+1`}$$
+
+
+Meta-information
+================
+exname: Calculate Fraction of Kinetic Energy Lost
+extype: schoice
+exsolution: 0001
+exshuffle: 4

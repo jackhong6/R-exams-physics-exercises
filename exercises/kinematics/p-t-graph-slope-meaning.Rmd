@@ -9,7 +9,7 @@ Answerlist
 * acceleration
 * displacement
 * velocity
-* rate
+* pace
 
 Solution
 ========

@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(1:10, 2)
+for (x in c(2, 3, 5, 7)) {
+  while (n[1] %% x == 0 && n[2] %% x == 0) {
+    n[1] <- n[1] / x
+    n[2] <- n[2] / x
+  }
+}
+```
+
+Question
+========
+Object 1 and Object 2 have the same momentum. The ratio of Object 1's mass to Object 2's mass is $m_1 / m_2 = `r n[1]` / `r n[2]`$. What is the ratio of Object 1's kinetic energy to Object 2's kinetic energy, $KE_1 / KE_2$?
+
+
+Answerlist
+----------
+* $`r n[1]` /`r n[2]`$
+* $`r n[2]` /`r n[1]`$
+* $`r n[1]^2` /`r n[2]^2`$
+* $`r n[2]^2` /`r n[1]^2`$
+
+
+Solution
+========
+Object 1 and 2 have the same momentum so $m_1 v_1 = m_2 v_2$ or
+$$\frac{m_1}{m_2} = \frac{v_2}{v_1}$$
+The ratio of their kinetic energy is
+$$\frac{m_1 v_1^2 / 2}{m_2 v_2^2 / 2} = \frac{m_1}{m_2} \left( \frac{v_1}{v_2} \right)^2 = \frac{m_1}{m_2} \left( \frac{m_2}{m_1} \right)^2 = \frac{m_2}{m_1} = \frac{`r n[2]`}{`r n[1]`}$$
+
+
+Meta-information
+================
+exname: Kinetic Energy Ratio Same Momentum Different Mass
+extype: schoice
+exsolution: 0100
+exshuffle: 4

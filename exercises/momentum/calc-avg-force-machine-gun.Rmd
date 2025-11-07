@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen = 999)
+M <- sample(5:15, 1) # mass of machine gun (kg)
+m <- sample(10:50, 1) # mass of bullets (g)
+v <- sample(600:1200, 1) # muzzle speed (m/s)
+rpm <- sample(600:1500, 1) # rounds per minute
+
+f <- (m / 1000) * v * (rpm / 60)
+distractors <- c(f * 60, f * 1000)
+
+sc <- num_to_schoice(f, wrong = distractors, delta = f/100, format = FALSE)
+
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+```
+
+Question
+========
+A machine gun, of mass $`r M`$ kg, fires bullets of mass $`r m`$ g, with a muzzle speed of
+$`r v`$ m/s, at the rate of $`r rpm`$ rounds per minute. What is the average force exerted
+on the machine gun mount?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The impulse is equal to the change in momentum
+
+$$F \Delta t = m \Delta v$$
+Solving for $F$
+
+$$F = \frac{m \Delta v}{\Delta t} = (\SI{`r m/1000`}{kg})(\SI{`r v`}{m/s})(\SI{`r rpm`}{rpm})(1/(\SI{60}{s/min})) = \SI{`r signif(f, 3)`}{N}$$
+
+Meta-information
+================
+exname: Calculate Average Force on Machine Gun Mount
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+fx <- sample(10:50, 1)
+fy <- sample(10:50, 1)
+ans <- signif(atan2(fy, fx) * 180 / pi, 2)
+
+sc <- num_to_schoice(ans, digits = 1, range = c(0, 90), format = FALSE)
+sc$questions <- sprintf("$%.1f^\\circ$", sc$questions)
+```
+
+Question
+========
+Xavier pulls on a box with `r fmt(fx, 1)` N of force at $0^\circ$. Yuri pulls on the the same box with
+`r fmt(fy, 1)` N of force, at $90^\circ$. What is the angle of the net force?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The angle can be found using the arctangent.
+$$\theta = \tan^{-1}(`r fy` / `r fx`) = `r ans`^\circ$$
+
+
+Meta-information
+================
+exname: Calculate Net Force Angle for Perpendicular Forces
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

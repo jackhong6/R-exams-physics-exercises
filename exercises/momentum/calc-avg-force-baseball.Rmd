@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen = 999)
+m <- sample(100:200, 1) # mass of ball (g)
+v <- sample(10:40, 1) # initial speed (m/s)
+t <- signif(runif(1, 1, 2), 2) # contact time (ms)
+
+f <- 2 * m * v / t
+distractors <- c(1000*f, f/1000, f/2)
+
+sc <- num_to_schoice(f, wrong = distractors, delta = f/100, format = FALSE)
+
+sc$questions <- signif(sc$questions, 3)
+sc$questions <- sprintf("\\SI{%g}{N}", sc$questions)
+```
+
+Question
+========
+A `r m` g baseball is thrown towards a batter at `r v` m/s. The batter hits the
+ball back along the same path, and at the same speed. If the bat was in contact
+with the ball for `r t` ms, the average force exerted by the bat was
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The impulse is equal to the change in momentum
+
+$$F \Delta t = m \Delta v$$
+Solving for $F$
+
+$$F = \frac{m \Delta v}{\Delta t} = \frac{(\SI{`r m/1000`}{kg})(\SI{`r v`}{m/s} - \SI{`r -v`}{m/s})}{\SI{`r t/1000`}{s}} = \SI{`r signif(f,3)`}{N}$$
+
+Meta-information
+================
+exname: calculate average force baseball bat
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

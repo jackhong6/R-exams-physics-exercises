@@ -1,0 +1,28 @@
+Question
+========
+The gravitational acceleration on Mars is about one-third of that on Earth.
+If you throw a ball straight up with the same velocity on Mars as on Earth, how
+would its maximum height compare to that on Earth?
+
+
+Answerlist
+----------
+* The ball would go to 1/3 the maximum height on Earth.
+* The ball would go to the same maximum height as on Earth.
+* The ball would go 3 times higher than on Earth.
+* The ball would go 9 times higher than on Earth.
+
+
+Solution
+========
+The max height can be calculated from the formula $v_f^2 = v_i^2 + 2ad$ with $v_f = 0$ and $a = g$.
+$$d = -\frac{v_i^2}{2g}$$
+If $g$ is one third as large on Mars, then $d$ would be 3 times larger. Therefore,
+the ball would go 3 time higher on Mars than on Earth.
+
+
+Meta-information
+================
+exname: Max Height on Mars
+extype: schoice
+exsolution: 0010

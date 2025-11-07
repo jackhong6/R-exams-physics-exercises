@@ -1,0 +1,27 @@
+Question
+========
+Two forces have magnitudes of 5 N and 7 N, respectively. When these two 
+forces are added, the magnitude of the sum
+
+Answerlist
+----------
+* could be any value
+* could be any value between 2 N and 12 N (inclusive)
+* must be either 2 N or 12 N
+* must be 12 N
+
+
+Solution
+========
+If the two vectors point in the same direction, then the magnitude of their sum is 12 N.
+If the two vectors point in opposite directions, then the magnitude of their sum is 2 N.
+Otherwise, the magnitude of their sum is somewhere between 2 N and 12 N.
+The correct answer is "could be any value between 2 N and 12 N".
+
+
+Meta-information
+================
+exname: add vectors possibilities
+extype: schoice
+exsolution: 0100
+exshuffle: 4

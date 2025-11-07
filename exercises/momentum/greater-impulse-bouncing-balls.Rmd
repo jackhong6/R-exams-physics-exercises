@@ -1,0 +1,26 @@
+Question
+========
+Two equal mass balls, one red and one blue, are dropped from the same height,
+and bounce off the floor. The red ball bounces higher than the blue ball. Which
+ball is subjected to the greater magnitude of impulse during its collision with
+the floor?
+
+Answerlist
+----------
+* The red ball.
+* The blue ball.
+* Both balls were subjected to the same impulse.
+* It depends on the elasticity of the collisions.
+
+Solution
+========
+Both balls hit the floor with the same speed, but the red one rebounds with a
+greater speed (since it goes higher). Therefore, the red ball had the greater
+change in momentum and must have experienced the greater impulse.
+
+Meta-information
+================
+exname: Greater Impulse of Bouncing Balls
+extype: schoice
+exsolution: 1000
+exshuffle: 4

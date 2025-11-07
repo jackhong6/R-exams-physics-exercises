@@ -1,14 +1,17 @@
 ```{r, echo = FALSE, results = "hide"}
-x <- signif(runif(1, 0.1, 3), 2)
+x <- signif(runif(1, 0.1, 3), 3)
+while (x == 1) {
+  x <- signif(runif(1, 0.1, 3), 3)
+}
 ```
 
 Question
 ========
-The acceleration of gravity on Planet X is $`r x`g$, where $g$ is the acceleration of gravity on Earth. If you hit a baseball on this planet with the same speed and angle that you would on Earth, the ball would land
+The acceleration of gravity on Planet X is $`r x`g$, where $g$ is the acceleration of gravity on Earth. If you hit a baseball on this planet with the same speed and angle as you do on Earth, the ball would land
 
 Answerlist
 ----------
-* the same distance away
+* $1/`r x`^2$ times as far
 * $`r x`$ times as far
 * $1/`r x`$ times as far
 * $`r x`^2$ times as far

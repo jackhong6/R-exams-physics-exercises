@@ -1,0 +1,25 @@
+Question
+========
+A football is kicked with a velocity of 25 m/s at an angle of $45^\circ$ above
+the horizontal. What is the vertical component of its acceleration as it travels
+along its trajectory? (Ignore air resistance.)
+
+
+Answerlist
+----------
+* $g \sin(45^\circ)$ upward
+* $g \sin(45^\circ)$ downward
+* $g$ upward
+* $g$ downward
+
+
+Solution
+========
+For projectile motion on Earth, the acceleration is always $g$ downward.
+
+
+Meta-information
+================
+exname: Acceleration of 2D Projectile
+extype: schoice
+exsolution: 0001

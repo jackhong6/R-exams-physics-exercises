@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+f1 <- sample(100:999, 1) # force 1 (N)
+f2 <- sample(100:999, 1) # force 2 (N)
+angle <- sample(20:160, 1)  # separation between f1 and f2 (degrees)
+
+f3 <- sqrt(f1^2 + f2^2 - 2*f1*f2*cos((180-angle)*pi/180))
+
+sc <- num_to_schoice(f3, delta = f3/100, format = FALSE)
+sc$questions <- sprintf("$\\SI{%g}{\\N}$", signif(sc$questions, 3))
+```
+
+Question
+========
+An object is kept in static equilibrium by three forces, $F_1$, $F_2$, and $F_3$. If $F_1 = \SI{`r f1`}{N}$ and $F_2 = \SI{`r f2`}{N}$ are separated by an angle of \ang{`r angle`}, what is magnitude of $F_3$?
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The three vectors sum to zero and therefore they form a triangle. Adding $F_1$ 
+and $F_2$ tip to tail results in an angle of $\ang{180} - \ang{`r angle`}$
+between them. To find the magnitude of $F_3$, use the cosine law:
+
+$$F_3 = \sqrt{F_1^2 + F_2^2 - 2 F_1 F_2 \cos(\ang{180} - \ang{`r angle`})} = \SI{`r signif(f3, 3)`}{N}$$
+
+
+
+Meta-information
+================
+exname: calculate equilibrant
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

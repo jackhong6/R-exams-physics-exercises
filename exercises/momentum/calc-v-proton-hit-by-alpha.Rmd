@@ -1,0 +1,28 @@
+Question
+========
+A proton at rest is struck head-on by an alpha particle 
+(which consists of 2 protons and 2 neutrons) moving at speed $v$. If the collision
+is completely elastic, what speed will the alpha particle have after the collision?
+Assume that the neutron's mass is equal to the proton's mass.
+
+Answerlist
+----------
+* $(5/3) v$
+* $(3/5) v$
+* $(1/4) v$
+* $(1/5) v$
+
+Solution
+========
+The general solution for an elastic collision in 1D is
+
+$$v_1' = \frac{(m_1 - m_2) v_1 + 2 m_2 v_2}{m_1 + m_2}$$
+When $m_1 = 4 m_2$, $v_1 = v$, and $v_2 = 0$, this simplifies to
+$$v_1' = (3/5) v$$
+
+
+Meta-information
+================
+exname: Proton Hit By Alpha Particle
+extype: schoice
+exsolution: 0100

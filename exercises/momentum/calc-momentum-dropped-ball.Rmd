@@ -1,0 +1,41 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # mass (g)
+h <- sample(1:20, 1) # height (m)
+p <- (m/1000) * sqrt(2 * 9.8 * h) # momentum (kg m/s)
+
+distractors <- c(m * h, p * 1000)
+sc <- num_to_schoice(p, wrong = distractors, delta = p/10, format = FALSE)
+sc$questions <- signif(sc$questions, 2)
+sc$questions <- sprintf("\\SI{%g}{kg.m/s}", sc$questions)
+```
+
+Question
+========
+A ball of mass \SI{`r m`}{g} is dropped from a height of \SI{`r h`}{m}. Its
+momentum just before it strikes the ground is
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The velocity of the ball just before hitting the ground can be calculated using
+conservation of mechanical energy
+
+$$\frac{1}{2} m v^2 = mgh$$
+$$v = \sqrt{2gh}$$
+
+The momentum is the product of mass and velocity
+$$
+p = m v = m\sqrt{2gh} = (\SI{`r m/1000`}{kg})\sqrt{2(\SI{9.8}{m/s^2})(\SI{`r h`}{m})} = \SI{`r signif(p, 2)`}{kg.m/s}
+$$
+
+
+Meta-information
+================
+exname: Calculate Momentum of Dropped Ball
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

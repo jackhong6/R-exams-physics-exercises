@@ -1,0 +1,21 @@
+Question
+========
+A small car collides with a large truck in a head-on collision. Which of the following
+statements concerning the magnitude of the average collision force is correct?
+
+Answerlist
+----------
+* The truck experiences the greater average force.
+* The car experiences the greater average force.
+* The car and the truck experience the same average force.
+* Cannot be determined because the masses and velocities are not given.
+
+Solution
+========
+Both objects experienced the same force (Newton's Third Law of Motion).
+
+Meta-information
+================
+exname: Force During Collision
+extype: schoice
+exsolution: 0010

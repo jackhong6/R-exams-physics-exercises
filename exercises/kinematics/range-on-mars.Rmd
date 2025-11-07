@@ -1,0 +1,30 @@
+Question
+========
+The gravitational acceleration on Mars is about one-third of that on Earth. 
+If you hit a baseball on Mars with the same speed and angle that you do on Earth,
+the ball would land
+
+Answerlist
+----------
+* 1/9 times as far
+* 1/3 times as far
+* 3 times as far
+* 9 times as far
+
+Solution
+========
+The hang time of the ball can be calculated from the formula $v_f = v_i + at$ with $v_f = -v_i$. 
+
+$$t = -\frac{2v_i}{a}$$
+On Earth, the time is $t_{Earth} = -2 v_i / g_{Earth}$. On Mars, $g_{Mars} = g_{Earth} / 3$ so
+
+$$t_{Mars} = -\frac{2 v_i}{g_{Earth} / 3} = 3 \times \frac{-2 v_i}{g_{Earth}} = 3 t_{Earth}$$
+
+The ball is in the air 3 times longer on Mars than on Earth. Since the horizontal velocity is the same, the ball will travel 3 times as far.
+
+
+Meta-information
+================
+exname: range on Mars
+extype: schoice
+exsolution: 0010

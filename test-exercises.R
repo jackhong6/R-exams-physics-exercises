@@ -1,20 +1,21 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/momentum"))
+my_exam <- c(dir("exercises/dynamics"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calculate-d2-given-d1-const-a.Rmd")
+my_exam <- list("select-all-v-t-graphs-slowing-down.Rmd",
+                "acc-2d-projectile.Rmd",
+                "which-has-greater-acc-bike-or-car.Rmd",
+                "range-on-mars.Rmd", "hang-time-on-moon.Rmd")
 
 # Generate different PDFs
-set.seed(1)
 exams2pdf(my_exam, edir = "exercises", template = "templates/practice", 
-          header = list(Course = "Physics 11/12", Title = "Test"))
-set.seed(1)
+          header = list(Course = "Physics 11/12", Title = "Practice Test"))
 exams2pdf(my_exam, edir = "exercises", template = "templates/solution.tex", 
-          header = list(Course = "Physics 11/12", Title = "Test Solutions"))
+          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
 exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", blank = 0, samepage = TRUE,
            usepackage = c("newpxtext", "eulervm", "siunitx"))
 

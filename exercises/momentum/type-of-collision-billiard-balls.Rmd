@@ -1,0 +1,23 @@
+Question
+========
+In a game of pool, the white cue ball hits the #2 ball and stops, while the #2
+ball moves away with the same velocity as the cue ball had originally. Both balls
+have the same mass. The type of collision is
+
+Answerlist
+----------
+* elastic
+* inelastic
+* completely inelastic
+* any of the above, depending on the mass of the balls
+
+Solution
+========
+The collision described conserves kinetic energy. Therefore, it is an elastic
+collision.
+
+Meta-information
+================
+exname: Type of Collision Billiard Balls
+extype: schoice
+exsolution: 1000

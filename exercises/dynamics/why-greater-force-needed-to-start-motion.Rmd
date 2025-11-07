@@ -1,0 +1,24 @@
+Question
+========
+Why is a greater force needed to start moving a heavy box from rest than to
+keep pushing it with constant velocity? In the choices below, $\mu_k$ is the 
+coefficient of kinetic friction and $\mu_s$ is the coefficient of static friction.
+
+Answerlist
+----------
+* The normal force is greater when the box is at rest.
+* The inertia of the box is greater when it is at rest.
+* $\mu_s < \mu_k$
+* $\mu_k < \mu_s$
+
+Solution
+========
+$\mu_k < \mu_s$. The coefficient of kinetic friction is less than the coefficient
+of static friction.
+
+Meta-information
+================
+exname: Why Greater Force is Needed to Start Movement
+extype: schoice
+exsolution: 0001
+exshuffle: 4

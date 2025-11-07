@@ -1,0 +1,28 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(2:7, 1) # mass of bowling ball (kg)
+v <- sample(2:12, 1) # speed of bowling ball (m/s)
+```
+
+Question
+========
+Which has greater inertia? A bowling ball of mass `r m` kg traveling at `r v` m/s
+or a bullet of mass `r m/100` kg traveling at `r v*100` m/s?
+
+Answerlist
+----------
+* The bowling ball.
+* The bullet.
+* The bowling ball and the bullet have the same inertia.
+* Not enough information to determine.
+
+Solution
+========
+Inertia depends only on mass. Therefore, the bowling ball has the greater inertia.
+
+
+Meta-information
+================
+exname: Which Has Greater Inertia?
+extype: schoice
+exsolution: 1000
+exshuffle: 4

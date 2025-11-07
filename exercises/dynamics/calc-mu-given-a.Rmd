@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+a <- signif(runif(1, 1, 9), 3)
+mu <- signif(a / 9.8, 3)
+
+sc <- num_to_schoice(mu, delta = mu/10, digits = 3, format = TRUE)
+```
+Question
+========
+A box slides on the floor in the $+x$ direction. It slows down and comes
+to a stop with a constant acceleration of $-\SI{`r a`}{m/s^2}$. The only force acting on the box while it is slowing down is friction between the box and the floor. What is the
+coefficient of kinetic friction between the box and the floor?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The net force is the friction force, so
+$$F_f = F_{net} = ma$$
+The normal force, $F_N$, is the weight of the box, $mg$, so
+$$\mu_k = \frac{F_f}{F_N} = \frac{ma}{mg} = \frac{a}{g} = \frac{`r a`}{9.80} = `r mu`$$
+
+
+Meta-information
+================
+exname: Calculate mu given acceleration
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

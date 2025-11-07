@@ -1,0 +1,24 @@
+Question
+========
+True or false? The normal force on an object of mass $M$ at rest on an inclined 
+plane is less than $Mg$. Assume that the plane is inclined at a positive acute angle
+and that only gravity and the normal force act on the object.
+
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+True. The normal force on an inclined plane is $Mg \cos \theta$ and $\cos \theta$
+is always less than one for positive acute angles.
+
+
+Meta-information
+================
+exname: TF Normal Force is Less Than mg on Incline
+extype: schoice
+exsolution: 10

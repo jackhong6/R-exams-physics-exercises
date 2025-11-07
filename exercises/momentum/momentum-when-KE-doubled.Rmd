@@ -1,0 +1,23 @@
+Question
+========
+Consider two balls of equal mass moving at different speeds. Ball 1 has double 
+the kinetic energy of ball 2. How does the momentum of ball 1, $p_1$, compare to
+the momentum of ball 2, $p_2$?
+
+Answerlist
+----------
+* $p_1 = p_2$
+* $p_1 = \sqrt{2} p_2$
+* $p_1 = 2 p_2$
+* $p_1 = 4 p_2$
+
+Solution
+========
+Momentum is proportional to the square root of kinetic energy.
+$$p = \sqrt{2m E_k}$$ 
+
+Meta-information
+================
+exname: Momentum when kinetic energy is doubled.
+extype: schoice
+exsolution: 0100

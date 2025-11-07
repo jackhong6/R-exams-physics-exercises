@@ -1,0 +1,22 @@
+Question
+========
+A box, of mass $M$, is suspended by a string from the ceiling inside an elevator.
+The elevator is moving upward, but slowing down. The tension in the string is
+
+Answerlist
+----------
+* less than $Mg$.
+* equal to $Mg$.
+* greater than $Mg$.
+* zero.
+
+Solution
+========
+The elevator is accelerating downward, so the tension is less than $Mg$.
+
+
+Meta-information
+================
+exname: Tension Slowing Down Moving Up Elevator
+extype: schoice
+exsolution: 1000

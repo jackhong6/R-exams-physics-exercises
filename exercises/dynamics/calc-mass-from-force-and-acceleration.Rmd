@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(10:99, 1) # weight (N)
+a <- sample(10:99, 1) # acceleration (m/s^2)
+m <- f / a # mass (kg)
+
+distractors <- c(f * a, a / f)
+sc <- num_to_schoice(m, wrong = distractors, delta = m/10, format = FALSE)
+sc$questions <- sprintf("%g kg", signif(sc$questions, 2))
+```
+
+Question
+========
+A net force of `r f` N acts on an object, and it accelerates at `r a` m/s/s
+in the direction of the net force. What is the mass of the object?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+According to Newton's Second Law of Motion
+$$
+m = F / a = (\SI{`r f`}{N}) / (\SI{`r a`}{m/s^2}) = \SI{`r signif(m, 2)`}{kg}
+$$
+
+
+Meta-information
+================
+exname: Calculate Mass From Force and Acceleration
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

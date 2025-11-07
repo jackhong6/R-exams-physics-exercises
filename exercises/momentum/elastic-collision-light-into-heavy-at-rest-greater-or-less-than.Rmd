@@ -1,0 +1,22 @@
+Question
+========
+A golf ball traveling at speed $v$ collides head-on with a stationary bowling ball.
+If the collision is almost perfectly elastic, the speed of the golf ball just after
+the collision is
+
+Answerlist
+----------
+* slightly less than $v$.
+* slightly greater than $v$.
+* equal to $v$.
+* much less than $v$.
+
+Solution
+========
+The golf ball will bounce back with almost the same speed.
+
+Meta-information
+================
+exname: Elastic Collision Light into Heavy at Rest Greater or Less Than
+extype: schoice
+exsolution: 1000

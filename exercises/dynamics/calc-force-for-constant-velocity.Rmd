@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # mass (kg)
+mu <- signif(runif(1, 0.2, 0.7), 2) # coefficient of kinetic friction
+ans <- mu * m * 9.8
+dis <- c(mu * m)
+
+sc <- num_to_schoice(ans, wrong = dis, format = FALSE, delta = ans/10)
+sc$questions <- sprintf("%g N", signif(sc$questions, 2))
+```
+
+Question
+========
+What force is needed to keep a `r m`-kg box moving at a constant velocity across
+a warehouse floor if the coefficient of kinetic friction between the box and the floor is `r fmt(mu, 2)`?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The applied force needed for constant velocity (zero acceleration) is one that balances the friction force.
+$$F_f = \mu_k F_N = \mu m g = (`r mu`)(\SI{`r m`}{kg})(\SI{9.8}{N/kg}) = \SI{`r signif(ans, 2)`}{N}$$
+
+
+Meta-information
+================
+exname: Calculate Force for Constant Speed
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

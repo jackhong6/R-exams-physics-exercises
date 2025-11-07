@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+f1 <- sample(10:99, 1) # force 1 (N)
+f2 <- sample(10:99, 1) # force 2 (N)
+
+ans <- signif(sqrt(f1^2 + f2^2), 3)
+
+sc <- num_to_schoice(ans, delta = ans/100, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+```
+
+Question
+========
+Two forces act on an object. A `r f1`-N force acts at $0^\circ$ and a `r f2`-N force
+acts at $90^\circ$. What is the magnitude of the equilibrant?
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Perpendicular forces are added using the Pythagorean theorem. The equilibrant has
+the same magnitude as the sum of the two forces.
+$$F_{eq} = \sqrt{`r f1` N + `r f2` N} = `r ans` \text{ N}$$
+
+
+Meta-information
+================
+exname: Calculate Equilibrant Magnitude of Perpendicular Forces
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

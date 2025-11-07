@@ -1,0 +1,26 @@
+Question
+========
+A student puts two objects on a physics book and carefully tilts the cover. At a
+small angle, object A starts to slide. At a larger angle, object B starts to
+slide. Which has the greater coefficient of static friction with the book cover?
+
+Answerlist
+----------
+* Object A
+* Object B
+
+
+Solution
+========
+As shown in the example on p. 126, the coefficient of static friction is equal
+to $\tan \theta$, where $\theta$ is the angle at which the object starts to
+slide. The tangent function increases with the angle so it is greater for
+greater angles. Therefore, object B, which starts sliding at a greater angle,
+has the greater coefficient of static friction.
+
+
+Meta-information
+================
+exname: Greater Static Friction
+extype: schoice
+exsolution: 01

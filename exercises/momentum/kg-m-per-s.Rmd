@@ -1,6 +1,6 @@
 Question
 ========
-The kilogram metre per second (\unit{\kg.\m \per \s}) is SI unit of
+The kilogram metre per second (\unit{\kg.\m \per \s}) is the SI unit of
 
 Answerlist
 ----------

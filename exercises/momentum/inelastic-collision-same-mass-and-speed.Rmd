@@ -1,0 +1,23 @@
+Question
+========
+Two balls of equal mass roll straight toward each other with the same speed $v$ and 
+collide head on. If the collision is completely inelastic, then the speed of the
+combined mass after the collision is
+
+Answerlist
+----------
+* $0$
+* $v/2$
+* $v$
+* $2v$
+
+Solution
+========
+The total momentum before is zero and must remain zero after the collision.
+
+
+Meta-information
+================
+exname: Inelastic Collision Same Speed and Mass
+extype: schoice
+exsolution: 1000

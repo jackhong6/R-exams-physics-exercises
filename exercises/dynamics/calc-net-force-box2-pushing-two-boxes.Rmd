@@ -1,0 +1,52 @@
+```{r, echo = FALSE, results = "hide"}
+m1 <- sample(10:99, 1) # kg
+m2 <- m1 * sample(2:9, 1) # kg
+
+f2 <- m2 / (m1 + m2) * 100 # N
+dis <- c(100)
+
+sc <- num_to_schoice(f2, wrong = dis, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 0) -- (5, 0);",
+  "\\draw[thick] (1, 0) rectangle node[midway, font=\\small]{$m_1$} (2, 1);",
+  "\\draw[thick] (2, 0) rectangle node[midway, font=\\small]{$m_2$} (4, 2);",
+  "\\draw[-Stealth, thick] (0, 0.5) -- node[midway, above, font=\\small]{100 N} (1, 0.5);",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+Two boxes are in contact with each other on a frictionless table. The mass of
+the first box is $m_1 = `r m1` \text{ kg}$ and the mass of the second box is $m_2 = `r m2` \text{ kg}$.
+If you push on the first box with a horizontal force of 100 N to the right, then the second box will experience
+a net force of
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "boxes", format = typ, library = c("arrows.meta"))
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The acceleration of the system of two boxes is
+$$a = \frac{\SI{100}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}}$$
+The net force on $m_2$ is its mass times its acceleration
+$$F_{net, 2} = (\SI{`r m2`}{kg}) \left( \frac{\SI{100}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}} \right) = \SI{`r signif(f2, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: Calculate Net Force on Box 2 Pushing Boxes in Contact
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

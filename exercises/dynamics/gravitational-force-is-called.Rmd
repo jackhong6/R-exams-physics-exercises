@@ -1,0 +1,23 @@
+Question
+========
+The gravitational force exerted by a large body, such as the Earth,
+is called
+
+Answerlist
+----------
+* weight
+* gravitational field strength
+* gravitational mass
+* inertial mass
+
+Solution
+========
+The gravitational force exerted by a large body, such as the Earth, is called
+**weight**. (p. 94)
+
+Meta-information
+================
+exname: Gravitational Force is Also Called
+extype: schoice
+exsolution: 1000
+exshuffle: 4

@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+mp <- sample(20:99, 1) # mass of person (kg)
+mb <- sample(2:20, 1) # mass of box (kg)
+ans <- (mp + mb) * 9.8 # normal force (N)
+dis <- c(mb * 9.8, mp * 9.8, (mp - mb) * 9.8)
+
+sc <- num_to_schoice(ans, wrong = dis, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+```
+
+Question
+========
+A person (mass = `r mp` kg) stands on top of a box (mass = `r mb` kg) on the ground. What is the magnitude of the
+normal force that the ground applies to the box?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The normal force is
+$$F_N = (\SI{`r mp`}{kg} + \SI{`r mb`}{kg})(\SI{9.80}{N/kg}) = \SI{`r signif(ans, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: Calculate Normal Force Person on Top of Box
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

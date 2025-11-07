@@ -1,0 +1,28 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(1:10, 1)
+```
+
+Question
+========
+What is the net force on a person who is standing in an elevator moving up with
+a constant velocity of $`r fmt(v, 2)`$ m/s?
+
+Answerlist
+----------
+* $0$ N
+* $`r fmt(v, 2)`$ N, up
+* $`r fmt(v, 2)`$ N, down
+* It depends on the mass of the person.
+
+Solution
+========
+The elevator is moving with constant velocity so the acceleration is zero and
+the net force must also be zero.
+
+
+Meta-information
+================
+exname: Net Force Constant Velocity Elevator
+extype: schoice
+exsolution: 1000
+exshuffle: 4

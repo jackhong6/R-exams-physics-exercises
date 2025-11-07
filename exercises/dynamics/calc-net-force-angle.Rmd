@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(10:99, 2) # force (N)
+a <- sample (-179:180, 2) # angle (deg)
+
+x <- sum(f * cos(a * pi / 180))
+y <- sum(f * sin(a * pi / 180))
+ans <- atan2(y, x) * 180 / pi
+
+sc <- num_to_schoice(ans, digits = 1, range = c(-180, 180), format = FALSE)
+sc$questions <- sprintf("$%.1f^\\circ$", sc$questions)
+```
+
+Question
+========
+Charlie pulls on a box with $`r fmt(f[1], 1)`$ N of force at $`r a[1]`^\circ$. 
+Dan pulls on the the same box with $`r fmt(f[2], 1)`$ N of force at $`r a[2]`^\circ$.
+What is the angle of the net force on the box?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The sum of the horizontal components is
+$$F_{net, x} = (`r f[1]` N)\cos(`r a[1]`^\circ) + (`r f[2]` N)\cos(`r a[2]`^\circ) = `r x` N$$
+The sum of the vertical components is 
+$$F_{net, y} = (`r f[1]` N)\sin(`r a[1]`^\circ) + (`r f[2]` N)\sin(`r a[2]`^\circ) = `r y` N$$
+The angle of the net force is
+$$\theta = \tan^{-1}(`r y` / `r x`)  = `r fmt(ans, 1)`^\circ$$
+
+
+Meta-information
+================
+exname: Calculate Net Force Angle
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

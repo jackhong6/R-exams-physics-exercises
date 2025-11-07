@@ -1,0 +1,24 @@
+Question
+========
+A very light object moving to the right collides with a very heavy object at rest.
+After the collision, the heavy object moves to the right with a small speed, and the
+light object moves to the left. Which object experienced the greater magnitude of impulse
+during the collision?
+
+Answerlist
+----------
+* The heavy object.
+* The light object.
+* Both objects experienced the same magnitude of impulse.
+* Cannot be determined from the information given.
+
+Solution
+========
+Both objects experienced the same force (Newton's Third Law of Motion) for the 
+same amount of time. Therefore, they both experienced the same magnitude of impulse.
+
+Meta-information
+================
+exname: Impulse During Collision
+extype: schoice
+exsolution: 0010

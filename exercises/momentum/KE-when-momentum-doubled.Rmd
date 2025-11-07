@@ -1,0 +1,26 @@
+Question
+========
+Consider two balls of equal mass moving at different speeds. Ball 1 has double 
+the momentum of ball 2. How does the kinetic energy of ball 1, $KE_1$, compare to
+the kinetic energy of ball 2, $KE_2$?
+
+Answerlist
+----------
+* $KE_1 = KE_2$
+* $KE_1 = \sqrt{2} KE_2$
+* $KE_1 = 2 KE_2$
+* $KE_1 = 4 KE_2$
+
+Solution
+========
+Kinetic energy is proportional to momentum squared.
+$$KE = \frac{p^2}{2m}$$ 
+
+So when momentum is doubled, the kinetic energy must quadruple.
+$$KE_1 = 4 KE_2$$
+
+Meta-information
+================
+exname: Kinetic energy when momentum is doubled.
+extype: schoice
+exsolution: 0001

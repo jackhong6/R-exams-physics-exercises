@@ -1,0 +1,24 @@
+Question
+========
+A box, of mass $M$, is suspended by a string from the ceiling inside an elevator.
+The elevator is traveling downward with a constant speed. The tension in the string is
+
+Answerlist
+----------
+* less than $Mg$.
+* equal to $Mg$.
+* greater than $Mg$.
+* impossible to determine without knowing the speed.
+
+Solution
+========
+The elevator is moving with constant velocity so the acceleration is zero and
+the net force must also be zero. Therefore, the tension force must balance 
+(equal) the gravitational force, $Mg$.
+
+
+Meta-information
+================
+exname: Tension Constant Velocity Elevator
+extype: schoice
+exsolution: 0100

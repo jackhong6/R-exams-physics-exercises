@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # bullet mass (g)
+M <- sample(1:10, 1) # block mass (kg)
+h <- sample(10:99, 1) # height of swing (cm)
+
+v <- (m/1000 + M) / (m/1000) * sqrt(2 * 9.8 * h/100)
+
+sc <- num_to_schoice(v, range = c(v / 2, 2 * v), delta = v / 10, format = FALSE)
+sc$questions <- signif(sc$questions, 3)
+sc$questions <- sprintf("%g m/s", sc$questions)
+```
+
+Question
+========
+A bullet (`r m` g) is fired into the wooden block ($`r fmt(M, 2)`$ kg) of a ballistic pendulum. As a result, the
+bullet is lodged into the block, and the centre of mass of the pendulum-projectile system swings up to
+a maximum height of $`r h`$ cm. What was the initial speed of the bullet? 
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Conservation of momentum for the initial inelastic collision gives
+$$m v_1 = (m + M) v'$$
+The maximum pendulum swing height can be calculated using conservation of
+energy during the swing.
+$$v' = \sqrt{2gh}$$
+The speed of the bullet can be found by combining the two equations
+$$v_1 = \frac{m + M}{m} \sqrt{2gh} = \frac{`r m/1000` + `r M`}{`r m/1000`} \sqrt{2(\SI{9.8}{m/s^2})(\SI{`r h/100`}{m})} = \SI{`r signif(v, 3)`}{m/s}$$
+
+
+Meta-information
+================
+exname: Calculate Bullet Speed Ballistic Pendulum
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

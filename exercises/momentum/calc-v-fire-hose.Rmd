@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(500:1500, 1) # force to knock down door (N)
+r <- sample(10:40, 1) # rate of water flow (kg / s)
+v <- f / r # velocity of water needed (m / s)
+
+sc <- num_to_schoice(v, range = c(v / 2, 2 * v), delta = v / 10, format = FALSE)
+sc$questions <- signif(sc$questions, 2)
+sc$questions <- sprintf("%g m/s", sc$questions)
+```
+
+Question
+========
+A fire hose is turned on the door of a burning building in order to knock it down.
+This requires a force of $`r f`$ N. If the hose delivers $`r r`$ kg / s, what is the velocity of water
+needed, assuming that the water doesn't bounce back?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The impulse is related to the momentum by
+$$
+F \Delta t = m \Delta v
+$$
+Since the water does not bounce back, $v_f = 0$ and $\Delta v = -v_i$, where $v_i$
+is the velocity of the water needed to knock down the door. Therefore,
+$$v_i = F \left( \frac{\Delta t}{m} \right) = (`r f` \text{ N}) / (`r r`\text{ kg / s}) = `r signif(v, 2)` \text{ m/s}$$
+
+
+Meta-information
+================
+exname: Calculate Velocity of Water From Fire Hose
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

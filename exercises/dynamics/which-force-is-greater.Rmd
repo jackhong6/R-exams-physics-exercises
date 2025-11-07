@@ -1,0 +1,28 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(50:120, 2) # kg
+```
+
+Question
+========
+In a rugby game, Bob (mass = `r m[1]` kg) tackles Joe (mass = `r m[2]` kg)
+and knocks Joe to the ground. During the collision, who applied the greater force
+on whom?
+
+Answerlist
+----------
+* Bob applied a greater force on Joe (than Joe did on him).
+* Joe applied a greater force on Bob (than Bob did on him).
+* Bob and Joe applied the same magnitude force on each other.
+* It depends on the relative speeds of Bob and Joe.
+
+Solution
+========
+According to Newton's Third Law of Motion, the force of Bob on Joe is equal (but
+opposite) the force of Joe on Bob.
+
+
+Meta-information
+================
+exname: Which Force is Greater?
+extype: schoice
+exsolution: 0010

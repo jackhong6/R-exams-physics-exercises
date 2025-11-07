@@ -1,0 +1,18 @@
+Question
+========
+True or false? Momentum is conserved in a completely inelastic collision.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. Momentum is conserved in any collision.
+
+Meta-information
+================
+exname: TF Momentum Conserved Inelastic
+extype: schoice
+exsolution: 10

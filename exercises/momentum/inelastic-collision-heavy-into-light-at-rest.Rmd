@@ -1,0 +1,28 @@
+Question
+========
+A very heavy ball rolling with speed $v$ collides with a very light ball at 
+rest. If the collision is completely inelastic, then the speed of the combined 
+mass after the collision is approximately
+
+Answerlist
+----------
+* $0$
+* $v/2$
+* $v$
+* $2v$
+
+Solution
+========
+The very light ball will have very little effect on the very heavy ball and so
+the combined mass will hardly change. Using conservation of momentum, we can see
+that
+
+$$v' = \left(\frac{m_1}{m_1 + m_2} \right) v_1$$
+If $m_2 \ll m_1$, then $m_1 / (m_1 + m_2) \approx 1$.
+
+
+Meta-information
+================
+exname: Inelastic Collision Heavy into Light at Rest
+extype: schoice
+exsolution: 0010

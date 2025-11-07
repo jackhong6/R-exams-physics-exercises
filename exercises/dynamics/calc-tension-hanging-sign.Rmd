@@ -1,0 +1,53 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(100:999, 1) # weight (N)
+a <- sample(20:60, 1) # angle (deg)
+ans <- signif(w / 2 / sin(a * pi / 180), 3)
+
+sc <- num_to_schoice(ans, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+y_top <- -2 * tan(a * pi / 180)
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 0) -- (6, 0);",
+  sprintf("\\draw[thick](1,0) coordinate (A) -- (3, %f) coordinate (B) -- (5, 0) coordinate (C);", y_top),
+  sprintf("\\draw[thick] (2, %f) rectangle node[midway, font=\\small]{%d N} (4, %f);", y_top, w, y_top - 1),
+  sprintf("\\coordinate (D) at (1, %f); \\coordinate (E) at (5, %f);", y_top, y_top),
+  sprintf("\\pic[\"$%d^\\circ$\"scale=0.75, draw, angle eccentricity=2] {angle={A--B--D}};", a),
+  sprintf("\\pic[\"$%d^\\circ$\"scale=0.75, draw, angle eccentricity=2] {angle={E--B--C}};", a),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+A sign that weighs $`r w`$ N is supported by two ropes that each makes a $`r a`^\circ$
+angle with the horizontal. The sign is not moving. What is the magnitude of the
+force exerted by each rope?
+
+\vspace*{1em}
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "boxes", format = typ, library = c("arrows.meta", "angles", "quotes"))
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The horizontal components cancel out so the two vertical components must balance
+the weight of the sign. (See the example problem on p. 122.)
+$$F = \frac{(`r w` N)}{2\sin(`r a`^\circ)} = `r ans` \text{ N}$$
+
+
+Meta-information
+================
+exname: Calculate Tension Hanging Sign
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

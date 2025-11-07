@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+f1 <- sample(1:20, 1)
+f2 <- sample(1:20, 1)
+ans <- signif(sqrt(f1^2 + f2^2), 3)
+
+distractors <- c(f1 + f2, abs(f2 - f1))
+sc <- num_to_schoice(ans, wrong = distractors, delta = ans/10, digits = 1, format = FALSE)
+sc$questions <- sprintf("%g N", sc$questions)
+```
+
+Question
+========
+Adam pulls on a box with `r fmt(f1, 1)` N of force. Bob pulls on the the same box with 
+`r fmt(f2, 1)` N of force, at a right angle to Adam's force. What is the magnitude of the
+net force on the box?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Perpendicular forces are added using the Pythagorean theorem.
+$$F_{net} = \sqrt{F_1^2 + F_2^2} = \sqrt{(`r f1` N)^2 + (`r f2` N)^2} = `r ans` \text{ N}$$
+
+
+Meta-information
+================
+exname: Calculate Net Force Magnitude for Perpendicular Forces
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

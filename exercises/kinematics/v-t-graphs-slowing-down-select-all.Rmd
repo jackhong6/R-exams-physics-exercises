@@ -6,35 +6,35 @@ typ <- match_exams_device()
 tikz_graph_A <- "\\begin{tikzpicture}
                         \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
                         \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
-                        \\draw[red, ultra thick] (0,-1.4) .. controls (1,-1.4) and (2, -1.4) .. (2.9,0);
+                        \\draw[red, ultra thick] (0,-1.4) .. controls (0.5,-0.5) and (1, -0.2) .. (2.9,-0.1);
                 \\end{tikzpicture}"
 
 tikz_graph_B <- "\\begin{tikzpicture}
                         \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
                         \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
-                        \\draw[red, ultra thick] (0,0) -- (2.9,1.4);
+                        \\draw[red, ultra thick] (0,1.4) -- (2.9,0);
                 \\end{tikzpicture}"
 
 tikz_graph_C <- "\\begin{tikzpicture}
                         \\draw[->] node[anchor=east] {$0$} (0,0) -- (3, 0) node[anchor=west] {$t$};
                         \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
-                        \\draw[red, ultra thick] (0,0) -- (2.9, -1.4);
+                        \\draw[red, ultra thick] (0,-1.4) -- (2.9, 0);
                 \\end{tikzpicture}"
 
 tikz_graph_D <- "\\begin{tikzpicture}
                         \\draw[->] node[anchor=east] {$0$} (0,0) -- (3,0) node[anchor=west] {$t$};
                         \\draw[<->] (0,-1.5) -- (0,1.5) node[anchor=east] {$v$};
-                        \\draw[red, ultra thick] (0,0) .. controls (0.5,1.5) and (1,1.5) .. (2.9,1.5);
+                        \\draw[red, ultra thick] (0,1.4) .. controls (0.5,0.5) and (1,0.2) .. (2.9,0.1);
                 \\end{tikzpicture}"
 
 choices <- c("Graph A", "Graph B", "Graph C", "Graph D")
 
 # Generate all graphs
 graphs <- c(
-  include_tikz(tikz_graph_A, name = "v-t-graph-slowing-down-A", markup = "none", format = typ),
-  include_tikz(tikz_graph_B, name = "v-t-graph-slowing-down-B", markup = "none", format = typ),
-  include_tikz(tikz_graph_C, name = "v-t-graph-slowing-down-C", markup = "none", format = typ),
-  include_tikz(tikz_graph_D, name = "v-t-graph-slowing-down-D", markup = "none", format = typ)
+  include_tikz(tikz_graph_A, name = "select-all-v-t-graphs-slowing-down-A", markup = "none", format = typ),
+  include_tikz(tikz_graph_B, name = "select-all-v-t-graphs-slowing-down-B", markup = "none", format = typ),
+  include_tikz(tikz_graph_C, name = "select-all-v-t-graphs-slowing-down-C", markup = "none", format = typ),
+  include_tikz(tikz_graph_D, name = "select-all-v-t-graphs-slowing-down-D", markup = "none", format = typ)
 )
 
 # Randomize graphs and find the correct answer (original graph A)
@@ -47,7 +47,7 @@ sol <- sol[rand_ord]
 Question
 ========
 
-Which velocity-time graph represents the motion of an object that is slowing down?
+Which velocity-time graphs represent the motion of an object that is slowing down? *Select all that apply.*
 
 |            Graph A            |             Graph B           |             Graph C           |             Graph D           |
 |:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
@@ -66,6 +66,6 @@ Slowing down is represented by a line approaching the time axis on a velocity-ti
 
 Meta-information
 ================
-exname: velocity time graph slowing down
-extype: schoice
-exsolution: `r mchoice2string(sol)`
+exname: Velocity-Time Graphs that Show Slowing Down Select All That Apply
+extype: mchoice
+exsolution: 1111

@@ -1,0 +1,22 @@
+Question
+========
+True or false? If an object is in equilibrium (i.e. all the forces on it are 
+balanced), then the object must be at rest.
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. An object in equilibrium must have zero acceleration, but its velocity is
+not necessarily zero.
+
+
+Meta-information
+================
+exname: TF Equilibrium Moving
+extype: schoice
+exsolution: 01

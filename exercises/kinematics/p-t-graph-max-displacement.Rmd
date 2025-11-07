@@ -1,0 +1,43 @@
+```{r, echo = FALSE, results = "hide"}
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+# tikz velocity-time graph
+tikz_graph <- "\\begin{tikzpicture}
+                        \\draw[-Stealth] node[anchor=east] {$0$} (0,0) -- (10, 0) node[anchor=west] {time};
+                        \\draw[Stealth-Stealth] (0,-2) -- (0,2) node[anchor=east] {position};
+                        \\draw[red, ultra thick] (0,0) -- (3, -2) -- (8, 1) -- (9.8, 0);
+                        \\node at (3,0) [anchor=south] {A};
+                        \\node at (6,0) [anchor=south] {B};
+                        \\node at (8,0) [anchor=south] {C};
+                        \\node at (10,0) [anchor=south] {D};
+                \\end{tikzpicture}"
+```
+
+Question
+========
+The motion of an object is described by the following position-time graph. At which point in time is the magnitude of the object's displacement at a maximum?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz_graph, name = "p-t-graph", format = typ, library = c("arrows.meta"), packages="siunitx")
+```
+
+
+Answerlist
+----------
+* Point A
+* Point B
+* Point C
+* Point D
+
+
+Solution
+========
+The displacement is maximum when the position is furthest away from the starting position.
+
+
+Meta-information
+================
+exname: position time graph max displacement
+extype: schoice
+exsolution: 1000

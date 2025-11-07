@@ -1,0 +1,21 @@
+Question
+========
+True or false? If the velocity vector and the acceleration vector both point in
+the same direction, then the object must be speeding up.
+
+Answerlist
+----------
+* True
+* False
+
+Solution
+========
+True. Acceleration is the change in velocity over time. If acceleration is in the
+same direction as velocity, then the velocity vector must be increasing and the
+object must be speeding up.
+
+Meta-information
+================
+exname: TF Acceleration and Velocity in Same Direction Means Speeding Up
+extype: schoice
+exsolution: 10

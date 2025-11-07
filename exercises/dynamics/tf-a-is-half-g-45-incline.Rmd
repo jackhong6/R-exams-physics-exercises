@@ -1,0 +1,22 @@
+Question
+========
+True or false? An object sliding down a 45 degree incline without friction is
+accelerating at half the acceleration of gravity.
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. The acceleration of an object on a frictionless inclined plane is given 
+by the equation $a = g \sin \theta$ and $\sin(\ang{45}) \neq 1/2$.
+
+
+Meta-information
+================
+exname: TF a is Half g on Frictionless 45 Degree Incline
+extype: schoice
+exsolution: 01

@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # mass (kg)
+w <- m * 9.8 # weight (N)
+
+distractors <- c(m / 9.8, m)
+sc <- num_to_schoice(w, wrong = distractors, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 2))
+```
+
+Question
+========
+The mass of an object is `r m` kg. What is its weight on Earth?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Weight is related to mass by
+$$
+W = m g = (\SI{`r m`}{kg})(\SI{9.8}{N/kg}) = \SI{`r signif(w, 2)`}{N}
+$$
+
+
+Meta-information
+================
+exname: Calculate Weight From Mass
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

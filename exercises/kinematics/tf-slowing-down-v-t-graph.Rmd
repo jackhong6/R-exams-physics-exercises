@@ -9,7 +9,7 @@ Answerlist
 
 Solution
 ========
-False. An object that starts with a negative velocity is speeding up if the velocity-time graph has a negative slope.
+False. An object that starts with a negative velocity is speeding up if the velocity-time graph has a negative slope. On a velocity-time graph, slowing down is represented by a line that gets closer to the time axis.
 
 Meta-information
 ================
