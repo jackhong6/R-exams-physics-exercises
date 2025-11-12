@@ -1,0 +1,24 @@
+Question
+========
+As the angle of an inclined plane increases, the parallel force _______ and the
+perpendicular force _______.
+
+
+Answerlist
+----------
+* decreases, decreases
+* decreases, increases
+* increases, decreases
+* increases, increases
+
+
+Solution
+========
+The parallel forces increases and the perpendicular force decreases.
+
+
+Meta-information
+================
+exname: Parallel and Perpendicular Forces as Incline Angle Increases
+extype: schoice
+exsolution: 0010

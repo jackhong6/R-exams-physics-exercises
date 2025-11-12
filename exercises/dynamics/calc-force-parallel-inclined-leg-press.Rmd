@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+a <- sample(40:50, 1) # angle of incline (deg)
+m <- sample(20:120, 1) # mass (kg)
+
+ans <- 9.8 * m * sin(a * pi / 180)
+dis <- c(9.8 * m, m, m * sin(a * pi / 180))
+
+include_supplement("inclined-leg-press.png", dir = "../graphics")
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/100, digits = 0)
+sc$questions <- paste(sc$questions, "N")
+```
+Question
+========
+A leg press machine is inclined at $`r fmt(a, 1)`^\circ$ from the horizontal. The total mass to be pressed
+up is $`r fmt(m, 1)`$ kg. What force must the legs apply to move the mass at a constant 
+velocity? Assume that friction is negligible.
+
+![](inclined-leg-press.png)
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The forces must be balanced for the mass to be moving at constant velocity. The
+legs must apply a force equal to the parallel component of the force of gravity.
+$$F = mg \sin(`r a`^\circ) = `r fmt(ans, 0)` \text{ N}$$
+
+
+Meta-information
+================
+exname: Calculate Force Parallel Inclined Leg Press
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

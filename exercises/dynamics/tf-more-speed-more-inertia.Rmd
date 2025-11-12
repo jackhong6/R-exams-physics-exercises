@@ -1,0 +1,21 @@
+Question
+========
+True or false? An object moving at high speed has more inertia than when it is at rest.
+
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. Inertia depends only on the mass of the object, not its speed.
+
+
+Meta-information
+================
+exname: True or False? More Speed Means More Inertia
+extype: schoice
+exsolution: 01

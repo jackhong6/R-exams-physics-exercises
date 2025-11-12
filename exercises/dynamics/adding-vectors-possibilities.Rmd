@@ -1,22 +1,27 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(1:20, 2)
+d <- abs(f[1] - f[2])
+s <- sum(f)
+```
 Question
 ========
-Two forces have magnitudes of 5 N and 7 N, respectively. When these two 
+Two forces have magnitudes of `r f[1]` N and `r f[2]` N, respectively. When these two 
 forces are added, the magnitude of the sum
 
 Answerlist
 ----------
 * could be any value
-* could be any value between 2 N and 12 N (inclusive)
-* must be either 2 N or 12 N
-* must be 12 N
+* could be any value between `r d` N and `r s` N (inclusive)
+* must be either `r d` N or `r s` N
+* must be `r s` N
 
 
 Solution
 ========
-If the two vectors point in the same direction, then the magnitude of their sum is 12 N.
-If the two vectors point in opposite directions, then the magnitude of their sum is 2 N.
-Otherwise, the magnitude of their sum is somewhere between 2 N and 12 N.
-The correct answer is "could be any value between 2 N and 12 N".
+Vectors are added "tip to tail".
+If the two vectors point in the same direction, then the magnitude of their sum is `r s` N.
+If the two vectors point in opposite directions, then the magnitude of their sum is `r d` N.
+Otherwise, the magnitude of their sum is somewhere between `r d` N and `r s` N.
 
 
 Meta-information

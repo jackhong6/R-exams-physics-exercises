@@ -1,5 +1,5 @@
 ```{r, echo = FALSE, results = "hide"}
-f <- sample(10:99, 1) # weight (N)
+f <- sample(100:999, 1) # weight (N)
 a <- sample(10:99, 1) # acceleration (m/s^2)
 m <- f / a # mass (kg)
 

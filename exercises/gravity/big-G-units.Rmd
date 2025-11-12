@@ -1,0 +1,34 @@
+Question
+========
+What are the units of $G$, the universal gravitational constant?
+
+Answerlist
+----------
+* \unit{N.m^2.kg^{-2}}
+* \unit{m^3.kg^{-1}.s^{-2}}
+* \unit{m.s^{-2}}
+* \unit{kg.m/s}
+* \unit{kg.m/s^2}
+* $G$ does not have any units
+
+Solution
+========
+The universal gravitational constant is defined in Newton's law of universal gravitation:
+$$F = \frac{GMm}{r^2}$$
+The constant relates the combination of mass and distance units to force units. Therefore,
+it must have units of
+
+$$\unit{N.m^2.kg^{-2}}$$
+
+Or, since $\unit{N} = \unit{kg.m/s^2}$, the units of $G$ are also
+
+$$\unit{m^3.kg^{-1}.s^{-2}}$$
+
+
+Meta-information
+================
+exname: Big G Units
+extype: schoice
+exsolution: 110000
+exshuffle: 4
+

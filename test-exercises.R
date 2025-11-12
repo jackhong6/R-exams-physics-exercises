@@ -6,18 +6,27 @@ my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("select-all-v-t-graphs-slowing-down.Rmd",
-                "acc-2d-projectile.Rmd",
-                "which-has-greater-acc-bike-or-car.Rmd",
-                "range-on-mars.Rmd", "hang-time-on-moon.Rmd")
+my_exam <- list("tf-obj-at-rest-no-forces.Rmd",
+                "adding-vectors-possibilities.Rmd"
+                "tf-obj-at-rest-zero-net-force.Rmd",
+                "tf-more-speed-more-inertia.Rmd",
+                "tf-force-on-2d-projectile.Rmd",
+                "tf-less-weight-on-moon.Rmd",
+                "tf-leftward-motion-leftward-force.Rmd")
 
 # Generate different PDFs
+s <- 2025*11*7
+set.seed(s)
 exams2pdf(my_exam, edir = "exercises", template = "templates/practice", 
-          header = list(Course = "Physics 11/12", Title = "Practice Test"))
-exams2pdf(my_exam, edir = "exercises", template = "templates/solution.tex", 
-          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
+          header = list(Course = "Physics 11", Title = "Dynamics Practice Test"))
+
+set.seed(s)
+exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
+          header = list(Course = "Physics 11", Title = "Dynamics Practice Test Solutions"))
+
+set.seed(s)
 exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", blank = 0, samepage = TRUE,
-           usepackage = c("newpxtext", "eulervm", "siunitx"))
+           usepackage = c("eulervm", "siunitx"))
 
 # Stress test an exercise
 st_results <- stresstest_exercise("~/Documents/GitHub/R-exams-physics-exercises/exercises/kinematics/calculate-d2-given-d1-const-a.Rmd")

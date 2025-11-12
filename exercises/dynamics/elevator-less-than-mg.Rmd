@@ -1,0 +1,29 @@
+Question
+========
+A box that weighs 100 N rests on a digital scale on the floor of an elevator. 
+When would the scale measure a weight less than 100 N? *Select all that apply.*
+
+
+Answerlist
+----------
+* moving upward with increasing speed.
+* moving upward with decreasing speed.
+* moving downward with increasing speed.
+* moving downward with decreasing speed.
+
+Solution
+========
+The force of gravity is always downward while the normal force provided by the
+scale always points upward. The scale measures the normal force on it. 
+If the acceleration is upward, then the normal force must be greater (so the scale
+would measure a greater weight). If the acceleration is downward, then the normal
+force must be less (so the scale would measure a smaller weight).
+
+The acceleration is downward when the elevator is moving down with increasing speed and
+when the elevator is moving up with decreasing speed.
+
+Meta-information
+================
+exname: Elevator Less than Mg
+extype: mchoice
+exsolution: 0110

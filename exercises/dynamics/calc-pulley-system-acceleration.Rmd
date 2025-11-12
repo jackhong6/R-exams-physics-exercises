@@ -1,0 +1,58 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 2) # masses 1 and 2 (kg)
+ans <- 9.8 * abs(m[1] - m[2]) / (m[1] + m[2])
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%g m/s/s", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 0) circle [radius=0.5];",
+  "\\draw[thick] (-0.5, 0) -- (-0.5, -1);",
+  "\\draw[thick] (0.5, 0) -- (0.5, -2);",
+  "\\draw[thick] (-0.9, -1) rectangle node[midway, font=\\small]{$m_1$} (-0.1, -1.5);",
+  "\\draw[thick] (0.1, -2) rectangle node[midway, font=\\small]{$m_2$} (0.9, -2.5);",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+Two masses are attached to a lightweight cord that passes over a frictionless 
+pulley as shown in the diagram. The values of the masses are $m_1 = `r fmt(m[1], 1)`$ kg 
+and $m_2 = `r fmt(m[2], 1)`$ kg. The hanging masses are free to move. 
+What is the magnitude of the acceleration of the system?
+
+\vspace*{1em}
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "pulley-system", format = typ)
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Since the weight of the two masses oppose each other, the net force is the 
+difference of the masses times the gravitational field strength. The direction
+is of course down toward the heavier side. We can use the absolute value of the
+difference to find the magnitude of the acceleration.
+$$F_{net} = |m_1 - m_2|g$$
+
+The magnitude of the acceleration is then
+$$a = \left| \frac{m_1 - m_2}{m_1 + m_2}\right| g$$
+The answer is
+$$a = `r signif(ans, 3)` \text{ m/s/s}$$
+
+
+Meta-information
+================
+exname: Calculate Pulley System Acceleration
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

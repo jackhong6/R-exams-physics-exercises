@@ -1,0 +1,26 @@
+Question
+========
+An object is moving in a circle with a constant speed. Its acceleration is
+
+Answerlist
+----------
+* directed towards the centre of the circle.
+* tangent to the circle.
+* directed away from the centre of the circle.
+* in the same direction as its velocity.
+* opposite the direction of its velocity.
+* zero.
+
+Solution
+========
+An object in uniform circular motion has a centripetal acceleration that always
+points toward the centre of the circle.
+
+
+Meta-information
+================
+exname: Circular Motion Acceleration Direction
+extype: schoice
+exsolution: 100000
+exshuffle: 4
+

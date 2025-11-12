@@ -1,11 +1,11 @@
 ```{r, echo = FALSE, results = "hide"}
 m1 <- sample(10:99, 1) # kg
-m2 <- m1 * sample(2:9, 1) # kg
+m2 <- m1 * sample(3:12, 1) / 2  # kg
+f <- sample(100:999, 1) # N
 
-f2 <- m2 / (m1 + m2) * 100 # N
-dis <- c(100)
+f2 <- m2 / (m1 + m2) * f # N
 
-sc <- num_to_schoice(f2, wrong = dis, format = FALSE)
+sc <- num_to_schoice(f2, delta = f2 / 10, format = FALSE)
 sc$questions <- sprintf("%g N", signif(sc$questions, 3))
 
 # use the same graphics type (pdf, svg, png) as the current xweave() call
@@ -16,16 +16,14 @@ tikz <- c("\\begin{tikzpicture}",
   "\\draw[thick] (0, 0) -- (5, 0);",
   "\\draw[thick] (1, 0) rectangle node[midway, font=\\small]{$m_1$} (2, 1);",
   "\\draw[thick] (2, 0) rectangle node[midway, font=\\small]{$m_2$} (4, 2);",
-  "\\draw[-Stealth, thick] (0, 0.5) -- node[midway, above, font=\\small]{100 N} (1, 0.5);",
+  sprintf("\\draw[-Stealth, thick] (0, 0.5) -- node[midway, above, font=\\small]{%d N} (1, 0.5);", f),
   "\\end{tikzpicture}")
 ```
 
 Question
 ========
-Two boxes are in contact with each other on a frictionless table. The mass of
-the first box is $m_1 = `r m1` \text{ kg}$ and the mass of the second box is $m_2 = `r m2` \text{ kg}$.
-If you push on the first box with a horizontal force of 100 N to the right, then the second box will experience
-a net force of
+Two boxes are in contact with each other on a frictionless table as shown in the diagram. The masses are $m_1 = `r m1`$ kg and $m_2 = `r m2`$ kg. The first box ($m_1$)is pushed with a horizontal force of `r f` N to the right. 
+What is the net force on the second box ($m_2$)?
 
 ```{r, echo = FALSE, results = "asis"}
 include_tikz(tikz, name = "boxes", format = typ, library = c("arrows.meta"))
@@ -39,9 +37,9 @@ answerlist(sc$questions, markup = "markdown")
 Solution
 ========
 The acceleration of the system of two boxes is
-$$a = \frac{\SI{100}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}}$$
+$$a = \frac{\SI{`r f`}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}}$$
 The net force on $m_2$ is its mass times its acceleration
-$$F_{net, 2} = (\SI{`r m2`}{kg}) \left( \frac{\SI{100}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}} \right) = \SI{`r signif(f2, 3)`}{N}$$
+$$F_{net, 2} = (\SI{`r m2`}{kg}) \left( \frac{\SI{`r f`}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}} \right) = \SI{`r signif(f2, 3)`}{N}$$
 
 
 Meta-information

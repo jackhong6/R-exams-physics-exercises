@@ -17,7 +17,7 @@ Answerlist
 
 Solution
 ========
-Inertia depends only on mass. Therefore, the bowling ball has the greater inertia.
+Inertia depends only on mass. The bowling ball has the greater mass. Therefore, the bowling ball has the greater inertia.
 
 
 Meta-information

@@ -1,0 +1,23 @@
+Question
+========
+A physics textbook of mass $m$ is at rest on a flat table. Earth's gravity applies a downward force $mg$ on the book, which we will call the action force. What is the reaction force?
+
+Answerlist
+----------
+* The table pushing up on the book with force $mg$.
+* The book pushing down on the table with force $mg$.
+* The table pushing down on the floor with force $mg$.
+* The book pulling upward on the Earth with force $mg$.
+
+Solution
+========
+The book pulling upward on the Earth with force $mg$. Action-reaction force pairs
+are always between the same two objects.
+
+
+Meta-information
+================
+exname: Identify Reaction Force Book on Desk
+extype: schoice
+exsolution: 0010
+exshuffle: 4

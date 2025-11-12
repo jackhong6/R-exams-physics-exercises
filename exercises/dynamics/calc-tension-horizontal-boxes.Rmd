@@ -1,0 +1,53 @@
+```{r, echo = FALSE, results = "hide"}
+m1 <- sample(10:99, 1) # kg
+m2 <- m1 * sample(3:12, 1) / 2 # kg
+f <- sample(100:999, 1) # applied force (N)
+
+ans <- m2 / (m1 + m2) * f # N
+
+sc <- num_to_schoice(ans, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 3))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 0) -- (8, 0);",
+  "\\draw[thick] (5, 0) rectangle node[midway, font=\\small]{$m_1$} (6, 1);",
+  "\\draw[thick] (3, 0.5) -- (5, 0.5);",
+  "\\draw[thick] (1, 0) rectangle node[midway, font=\\small]{$m_2$} (3, 1);",
+  sprintf("\\draw[-Stealth, thick] (6, 0.5) -- node[midway, above, font=\\small]{%d N} (8, 0.5);", f),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+Two boxes connected by a light cord are on a frictionless table as shown in
+the diagram. The masses are $m_1 = `r m1` \text{ kg}$ and $m_2 = `r m2` \text{ kg}$.
+A `r f`-N force is applied horizontally on the right box. What is the tension in
+the cord?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "boxes-and-cord", format = typ, library = c("arrows.meta"))
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The acceleration of the system of two boxes is
+$$a = \frac{\SI{`r f`}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}}$$
+The tension in the cord is the net force on $m_2$ and it is equal to $m_2$ times the acceleration
+$$F_{tension} = (\SI{`r m2`}{kg}) \left( \frac{\SI{`r f`}{N}}{\SI{`r m1`}{kg} + \SI{`r m2`}{kg}} \right) = \SI{`r signif(ans, 3)`}{N}$$
+
+
+Meta-information
+================
+exname: Calculate Tension in Connected Horizontal Boxes
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

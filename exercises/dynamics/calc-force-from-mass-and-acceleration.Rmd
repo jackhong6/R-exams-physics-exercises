@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+a <- sample(1:20, 1) # acceleration (m/s^2)
+m <- sample(1:20, 1) # mass (kg)
+f <- m * a # force (N)
+
+sc <- num_to_schoice(f, delta = f/10, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 2))
+```
+
+Question
+========
+An object of mass \SI{`r fmt(m,1)`}{kg} accelerates at \SI{`r fmt(a,1)`}{m/s^2}. What is the magnitude of 
+the net force on the object?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+According to Newton's Second Law of Motion
+$$
+F = ma = (\SI{`r m`}{kg})(\SI{`r a`}{m/s^2}) = \SI{`r signif(f, 2)`}{N}
+$$
+
+
+Meta-information
+================
+exname: Calculate Force From Mass and Acceleration
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

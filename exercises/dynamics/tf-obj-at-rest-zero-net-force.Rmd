@@ -1,0 +1,21 @@
+Question
+========
+True or false? If an object is at rest, then the net force on the object must be zero.
+
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+True. If an object is at rest, then its acceleration and the net force on the object must both be zero.
+
+
+Meta-information
+================
+exname: True or False? Net force on object at rest is zero.
+extype: schoice
+exsolution: 10

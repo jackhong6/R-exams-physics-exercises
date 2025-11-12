@@ -9,7 +9,7 @@ sc$questions <- sprintf("%g kg", signif(sc$questions, 2))
 
 Question
 ========
-An object weight `r w` N on Earth. What is its mass?
+An object weighs `r w` N on Earth. What is its mass?
 
 ```{r, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(2:9, 1)
+```
+Question
+========
+A rock, of mass $m$, is attached to a string and whirled in a vertical circle of
+radius $r$. At the top of the circle, the tension in the string is $`r n`$
+times the rock's weight. The rock's speed at this point is given by
+
+Answerlist
+----------
+* $`r n` \sqrt{gr}$
+* $\sqrt{`r n` g r}$
+* $\sqrt{`r n+1` g r}$
+* $\sqrt{`r n-1` g r}$
+
+Solution
+========
+The net force at the top of the circle is the tension in the string plus the 
+weight of the rock. This net force is the centripetal force for circular motion.
+$$\frac{mv^2}{r} = F_{tension} + mg$$
+We are also given in the problem that $F_{tension} = `r n` mg$. Putting this into
+the equation above and solving for $v$ gives
+$$v = \sqrt{`r n+1` gr}$$
+
+
+
+Meta-information
+================
+exname: Speed at Top of Circle
+extype: schoice
+exsolution: 0010
+exshuffle: 4
+

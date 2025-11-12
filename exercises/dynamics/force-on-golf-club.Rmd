@@ -1,0 +1,23 @@
+Question
+========
+A golf club hits a golf ball with a force of 2400 N. The golf ball hits the club with a force
+
+Answerlist
+----------
+* more than 2400 N
+* less than 2400 N
+* 2400 N
+* not enough information to determine
+
+Solution
+========
+According to Newton's Third Law of Motion, the golf ball exerts the same force
+back on the club. The answer is exactly 2400 N.
+
+
+Meta-information
+================
+exname: Force on Golf Club
+extype: schoice
+exsolution: 0010
+exshuffle: 4

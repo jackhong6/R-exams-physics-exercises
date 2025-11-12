@@ -52,12 +52,12 @@ name <- "kinematics-retest-2"
 set.seed(s)
 exams2nops(quiz, n = 4, nsamp = 5, date = as.Date("2025-11-05"), edir = "exercises", title = "Kinematics Retest 2", 
            course = "Physics 11", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", 
-           blank = 0, samepage = TRUE, dir = paste("exams/", name), name = name, helvet = TRUE,
+           blank = 0, samepage = TRUE, dir = paste0("exams/", name), name = name, helvet = TRUE,
            usepackage = c("siunitx", "eulervm"))
 
 
 set.seed(s)
 exams2pdf(quiz, n = 4, nsamp = 5, edir = "exercises", template = "templates/solution.tex", header = list(Course = "Physics 11", Title = "Kinematics Retest 2 Solutions"),
-          dir = paste("exams/", name), name = paste(name, "solutions", sep="-"))
+          dir = paste0("exams/", name), name = paste(name, "solutions", sep="-"))
 
 

@@ -1,0 +1,20 @@
+Question
+========
+True or false? If an object is at rest, then there are no forces acting upon the object.
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. If an object is at rest, then the forces on it must be balanced. For example, a book at rest on a table is acted upon by gravity and the normal force from the desk.
+
+
+Meta-information
+================
+exname: True or False? No Forces on Object at Rest
+extype: schoice
+exsolution: 01

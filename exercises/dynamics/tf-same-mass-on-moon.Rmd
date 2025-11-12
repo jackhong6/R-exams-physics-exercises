@@ -1,0 +1,21 @@
+Question
+========
+True or false? The mass of an object on the moon is the same as its mass on earth.
+
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+True. Mass is an inherent property of the object that does not depend on its location.
+
+
+Meta-information
+================
+exname: True or False? Same mass on the moon
+extype: schoice
+exsolution: 10

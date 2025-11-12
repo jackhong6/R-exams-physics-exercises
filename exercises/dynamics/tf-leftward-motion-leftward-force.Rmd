@@ -1,0 +1,20 @@
+Question
+========
+True or false? If an object is moving to the left, then the net force on it must point to the left.
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. The net force is the direction of acceleration, not the direction of motion (velocity).
+
+
+Meta-information
+================
+exname: True or False? Leftward Motion Means Leftward Force
+extype: schoice
+exsolution: 01

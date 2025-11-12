@@ -3,7 +3,7 @@ m <- sample(10:99, 1) # mass (kg)
 w <- m * 9.8 # weight (N)
 
 distractors <- c(m / 9.8, m)
-sc <- num_to_schoice(w, wrong = distractors, format = FALSE)
+sc <- num_to_schoice(w, wrong = distractors, delta = 10, format = FALSE)
 sc$questions <- sprintf("%g N", signif(sc$questions, 2))
 ```
 

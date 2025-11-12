@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+period <- signif(runif(1, 1.2, 12), 3) # years
+ans <- period ^ (2 / 3) # au
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.2f au", sc$questions)
+```
+Question
+========
+An asteroid orbits the sun with a period of `r period` years. What is the asteroid's
+average distance from the sun? Note: One astronomical unit (au) is the average
+distance from the earth to the sun.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Kepler's Third Law of Planetary Motion states that the square of the orbital
+period is proportional to the cube of the average distance
+$$\left( \frac{T_{asteroid}}{T_{earth}} \right)^2 = \left( \frac{R_{asteroid}}{R_{earth}} \right)^3$$
+We are given that $T_{asteroid} / T_{earth} = `r period`$ and $R_{earth} = 1$ au. Therefore,
+$$R_{asteroid} = \sqrt[3]{(`r period`)^2} \text{ au} = `r signif(ans, 3)` \text{ au}$$
+
+
+Meta-information
+================
+exname: Calculate r given t (kepler's law)
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

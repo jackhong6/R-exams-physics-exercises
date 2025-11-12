@@ -1,0 +1,21 @@
+Question
+========
+True or false? A ball is thrown upwards and rightwards. While it is in the air, the net force on the ball is directed upwards and rightwards.
+
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+False. The only force on the ball while it is in the air is the force of gravity, which points downward (assuming no air resistance).
+
+
+Meta-information
+================
+exname: True or False? Force on 2D Projectile
+extype: schoice
+exsolution: 01

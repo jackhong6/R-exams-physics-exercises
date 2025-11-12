@@ -1,0 +1,25 @@
+Question
+========
+An apple is falling straight down toward the ground. Take the weight of the apple to
+be the action force. What is the reaction force?
+
+
+Answerlist
+----------
+* There is no reaction force because the apple is not touching anything.
+* The force of impact when the object hits the ground.
+* The air resistance pushing up on the apples.
+* The apple's gravity pulling upward on the Earth.
+
+
+Solution
+========
+The apple applies an equal and opposite gravitational pull on the Earth.
+
+
+Meta-information
+================
+exname: Identify Reaction Force Falling Apple
+extype: schoice
+exsolution: 0001
+exshuffle: 4

@@ -1,0 +1,20 @@
+Question
+========
+True or false? An object weighs less on the moon than it does on earth.
+
+Answerlist
+----------
+* True
+* False
+
+
+Solution
+========
+True. Weight is the force of gravity. The gravitational field strength on the moon is less than on earth, so objects weigh less on the moon.
+
+
+Meta-information
+================
+exname: True or False? Less Weight on the Moon
+extype: schoice
+exsolution: 10

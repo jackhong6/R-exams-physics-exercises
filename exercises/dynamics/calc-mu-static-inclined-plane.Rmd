@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+a <- sample(10:60, 1) # angle of incline (deg)
+a_rad <- a * pi / 180
+ans <- tan(a_rad)
+
+sc <- num_to_schoice(ans, delta = ans/10, range = c(0, ans*1.5), digits = 3, format = TRUE)
+```
+Question
+========
+An box is at rest on an inclined plane. The angle of incline is increased 
+slowly. When the angle reaches $`r fmt(a, 1)`^\circ$, the box begins to slide. What is
+the coefficient of static friction between the box and the inclined plane?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+On an inclined plane, the normal force is equal to the perpendicular component
+of the force of gravity:
+$$F_N = mg \cos\theta$$
+The friction force when the object starts to slide, the maximum static friction
+force is reached and it must be equal to the parallel component of the force of gravity:
+$$F_f = \mu_s F_N = \mu_s mg \cos \theta = mg \sin \theta$$
+Therefore, the coefficient of static friction, $\mu_s$, is:
+$$\mu_s = \frac{\sin\theta}{\cos\theta} = \tan \theta = \tan(`r a`^\circ) = `r fmt(ans, 3)`$$
+
+
+Meta-information
+================
+exname: Calculate mu Static on Inclined Plane
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

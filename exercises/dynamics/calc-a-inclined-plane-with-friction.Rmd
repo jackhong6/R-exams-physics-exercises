@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # kg
+ang <- sample(20:70, 1) # angle (deg)
+ang_r <- ang * pi / 180 # angle (radians)
+mu <- signif(runif(1, 0, tan(ang_r)) - 0.1, 2) # coefficient of kinetic friction
+
+ans <- 9.8 * (sin(ang_r) - mu * cos(ang_r)) # acceleration (m/s^2)
+
+sc <- num_to_schoice(ans, delta = 0.1, range = c(0, 9.8), format = FALSE, digits = 1)
+sc$questions <- sprintf("\\SI{%.1f}{m/s^2}", sc$questions)
+```
+
+Question
+========
+A box of mass $`r m`$ kg slides down an inclined plane with friction. The angle 
+of incline is $`r ang`^\circ$ and $\mu_k = `r mu`$. What is the acceleration of the box?
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The acceleration is
+$$a = g (\sin\theta - \mu \cos\theta) = \SI{`r fmt(ans, 1)`}{m/s^2}$$
+
+
+Meta-information
+================
+exname: Calculate Acceleration on Inclined Plane with Friction
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
