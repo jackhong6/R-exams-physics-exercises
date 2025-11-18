@@ -1,0 +1,28 @@
+Question
+========
+A pilot, of mass $m$, executes a vertical dive, then follows a semi-circular arc until the plane
+is going straight up. Just as the plane is at its lowest point, the force that the pilot's seat
+exerts on him is
+
+
+Answerlist
+----------
+* less than $mg$ and pointing up
+* less than $mg$ and pointing down
+* more than $mg$ and pointing up
+* more than $mg$ and pointing down
+
+Solution
+========
+The centripetal force points towards the centre of the circle, which would be
+upward. This force must oppose and overcome the pilot's weight, so it is more
+than $mg$.
+
+
+
+Meta-information
+================
+exname: Force at bottom of dive
+extype: schoice
+exsolution: 0010
+

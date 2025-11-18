@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(1:10, 1) # weight (N)
+h <- sample(1:10, 1) # height (m)
+
+ans <- w * h # work (J)
+dis <- c(0, w * 9.8 * h)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = 0.1, format = FALSE, digits = 1)
+sc$questions <- sprintf("%.1f J", sc$questions)
+```
+
+Question
+========
+How much work is done if you raise a `r fmt(w, 1)` N weight `r fmt(h, 1)` m above the ground?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Work is force times distance.
+$$W = Fd = (`r fmt(w,1)` \text{ N})(`r fmt(h, 1)` \text{ m}) = `r fmt(ans, 1)` \text{ J}$$
+
+
+Meta-information
+================
+exname: Calculate Acceleration on Inclined Plane with no Friction
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

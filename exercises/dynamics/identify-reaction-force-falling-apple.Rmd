@@ -8,7 +8,7 @@ Answerlist
 ----------
 * There is no reaction force because the apple is not touching anything.
 * The force of impact when the object hits the ground.
-* The air resistance pushing up on the apples.
+* The air resistance pushing up on the apple.
 * The apple's gravity pulling upward on the Earth.
 
 

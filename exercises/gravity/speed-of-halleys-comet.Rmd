@@ -1,0 +1,21 @@
+Question
+========
+Halley's comet is in a highly elliptical orbit around the sun. Its speed
+
+Answerlist
+----------
+* is constant.
+* increases as it nears the sun.
+* decreases as it nears the sun.
+* is zero when it reaches its furthest point from the sun.
+
+Solution
+========
+Orbiting objects get faster when they get closer to the sun (Kepler's second law).
+
+
+Meta-information
+================
+exname: Speed of Halley's Comet
+extype: schoice
+exsolution: 0100

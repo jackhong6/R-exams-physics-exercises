@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+p1 <- sample(c("Albert", "Bob", "Charlie", "Dave", "Joe"), 1)
+p2 <- sample(c("Mary", "Nicole", "Olivia", "Rachel", "Zoe"), 1)
+t <- sample(10:30, 1)
+```
+
+Question
+========
+`r p1` pushes against a brick wall for `r t` seconds. `r p2` pushes against the
+same wall for `r 2*t` seconds. The wall does not move. Compare the work done by 
+each person.
+
+
+Answerlist
+----------
+* `r p2` does $2$ times as much work as `r p1`.
+* `r p2` does $`r t`$ seconds more work than `r p1`.
+* The work done by each person depends on the force they applied.
+* Both `r p1` and `r p2` do no work.
+
+
+Solution
+========
+Work is force times distance ($W=Fd$). Since the wall does not move ($d=0$),
+they both do no work.
+
+
+Meta-information
+================
+exname: Work Done Pushing Against Wall
+extype: schoice
+exsolution: 0001

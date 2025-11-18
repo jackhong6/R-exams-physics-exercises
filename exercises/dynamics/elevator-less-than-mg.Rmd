@@ -1,7 +1,7 @@
 Question
 ========
 A box that weighs 100 N rests on a digital scale on the floor of an elevator. 
-When would the scale measure a weight less than 100 N? *Select all that apply.*
+When would the scale measure a value less than 100 N? *Select all that apply.*
 
 
 Answerlist

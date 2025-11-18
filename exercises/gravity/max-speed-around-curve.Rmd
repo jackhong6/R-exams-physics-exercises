@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(20:80, 1) # km/h
+n <- sample(2:6, 1) # n times radius
+
+ans <- sqrt(n) * v # 
+dis <- c(n * v, v / n, v / sqrt(n))
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.1f km/h", sc$questions)
+```
+Question
+========
+The maximum speed around a level circular curve is `r fmt(v, 1)` km/h. What is the 
+maximum speed around a curve with `r n` times the radius? Assume all other
+factors remain unchanged.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+For uniform circular motion, the centripetal force is given by
+$$F_c = \frac{mv^2}{r}$$
+If $r \to `r n` r$, then to maintain the same centripetal force (since the friction
+is assumed to be the same) we must have $v \to \sqrt{`r n`} v = `r fmt(ans, 1)`$ km/h.
+
+
+Meta-information
+================
+exname: Max speed around curve
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

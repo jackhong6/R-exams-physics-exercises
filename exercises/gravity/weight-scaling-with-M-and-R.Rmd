@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(2:9, 1)
+r <- sample(2:9, 1)
+ans <- 100 * m / r^2
+dis <- c(100 * m / r)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.1f N", sc$questions)
+```
+Question
+========
+A planet has `r m` times the earth's mass and `r r` times the earth's radius.
+If an object weighs 100 N on earth, how much would it weigh on this planet?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The gravitational field strength on the surface of a planet is
+$$g = \frac{GM}{r^2}$$
+So the gravitational field strength on the planet is
+$$g_{planet} = \frac{G(`r m` M_{earth})}{(`r r`r_{earth})^2} = \frac{`r m`}{`r r^2`} g_{earth}$$
+So the 100 N object would weigh
+$$(100 N)\frac{`r m`}{`r r^2`} = `r fmt(ans,1)` N$$
+
+
+Meta-information
+================
+exname: Weight Scaling with Mass and Radius of Planet
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

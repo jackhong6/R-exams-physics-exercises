@@ -1,0 +1,28 @@
+Question
+========
+Consider a satellite moving in a circular orbit of radius $r$ around a planet of
+mass $M$. Which expression gives the satellite's orbital speed?
+
+Answerlist
+----------
+* $\sqrt{GM/r}$
+* $\sqrt{GM/r^2}$
+* $\sqrt{2GM/r}$
+* $\sqrt{Gr}$
+* $\sqrt{2GM/r^2}$
+* $GM/r$
+* $GM/r^2$
+
+Solution
+========
+The centripetal force is the gravitational force for a circular orbit.
+$$\frac{mv^2}{r} = \frac{GMm}{r^2}$$
+Solving for $v$ gives
+$$v = \sqrt{GM/r}$$
+
+Meta-information
+================
+exname: Speed of Circular Orbit
+extype: schoice
+exsolution: 1000000
+exshuffle: 4

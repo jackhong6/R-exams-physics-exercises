@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+m <- 6.39e23
+r <- 3.39e6
+G <- 6.67e-11
+
+ans <- sqrt(2 * G * m / r) / 1000 # km/s
+dis <- c(sqrt(G * m / r)) / 1000
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.2f km/s", sc$questions)
+```
+Question
+========
+What is the escape speed on Mars? The mass of Mars is $6.39 \times 10^{23}$ kg and
+its radius is $3.39 \times 10^6$ m.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The escape speed is
+$$v_{esc} = \sqrt{\frac{2GM}{r}} = `r signif(ans,3)` \text{ km/s}$$
+
+
+Meta-information
+================
+exname: Calculate Escape Speed
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

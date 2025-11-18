@@ -1,0 +1,28 @@
+Question
+========
+An object is moving in a circle with a constant speed. Its velocity is
+
+
+Answerlist
+----------
+* tangent to the circle.
+* constant.
+* directed away from the centre of the circle.
+* directed towards the centre of the circle.
+* in the same direction as its acceleration.
+* opposite the direction of its acceleration.
+
+
+Solution
+========
+An object in uniform circular motion has a velocity that is always tangent to
+the circle.
+
+
+Meta-information
+================
+exname: Circular Motion Velocity Direction
+extype: schoice
+exsolution: 100000
+exshuffle: 4
+

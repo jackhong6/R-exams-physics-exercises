@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+r <- sample(1000:5000, 1) # loop radius (m)
+n <- sample(2:9, 1) # denominator
+
+ans <- sqrt(r * 9.8 * (1 - 1/n))
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.0f m/s", sc$questions)
+```
+Question
+========
+A pilot makes an outside vertical loop (in which the path of the plane traces out the 
+top half of a circle with centre of the loop beneath the plane) of radius `r r` m.
+At the top of his loop, he is pushing down on his seat with only $1/`r n`$ of 
+his normal weight. How fast is he going?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The centripetal force is
+$$\frac{mv^2}{r} = mg(1 - 1/`r n`)$$
+Solving for $v$ gives
+$$v = \sqrt{gr(1 - 1/`r n`)} = `r fmt(ans, 0)` \text{ m/s}$$
+
+
+Meta-information
+================
+exname: Calculate Speed at Top of Loop
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

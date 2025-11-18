@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+M <- 5.97e24 # mass of earth (kg)
+R <- 6.38e6 # radius of earth (m)
+G <- 6.67e-11
+v <- sample(12:30, 1) # launch speed (km/s)
+
+ans <- sqrt((v*1000)^2 - 2*G*M / R) / 1000  # km/s
+
+sc <- num_to_schoice(ans, delta = ans/50, range = c(0, v), format = FALSE)
+sc$questions <- sprintf("%.1f km/s", sc$questions)
+```
+Question
+========
+A rocket is launched straight up from earth's surface at a speed of `r v` km/s.
+What is its speed when it is very far away from the earth? Consider only the effect
+of the earth's gravity in your answer. The mass of the earth is $5.97 \times 10^{24}$ kg and its
+radius is $6.38 \times 10^{6}$ m.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+When the rocket is very far away, its potential energy is zero and it only has kinetic energy. This is equal to its initial energy.
+$$\frac{1}{2}mv_f^2 = \frac{1}{2}mv_i^2 - \frac{GMm}{r}$$
+Solving for $v_f$ gives
+$$v_f = \sqrt{v_i^2 - \frac{2GM}{r}} = `r fmt(ans,1)` \text{ km/s}$$
+
+
+Meta-information
+================
+exname: Calculate Speed Far Away
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

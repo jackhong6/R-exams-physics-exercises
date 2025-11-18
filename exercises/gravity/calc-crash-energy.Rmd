@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+M <- 5.97e24 # mass of earth (kg)
+R <- 6.38e6 # radius of earth (m)
+G <- 6.67e-11
+
+h <- sample(200:2000, 1) # altitude of orbit (km)
+m <- sample(100:1000, 1) # mass of satellite (kg)
+
+ans <- G*M*m * (1/R - 1/(2*(R+h*1000))) / 1e9 # energy (GJ)
+
+sc <- num_to_schoice(ans, delta = ans/50, format = FALSE)
+sc$questions <- sprintf("%.1f GJ", sc$questions)
+```
+Question
+========
+A `r m`-kg satellite is in a circular orbit at an altitude of `r h` km around the earth.
+How much energy (kinetic and potential) would it release if it were to crash down
+onto the surface of the earth?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+During the crash, the satellite would lose its kinetic energy and some of its
+potential energy.
+$$\Delta E = GMm \left(\frac{1}{R} - \frac{1}{2(R+h)} \right) = `r fmt(ans,1)` \text{ GJ}$$
+
+
+Meta-information
+================
+exname: Calculate Crash Energy
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,18 +1,14 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/dynamics"))
+my_exam <- c(dir("exercises/energy"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("tf-obj-at-rest-no-forces.Rmd",
-                "adding-vectors-possibilities.Rmd"
-                "tf-obj-at-rest-zero-net-force.Rmd",
-                "tf-more-speed-more-inertia.Rmd",
-                "tf-force-on-2d-projectile.Rmd",
-                "tf-less-weight-on-moon.Rmd",
-                "tf-leftward-motion-leftward-force.Rmd")
+my_exam <- list("bike-gear-shift-downhill.Rmd",
+                "bike-gear-shift-uphill.Rmd",
+                "work-pushing-against-wall.Rmd")
 
 # Generate different PDFs
 s <- 2025*11*7
@@ -22,7 +18,7 @@ exams2pdf(my_exam, edir = "exercises", template = "templates/practice",
 
 set.seed(s)
 exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
-          header = list(Course = "Physics 11", Title = "Dynamics Practice Test Solutions"))
+          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
 
 set.seed(s)
 exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", blank = 0, samepage = TRUE,

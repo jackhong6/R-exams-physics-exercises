@@ -7,7 +7,7 @@ sc <- num_to_schoice(mu, delta = mu/10, digits = 3, format = TRUE)
 Question
 ========
 A box slides on the floor in the $+x$ direction. It slows down and comes
-to a stop with a constant acceleration of $-\SI{`r a`}{m/s^2}$. The only force acting on the box while it is slowing down is friction between the box and the floor. What is the
+to a stop with a constant acceleration of $-\SI{`r a`}{m/s^2}$. The only force that is slowing down the box is the friction between the box and the floor. What is the
 coefficient of kinetic friction between the box and the floor?
 
 ```{r, echo = FALSE, results = "asis"}

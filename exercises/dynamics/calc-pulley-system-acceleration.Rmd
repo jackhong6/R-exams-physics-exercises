@@ -25,8 +25,6 @@ pulley as shown in the diagram. The values of the masses are $m_1 = `r fmt(m[1],
 and $m_2 = `r fmt(m[2], 1)`$ kg. The hanging masses are free to move. 
 What is the magnitude of the acceleration of the system?
 
-\vspace*{1em}
-
 ```{r, echo = FALSE, results = "asis"}
 include_tikz(tikz, name = "pulley-system", format = typ)
 ```

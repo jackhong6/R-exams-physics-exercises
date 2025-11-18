@@ -1,0 +1,35 @@
+Question
+========
+A cyclist climbing up a hill wants to shift gears to increase his bicycle's
+mechanical advantage. This would make it so that a smaller effort force is
+needed to overcome the force of gravity on the bike. Which sprocket changes
+would result in a greater mechanical advantage? *Select all that apply.*
+
+
+Answerlist
+----------
+* increase front sprocket radius.
+* increase rear sprocket radius.
+* decrease front sprocket radius.
+* decrease rear sprocket radius.
+
+
+Solution
+========
+The ideal mechanical advantage of a bicycle is
+
+$$IMA = \frac{\text{rear sprocket radius}}{\text{front sprocket radius}} \cdot 
+\frac{\text{pedal radius}}{\text{wheel radius}}$$
+
+To increase the ideal mechanical advantage (which would also increase the 
+mechanical advantage if the efficiency does not change significantly), we can
+increase the rear sprocket radius or decrease the front sprocket radius.
+
+
+Meta-information
+================
+exname: Bike gear shift uphill
+extype: mchoice
+exsolution: 0110
+
+

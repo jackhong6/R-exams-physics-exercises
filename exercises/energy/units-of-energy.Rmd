@@ -1,0 +1,28 @@
+Question
+========
+Which of the following are units of energy? *Select all that apply.*
+
+Answerlist
+----------
+* $\mathsf{kg\,m^2\,s^{-2}}$
+* $\mathsf{N\,m}$
+* $\mathsf{J}$
+* $\mathsf{kg\,m^2\,s^2}$
+* $\mathsf{kg\,m\,s^{-2}}$
+* $\mathsf{kg\,m\,s}$
+* $\mathsf{m^3\,kg^{-1}\,s^{-2}}$
+
+
+Solution
+========
+The SI unit of energy is the joule (J). One joule is also equal to
+$$1 \mathsf{\,J} = 1 \mathsf{\,N\,m} = 1 \mathsf{\,kg\,m^2\,s^{-2}}$$
+
+
+
+Meta-information
+================
+exname: Units of energy
+extype: mchoice
+exsolution: 1110000
+exshuffle: 4

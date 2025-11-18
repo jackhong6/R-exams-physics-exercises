@@ -1,0 +1,25 @@
+Question
+========
+A simple machine with mechanical advantage greater than 1
+
+Answerlist
+----------
+* increases friction.
+* increases energy.
+* increases effort force.
+* decreases effort force.
+
+Solution
+========
+The mechanical advantage, $MA$, of a simple machine is
+$$MA = \frac{F_r}{F_e}$$
+If this ratio is greater than $1$, then $F_r > F_e$. This means that the simple
+machine increases the effort force.
+
+
+
+Meta-information
+================
+exname: Mechanical Advantage Greater Than 1
+extype: schoice
+exsolution: 0010

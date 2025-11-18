@@ -1,7 +1,7 @@
 Question
 ========
 A box that weighs 100 N rests on a digital scale on the floor of an elevator. 
-When would the scale measure a weight more than 100 N? *Select all that apply.*
+When would the scale measure a value greater than 100 N? *Select all that apply.*
 
 
 Answerlist
@@ -24,6 +24,6 @@ when the elevator is moving up with decreasing speed.
 
 Meta-information
 ================
-exname: Elevator More than Mg
+exname: Elevator Greater than Mg
 extype: mchoice
 exsolution: 1001
