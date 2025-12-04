@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+PE <- sample(10:99, 1) # potential energy lost (J)
+```
+
+Question
+========
+A ball drops some distance and loses `r PE` J of gravitational potential energy. Do **NOT** ignore
+air resistance. How much kinetic energy did the ball gain?
+
+
+Answerlist
+----------
+* More than `r PE` J.
+* Exactly `r PE` J.
+* Less than `r PE` J.
+* Cannot be determined.
+
+
+Solution
+========
+Some of the potential energy was transformed into kinetic energy and some into
+non-mechanical energy (heat, sound, vibrations, etc.) because of the air resistance.
+Therefore, the kinetic energy gained is less than the potential energy lost.
+
+
+
+Meta-information
+================
+exname: KE gained with air resistance
+extype: schoice
+exsolution: 0010

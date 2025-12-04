@@ -1,0 +1,48 @@
+```{r, echo = FALSE, results = "hide"}
+d <- sample(1:20, 2) # distance between charges (cm)
+
+for (x in c(2, 3, 5, 7)) {
+  while (d[1] %% x == 0 && d[2] %% x == 0) {
+    d[1] <- d[1] / x
+    d[2] <- d[2] / x
+  }
+}
+```
+
+Question
+========
+Two point charges are separated by a distance of $`r d[1]` \mathsf{\,cm}$. 
+On each charge, there is a coulomb force of 1 N due to the other charge. 
+What would the coulomb force be if the separation is changed to $`r d[2]` \mathsf{\,cm}$?
+
+
+Answerlist
+----------
+* $(`r d[1]` / `r d[2]`) \mathsf{\,N}$
+* $(`r d[2]` / `r d[1]`) \mathsf{\,N}$
+* $(`r d[1]` / `r d[2]`)^2 \mathsf{\,N}$
+* $(`r d[2]` / `r d[1]`)^2 \mathsf{\,N}$
+
+
+Solution
+========
+The formula for the coulomb force shows that it is inversely proportional to the
+distance squared:
+
+$$F = \frac{k q_1 q_2}{r^2}$$
+
+Let $r_1 = `r d[1]`$ cm and $r_2 = `r d[2]`$ cm. The ratio between the coulomb force
+at $r_1$ and $r_2$ is
+
+$$\frac{F_2}{F_1} = \frac{k q_1 q_2 / r_2^2}{k q_1 q_2 / r_1^2} 
+= \left(\frac{r_1}{r_2} \right)^2 = \left(\frac{`r d[1]`}{`r d[2]`} \right)^2$$
+
+Since $F_1 = 1 \mathsf{\,N}$, the coulomb force when the separation is $`r d[2]` \mathsf{\,cm}$ is 
+$(`r d[1]` / `r d[2]`)^2 \mathsf{\,N}$.
+
+Meta-information
+================
+exname: Proportional reasoning - coulomb force distance
+extype: schoice
+exsolution: 0010
+exshuffle: 4

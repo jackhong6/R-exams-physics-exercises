@@ -1,0 +1,26 @@
+Question
+========
+Which of the following are scalar quantities? **Select all that apply.**
+
+
+Answerlist
+----------
+* Electric charge.
+* Electric potential.
+* Electric potential difference (voltage).
+* Electric potential energy.
+* Electric force.
+* Electric field.
+
+
+Solution
+========
+Vectors: Electric (coulomb) force and electric field.  
+Scalars: Electric charge, electric potential, electric potential difference (voltage), electric potential energy.
+
+Meta-information
+================
+exname: Electric scalars
+extype: mchoice
+exsolution: 111100
+exshuffle: 4

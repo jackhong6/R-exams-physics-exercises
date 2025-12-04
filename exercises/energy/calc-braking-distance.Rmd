@@ -1,0 +1,37 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(1000:2000, 1) # mass of car (kg)
+v <- sample(10:30, 1) # speed (m/s)
+f <- sample(1000:9999, 1) # braking force (N)
+
+ans <- 0.5 * m * v^2 / f
+
+sc <- num_to_schoice(ans, delta = ans / 10, format = FALSE)
+sc$questions <- sprintf("%.1f m", signif(sc$questions, 3))
+```
+Question
+========
+A `r m`-kg car is traveling at `r v` m/s. The brakes are suddenly applied and the
+car slides to a stop. The average braking force between the tires and the road
+is `r f` N. How far will the car slide once the brakes are applied?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The work done by the brakes equals the kinetic energy of the car.
+
+$$W = Fd = \frac{1}{2}mv^2$$
+Therefore, solving for $d$,
+
+$$d = \frac{m}{2Fv^2} = `r signif(ans, 3)` \mathsf{\,m}$$
+
+
+Meta-information
+================
+exname: Calculate braking distance
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+m <- signif(runif(1, 1, 9), 2) # mass of ball (kg)
+v <- sort(sample(10:30, 2), decreasing = TRUE) # speed (m/s)
+t <- signif(runif(1, 0.1, 1), 2) # contact time (ms)
+
+ans <- signif(m * sqrt(sum(v^2)), 2)
+dis <- c(v[1] - v[2], m * sqrt(v[1]^2 - v[2]^2))
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%g \\,\\mathsf{N\\,s}$", signif(sc$questions, 2))
+```
+
+Question
+========
+A $`r m` \,\mathsf{kg}$ object moving due north at $`r v[1]` \,\mathsf{m/s}$ collides with a barrier for $`r t` \,\mathsf{s}$, resulting in a final velocity of $`r v[2]` \,\mathsf{m/s}$ due east. What is the magnitude of impulse on the object?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The impulse is equal to the change in momentum, which is a vector quantity.
+
+$$\Delta \vec{p} = \vec{p_f} - \vec{p_i} = \vec{p_f} + (-\vec{p_i})$$
+
+It is thus the sum of two perpendicular vectors, $\vec{p}_f$ which points east, and $-\vec{p}_i$ which points south. The magnitude of impulse can be calculated using the Pythagorean theorem.
+
+$$\mathsf{impulse} = m\sqrt{v_f^2 + v_i^2} = (`r m` \,\mathsf{kg}) \sqrt{(`r v[1]` \,\mathsf{m/s})^2 + (`r v[2]` \,\mathsf{m/s})^2} = `r ans` \,\mathsf{N\, s}$$
+
+
+Meta-information
+================
+exname: Calculate Impulse Right Angle Collision
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

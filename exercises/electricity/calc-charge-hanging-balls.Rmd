@@ -1,0 +1,60 @@
+```{r, echo = FALSE, results = "hide"}
+m <- signif(runif(1, 0.1, 1), 2) # (kg)
+s <- sample(4:9, 1) # separation between balls (cm)
+d <- sample(10:15, 1) # length of string (cm)
+
+ans <- sqrt((s/100)^2 * m * 9.8 * tan(asin(s / 2 / d)) / 9e9) * 1e6 # microcoulombs
+
+sc <- num_to_schoice(ans, delta = ans/10, range = c(0, 2) * ans, format = FALSE)
+sc$questions <- sprintf("$%g \\,\\mu\\mathsf{C}$", signif(sc$questions, 2))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[thick] (0, 3) -- (4, 3);",
+  "\\filldraw[fill=black] (1,0) circle (2pt) node[anchor=east, font=\\small]{$+q$};",
+  "\\filldraw[fill=black] (3,0) circle (2pt) node[anchor=west, font=\\small]{$+q$};",
+  sprintf("\\draw[thick] (1, 0) -- (2, 3) node[midway, anchor=east, font=\\small]{%d cm};", d),
+  sprintf("\\draw[thick] (2, 3) -- (3, 0) node[midway, anchor=west, font=\\small]{%d cm};", d),
+  sprintf("\\draw[dashed] (1, 0) -- (3, 0) node[midway, anchor=north, font=\\small]{%.1f cm};", s),
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+Two balls, each of mass $`r fmt(m,2)`\,\mathsf{kg}$, acquire the same electric charge.
+Each charge is suspended from the same point by a massless, electrically insulating string.
+They repel each other and hang with a separation of $`r fmt(s,1)`\,\mathsf{cm}$. The length of the string from the point of support to the centre of a ball is $`r d`\,\mathsf{cm}$. What is the charge on each ball? (The figure is not drawn to scale.)
+
+\vspace*{0.5cm}
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "hanging-charges", format = typ)
+```
+\vspace*{0.5cm}
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The answer can be calculated by balancing the three forces on each ball:
+
+ * The force of gravity, $F_g = mg$, which acts straight down.
+ * The coulomb force, $F_q = kq^2/r^2$, which acts horizontally, pushing the charges apart.
+ * The tension force, which acts along the same angle as the string.
+
+The answer is
+
+$$q = \sqrt{\frac{r^2 mg \tan\theta}{k}} = `r signif(ans, 2)` \,\mu\mathsf{C}$$
+
+
+Meta-information
+================
+exname: Calculate charge on hanging balls
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

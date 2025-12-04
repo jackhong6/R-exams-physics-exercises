@@ -1,0 +1,40 @@
+```{r, echo = FALSE, results = "hide"}
+name <- sample(c("Max", "Lando", "Oscar", "Charles", "Fernando", "Pierre", 
+                 "Louis", "Kimi", "Ollie", "Yuki", "George", "Lance"), 1)
+m <- sample(10:99, 1) # mass (kg)
+g <- 9.8 # (m/s/s)
+h <- sample(10:99, 1) / 10 # height (m)
+v <- signif(runif(1, 0.1, 0.9) * sqrt(2 * g * h), 2) # speed at bottom (m/s)
+
+ans <- m * (g * h - 0.5 * v^2)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,J}$", signif(sc$questions, 3))
+```
+
+Question
+========
+`r name`'s mass is `r fmt(m, 1)` kg. He climbs the `r fmt(h, 1)`-m ladder of a slide, and reaches
+a velocity of `r fmt(v, 1)` m/s at the bottom. How much work was done by friction on `r name`?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The work done by friction is the difference between the initial potential energy
+and the final kinetic energy.
+
+$$W = mgh - \frac{1}{2} m v^2 = m(gh - \frac{1}{2} v^ 2) $$
+$$W = (`r m` \mathsf{\,kg})[(9.80 \mathsf{\,m/s^2})(`r h` \mathsf{\,m}) - \frac{1}{2}(`r v` \mathsf{m/s})^2]
+= `r signif(ans,3)` \mathsf{\,J}$$
+
+
+Meta-information
+================
+exname: Calculate friction work done by slide
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

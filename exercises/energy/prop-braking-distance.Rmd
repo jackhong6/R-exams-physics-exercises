@@ -1,0 +1,41 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(10:120, 2) # speeds (km/h)
+d <- sample(10: 100, 1) # braking distance (m)
+
+ans <- d * (v[2] / v[1]) ^ 2
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%.1f \\mathsf{\\,m}$", sc$questions)
+```
+
+Question
+========
+A car moving at `r v[1]` km/h comes to a stop in `r d` m after the driver applies the brakes.
+How far would the same car take to stop if it were moving at `r v[2]` km/h? 
+Assume identical road conditions and braking force.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The braking force does work to remove the kinetic energy of the car. Since kinetic
+energy depends on velocity squared, the car has 
+$(`r v[2]` / `r v[1]`)^2 = `r (v[2] / v[1]) ^ 2`$ times the kinetic energy when it
+is traveling at $`r v[2]`$ km/h than when it is traveling at $`r v[1]`$ km/h. 
+The work done by the brakes must also be multiplied by $(`r v[2]` / `r v[1]`) ^ 2$.
+
+Since $W=Fd$ and we are assuming the same braking force, the distance
+must be multiplied by $(`r v[2]` / `r v[1]`) ^ 2$.
+
+$$d = (`r v[2]` / `r v[1]`) ^ 2 (`r d` \mathsf{\,m}) = `r fmt(ans, 1)` \mathsf{\,m}$$
+
+
+Meta-information
+================
+exname: Proportional reasoning - braking distance
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

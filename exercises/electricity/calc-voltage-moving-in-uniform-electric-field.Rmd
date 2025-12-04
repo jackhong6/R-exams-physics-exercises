@@ -1,0 +1,44 @@
+```{r, echo = FALSE, results = "hide"}
+E <- sample(10:99, 1) # (N/C)
+V0 <- sample(100:999, 1) # (V)
+d <- sample(1:9, 1) # (m)
+
+s <- sample(-1:1, 1) # sign
+directions <- c("east", "south", "west") # in order based on s
+
+ans <- signif(V0 + E * d * s, 3)  # voltage
+
+sc <- num_to_schoice(ans, delta = ans/10, range = c(-2, 2) * ans, format = FALSE)
+sc$questions <- sprintf("%g V", signif(sc$questions, 3))
+```
+Question
+========
+Consider a uniform electric field of $`r fmt(E,1)` \,\mathsf{N/C}$ pointing
+toward the east. If the voltage measured relative to ground at a given point in the
+field is $`r V0` \,\mathsf{V}$, what is the voltage $`r fmt(d,2)` \,\mathsf{m}$
+directly `r directions[s + 2]` of the point?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The voltage changes with distance in a uniform electric field following the formula
+
+$$V = Ed$$
+
+The potential decreases moving in the same direction as the electric field and increases
+moving in the opposite direction. When moving perpendicular to the electric field,
+the potential does not change. Therefore, for this question, the voltage is
+
+$$V = `r V0` \,\mathsf{V} + (`r s * d`\,\mathsf{m})(`r E` \,\mathsf{N/C}) = `r ans`\,\mathsf{V}$$
+
+
+Meta-information
+================
+exname: Calculate voltage moving in uniform electric field
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

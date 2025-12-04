@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+m <- signif(runif(1, 10, 99), 4) # mass (kg)
+g <- signif(runif(1, 1, 20), 4) # acceleration of gravity (m/s^2)
+w <- signif(m * g, 4) # weight (N)
+
+ans <- signif(w / m, 4) # acceleration of gravity (m/s^2)
+
+sc <- num_to_schoice(ans, delta = 0.01, format = FALSE, digits = 2)
+sc$questions <- sprintf("$%g \\mathsf{\\,m/s^2}$", sc$questions)
+```
+
+Question
+========
+You place a `r m`-kg object on a spring scale. If the scale reads `r w` N, what
+is the acceleration of gravity at that location? 
+
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The acceleration of gravity ($g$) is related to the mass ($m$) and weight ($W$) 
+of objects by the equation $W = mg$. Solving for $g$, we get
+$$g = \frac{W}{m} = \frac{`r w` \mathsf{\,N}}{`r m` \mathsf{\,kg}} = `r fmt(ans, 2)` \mathsf{\,m/s^2}$$
+
+
+Meta-information
+================
+exname: Calculate g given weight and mass
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

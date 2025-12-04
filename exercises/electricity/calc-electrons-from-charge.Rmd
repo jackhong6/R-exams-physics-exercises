@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+e <- 1.6e-19
+q <- signif(runif(1, 10, 99), 2) # charges (microcoulombs)
+ans <- signif(q * 1e-6 /e, 2)  # number of electrons
+
+sc <- num_to_schoice(ans, method = "runif", delta = ans/10, range = c(0.01, 100) * ans, format = FALSE)
+sc$questions <- sprintf("%.2g", signif(sc$questions, 2))
+```
+Question
+========
+A person scuffing their feet on a wool rug on a dry day accumulates a net charge
+of $-`r q` \,\mu \mathsf{C}$. How many excess electrons did this person acquire?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The electric charge of an electron is $1.6 \times 10^{-19} \,\mathsf{C}$. 
+The number of electrons, $n_e$ is therefore
+
+$$n_e = \frac{`r q` \times 10^{-6}}{1.6 \times 10^{-19}} = `r ans * 1e-14` \times 10^{14}$$
+
+
+Meta-information
+================
+exname: Calculate number of electrons from charge
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

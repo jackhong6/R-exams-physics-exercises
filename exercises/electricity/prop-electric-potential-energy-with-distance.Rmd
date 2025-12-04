@@ -1,0 +1,49 @@
+```{r, echo = FALSE, results = "hide"}
+d <- sample(1:20, 2) # distance between charges (cm)
+
+for (x in c(2, 3, 5, 7)) {
+  while (d[1] %% x == 0 && d[2] %% x == 0) {
+    d[1] <- d[1] / x
+    d[2] <- d[2] / x
+  }
+}
+```
+
+Question
+========
+Two point charges are separated by a distance of $`r d[1]` \mathsf{\,cm}$. 
+Their electric potential energy is $1 \mathsf{\,J}$, relative to infinity. 
+What would their electric potential energy be if the separation is changed to $`r d[2]` \mathsf{\,cm}$?
+
+
+Answerlist
+----------
+* $(`r d[1]` / `r d[2]`) \mathsf{\,J}$
+* $(`r d[2]` / `r d[1]`) \mathsf{\,J}$
+* $(`r d[1]` / `r d[2]`)^2 \mathsf{\,J}$
+* $(`r d[2]` / `r d[1]`)^2 \mathsf{\,J}$
+
+
+Solution
+========
+The formula for the electric potential energy shows that it is inversely proportional to the
+distance:
+
+$$E_p = \frac{k q_1 q_2}{r}$$
+
+Let $r_1 = `r d[1]`$ cm and $r_2 = `r d[2]`$ cm. The ratio between the potential energy
+at $r_1$ and $r_2$ is
+
+$$\frac{E_{p,2}}{E_{p,1}} = \frac{k q_1 q_2 / r_2}{k q_1 q_2 / r_1} 
+= \frac{r_1}{r_2} = \frac{`r d[1]`}{`r d[2]`}$$
+
+Since $E_{p,1} = 1 \mathsf{\,J}$, the coulomb force when the separation is $`r d[2]` \mathsf{\,cm}$ is 
+$(`r d[1]` / `r d[2]`) \mathsf{\,J}$.
+
+
+Meta-information
+================
+exname: Proportional reasoning - electric potential energy distance
+extype: schoice
+exsolution: 1000
+exshuffle: 4

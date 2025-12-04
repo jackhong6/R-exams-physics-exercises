@@ -1,7 +1,7 @@
 Question
 ========
 A cyclist going down a hill wants to shift gears to decrease his bicycle's
-mechanical advantage. This would make it so that he can exert greater effort 
+mechanical advantage. This would make it so that he can exert a greater effort 
 force on the bike. Which sprocket changes would result in a smaller mechanical
 advantage? *Select all that apply.*
 

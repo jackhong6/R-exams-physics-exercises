@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(100:999, 1) # weight (N)
+h <- sample(1:20, 1) # height (m)
+t <- sample(10:30, 1) # time (s)
+
+ans <- w * h / t # power (W)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,W}$", signif(sc$questions, 3))
+```
+
+Question
+========
+How much power is required to lift a box that weighs $`r w` \mathsf{\,N}$ a
+distance of $`r fmt(h,1)` \mathsf{\,m}$ straight up in $`r fmt(t,1)` \mathsf{\,s}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Power is work over time:
+$$P = \frac{W}{t} = \frac{Fd}{t} = \frac{(`r w` \mathsf{\,N})(`r fmt(h, 1)` \mathsf{\,m})}{`r fmt(t, 1)` \mathsf{\,s}} = `r signif(ans, 3)` \mathsf{\,W}$$
+
+
+Meta-information
+================
+exname: Calculate Power Lifting Weight
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

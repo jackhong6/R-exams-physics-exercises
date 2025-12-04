@@ -1,0 +1,26 @@
+Question
+========
+The transfer of energy by mechanical means is
+
+
+Answerlist
+----------
+* work
+* momentum
+* acceleration
+* force
+
+
+Solution
+========
+The transfer of energy by mechanical means (applying a force over a distance) is
+work.
+
+
+
+Meta-information
+================
+exname: Transfer of energy
+extype: schoice
+exsolution: 1000
+exshuffle: 4

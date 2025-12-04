@@ -3,8 +3,7 @@ f1 <- sample(1:20, 1)
 fnet <- f1 + sample(1:10, 1)
 ans <- signif(sqrt(fnet^2 - f1^2), 3)
 
-distractors <- c(fnet - f1, f1 + fnet)
-sc <- num_to_schoice(ans, wrong = distractors, delta = ans/10, format = FALSE)
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
 sc$questions <- sprintf("%.1f N", sc$questions)
 ```
 

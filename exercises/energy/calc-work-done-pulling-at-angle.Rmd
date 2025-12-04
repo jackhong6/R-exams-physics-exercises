@@ -1,0 +1,44 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen=999)
+d <- sample(1:20, 1) # distance (m)
+a <- sample(20:60, 1) # angle (deg)
+f <- sample(100:999, 1) # pulling force (N)
+mu <- signif(runif(1, 0.1, 1), 2) # coefficient of friction -- not used
+m <- sample(10:99, 1) # mass of box (kg) -- not used
+
+ans <- f * d * cos(a * pi / 180) # work (J)
+dis <- c(f * d)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/100, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,J}$", signif(sc$questions, 3))
+```
+
+Question
+========
+A rope is used to pull a box $`r fmt(d, 1)` \mathsf{\,m}$ across the floor. The rope is held at
+an angle of $`r fmt(a, 1)`^\circ$ with the floor and a force of $`r f` \mathsf{\,N}$ is used.
+The mass of the box is $`r m` \mathsf{\,kg}$ and the coefficient of kinetic 
+friction  between the box and the ground is $`r mu`$.
+How much work does the force on the rope do?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Work is the component of force in the direction of motion times the distance.
+The coefficient of kinetic friction and the mass of the box are not needed 
+because the question asks for the work done by the force on the rope and not the
+work done by friction.
+
+$$W = Fd \cos\theta = (`r f` \mathsf{\,N})(`r fmt(d, 1)` \mathsf{\,m})\cos(`r fmt(a, 1)`^\circ) = `r signif(ans, 3)` \mathsf{\,J}$$
+
+
+Meta-information
+================
+exname: Calculate work done pulling at angle
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

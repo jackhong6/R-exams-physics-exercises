@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+x <- sample(2:9, 3) # factors
+```
+
+Question
+========
+Two charged objects repel each other with a force $F$. What is the force between
+them if one of the charges is multiplied by $`r x[1]`$, the other charge is 
+multiplied by $`r x[2]`$, and the distance between them is reduced to 
+$1/`r x[3]`$ its original value? 
+
+
+Answerlist
+----------
+* $`r x[1] * x[2] * x[3]^2` \, F$
+* $(`r x[1] * x[2]` / `r x[3]^2`) \, F$
+* $(`r x[1] * x[2]` / `r x[3]`) \, F$
+* $`r prod(x)` \,F$
+
+
+Solution
+========
+The formula for the coulomb force shows that it is proportional to both charges
+and inversely proportional to the distance squared:
+
+$$F = \frac{k q_1 q_2}{r^2}$$
+Therefore, the answer is $`r x[1]` \times `r x[2]` \times `r x[3]`^2 \, F= `r x[1] * x[2] * x[3]^2` \, F$.
+
+
+
+Meta-information
+================
+exname: Proportional reasoning - coulomb force all
+extype: schoice
+exsolution: 1000
+exshuffle: 4

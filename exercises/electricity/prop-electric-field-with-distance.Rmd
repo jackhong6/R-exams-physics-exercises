@@ -1,0 +1,49 @@
+```{r, echo = FALSE, results = "hide"}
+d <- sample(1:20, 2) # distance between charges (cm)
+
+for (x in c(2, 3, 5, 7)) {
+  while (d[1] %% x == 0 && d[2] %% x == 0) {
+    d[1] <- d[1] / x
+    d[2] <- d[2] / x
+  }
+}
+```
+
+Question
+========
+The magnitude of the electric field at a distance of $`r d[1]` \mathsf{\,m}$
+from a point charge is $1 \mathsf{\,N/C}$.
+What is the magnitude of the electric field at a distance of 
+$`r d[2]` \mathsf{\,m}$ from the point charge?
+
+
+Answerlist
+----------
+* $(`r d[1]` / `r d[2]`) \mathsf{\,N/C}$
+* $(`r d[2]` / `r d[1]`) \mathsf{\,N/C}$
+* $(`r d[1]` / `r d[2]`)^2 \mathsf{\,N/C}$
+* $(`r d[2]` / `r d[1]`)^2 \mathsf{\,N/C}$
+
+
+Solution
+========
+The formula for the electric field magnitude shows that it is inversely proportional to the
+distance squared:
+
+$$E = \frac{k q}{r^2}$$
+
+Let $r_1 = `r d[1]` \mathsf{\,m}$ and $r_2 = `r d[2]` \mathsf{\,m}$. The ratio 
+between the electric field at $r_1$ and $r_2$ is
+
+$$\frac{E_2}{E_1} = \frac{k q / r_2^2}{k q / r_1^2} 
+= \left(\frac{r_1}{r_2} \right)^2 = \left(\frac{`r d[1]`}{`r d[2]`} \right)^2$$
+
+Since $E_1 = 1 \mathsf{\,N/C}$, the electric field at $`r d[2]` \mathsf{\,cm}$ is 
+$(`r d[1]` / `r d[2]`)^2 \mathsf{\,N/C}$.
+
+Meta-information
+================
+exname: Proportional reasoning - electric field distance
+extype: schoice
+exsolution: 0010
+exshuffle: 4

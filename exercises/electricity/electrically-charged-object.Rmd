@@ -1,0 +1,23 @@
+Question
+========
+What is always true of an electrically charged object?
+
+
+Answerlist
+----------
+* It has more protons than electrons.
+* It has more electrons than protons.
+* It has an unequal number of protons and electrons.
+* It has no neutrons.
+
+
+Solution
+========
+An electrically charged object has an unequal number of protons and electrons.
+
+Meta-information
+================
+exname: Electrically charged object
+extype: schoice
+exsolution: 0010
+exshuffle: 4

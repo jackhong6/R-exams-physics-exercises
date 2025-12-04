@@ -1,0 +1,51 @@
+```{r, echo = FALSE, results = "hide"}
+q <- sample(c(-9:-2, 2:9), 2) # two charges (microcoulombs)
+s <- sample(2:9, 1) # side length of square (m)
+
+ans <- 9e9 / s^2 * sqrt(sum((q * 1e-6)^2)) # N/C
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{N/C}$", signif(sc$questions, 2))
+
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+
+## tikz graphic
+tikz <- c("\\begin{tikzpicture}",
+  "\\draw[dashed] (0,0) -- (0,2) -- (2,2) -- (2,0) -- cycle;",
+  "\\filldraw[fill=black] (0,2) circle (2pt) node[anchor=east]{$q_1$};",
+  "\\filldraw[fill=black] (2,0) circle (2pt) node[anchor=west]{$q_2$};",
+  "\\filldraw[fill=black] (2,2) circle (2pt) node[anchor=west]{$P$};",
+  "\\end{tikzpicture}")
+```
+
+Question
+========
+Two point charges, $q_1 = `r fmt(q[1],1)`\,\mu\mathsf{C}$ and $q_2 = `r fmt(q[2],1)`\,\mu\mathsf{C}$,
+are fixed at opposing corners of a square of side length $`r fmt(s,1)`\,\mathsf{m}$
+as shown in the figure. What is the electric field strength at one of the 
+unoccupied corners of the square (point $P$ in the figure)?
+
+```{r, echo = FALSE, results = "asis"}
+include_tikz(tikz, name = "charges-in-square", format = typ)
+```
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+At point $P$, the electric field from $q_1$ will be at a right angle to the 
+electric field from $q_2$. Therefore, the net electric field strength can be
+calculated using the Pythagorean theorem.
+
+$$E = \sqrt{E_1^2 + E_2^2} = \frac{k}{s^2} \sqrt{q_1^2 + q_2^2} = `r signif(ans,2)`\,\mathsf{N/C}$$
+
+Meta-information
+================
+exname: Calculate electric field opposing corners of square
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

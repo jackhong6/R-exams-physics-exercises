@@ -3,8 +3,7 @@ f1 <- sample(1:20, 1)
 f2 <- sample(1:20, 1)
 ans <- signif(sqrt(f1^2 + f2^2), 3)
 
-distractors <- c(f1 + f2, abs(f2 - f1))
-sc <- num_to_schoice(ans, wrong = distractors, delta = ans/10, digits = 1, format = FALSE)
+sc <- num_to_schoice(ans, delta = ans/10, digits = 1, format = FALSE)
 sc$questions <- sprintf("%g N", sc$questions)
 ```
 

@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+energy <- sample(10:99, 1) # (J)
+charge <- signif(runif(1, 1, 10), 2) # (C)
+
+ans <- signif(energy / charge, 2)  # voltage
+dis <- c(energy * charge, charge / energy)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%g V", signif(sc$questions, 2))
+```
+Question
+========
+It takes $`r energy` \,\mathsf{J}$ of energy to move $`r charge` \,\mathsf{C}$ of
+charge from point $A$ to point $B$. What is the potential difference between points $A$ and $B$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The electric potential difference (voltage) is the energy per charge:
+
+$$V = \frac{E}{Q} = \frac{`r energy` \,\mathsf{J}}{`r charge` \,\mathsf{C}} = `r ans` \,\mathsf{V}$$
+
+
+Meta-information
+================
+exname: Calculate voltage given energy and charge
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

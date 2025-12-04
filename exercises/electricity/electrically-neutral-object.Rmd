@@ -1,0 +1,24 @@
+Question
+========
+What is always true of an electrically neutral object?
+
+
+Answerlist
+----------
+* It has more neutrons than protons or electrons.
+* It is made up of neutrons only.
+* It is repelled by charged objects.
+* It is attracted to charged objects.
+
+
+Solution
+========
+An charged object would induce a charge in the neutral object causing the neutral
+object to be attracted to the charged object.
+
+
+Meta-information
+================
+exname: Electrically neutral object
+extype: schoice
+exsolution: 0001

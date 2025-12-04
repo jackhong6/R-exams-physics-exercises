@@ -11,7 +11,7 @@ sc$questions <- sprintf("%.1f J", sc$questions)
 
 Question
 ========
-How much work is done if you raise a `r fmt(w, 1)` N weight `r fmt(h, 1)` m above the ground?
+How much work is done (by you) if you raise a `r fmt(w, 1)` N weight `r fmt(h, 1)` m above the ground?
 
 ```{r, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -26,7 +26,7 @@ $$W = Fd = (`r fmt(w,1)` \text{ N})(`r fmt(h, 1)` \text{ m}) = `r fmt(ans, 1)` \
 
 Meta-information
 ================
-exname: Calculate Acceleration on Inclined Plane with no Friction
+exname: Calculate work done lifting weight
 extype: schoice
 exsolution: `r mchoice2string(sc$solutions)`
 exshuffle: 4

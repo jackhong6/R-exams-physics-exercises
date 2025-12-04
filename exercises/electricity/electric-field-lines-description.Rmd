@@ -1,0 +1,22 @@
+Question
+========
+Electric field lines
+
+Answerlist
+----------
+* Circle clockwise around positive charges.
+* Circle clockwise around negative charges.
+* Radiate outward from positive charges.
+* Radiate outward from negative charges.
+
+
+Solution
+========
+Electric field lines radiate outward from positive charges.
+
+Meta-information
+================
+exname: Electric field lines
+extype: schoice
+exsolution: 0010
+exshuffle: 4

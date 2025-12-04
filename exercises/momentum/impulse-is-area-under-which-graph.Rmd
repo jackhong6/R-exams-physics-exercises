@@ -1,0 +1,23 @@
+Question
+========
+Impulse is the area under a graph of
+
+Answerlist
+----------
+* force vs. time
+* force vs. displacement
+* velocity vs. time
+* momentum vs. time
+
+
+Solution
+========
+Impulse is represented by the area under a force vs. time graph.
+
+
+Meta-information
+================
+exname: Impulse is area under which graph
+extype: schoice
+exsolution: 1000
+exshuffle: 4

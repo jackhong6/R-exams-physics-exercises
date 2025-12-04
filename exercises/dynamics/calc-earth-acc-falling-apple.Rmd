@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(100:300, 1) # mass of apple (g)
+g <- 9.80 # acceleration of gravity (m/s^2)
+
+ans <- m * g / 1000 / 5.97 * 10 # 10^-25
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%.2f \\times 10^{-25} \\mathsf{\\,m/s^2}$", sc$questions)
+```
+
+Question
+========
+When you drop a `r m`-g apple, the earth exerts a force on it that accelerates it
+at $9.8 \mathsf{\,m/s^2}$ toward the earth's surface. If the mass of the earth is
+$5.97 \times 10^{24} \mathsf{\,kg}$, what is the magnitude of the earth's acceleration?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The earth pulls down on the earth with a force of
+
+$$F = ma = (`r m/1000` \mathsf{\,kg})(9.80 \mathsf{\,m/s^2}) = `r m * 9.8 / 1000` \mathsf{\,N}$$
+
+According to Newton's third law of motion, the apple also pulls up on the earth
+with a force of equal magnitude. The acceleration of the earth is then
+
+$$a = \frac{F}{m} = \frac{`r m * 9.8 / 1000` \mathsf{\,N}}{5.97 \times 10^{24} \mathsf{\,kg}} = `r fmt(ans,2)` \times 10^{-25} \mathsf{\,m/s^2} $$
+
+
+Meta-information
+================
+exname: Calculate acceleration of the earth due to falling apple
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

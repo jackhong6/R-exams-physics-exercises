@@ -18,6 +18,6 @@ Since horizontal and vertical motions can be analyzed separately, only the verti
 
 Meta-information
 ================
-exname: longest air time of 2d projectile
+exname: longest hang time of 2d projectile
 extype: schoice
 exsolution: 0100

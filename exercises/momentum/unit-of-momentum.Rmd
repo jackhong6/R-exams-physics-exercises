@@ -4,15 +4,15 @@ What is the SI unit of linear momentum?
 
 Answerlist
 ----------
-* \unit{\kg.\m \per \s}
-* \unit{\kg.\m \per \s^2}
-* \unit{\N.\s}
-* \unit{\N.\m}
-* \unit{\J.\s}
+* $\mathsf{kg\,m/s}$
+* $\mathsf{kg\,m/s^2}$
+* $\mathsf{N\,s}$
+* $\mathsf{N\,m}$
+* $\mathsf{J\,s}$
 
 Solution
 ========
-The kilogram metre per second (\unit{\kg.\m \per \s}) is the SI unit of momentum.
+The kilogram metre per second ($\mathsf{kg\,m/s}$) is the SI unit of momentum.
 
 Meta-information
 ================

@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:50, 1) # mass (kg)
+h <- signif(runif(1, 1, 20), 3) # height (m)
+
+ans <- m * 9.8 * h # work (J)
+dis <- c(0, m * h)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE, digits = 1)
+sc$questions <- sprintf("%g J", signif(sc$questions, 3))
+```
+
+Question
+========
+How much work does the force of gravity do when a `r fmt(m, 1)`-kg object falls a
+distance of `r fmt(h, 1)` m?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Work is force times distance.
+$$W = Fd = mgh = (`r fmt(m,1)` \mathsf{\,kg})(9.80 \mathsf{\,N/kg})(`r fmt(h, 1)` \mathsf{\,m}) 
+= `r signif(ans, 3)` \mathsf{\,J}$$
+
+
+Meta-information
+================
+exname: Calculate work done by gravity on falling mass
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

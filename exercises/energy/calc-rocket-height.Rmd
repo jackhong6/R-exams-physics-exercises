@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+E <- 9292#sample(1000:9999, 1) # rocket fuel energy (J)
+m <- 58#sample(10:99, 1) # mass of rocket (kg)
+
+ans <- E / m / 9.8
+
+sc <- num_to_schoice(ans, delta = ans/10, digits = 5, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,m}$", signif(sc$questions, 3))
+```
+
+Question
+========
+A test rocket of mass `r m` kg is fired straight up. Its fuel gives it a kinetic
+energy of `r E` J by the time the rocket engine burns all the fuel. What additional
+height will the rocket rise?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The rocket will rise an additional height such that all of its kinetic energy
+is transformed into gravitational potential energy, $E_p = mgh$. 
+
+$$h = \frac{E_p}{mg} = \frac{(`r E` \mathsf{\,J})}{(`r m` \mathsf{\,kg})(9.80 \mathsf{\,m/s^2})}
+= `r signif(ans, 3)` \mathsf{\,m}$$
+
+
+Meta-information
+================
+exname: Calculate rocket height
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+w <- sample(1200:2000, 1) # load weight (N)
+f <- sample(100:999, 1) # effort force (N)
+h <- signif(runif(1, 0.5, 5), 3) # height (m)
+
+eff <- runif(1, 50, 96) # efficiency (%)
+d <- signif(w * h / f / eff * 100, 3)
+
+ans <- w * h / d / f * 100
+
+sc <- num_to_schoice(ans, delta = 1, range = c(10, 100), format = FALSE)
+sc$questions <- sprintf("%.1f %%", sc$questions)
+```
+
+Question
+========
+A pulley system lifts a `r w`-N weight a distance of `r h` m. Paul pulls the rope
+a distance of `r signif(d, 3)` m, exerting a force of `r f` N. What is the efficiency
+of the system?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The formula for efficiency is
+$$\mathsf{efficiency} = \frac{MA}{IMA} = \frac{F_r / F_e}{d_e / d_r} 
+= \frac{`r w` / `r f`}{`r fmt(d, 1)` / `r h`} = `r fmt(ans, 1)` \%$$
+
+
+Meta-information
+================
+exname: Calculate efficiency of pulley system
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

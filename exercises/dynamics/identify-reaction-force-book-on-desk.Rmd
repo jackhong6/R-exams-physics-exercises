@@ -11,13 +11,14 @@ Answerlist
 
 Solution
 ========
-The book pulling upward on the Earth with force $mg$. Action-reaction force pairs
-are always between the same two objects.
+Action-reaction force pairs are always between the same two objects. 
+The reaction force to the Earth pulling down on the book is the book pulling 
+upward on the Earth with force.
 
 
 Meta-information
 ================
 exname: Identify Reaction Force Book on Desk
 extype: schoice
-exsolution: 0010
+exsolution: 0001
 exshuffle: 4

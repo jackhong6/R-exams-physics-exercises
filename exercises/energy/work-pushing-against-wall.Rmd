@@ -1,6 +1,6 @@
 ```{r, echo = FALSE, results = "hide"}
 p1 <- sample(c("Albert", "Bob", "Charlie", "Dave", "Joe"), 1)
-p2 <- sample(c("Mary", "Nicole", "Olivia", "Rachel", "Zoe"), 1)
+p2 <- sample(c("Juliet", "Mary", "Nicole", "Ophelia", "Zoe"), 1)
 t <- sample(10:30, 1)
 ```
 

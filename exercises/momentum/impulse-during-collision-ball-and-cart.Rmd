@@ -1,0 +1,23 @@
+Question
+========
+A light rubber ball moving at high speed strikes a heavy stationary cart. 
+As a result of the collision, the rubber ball rebounds and the cart rolls forward.
+Which object experienced the greater magnitude of impulse?
+
+Answerlist
+----------
+* The rubber ball.
+* The cart.
+* Both experienced the same magnitude of impulse.
+* It depends on whether the collision was elastic or inelastic.
+
+Solution
+========
+Both objects experienced the same force (Newton's Third Law of Motion) for the 
+same amount of time. Therefore, they both experienced the same magnitude of impulse.
+
+Meta-information
+================
+exname: Impulse During Collision Ball and Cart
+extype: schoice
+exsolution: 0010

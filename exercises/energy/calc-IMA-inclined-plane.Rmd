@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+angle <- sample(10:80, 1) # (deg)
+
+ans <- 1 / sin(angle * pi / 180) # IMA
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%.3f", signif(sc$questions, 3))
+```
+
+Question
+========
+A box is pushed up an inclined plane. The angle of incline is $`r angle`^\circ$ 
+from the ground. What is the ideal mechanical advantage of the inclined plane?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The ideal mechanical advantage is the effort distance over the resistance distance.
+The effort distance is the along the inclined surface, which is the hypotenuse of
+the right triangle. The resistance distance is the vertical distance, which is the
+side opposite the angle.
+
+$$IMA = \frac{d_e}{d_r} = \frac{\mathsf{hypotenuse}}{\mathsf{opposite}}
+= \frac{1}{\sin(`r angle`^\circ)} = `r fmt(ans,3)`$$
+
+
+Meta-information
+================
+exname: Calculate IMA of inclined plane
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

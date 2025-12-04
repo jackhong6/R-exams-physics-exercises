@@ -31,10 +31,10 @@ choices <- c("Graph A", "Graph B", "Graph C", "Graph D")
 
 # Generate all graphs
 graphs <- c(
-  include_tikz(tikz_graph_A, name = "v-t-graph-postive-acc-A", markup = "none", format = typ),
-  include_tikz(tikz_graph_B, name = "v-t-graph-postive-acc-B", markup = "none", format = typ),
-  include_tikz(tikz_graph_C, name = "v-t-graph-postive-acc-C", markup = "none", format = typ),
-  include_tikz(tikz_graph_D, name = "v-t-graph-postive-acc-D", markup = "none", format = typ)
+  include_tikz(tikz_graph_A, name = "v-t-graph-change-dir-A", markup = "none", format = typ),
+  include_tikz(tikz_graph_B, name = "v-t-graph-change-dir-B", markup = "none", format = typ),
+  include_tikz(tikz_graph_C, name = "v-t-graph-change-dir-C", markup = "none", format = typ),
+  include_tikz(tikz_graph_D, name = "v-t-graph-change-dir-D", markup = "none", format = typ)
 )
 
 # Randomize graphs and find the correct answer (original graph A)

@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(1000:2000, 1) # mass (kg)
+v <- signif(runif(1, 1, 5), 3) # speed (m/s)
+
+ans <- m * 9.8 * v / 1000 # power (kW)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,kW}$", signif(sc$questions, 3))
+```
+
+Question
+========
+An elevator is moving upwards at a constant speed of `r v` m/s. The total mass of
+the elevator and passengers is `r m` kg. How much power is developed by the elevator's motor?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+Power is force time velocity:
+$$P = Fv = mgv = (`r fmt(m,1)` \mathsf{\,kg})(9.80 \mathsf{\,N/kg})(`r fmt(v, 1)` \mathsf{\,m/s}) = `r signif(ans, 3)` \mathsf{\,kW}$$
+
+
+Meta-information
+================
+exname: Calculate elevator power given speed
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

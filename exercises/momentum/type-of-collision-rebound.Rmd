@@ -1,0 +1,26 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(10:30, 1) # speed (m/s)
+```
+Question
+========
+A ball moving due east at $`r v` \,\mathsf{m/s}$ collides with a wall.
+As a result, the ball moves due west at $`r v` \,\mathsf{m/s}$. Which of the
+following best describes the collision?
+
+Answerlist
+----------
+* Elastic.
+* Inelastic.
+* Completely inelastic.
+* Any of the above, depending on the mass of the ball.
+
+Solution
+========
+The collision described conserves kinetic energy. Therefore, it is an elastic
+collision.
+
+Meta-information
+================
+exname: Type of Collision Billiard Balls
+extype: schoice
+exsolution: 1000

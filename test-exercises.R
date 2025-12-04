@@ -1,14 +1,16 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/energy"))
+my_exam <- c(dir("exercises/electricity"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("bike-gear-shift-downhill.Rmd",
-                "bike-gear-shift-uphill.Rmd",
-                "work-pushing-against-wall.Rmd")
+my_exam <- list("momentum-of-male-olympic-sprinter.Rmd",
+                "calc-impulse-right-angle-collision.Rmd",
+                "unit-of-momentum.Rmd",
+                "impulse-is-area-under-which-graph.Rmd",
+                "impulse-during-collision-ball-and-cart.Rmd")
 
 # Generate different PDFs
 s <- 2025*11*7
@@ -25,7 +27,7 @@ exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", log
            usepackage = c("eulervm", "siunitx"))
 
 # Stress test an exercise
-st_results <- stresstest_exercise("~/Documents/GitHub/R-exams-physics-exercises/exercises/kinematics/calculate-d2-given-d1-const-a.Rmd")
+st_results <- stresstest_exercise("calc-electrons-from-charge.Rmd")
 plot(st_results)
 
 set.seed(1)

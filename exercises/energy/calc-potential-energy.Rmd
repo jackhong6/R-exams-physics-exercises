@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+m <- sample(10:99, 1) # mass (kg)
+h <- sample(1:10, 1) # height (m)
+
+ans <- m * 9.8 * h
+dis <- c(m*h)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("$%g \\mathsf{\\,J}$", signif(sc$questions, 3))
+```
+
+Question
+========
+An object of mass `r fmt(m, 1)` kg is `r fmt(h, 2)` m above the ground.
+What is its gravitational potential energy relative to the ground?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+
+Solution
+========
+The gravitational potential energy is
+$$E_p = mgh = (`r m` \mathsf{\,kg})(9.80 \mathsf{\,m/s^2})(`r h` \mathsf{\,m}) = `r signif(ans, 3)` \mathsf{\,J}$$
+
+
+Meta-information
+================
+exname: Calculate Potential Energy
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4

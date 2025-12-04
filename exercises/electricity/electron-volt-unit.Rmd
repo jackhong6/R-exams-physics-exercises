@@ -1,0 +1,23 @@
+Question
+========
+The electron-volt (eV) is a unit of
+
+Answerlist
+----------
+* Voltage.
+* Current.
+* Power.
+* Energy.
+
+
+Solution
+========
+The electron-volt (eV) is a unit of energy.
+
+
+Meta-information
+================
+exname: Electron-volt unit
+extype: schoice
+exsolution: 0001
+exshuffle: 4

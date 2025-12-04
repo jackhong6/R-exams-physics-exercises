@@ -1,0 +1,25 @@
+Question
+========
+The momentum of a male Olympic sprinter in the middle of a 100 m dash is about
+
+Answerlist
+----------
+* $10^1 \,\mathsf{kg\,m/s}$
+* $10^2 \,\mathsf{kg\,m/s}$
+* $10^3 \,\mathsf{kg\,m/s}$
+* $10^4 \,\mathsf{kg\,m/s}$
+
+Solution
+========
+The mass of a male Olympic sprinter is about $10^2 \,\mathsf{kg}$. An Olympic 
+sprinter can run $100 \,\mathsf{m}$ in about $10 \,\mathsf{s}$, which means that
+his average speed is about $10 \,\mathsf{m/s}$. Therefore, his momentum is
+
+$$p = mv = (10^2 \,\mathsf{kg})(10 \,\mathsf{m/s}) = 10^3 \,\mathsf{kg\,m/s}$$
+
+
+Meta-information
+================
+exname: Momentum of male olympic sprinter
+extype: schoice
+exsolution: 0010

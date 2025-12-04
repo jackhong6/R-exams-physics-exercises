@@ -1,0 +1,26 @@
+Question
+========
+The net work done on an object is equal to its
+
+Answerlist
+----------
+* change in kinetic energy.
+* change in potential energy.
+* change in total mechanical energy.
+* change in velocity.
+
+
+Solution
+========
+According to the work-energy theorem, the net work done on an object is equal to
+its change in kinetic energy. Note that the net work could include *negative* work done by
+gravity or friction so that an applied force could do work on an object without
+increasing its kinetic energy.
+
+
+Meta-information
+================
+exname: Work-energy theorem
+extype: schoice
+exsolution: 1000
+exshuffle: 4

@@ -1,0 +1,49 @@
+```{r, echo = FALSE, results = "hide"}
+m <- signif(runif(1, 1, 10), 2) # mass (kg)
+ang <- sample(10:60, 1) # angle of incline (deg)
+ang_rad <- ang * pi / 180
+d <- signif(runif(1, 1, 5), 3) # length of incline (m)
+vf <- signif(runif(1, 1, 0.9 * sqrt(2 * 9.8 * d * sin(ang_rad))), 3) # speed at bottom (m/s)
+
+acc <- vf^2 / 2 / d
+
+ans <- tan(ang_rad) - acc / 9.8 / cos(ang_rad)
+
+sc <- num_to_schoice(ans, delta = ans/10, range = c(0, ans*1.5), digits = 3, format = TRUE)
+```
+Question
+========
+An $`r m`$-kg box slides down a $`r ang`^\circ$ inclined plane with constant acceleration. 
+The box starts from rest at the top. At the bottom, its velocity reaches $`r vf`$ m/s.
+The length of the incline is `r d` m.
+What is the coefficient of kinetic friction between the box and the plane?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The acceleration of the box can be calculated using the constant acceleration formula $v_f^2 = v_i^2 + 2ad$.
+Since $v_i = 0$, we the acceleration is
+
+$$a = \frac{v_f^2}{2d} = \frac{(`r vf` \mathsf{\,m/s})^2}{2(`r d` \mathsf{\,m})} = `r acc` \mathsf{\,m/s^2}$$
+
+The acceleration down an inclined plane with friction is
+
+$$a = g \sin\theta - \mu g \cos\theta$$
+Solving for $\mu$
+
+$$\mu = \tan\theta - \frac{a}{g\cos\theta} 
+= \tan(`r ang`^\circ) - \frac{(`r acc` \mathsf{\,m/s^2})}{(9.80 \mathsf{\,m/s^2})\cos(`r ang`^\circ)}$$
+
+$$\mu = `r signif(ans, 3)`$$
+
+
+Meta-information
+================
+exname: Calculate mu_k inclined plane constant acceleration
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

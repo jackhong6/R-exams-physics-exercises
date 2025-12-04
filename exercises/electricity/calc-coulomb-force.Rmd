@@ -1,0 +1,35 @@
+```{r, echo = FALSE, results = "hide"}
+k <- 9e9 # N m^2 / C^2
+q <- signif(runif(2, 2, 9.99), 2) # charges (microcoulombs)
+r <- sample(10:50, 1) # distance (cm)
+
+ans <- k * q[1] * q[2] * 1e-12 / (r / 100)^2  # coulomb force (N)
+
+sc <- num_to_schoice(ans, delta = ans/10, range = c(0.1, 10) * ans, format = FALSE, digits = 5)
+sc$questions <- sprintf("%g N", signif(sc$questions, 2))
+```
+Question
+========
+What is the magnitude of the coulomb force a $+`r q[1]` \,\mu\mathsf{C}$ charge
+exerts on a $+`r q[2]` \,\mu\mathsf{C}$ charge $`r r` \,\mathsf{cm}$ away?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The coulomb force is
+
+$$F = \frac{k q_1 q_2}{r^2} = \frac{(9.0\times 10^9 \mathsf{\,N\,m^2 / C^2)(
+`r q[1]` \times 10^{-6} \mathsf{\,C})(`r q[2]` \times 10^{-6} \mathsf{\,C})}}
+{(`r r` \times 10^{-2} \mathsf{\,m})^2} = `r signif(ans, 2)` \mathsf{\,N}$$
+
+
+Meta-information
+================
+exname: Calculate Coulomb Force
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

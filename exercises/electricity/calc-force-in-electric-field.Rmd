@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+E <- sample(100:999, 1) # electric field (N/C)
+q <- signif(runif(1, 2, 9.99), 2) # charge (mC)
+
+ans <- q * 1e-3 * E  # coulomb force (N)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
+sc$questions <- sprintf("%g N", signif(sc$questions, 2))
+```
+Question
+========
+What is the force on a $+`r fmt(q,1)` \,\mathsf{mC}$ charge when placed in a
+uniform electric field of strength $`r E` \,\mathsf{N/C}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The force on a charge in an electric field is
+
+$$F = qE = (`r q` \times 10^{-3} \,\mathsf{C})(`r E` \,\mathsf{N/C}) = `r signif(ans, 2)` \,\mathsf{N}$$
+
+
+Meta-information
+================
+exname: Calculate Force in Electric Field
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+
