@@ -15,9 +15,9 @@ sc$questions <- sprintf("\\SI{%g}{N}", sc$questions)
 
 Question
 ========
-A `r m` g baseball is thrown towards a batter at `r v` m/s. The batter hits the
+A `r m` g baseball is thrown towards a batter at `r fmt(v,1)` m/s. The batter hits the
 ball back along the same path, and at the same speed. If the bat was in contact
-with the ball for `r t` ms, the average force exerted by the bat was
+with the ball for `r fmt(t,2)` ms, the average force exerted by the bat was
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

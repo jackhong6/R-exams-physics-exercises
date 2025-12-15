@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+I <- signif(runif(1, 1, 10), 2) # current (A)
+V <- signif(runif(1, 1, 10), 2) # voltage (V)
+
+ans <- signif(I * V, 2)
+dis <- c(V / I)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{W}$", signif(sc$questions, 2))
+```
+Question
+========
+A voltage source of $`r V` \,\mathsf{V}$ delivers a current of $`r I` \,\mathsf{A}$
+to an electric motor that is connected across its terminals. What power is consumed
+by the motor?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use the formula for the power in a circuit:
+
+$$P = I V = (`r I` \,\mathsf{A})(`r V` \,\mathsf{V}) = `r ans` \,\mathsf{W}$$
+
+
+Meta-information
+================
+exname: Calculate power given current and voltage
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+R <- sample(1:100, 3) # resistance (ohms)
+
+ans <- sum(R)
+dis <- 1 / sum(1/R)
+
+sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
+```
+Question
+========
+Three resistors are connected in **series**. Their resistances are $`r R[1]` \,\mathsf{\Omega}$, $`r R[2]` \,\mathsf{\Omega}$, and $`r R[3]` \,\mathsf{\Omega}$. What is the equivalent resistance of the resistors?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The equivalent resistance of resistors in series is the sum of the resistances.
+
+$$R = R_1 + R_2 + R_3 = `r ans` \,\mathsf{\Omega}$$
+
+
+Meta-information
+================
+exname: Calculate resistance in series
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

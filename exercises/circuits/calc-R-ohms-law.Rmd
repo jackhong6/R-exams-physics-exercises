@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+V <- signif(runif(1, 1, 10), 2) # voltage (V)
+I <- signif(runif(1, 1, 10), 2) # current (A)
+
+ans <- signif(V / I, 2)
+dis <- c(V * I, I / V)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
+```
+Question
+========
+A lamp draws a current of $`r I` \,\mathsf{A}$ when it is connected to a 
+$`r V` \,\mathsf{V}$ source. What is the resistance of the lamp?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use Ohm's law:
+
+$$R = \frac{V}{I} = \frac{`r V` \,\mathsf{V}}{`r I` \,\mathsf{A}} = `r ans` \,\mathsf{\Omega}$$
+
+
+Meta-information
+================
+exname: Calculate resistance in Ohm's law
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

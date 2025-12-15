@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+I <- signif(runif(1, 1, 10), 2) # current (A)
+R <- signif(runif(1, 1, 10), 2) # resistance (ohms)
+
+ans <- signif(I * R, 2)
+dis <- c(I / R)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{V}$", signif(sc$questions, 2))
+```
+Question
+========
+What voltage is applied across a $`r R` \,\mathsf{\Omega}$ resistor if the current is
+$`r I` \,\mathsf{A}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use Ohm's law:
+
+$$V = IR = (`r I` \,\mathsf{A})(`r R` \,\mathsf{\Omega}) = `r ans` \,\mathsf{V}$$
+
+
+Meta-information
+================
+exname: Calculate voltage in Ohm's law
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,26 +1,20 @@
 ```{r, echo = FALSE, results = "hide"}
-n <- sample(1:20, 2)
-for (x in c(2, 3, 5, 7, 11, 13, 17, 19)) {
-  while (n[1] %% x == 0 && n[2] %% x == 0) {
-    n[1] <- n[1] / x
-    n[2] <- n[2] / x
-  }
-}
+n <- sample(2:9, 1)
 ```
 
 Question
 ========
 A ball of mass $m$ rolls with speed $v$ towards another ball of mass 
-$(`r n[1]`/`r n[2]`)m$ at rest. If the collision is completely inelastic, what is the speed of the
+$`r n` m$ at rest. If the collision is completely inelastic, what is the speed of the
 combined mass after the collision?
 
 
 Answerlist
 ----------
-* $(`r n[1]`/`r n[2]`)v$
-* $(`r n[1]`/`r n[1] + n[2]`)v$
-* $(`r n[2]`/`r n[1]`)v$
-* $(`r n[2]`/`r n[1]+n[2]`)v$
+* $`r n`v$
+* $v / `r n`$
+* $v / `r n + 1`$
+* $v / `r n^2`$
 
 
 
@@ -28,14 +22,14 @@ Solution
 ========
 Conservation of momentum
 
-$$m v = \left(m + \frac{`r n[1]`}{`r n[2]`}m \right) v'$$
+$$m v = \left(m + `r n`m \right) v'$$
 Solve for $v'$
-$$v' = \left(\frac{m}{m + (`r n[1]`/`r n[2]`)m} \right) v = \left(\frac{`r n[2]`}{`r n[1]` + `r n[2]`} \right) v$$
+$$v' = \left(\frac{m}{m + `r n`m} \right) v = \left(\frac{1}{1 + `r n`} \right) v = v / `r n+1`$$
 
 Meta-information
 ================
 exname: Calculate vf Inelastic Collision Mass at Rest
 extype: schoice
-exsolution: 0001
+exsolution: 0010
 exshuffle: 4
 

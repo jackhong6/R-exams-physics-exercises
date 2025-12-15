@@ -1,0 +1,23 @@
+Question
+========
+The current flowing in an electric circuit can be increased by
+
+Answerlist
+----------
+* increasing voltage and decreasing resistance
+* decreasing voltage and increasing resistance
+* increasing voltage and increasing resistance
+* decreasing voltage and decreasing resistance
+
+Solution
+========
+Ohm's law states that
+
+$$I = \frac{V}{R}$$
+Therefore, current can be increased by increasing voltage and decreasing resistance.
+
+Meta-information
+================
+exname: Current can be increased by
+extype: schoice
+exsolution: 1000

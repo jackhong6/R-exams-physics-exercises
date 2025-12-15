@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+options(scipen = 999)
+R <- signif(runif(1, 5, 15), 2) # resistance (ohms)
+V <- sample(110:120, 1) # voltage (V)
+t <- signif(runif(1, 2, 12), 2) # time (h)
+
+ans <- signif(V^2 / R * t / 1000, 2)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{kWh}$", signif(sc$questions, 2))
+```
+Question
+========
+An space heater with a resistance of  $`r R` \,\mathsf{\Omega}$ operates at a 
+voltage of $`r V` \,\mathsf{V}$. How much energy does the space heater use in 
+$`r t` \,\mathsf{hours}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Find the power of the device using $P = IV = V^2 / R$ and multiply by the time. Remember to convert all units.
+$$E = P t = \frac{V^2}{R} t = \frac{(`r V` \,\mathsf{V})^2}{`r R` \,\mathsf{\Omega}}(`r t` \,\mathsf{h}) = `r ans*1000` \,\mathsf{Wh} = `r ans` \,\mathsf{kWh}$$
+
+
+Meta-information
+================
+exname: Calculate energy given I V t
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

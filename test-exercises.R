@@ -1,16 +1,12 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/electricity"))
+my_exam <- c(dir("exercises/circuits"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("momentum-of-male-olympic-sprinter.Rmd",
-                "calc-impulse-right-angle-collision.Rmd",
-                "unit-of-momentum.Rmd",
-                "impulse-is-area-under-which-graph.Rmd",
-                "impulse-during-collision-ball-and-cart.Rmd")
+my_exam <- list("calc-R-series.Rmd")
 
 # Generate different PDFs
 s <- 2025*11*7

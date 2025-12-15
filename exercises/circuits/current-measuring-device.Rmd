@@ -1,0 +1,22 @@
+Question
+========
+Which device can be used to measure the current in a circuit?
+
+Answerlist
+----------
+* ammeter
+* voltmeter
+* ohmmeter
+* potentiometer
+* currentometer
+
+Solution
+========
+Current can be measured by an ammeter.
+
+Meta-information
+================
+exname: Current measuring device
+extype: schoice
+exsolution: 10000
+exshuffle: 4

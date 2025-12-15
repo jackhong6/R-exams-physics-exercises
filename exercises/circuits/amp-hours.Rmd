@@ -1,0 +1,23 @@
+Question
+========
+Car batteries are rated in "amp-hours". This is a measure of their
+
+Answerlist
+----------
+* electric charge
+* current
+* emf
+* power
+* energy capacity
+* energy density
+
+Solution
+========
+The amp-hour comes from multiplying current and time and is therefore a unit of electric charge.
+
+Meta-information
+================
+exname: Amp-hours
+extype: schoice
+exsolution: 100000
+exshuffle: 4

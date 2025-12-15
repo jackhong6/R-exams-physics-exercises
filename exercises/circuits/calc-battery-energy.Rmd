@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+V <- signif(runif(1, 3, 12), 2) # voltage (V)
+Q <- signif(sample(1000:6000, 1), 2) # charge (mAh)
+
+ans <- signif(3.6 * Q * V / 1000, 2) # energy (kJ)
+
+sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{kJ}$", signif(sc$questions, 2))
+```
+Question
+========
+A battery is rated at $`r V` \,\mathsf{V}$ and $`r Q` \,\mathsf{mAh}$. How much
+energy does the battery store at full charge?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Convert to SI units and multiply the voltage by the charge:
+
+$$E = Q V = (`r Q` \,\mathsf{mAh} \times 3.6 \,\mathsf{C / mAh})(`r V` \,\mathsf{V}) = `r ans` \,\mathsf{kJ}$$
+
+
+Meta-information
+================
+exname: Calculate battery energy
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

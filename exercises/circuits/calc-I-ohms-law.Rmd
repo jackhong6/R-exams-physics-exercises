@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+V <- 8.5#signif(runif(1, 1, 10), 2) # voltage (V)
+R <- 6.8#signif(runif(1, 1, 10), 2) # resistance (ohms)
+
+ans <- signif(V / R, 2)
+dis <- c(R / V, V * R)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{A}$", signif(sc$questions, 2))
+```
+Question
+========
+A lamp with a resistance of $`r R` \,\mathsf{\Omega}$ is placed across a potential
+difference of $`r V` \,\mathsf{V}$. What is the current through the lamp?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Use Ohm's law:
+
+$$I = \frac{V}{R} = \frac{`r V` \,\mathsf{V}}{`r R` \,\mathsf{\Omega}} = `r ans` \,\mathsf{A}$$
+
+
+Meta-information
+================
+exname: Calculate current in Ohm's law
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+I <- signif(runif(1, 100, 300), 2) # current (mA)
+V <- signif(runif(1, 3, 5), 2) # voltage (V)
+t <- signif(runif(1, 2, 10), 2) # time (min)
+
+P <- I / 1000 * V # power (W)
+
+ans <- signif(P * t * 60, 2)
+dis <- c(I * V * t, I / 1000 * V * t)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{J}$", signif(sc$questions, 2))
+```
+Question
+========
+An electronic device is powered by a $`r V` \,\mathsf{V}$ battery. The current used
+to operate the device is $`r I` \,\mathsf{mA}$. How much energy does the device
+use in $`r t` \,\mathsf{minutes}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Find the power of the device using $P = IV$ and multiply by the time. Remember to convert all units.
+$$E = P t = I V t = (`r I/1000` \,\mathsf{A})(`r V` \,\mathsf{V})(`r t` \times 60 \,\mathsf{s}) = `r ans` \,\mathsf{J}$$
+
+
+Meta-information
+================
+exname: Calculate energy given I V t
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -11,7 +11,7 @@ sc$questions <- sprintf("%g m/s", sc$questions)
 Question
 ========
 A fire hose is turned on the door of a burning building in order to knock it down.
-This requires a force of $`r f`$ N. If the hose delivers $`r r`$ kg / s, what is the velocity of water
+This requires a force of $`r f` \,\mathsf{N}$. If the hose delivers $`r r` \,\mathsf{kg/s}$, what is the velocity of water
 needed, assuming that the water doesn't bounce back?
 
 ```{r, echo = FALSE, results = "asis"}
