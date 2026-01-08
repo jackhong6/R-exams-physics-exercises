@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+I <- signif(runif(1, 0.1, 1), 2) # current (A)
+V <- sort(signif(runif(2, 1, 10), 2)) # V[1] = terminal voltage (V), V[2] = emf (V)
+
+ans <- (V[2] - V[1]) / I
+
+sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
+```
+Question
+========
+When a battery with an emf of $`r V[2]` \,\mathsf{V}$ supplies a $`r I` \,\mathsf{A}$ current,
+its terminal voltage is $`r V[1]` \,\mathsf{V}$. What is the internal resistance of the battery?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The terminal resistance is related to the emf by $V_{terminal} = \mathcal{E} - I r$. Therefore,
+
+$$r = \frac{\mathcal{E} - V_{terminal}}{I} = `r signif(ans,2)` \,\mathsf{\Omega}$$
+
+
+Meta-information
+================
+exname: Calculate internal resistance given current.
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

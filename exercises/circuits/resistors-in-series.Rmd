@@ -1,0 +1,23 @@
+Question
+========
+When different resistors are connected in series, it is true that
+
+Answerlist
+----------
+* the same current flows in each one.
+* the potential difference across each is the same.
+* the power dissipated in each is the same.
+* the total resistance is equal to the greatest resistance of any individual resistor.
+
+
+Solution
+========
+The current is the same in resistors in series.
+
+
+Meta-information
+================
+exname: Resistors in series
+extype: schoice
+exsolution: 1000
+exshuffle: 4

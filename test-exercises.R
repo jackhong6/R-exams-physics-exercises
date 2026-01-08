@@ -6,8 +6,23 @@ my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calc-R-series.Rmd")
-
+my_exam <- list("calc-R-series.Rmd",
+                "calc-internal-resistance-given-current.Rmd",
+                "power-adding-resistors-in-series.Rmd",
+                "power-adding-resistors-in-parallel.Rmd",
+                "resistors-in-series.Rmd",
+                "resistors-in-parallel.Rmd",
+                "brighter-light-bulb.Rmd",
+                "ammeter-voltmeter-connections.Rmd",
+                "calc-R-parallel-100.Rmd",
+                "calc-R-series-100.Rmd",
+                "calc-I-through-resistor-parallel.Rmd",
+                "calc-I-series.Rmd",
+                "calc-I-parallel.Rmd",
+                "calc-R-parallel.Rmd",
+                "calc-I-in-parallel-resistor-given-I-total.Rmd")
+exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
+          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
 # Generate different PDFs
 s <- 2025*11*7
 set.seed(s)
@@ -15,8 +30,7 @@ exams2pdf(my_exam, edir = "exercises", template = "templates/practice",
           header = list(Course = "Physics 11", Title = "Dynamics Practice Test"))
 
 set.seed(s)
-exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
-          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
+
 
 set.seed(s)
 exams2nops(my_exam, edir = "exercises", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", blank = 0, samepage = TRUE,

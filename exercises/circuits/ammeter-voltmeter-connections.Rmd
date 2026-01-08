@@ -1,0 +1,20 @@
+Question
+========
+An ammeter is connected in _________ and a voltmeter is connected in ________.
+
+Answerlist
+----------
+* series, series
+* series, parallel
+* parallel, series
+* parallel, parallel
+
+Solution
+========
+An ammeter is connected in series and a voltmeter is connected in parallel.
+
+Meta-information
+================
+exname: Ammeter and voltmeter connections
+extype: schoice
+exsolution: 0100

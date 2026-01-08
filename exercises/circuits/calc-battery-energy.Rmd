@@ -5,7 +5,7 @@ Q <- signif(sample(1000:6000, 1), 2) # charge (mAh)
 ans <- signif(3.6 * Q * V / 1000, 2) # energy (kJ)
 
 sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
-sc$questions <- sprintf("$%g \\,\\mathsf{kJ}$", signif(sc$questions, 2))
+sc$questions <- sprintf("$%g \\,\\mathsf{kJ}$", signif(sc$questions, 3))
 ```
 Question
 ========

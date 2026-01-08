@@ -1,0 +1,24 @@
+Question
+========
+You have a $5 \,\mathsf{\Omega}$ light bulb and a $10 \,\mathsf{\Omega}$ light bulb.
+You make a circuit that places them in series across a battery. Which light
+bulb is brighter?
+
+Answerlist
+----------
+* The $5 \,\mathsf{\Omega}$ bulb is brighter.
+* The $10 \,\mathsf{\Omega}$ bulb is brighter.
+* Both bulbs glow at the same brightness.
+* It depends on the voltage.
+
+Solution
+========
+The current through both bulbs is the same since they are placed in series. However,
+the voltage drop is greater for the greater resistance. Since $P = IV$, and $V$ is
+greater for the greater resistance, the $10 \,\mathsf{\Omega}$ light bulb is brighter.
+
+Meta-information
+================
+exname: Brighter light bulb resistance
+extype: schoice
+exsolution: 0100

@@ -1,0 +1,21 @@
+Question
+========
+When different resistors are connected in parallel, it is true that
+
+Answerlist
+----------
+* the same current flows in each one.
+* the potential difference across each is the same.
+* the power dissipated in each is the same.
+* their equivalent resistance is greater than the resistance of one of the resistors.
+
+Solution
+========
+The potential difference is the same across resistors in parallel.
+
+Meta-information
+================
+exname: Resistors in parallel
+extype: schoice
+exsolution: 0100
+exshuffle: 4

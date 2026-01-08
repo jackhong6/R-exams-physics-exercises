@@ -1,0 +1,23 @@
+Question
+========
+As more resistors are added in **parallel** to a constant voltage source, the power
+supplied by the source
+
+Answerlist
+----------
+* increases.
+* decreases.
+* remains the same.
+* not enough information.
+
+Solution
+========
+The total resistance decreases because resistors in parallel provide more paths
+for the current to go through, causing the total current to increase. Since the
+voltage is constant and $P = IV$, the power increases.
+
+Meta-information
+================
+exname: Power adding resistors in parallel.
+extype: schoice
+exsolution: 1000

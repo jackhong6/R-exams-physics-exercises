@@ -1,0 +1,26 @@
+Question
+========
+You have a $60 \,\mathsf{W}$ light bulb and a $100 \,\mathsf{W}$ light bulb.
+Instead of connecting them the normal way, you make a circuit that places them
+in series across the normal household voltage. Which statement is correct?
+
+Answerlist
+----------
+* Both bulbs glow at the same reduced brightness.
+* Both bulbs glow at the same increased brightness.
+* The $100 \,\mathsf{W}$ bulb glows brighter than the $60 \,\mathsf{W}$ bulb.
+* The $60 \,\mathsf{W}$ bulb glows brighter than the $100 \,\mathsf{W}$ bulb.
+
+Solution
+========
+The $60 \,\mathsf{W}$ bulb has a higher resistance than the $100 \,\mathsf{W}$,
+which is why it is normally dimmer (bulbs are normally connected in parallel).
+However, when the two bulbs are connected in series, there is a greater voltage
+drop across the $60 \,\mathsf{W}$, making it brighter (the current is the same 
+for bulbs in series).
+
+Meta-information
+================
+exname: Brighter light bulb
+extype: schoice
+exsolution: 0001

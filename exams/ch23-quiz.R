@@ -1,17 +1,20 @@
 library("exams")
 
-quiz <- list("current-increased-by.Rmd",
-             "current-measuring-device.Rmd",
-             "amp-hours.Rmd",
-             "calc-battery-energy.Rmd",
-             "calc-V-ohms-law.Rmd",
-             "calc-R-ohms-law.Rmd",
-             "calc-I-ohms-law.Rmd",
-             "calc-P-given-I-V.Rmd",
-             "calc-energy-given-R-V.Rmd")
+quiz <- list("calc-R-series.Rmd",
+                "resistors-in-series.Rmd",
+                "resistors-in-parallel.Rmd",
+                "brighter-light-bulb.Rmd",
+                "ammeter-voltmeter-connections.Rmd",
+                "calc-R-parallel-100.Rmd",
+                "calc-R-series-100.Rmd",
+                "calc-I-through-resistor-parallel.Rmd",
+                "calc-I-series.Rmd",
+                "calc-I-parallel.Rmd",
+                "calc-R-parallel.Rmd",
+                "calc-I-in-parallel-resistor-given-I-total.Rmd")
 
-s <- 2025 * 12 * 10
-name <- "ch22-quiz"
+s <- 2025 * 12 * 15
+name <- "ch23-quiz"
 
 set.seed(s)
 exams2nops(quiz, n = 1, date = as.Date("2025-12-10"), edir = "exercises", title = "Chapter 22 Quiz", 

@@ -2,9 +2,9 @@
 R <- sample(1:100, 3) # resistance (ohms)
 
 ans <- sum(R)
-dis <- 1 / sum(1/R)
+dis <- c(1 / sum(1/R))
 
-sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc <- num_to_schoice(ans, wrong = dis, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
 sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
 ```
 Question

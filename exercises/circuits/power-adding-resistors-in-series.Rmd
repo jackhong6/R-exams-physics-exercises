@@ -1,0 +1,22 @@
+Question
+========
+As more resistors are added in **series** to a constant voltage source, the power
+supplied by the source
+
+Answerlist
+----------
+* increases.
+* decreases.
+* remains the same.
+* not enough information.
+
+Solution
+========
+The total resistance increases, causing the total current to decrease. Since the
+voltage is constant and $P = IV$, the power decreases.
+
+Meta-information
+================
+exname: Power adding resistors in series.
+extype: schoice
+exsolution: 0100

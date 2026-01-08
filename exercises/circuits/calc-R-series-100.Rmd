@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+R <- sample(100:999, 1) / 1000 # resistance (ohms)
+n <- sample(100:999, 1) # number of resistors in series
+
+ans <- n * R
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
+```
+Question
+========
+A total of `r n` Christmas light bulbs, all with resistance $`r R` \,\mathsf{\Omega}$, 
+are connected in **series**. What is the equivalent resistance of the lights?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The equivalent resistance of resistors in series when they all have the same resistance $R_i$ is 
+
+$$R = R_i + R_i + R_i + ... + R_i = `r n` R_i = `r signif(ans, 2)` \,\mathsf{k\Omega}$$
+
+
+Meta-information
+================
+exname: Calculate resistance of 100 resistors in series
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

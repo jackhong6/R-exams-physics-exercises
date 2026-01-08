@@ -11,7 +11,7 @@ sc$questions <- sprintf("$%g \\,\\mathsf{kWh}$", signif(sc$questions, 2))
 ```
 Question
 ========
-An space heater with a resistance of  $`r R` \,\mathsf{\Omega}$ operates at a 
+A space heater with a resistance of  $`r R` \,\mathsf{\Omega}$ operates at a 
 voltage of $`r V` \,\mathsf{V}$. How much energy does the space heater use in 
 $`r t` \,\mathsf{hours}$?
 

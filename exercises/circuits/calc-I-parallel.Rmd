@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+R <- sample(10:40, 2) # resistance (ohms)
+V <- signif(runif(1, 10, 100), 2) # (volts)
+Rt <- 1 / sum(1 / R)
+
+ans <- V / Rt
+
+sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{A}$", signif(sc$questions, 2))
+```
+Question
+========
+Two resistors are connected in **parallel**. Their resistances are $`r R[1]` \,\mathsf{\Omega}$ and $`r R[2]` \,\mathsf{\Omega}$. A battery applies $`r V` \,\mathsf{V}$ to the combination. What
+is the current drawn from the battery?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The equivalent resistance of resistors in parallel is
+
+$$R = \left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} \right)^{-1} = `r Rt` \,\mathsf{\Omega}$$
+The current drawn from the battery is
+
+$$I = \frac{V}{R} = \frac{`r V` \,\mathsf{V}}{`r Rt` \,\mathsf{\Omega}} = `r signif(ans, 2)` \,\mathsf{A}$$
+
+
+Meta-information
+================
+exname: Calculate resistance parallel
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

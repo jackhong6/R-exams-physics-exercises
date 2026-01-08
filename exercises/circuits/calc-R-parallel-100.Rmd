@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+R <- sample(100:999, 1) # resistance (ohms)
+n <- sample(100:999, 1) # number of resistors in parallel
+
+ans <- R / n
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{\\Omega}$", signif(sc$questions, 2))
+```
+Question
+========
+A total of `r n` resistors, all with resistance $`r R` \,\mathsf{\Omega}$, 
+are connected in **parallel**. What is the equivalent resistance of the resistors?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The equivalent resistance of resistors in parallel when they all have the same resistance $R_i$ is 
+
+$$R = \left( \frac{1}{R_i} + \frac{1}{R_i} + \frac{1}{R_i} + ... \right)^{-1} = \frac{R_i}{`r n`} = `r signif(ans, 2)` \,\mathsf{\Omega}$$
+
+
+Meta-information
+================
+exname: Calculate resistance of 100 resistors in parallel
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

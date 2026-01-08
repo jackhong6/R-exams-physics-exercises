@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+R <- sample(100:500, 2) # resistance (ohms)
+V <- signif(runif(1, 1, 10), 2) # (volts)
+
+ans <- V / R[1] * 1000 # (mA)
+
+sc <- num_to_schoice(ans, range = c(0.5, 2)*ans, delta = ans/10, format = FALSE, digits = 5)
+sc$questions <- sprintf("$%g \\,\\mathsf{mA}$", signif(sc$questions, 2))
+```
+Question
+========
+Two resistors are connected in **parallel**. Their resistances are $`r R[1]` \,\mathsf{\Omega}$ and $`r R[2]` \,\mathsf{\Omega}$. A battery applies $`r V` \,\mathsf{V}$ to the combination. What
+is the current through the $`r R[1]` \,\mathsf{\Omega}$ resistor?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The full voltage of the battery is applied to both resistors. The current through the first resistor is
+
+$$I = \frac{V}{R} = \frac{`r V` \,\mathsf{V}}{`r R[1]` \,\mathsf{\Omega}} = `r signif(ans, 2)` \,\mathsf{mA}$$
+
+
+Meta-information
+================
+exname: Calculate current through resistor parallel
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+
