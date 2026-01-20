@@ -1,0 +1,30 @@
+```{r, echo = FALSE, results = "hide"}
+period <- signif(runif(1, 1, 10), 3) # seconds
+  
+ans <- signif(1 / period, 3) # freq (Hz)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%g \\,\\mathsf{Hz}$", signif(sc$questions, 3))
+```
+Question
+========
+A wave has a period of $`r period` \,\mathsf{seconds}$. What is its frequency?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Frequency is the reciprocal of the period. Therefore,
+
+$$ f = \frac{1}{T} = \frac{1}{`r period` \,\mathsf{s}} = `r ans` \,\mathsf{Hz} $$
+
+
+Meta-information
+================
+exname: Calculate Frequency Given Period
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

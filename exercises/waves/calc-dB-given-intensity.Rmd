@@ -1,0 +1,32 @@
+```{r echo=FALSE, message=TRUE, warning=TRUE, paged.print=FALSE, results="hide"}
+m <- signif(runif(1, 1, 9.9), 2)
+x <- sample(-12:2, 1)
+
+ans <- 10 * log10(m * 10^(x + 12))
+
+sc <- num_to_schoice(ans, delta = ans / 10, format = FALSE, digits = 0)
+sc$questions <- sprintf("%s dB", sc$questions)
+```
+
+Question
+========
+What is the decibel level of a sound that has an intensity of $`r m` \times 10^{`r x`} \,\mathsf{W / m^2}$?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The decibel level is
+
+$$ 10 \cdot \log_{10}\left(\frac{`r m` \times 10^{`r x`}}{1 \times 10^{-12}} \right) = `r fmt(ans, 0)` \,\mathsf{dB} $$
+
+
+Meta-information
+================
+exname: Calculate Decibel given intensity
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

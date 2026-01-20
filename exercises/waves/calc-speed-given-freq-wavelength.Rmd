@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+freq <- sample(10:100, 1) # Hz
+wavelength <- sample(10:100, 1) # cm
+  
+ans <- signif(freq * wavelength / 100, 3) # freq (Hz)
+dis <- c(freq * wavelength)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%g \\,\\mathsf{m/s}$", signif(sc$questions, 3))
+```
+Question
+========
+A wave has a wavelength of $`r wavelength` \,\mathsf{cm}$ and a frequency of $`r freq` \,\mathsf{Hz}$.
+What is its speed?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Wave speed is wavelength times frequency. Remember to convert to SI base units (metres)
+
+$$ v = \lambda f = (`r wavelength/100` \,\mathsf{m})(`r freq` \,\mathsf{Hz}) = `r ans` \,\mathsf{m/s}$$
+
+
+Meta-information
+================
+exname: Calculate speed given frequency and wavelength
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

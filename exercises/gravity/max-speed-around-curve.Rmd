@@ -3,9 +3,8 @@ v <- sample(20:80, 1) # km/h
 n <- sample(2:6, 1) # n times radius
 
 ans <- sqrt(n) * v # 
-dis <- c(n * v, v / n, v / sqrt(n))
 
-sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
 sc$questions <- sprintf("%.1f km/h", sc$questions)
 ```
 Question

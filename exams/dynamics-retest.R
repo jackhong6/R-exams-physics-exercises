@@ -46,16 +46,16 @@ exm <- list(c("tf-obj-at-rest-no-forces.Rmd",
             "calc-mu-k-incline-const-acc.Rmd")
 
 name <- "dynamics-retest"
-s <- 2025*11*26
+s <- 2025*1*19
 
 set.seed(s)
-exams2nops(exm, n = 4, date = as.Date("2025-11-26"), edir = "exercises", title = "Dynamics Unit Retest", 
+exams2nops(exm, n = 4, date = as.Date("2025-01-19"), edir = "exercises", title = "Dynamics Unit Retest 2", 
            course = "Physics 11", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", 
            blank = 0, samepage = TRUE, dir = paste0("exams/", name), name = name, helvet = TRUE,
-           usepackage = c("siunitx", "eulervm"), seed = TRUE)
+           usepackage = c("siunitx"), seed = TRUE)
 
 set.seed(s)
 exams2pdf(exm, n = 4, edir = "exercises", template = "templates/solution.tex", 
-          header = list(Course = "Physics 11", Title = "Dynamics Unit Retest Solutions"),
+          header = list(Course = "Physics 11", Title = "Dynamics Unit Retest 2 Solutions"),
           dir = paste0("exams/", name), name = paste(name, "solutions", sep= "-"), seed = TRUE)
 

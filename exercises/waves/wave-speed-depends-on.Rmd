@@ -1,0 +1,25 @@
+Question
+========
+What does the speed of a mechanical wave depend on? **Select all that apply.**
+
+Answerlist
+----------
+* properties of the medium
+* frequency
+* wavelength
+* amplitude
+* energy of the wave
+
+
+Solution
+========
+The speed of a mechanical wave depends only on the properties of the medium 
+(temperature, density, tension, viscosity, stiffness, etc.)
+
+
+Meta-information
+================
+exname: Wave Speed Depends On
+extype: mchoice
+exsolution: 10000
+exshuffle: 4

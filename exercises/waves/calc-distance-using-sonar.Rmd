@@ -1,0 +1,34 @@
+```{r, echo = FALSE, results = "hide"}
+v <- sample(1200:1500, 1) # speed of sound in water (m/s)
+t <- signif(runif(1, 0.01, 1), 3)
+  
+ans <- signif(v * t / 2, 3) # freq (Hz)
+dis <- c(v * t)
+
+sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%g \\,\\mathsf{m}$", signif(sc$questions, 3))
+```
+Question
+========
+A sonar signal (sound wave) is emitted from a submarine and returns $`r t` \,\mathsf{s}$ later. The speed of sound in water is $`r v` \,\mathsf{m/s}$. 
+How far away is the object that reflected the sonar signal?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The distance to the object is half the distance traveled by the sonar signal
+because the sonar had to go there and back.
+
+$$ d = v t / 2 = (`r v` \,\mathsf{m/s}) (`r t` \,\mathsf{s}) / 2 = `r ans` \,\mathsf{m} $$
+
+
+Meta-information
+================
+exname: Calculate distance using sonar
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

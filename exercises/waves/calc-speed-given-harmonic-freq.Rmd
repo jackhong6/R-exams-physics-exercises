@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+harmonic <- sample(1:5, 1) # harmonic number
+freq <- sample(20:2000, 1) # frequency (Hz)
+string_len <- signif(runif(1, 0.2, 2), 3) # (m)
+
+wavelength <- 2 * string_len / harmonic
+ans <- signif(freq * wavelength, 3) # speed (m/s)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%g \\,\\mathsf{m/s}$", signif(sc$questions, 3))
+```
+Question
+========
+The distance between the two fixed ends of a piece of string is $`r string_len` \,\mathsf{m}$.
+When the string is vibrating at harmonic number `r harmonic`, the frequency is $`r freq` \,\mathsf{Hz}$.
+What is the speed of the waves on the string?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The wavelength is
+
+$$ \lambda = \frac{2 L}{n} = `r wavelength` \,\mathsf{m}$$
+The speed is the wavelength times the frequency.
+
+$$ v = f \lambda = (`r freq` \,\mathsf{Hz}) (`r wavelength` \,\mathsf{m}) = `r ans` \,\mathsf{m/s}$$
+
+
+Meta-information
+================
+exname: Calculate speed given harmonic and frequency
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

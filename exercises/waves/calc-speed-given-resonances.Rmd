@@ -1,0 +1,36 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(350:400, 1)
+s <- signif(runif(1, 40, 50), 3)
+
+ans <- 2 * s / 100 * f
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("%g m/s", signif(sc$questions, 3))
+```
+
+Question
+========
+A tuning fork has a frequency of `r f` Hz. The fork causes resonances in an air column
+spaced at `r s` cm. What is the speed of the sound?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The spacing between resonances is half a wavelength. Therefore, the wavelength is
+
+$$ \lambda = 2(`r s` \,\mathsf{cm}) = `r 2*s` \,\mathsf{cm} $$
+Speed is frequency times wavelength.
+
+$$ v = f \lambda = (`r f` \,\mathsf{Hz})(`r 2*s` \,\mathsf{cm}) = `r fmt(ans, 0)` \,\mathsf{m/s}$$
+
+
+Meta-information
+================
+exname: Calculate Frequency Given Semitones
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

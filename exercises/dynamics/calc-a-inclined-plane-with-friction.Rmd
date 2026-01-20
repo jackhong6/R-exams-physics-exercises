@@ -1,8 +1,8 @@
 ```{r, echo = FALSE, results = "hide"}
-m <- sample(10:99, 1) # kg
-ang <- sample(20:70, 1) # angle (deg)
+m <- sample(10:50, 1) # kg
+ang <- sample(20:60, 1) # angle (deg)
 ang_r <- ang * pi / 180 # angle (radians)
-mu <- signif(runif(1, 0, tan(ang_r)) - 0.1, 2) # coefficient of kinetic friction
+mu <- signif(runif(1, 0.1, tan(ang_r)), 2) # coefficient of kinetic friction
 
 ans <- 9.8 * (sin(ang_r) - mu * cos(ang_r)) # acceleration (m/s^2)
 
@@ -24,7 +24,7 @@ answerlist(sc$questions, markup = "markdown")
 Solution
 ========
 The acceleration is
-$$a = g (\sin\theta - \mu \cos\theta) = \SI{`r fmt(ans, 1)`}{m/s^2}$$
+$$a = g (\sin\theta - \mu \cos\theta) = `r fmt(ans, 1)` \,\mathsf{m/s^2}$$
 
 
 Meta-information

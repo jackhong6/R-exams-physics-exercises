@@ -1,0 +1,26 @@
+Question
+========
+When waves spread out around the edge of a barrier, ______ occurs.
+
+
+Answerlist
+----------
+* diffraction
+* refraction
+* reflection
+* rarefaction
+* resonance
+* interference
+* superposition
+
+
+Solution
+========
+Diffraction occurs when waves spread out around the edge of a barrier.
+
+Meta-information
+================
+exname: Definition of Diffraction
+extype: schoice
+exsolution: 1000000
+exshuffle: 4

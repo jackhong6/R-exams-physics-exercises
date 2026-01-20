@@ -1,0 +1,27 @@
+Question
+========
+The shortest distance between two points on a wave where the wave pattern is 
+repeated is the
+
+Answerlist
+----------
+* wavelength
+* wave pulse
+* period
+* frequency
+* amplitude
+* wave speed
+
+
+Solution
+========
+The wavelength is the shortest distance between two points on a wave where the
+wave pattern is repeated.
+
+
+Meta-information
+================
+exname: Definition of Wavelength
+extype: schoice
+exsolution: 100000
+exshuffle: 4

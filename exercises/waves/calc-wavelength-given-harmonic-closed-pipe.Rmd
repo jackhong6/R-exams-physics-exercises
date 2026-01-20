@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(seq(1, 9, 2), 1)
+L <- signif(runif(1, 0.2, 2), 3)
+
+ans <- signif(4 * L / n , 3)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("%g m", signif(sc$questions, 3))
+```
+
+Question
+========
+What is the wavelength of harmonic number `r n` in a closed-pipe resonator of length `r L` m?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The wavelength is
+
+$$ \lambda = \frac{4 L}{n} = `r ans` \,\mathsf{m} $$
+
+
+Meta-information
+================
+exname: Calculate Wavelength Given Harmonic Closed Pipe
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

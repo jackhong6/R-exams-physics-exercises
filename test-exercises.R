@@ -1,26 +1,23 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/circuits"))
+my_exam <- c(dir("exercises/waves"))
 my_exam <- sample(my_exam, 45) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calc-R-series.Rmd",
-                "calc-internal-resistance-given-current.Rmd",
-                "power-adding-resistors-in-series.Rmd",
-                "power-adding-resistors-in-parallel.Rmd",
-                "resistors-in-series.Rmd",
-                "resistors-in-parallel.Rmd",
-                "brighter-light-bulb.Rmd",
-                "ammeter-voltmeter-connections.Rmd",
-                "calc-R-parallel-100.Rmd",
-                "calc-R-series-100.Rmd",
-                "calc-I-through-resistor-parallel.Rmd",
-                "calc-I-series.Rmd",
-                "calc-I-parallel.Rmd",
-                "calc-R-parallel.Rmd",
-                "calc-I-in-parallel-resistor-given-I-total.Rmd")
+my_exam <- list("calc-relative-intensity-given-dB.Rmd", 
+                "calc-freq-given-interval.Rmd",
+                "which-does-not-describe-pitch.Rmd",
+                "calc-intensity-given-dB.Rmd", 
+                "calc-beat-freq.Rmd",
+                "calc-two-freqs-given-beat-freq.Rmd",
+                "calc-dB-given-intensity.Rmd",
+                "calc-freq-given-semitones.Rmd",
+                "calc-wavelength-given-harmonic-open-pipe.Rmd",
+                "calc-wavelength-given-harmonic-closed-pipe.Rmd",
+                "calc-pipe-length-given-interval.Rmd",
+                "calc-speed-given-resonances.Rmd")
 exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
           header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
 # Generate different PDFs

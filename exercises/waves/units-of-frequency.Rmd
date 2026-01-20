@@ -1,0 +1,25 @@
+Question
+========
+Which unit is used to measure frequency?
+
+
+Answerlist
+----------
+* hertz (Hz)
+* second (s)
+* metres per second (m/s)
+* metre (m)
+* seconds per metre (s/m)
+
+
+Solution
+========
+Frequency can be measured in units of hertz (Hz)
+
+
+Meta-information
+================
+exname: Units of Hertz
+extype: schoice
+exsolution: 10000
+exshuffle: 4

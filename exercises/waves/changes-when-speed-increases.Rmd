@@ -1,0 +1,23 @@
+Question
+========
+When a wave enters a medium in which its speed increases, which change must occur?
+
+
+Answerlist
+----------
+* frequency increases
+* frequency decreases
+* wavelength increases
+* wavelength decreases
+
+
+Solution
+========
+When the speed increases across a boundary between two media, the frequency remains the same while the wavelength increases.
+
+
+Meta-information
+================
+exname: Changes when speed increases
+extype: schoice
+exsolution: 0010

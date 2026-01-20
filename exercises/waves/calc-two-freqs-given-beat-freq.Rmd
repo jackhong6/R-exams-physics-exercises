@@ -1,0 +1,41 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(100:1000, 1)
+b <- sample(2:20, 1)
+```
+
+Question
+========
+A student has two tuning forks, one with a frequency of `r f` Hz and the other
+with frequency unknown. When struck together, the tuning forks produce `r b` beats
+per second. What are the possible frequencies of the unknown tuning fork?
+**Select all that apply**.
+
+
+AnswerList
+----------
+* `r f + b` Hz
+* `r f - b` Hz
+* `r fmt(f / b, 0)` Hz
+* `r f` Hz
+* `r f + 2*b` Hz
+* `r f - 2*b` Hz
+
+Solution
+========
+The beat frequency is $f_{beat} = |f_2 - f_1|$
+Therefore, the two possible frequencies are 
+
+$$ f_1 - f_{beat} = `r f - b` \,\mathsf{Hz} $$
+
+and 
+
+$$f_1 + f_{beat} = `r f + b` \,\mathsf{Hz}$$
+
+
+Meta-information
+================
+exname: Calculate Beat Frequency
+extype: mchoice
+exsolution: 110000
+exshuffle: 4
+

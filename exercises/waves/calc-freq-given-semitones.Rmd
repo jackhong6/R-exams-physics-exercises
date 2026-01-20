@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(1:12, 1)
+
+tonic <- sample(100:1000, 1)
+
+ans <- tonic * 2^(n / 12)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("%.0f Hz", sc$questions)
+```
+
+Question
+========
+What frequency is `r n` semitones above `r tonic` Hz?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The frequency is
+
+$$ (`r tonic` \,\mathsf{Hz}) \times 2^{`r n` / 12}= `r fmt(ans, 0)` \,\mathsf{Hz} $$
+
+
+Meta-information
+================
+exname: Calculate Frequency Given Semitones
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

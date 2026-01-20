@@ -1,0 +1,31 @@
+```{r echo=FALSE, message=TRUE, warning=TRUE, paged.print=FALSE, results="hide"}
+dB <- sample(0:120, 1)
+  
+ans <- dB / 10 - 12
+
+sc <- num_to_schoice(ans, delta = ans / 10, format = FALSE)
+sc$questions <- sprintf("%s $\\mathsf{W / m^2}$", formatC(10^sc$questions, format = "E", flag = "#", digits = 2))
+```
+
+Question
+========
+What is the intensity of a `r dB` dB sound?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The intensity of the sound is
+
+$$ 10^{`r dB/10` - 12} = `r formatC(10^ans, format = "E", flag = "#", digits = 3)` \,\mathsf{W/m^2} $$
+
+
+Meta-information
+================
+exname: Calculate Relative Intensity Given Decibels
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

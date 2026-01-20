@@ -1,0 +1,24 @@
+Question
+========
+Which of the following does **not** describe the pitch of a sound?
+
+Answerlist
+----------
+* frequency of vibration
+* a musical note
+* high or low
+* loud or soft
+
+
+Solution
+========
+Pitch can be described using a frequency, a musical note, or as high or low.
+It is not described by loud or soft (that is amplitude).
+
+
+Meta-information
+================
+exname: What does not describe pitch?
+extype: schoice
+exsolution: 0001
+exshuffle: 4

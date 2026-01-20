@@ -1,0 +1,25 @@
+Question
+========
+The number of repeating cycles per second is the
+
+Answerlist
+----------
+* frequency
+* wave pulse
+* period
+* wavelength
+* amplitude
+* wave speed
+
+
+Solution
+========
+The frequency of a wave is the number of repeating cycles per second.
+
+
+Meta-information
+================
+exname: Definition of Frequency
+extype: schoice
+exsolution: 100000
+exshuffle: 4

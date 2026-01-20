@@ -1,0 +1,31 @@
+```{r, echo = FALSE, results = "hide"}
+f <- sample(100:1000, 2)
+
+ans <- signif(abs(f[1] - f[2]))
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 0)
+sc$questions <- sprintf("%g Hz", sc$questions)
+```
+
+Question
+========
+A `r f[1]` Hz pure tone is played at the same time as a `r f[2]` Hz pure tone. What beat frequency will be produced?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The beat frequency is
+
+$$ f_{beat} = |f_2 - f_1| = |`r f[1]` \,\mathsf{Hz} - `r f[2]` \,\mathsf{Hz}| = `r ans` \,\mathsf{Hz}$$
+
+
+Meta-information
+================
+exname: Calculate Beat Frequency
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

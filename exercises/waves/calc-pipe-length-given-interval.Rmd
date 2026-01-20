@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+L <- signif(runif(1, 0.2, 2), 1) # m
+
+int_names <- c("unison", "major second", "major third", "perfect fourth", "perfect fifth", 
+             "major sixth", "major seventh", "octave")
+int_ratios <- c(1, 9/8, 5/4, 4/3, 3/2, 5/3, 15/8, 2)
+i <- sample(2:8, 1)
+  
+ans <- signif(L / int_ratios[i], 3)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("%g m", signif(sc$questions, 3))
+```
+Question
+========
+One organ pipe has a length of `r fmt(L,1)` m. A second pipe should have a pitch one
+`r int_names[i]` higher. The pipe should be how long?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The speed is the same in both pipes and both resonate at their fundamental frequency. Therefore,
+frequency and wavelength are inversely proportional to each other. 
+In order for the second pipe to play a higher sound, it must have a shorter length.
+
+$$ L = (`r L` \,\mathsf{m}) / (`r int_ratios[i]`) = `r ans` \,\mathsf{m} $$
+
+
+Meta-information
+================
+exname: Calculate pipe length given interval
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

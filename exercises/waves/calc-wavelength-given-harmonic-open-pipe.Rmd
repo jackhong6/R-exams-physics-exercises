@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+n <- sample(1: 6, 1)
+L <- signif(runif(1, 0.2, 2), 3)
+
+ans <- signif(2 * L / n , 3)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("%g m", signif(sc$questions, 3))
+```
+
+Question
+========
+What is the wavelength of harmonic number `r n` in an open-pipe resonator of length `r fmt(L, 2)` m?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The wavelength is
+
+$$ \lambda = \frac{2 L}{n} = `r ans` \,\mathsf{m} $$
+
+
+Meta-information
+================
+exname: Calculate Wavelength Given Harmonic Open Pipe
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

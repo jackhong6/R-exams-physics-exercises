@@ -39,18 +39,18 @@ exm <- list(c("tf-speeding-up-acc-and-vel-same-direction.Rmd",
                "calc-max-h-given-vi-projectile-1d.Rmd"))
 
 
-s <- 2025 * 11 * 25
-name <- "kinematics-retest-3"
+s <- 2025 * 1 * 20
+name <- "kinematics-retest-4"
 
 set.seed(s)
-exams2nops(exm, n = 2, nsamp = 5, date = as.Date("2025-11-26"), edir = "exercises", title = "Kinematics Retest 3", 
+exams2nops(exm, n = 2, nsamp = 5, date = as.Date("2025-01-20"), edir = "exercises", title = "Kinematics Retest 4", 
            course = "Physics 11", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", 
            blank = 0, samepage = TRUE, dir = paste0("exams/", name), name = name, helvet = TRUE,
-           usepackage = c("siunitx", "eulervm"))
+           usepackage = c("siunitx"))
 
 
 set.seed(s)
-exams2pdf(exm, n = 2, nsamp = 5, edir = "exercises", template = "templates/solution.tex", header = list(Course = "Physics 11", Title = "Kinematics Retest 3 Solutions"),
+exams2pdf(exm, n = 2, nsamp = 5, edir = "exercises", template = "templates/solution.tex", header = list(Course = "Physics 11", Title = "Kinematics Retest 4 Solutions"),
           dir = paste0("exams/", name), name = paste(name, "solutions", sep="-"))
 
 

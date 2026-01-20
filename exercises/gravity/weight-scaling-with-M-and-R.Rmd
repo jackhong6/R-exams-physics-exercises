@@ -2,9 +2,8 @@
 m <- sample(2:9, 1)
 r <- sample(2:9, 1)
 ans <- 100 * m / r^2
-dis <- c(100 * m / r)
 
-sc <- num_to_schoice(ans, wrong = dis, delta = ans/10, format = FALSE)
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE)
 sc$questions <- sprintf("%.1f N", sc$questions)
 ```
 Question

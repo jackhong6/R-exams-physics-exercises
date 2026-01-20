@@ -1,0 +1,25 @@
+Question
+========
+What quantity can be measured in units of hertz (Hz)?
+
+Answerlist
+----------
+* frequency
+* wave pulse
+* period
+* wavelength
+* amplitude
+* wave speed
+
+
+Solution
+========
+Frequency can be measured in units of hertz (Hz)
+
+
+Meta-information
+================
+exname: Units of Hertz
+extype: schoice
+exsolution: 100000
+exshuffle: 4

@@ -1,0 +1,25 @@
+Question
+========
+The shortest time interval during which wave motion repeats is the
+
+Answerlist
+----------
+* period
+* wave pulse
+* frequency
+* wavelength
+* amplitude
+* wave speed
+
+
+Solution
+========
+The period of a wave is the shortest time interval during which wave motion repeats.
+
+
+Meta-information
+================
+exname: Definition of Period
+extype: schoice
+exsolution: 100000
+exshuffle: 4

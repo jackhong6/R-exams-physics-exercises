@@ -1,0 +1,33 @@
+```{r, echo = FALSE, results = "hide"}
+wavelength <- sample(10:99, 1) # m
+speed <- sample(10:99, 1) # m/s
+  
+ans <- signif(wavelength / speed, 3) # freq (Hz)
+
+sc <- num_to_schoice(ans, delta = ans/10, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%g \\,\\mathsf{s}$", signif(sc$questions, 3))
+```
+Question
+========
+A wave is travelling at $`r speed` \,\mathsf{m/s}$ with a wavelength of $`r fmt(wavelength, 1)` \,\mathsf{m}$. 
+What is its period?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Since $f = 1/ T$, period is related to wavelength and speed by $v = f \lambda = \lambda/T$. 
+Therefore, we have
+
+$$ T = \frac{\lambda}{v} = \frac{`r wavelength` \,\mathsf{m}}{`r speed` \,\mathsf{m/s}} = `r ans` \,\mathsf{s}$$
+
+
+Meta-information
+================
+exname: Calculate period given wavelength and speed
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

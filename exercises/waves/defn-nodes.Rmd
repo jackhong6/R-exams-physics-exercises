@@ -1,0 +1,23 @@
+Question
+========
+In a standing wave on a string, nodes are points where
+
+Answerlist
+----------
+* maximum displacement occurs
+* no displacement occurs
+* energy is lost
+* the wave is reflected
+
+
+Solution
+========
+Nodes are where no displacement occurs.
+
+
+Meta-information
+================
+exname: Definition of Nodes
+extype: schoice
+exsolution: 0100
+exshuffle: 4

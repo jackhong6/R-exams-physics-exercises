@@ -1,0 +1,26 @@
+Question
+========
+The change in the direction of waves at the boundary between two different media is
+
+
+Answerlist
+----------
+* refraction
+* reflection
+* rarefaction
+* resonance
+* diffraction
+* interference
+* superposition
+
+
+Solution
+========
+Refraction is the change in the direction of waves at the boundary between two different media.
+
+Meta-information
+================
+exname: Definition of Refraction
+extype: schoice
+exsolution: 1000000
+exshuffle: 4

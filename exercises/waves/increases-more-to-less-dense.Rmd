@@ -1,0 +1,26 @@
+Question
+========
+A wave travels from a more‑dense medium into a less‑dense medium. 
+Which quantities must be greater for the transmitted wave than for the incident wave? **Select all that apply.**
+
+Answerlist
+----------
+* speed
+* wavelength
+* period
+* frequency
+
+
+Solution
+========
+When moving from a more dense medium to a less dense one, the speed and the wavelength
+are greater for the transmitted wave than the incident wave. The frequency and the
+period remain the same and the amplitude decreases.
+
+
+Meta-information
+================
+exname: What increases more-dense to less-dense
+extype: mchoice
+exsolution: 1100
+exshuffle: 4
