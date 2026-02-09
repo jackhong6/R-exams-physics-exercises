@@ -1,10 +1,10 @@
 ```{r, echo = FALSE, results = "hide"}
-dB <- sort(sample(0:120, 2))
+dB <- c(80, 105)#sort(sample(0:120, 2))
   
 ans <- signif(10^((dB[2] - dB[1]) / 10), 2)
 
 sc <- num_to_schoice(ans, delta = ans/10, range = c(0, ans*100), format = FALSE, digits = 6)
-sc$questions <- sprintf("%s", formatC(sc$questions, format = "G", flag = "#", digits = 3))
+sc$questions <- sprintf("%s", formatC(sc$questions, format = "G", digits = 3))
 ```
 
 Question
@@ -19,7 +19,7 @@ Solution
 ========
 The relative intensity of the sound is
 
-$$ I_2 / I_1 = 10^{`r dB[2]/10` - `r dB[1]/10`} = `r formatC(ans, format = "G", flag = "#", digits = 3)`$$
+$$ I_2 / I_1 = 10^{`r dB[2]/10` - `r dB[1]/10`} = `r ans` $$
 
 
 Meta-information

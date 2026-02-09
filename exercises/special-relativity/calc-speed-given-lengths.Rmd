@@ -1,0 +1,38 @@
+```{r, echo = FALSE, results = "hide"}
+L <- sample(30:100, 2)
+L0 <- max(L)
+L <- min(L)
+
+g <- L0 / L
+
+ans <- sqrt(1 - 1 / g^2) # v / c
+
+sc <- num_to_schoice(ans, range = c(0, 1), delta = 0.01, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%s c$", fmt(sc$questions, 3))
+```
+
+Question
+========
+Suppose you decide to travel to a star `r fmt(L0, 1)` light-years away in the reference frame of the Earth. How fast would you have to travel so that the distance would be only `r fmt(L, 1)` light years?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The Lorentz factor is
+
+$$ \gamma = \frac{L_0}{L} = `r fmt(g, 3)` $$
+We solve for $v$ in terms of $\gamma$
+
+$$ \frac{v}{c} = \sqrt{1 - \frac{1}{\gamma^2}} = \sqrt{1 - \frac{1}{`r g`^2}} = `r fmt(ans, 3)` $$
+
+
+Meta-information
+================
+exname: Calculate Dilated Time
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

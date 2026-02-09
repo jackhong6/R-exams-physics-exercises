@@ -1,0 +1,22 @@
+Question
+========
+According to the postulates of special relativity, the speed of light in a vacuum
+
+Answerlist
+----------
+* depends on the speed of the light source.
+* depends on the speed of the observer.
+* is constant for all observers regardless of their motion.
+* is constant only in the rest frame of the ether.
+
+Solution
+========
+The speed of light is constant for all observers regardless of their motion.
+
+Meta-information
+================
+exname: Speed of Light
+extype: schoice
+exsolution: 0010
+exshuffle: 4
+

@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+v <- signif(runif(1, 0.1, 0.9), 2)
+t <- sample(10:60, 1) # time (s)
+g <- 1 / sqrt(1 - v^2)
+
+ans <- g * t
+dis <- c(t / g, t * v)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0, 10) * ans, delta = ans/100, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%.1f \\,\\mathsf{s}$", signif(sc$questions, 3))
+```
+
+Question
+========
+A clock moving at $v = `r fmt(v, 3)` c$ passes your clock when both clocks read $t = 0$. When the moving clock reads $t = `r fmt(t,1)` \,\mathsf{s}$, what do the clocks in your frame read? 
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+Time is dilated in your frame, so the clocks in your frame would read a greater time interval.
+
+The Lorentz factor is
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} = \frac{1}{\sqrt{1 - `r v`^2}} = `r fmt(g, 3)` $$
+The clocks in your frame read
+
+$$ \Delta t = \gamma \Delta t_0 = (`r g`)(`r t` \,\mathsf{s}) = `r fmt(ans, 1)` \,\mathsf{s} $$
+
+
+Meta-information
+================
+exname: Calculate Dilated Time
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

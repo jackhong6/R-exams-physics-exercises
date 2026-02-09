@@ -1,0 +1,21 @@
+Question
+========
+Sitting in a stationary car, you observe a fast-moving train to be shorter than its rest length. An observer on the train observes your car to be
+
+Answerlist
+----------
+* shorter than its rest length
+* longer than its rest length
+* the same as its rest length
+* not enough information to determine
+
+Solution
+========
+In the train's reference frame, you are moving, so your car is length contracted to be shorter than its rest length.
+
+
+Meta-information
+================
+exname: Relative Lengths
+extype: schoice
+exsolution: 1000

@@ -17,17 +17,17 @@ exm <- list(c("electric-scalars.Rmd", "electric-vectors.Rmd"),
             "calc-charge-hanging-balls.Rmd"
 )
 
-name <- "electricity-test"
-s <- 2025*12*1
+name <- "electricity-retest"
+s <- 2025*1*20
 
 set.seed(s)
-exams2nops(exm, n = 4, date = as.Date("2025-12-01"), edir = "exercises", title = "Electricity Test", 
+exams2nops(exm, n = 2, date = as.Date("2025-01-20"), edir = "exercises", title = "Electricity Retest", 
            course = "Physics 12", institution = "McRoberts Secondary", logo = "graphics/school-logo.png", 
            blank = 0, samepage = TRUE, dir = paste0("exams/", name), name = name, helvet = TRUE,
-           usepackage = c("siunitx", "eulervm"), seed = TRUE)
+           usepackage = c("siunitx"), seed = TRUE)
 
 set.seed(s)
-exams2pdf(exm, n = 4, edir = "exercises", template = "templates/solution.tex", 
-          header = list(Course = "Physics 12", Title = "Electricity Test Solutions"),
+exams2pdf(exm, n = 2, edir = "exercises", template = "templates/solution.tex", 
+          header = list(Course = "Physics 12", Title = "Electricity Retest Solutions"),
           dir = paste0("exams/", name), name = paste(name, "solutions", sep= "-"), seed = TRUE)
 

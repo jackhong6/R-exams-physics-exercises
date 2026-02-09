@@ -1,0 +1,22 @@
+Question
+========
+Length contraction occurs
+
+Answerlist
+----------
+* parallel to the direction of motion (longitudinal lengths).
+* perpendicular to the direction of motion (transverse lengths).
+* only when the object is approaching the speed of light.
+* only when the object is not moving.
+
+Solution
+========
+Length contraction occurs for any object moving relative to an observer in the direction of motion (longitudinal lengths).
+
+Meta-information
+================
+exname: Length contraction
+extype: schoice
+exsolution: 1000
+exshuffle: 4
+

@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+v <- signif(runif(1, 0.1, 0.9), 2)
+L <- sample(50:100, 1) # contracted length (m)
+g <- 1 / sqrt(1 - v^2)
+
+ans <- L * g
+dis <- c(L / g)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0, 2) * ans, delta = ans/100, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%.1f \\,\\mathsf{m}$", sc$questions)
+```
+
+Question
+========
+A rod passes by you at a speed of $`r fmt(v, 3)` c$. You measure its length to be $`r fmt(L, 1)` \,\mathsf{m}$. How long would it be at rest?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The length of the rod is contracted in your frame, so it would be longer when at rest.
+
+The Lorentz factor is
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} = \frac{1}{\sqrt{1 - `r v`^2}} = `r fmt(g, 3)` $$
+Therefore, the proper length of the rod is
+
+$$ L_0 = \gamma L = (`r g`)(`r L` \,\mathsf{m}) = `r fmt(ans, 1)` \,\mathsf{m} $$
+
+
+Meta-information
+================
+exname: Calculate Proper Length
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,0 +1,26 @@
+Question
+========
+Why was it once believed that light must travel through a medium called the *ether*
+and could not propagate across empty space?
+
+Answerlist
+----------
+* Maxwell's theory of electromagnetism implies this.
+* Light shows the phenomenon of diffraction and interference.
+* The speed of light is the maximum possible speed.
+* All other known waves need a medium to travel through.
+
+Solution
+========
+All other waves, such as sound and ocean waves, need a medium to travel through
+(e.g. air or water). Light, which is an electromagnetic wave according to Maxwell's
+theory, is the only wave that can propagate through empty space.
+
+
+Meta-information
+================
+exname: Reason for ether
+extype: schoice
+exsolution: 0001
+exshuffle: 4
+

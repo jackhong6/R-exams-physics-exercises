@@ -1,0 +1,23 @@
+Question
+========
+What was the purpose of the Michelson-Morley experiment?
+
+Answerlist
+----------
+* To make a precise measurement of the speed of light.
+* To verify that light is an electromagnetic wave.
+* To establish that the Earth is the one true reference frame.
+* To measure the Earth's motion relative to the ether.
+
+Solution
+========
+The purpose of the Michelson-Morley experiment was to establish the existence of the ether and to measure the Earth's motion relative to the ether.
+
+
+Meta-information
+================
+exname: Michelson-Morley Purpose
+extype: schoice
+exsolution: 0001
+exshuffle: 4
+

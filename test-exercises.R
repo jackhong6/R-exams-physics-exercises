@@ -1,25 +1,14 @@
 library("exams")
 
 # Include all the questions in the specified folder in the exam.
-my_exam <- c(dir("exercises/waves"))
-my_exam <- sample(my_exam, 45) # randomize
+my_exam <- c(dir("exercises/statics"))
+my_exam <- sample(my_exam, 10) # randomize
 
 
 # Include only the exercises listed.
-my_exam <- list("calc-relative-intensity-given-dB.Rmd", 
-                "calc-freq-given-interval.Rmd",
-                "which-does-not-describe-pitch.Rmd",
-                "calc-intensity-given-dB.Rmd", 
-                "calc-beat-freq.Rmd",
-                "calc-two-freqs-given-beat-freq.Rmd",
-                "calc-dB-given-intensity.Rmd",
-                "calc-freq-given-semitones.Rmd",
-                "calc-wavelength-given-harmonic-open-pipe.Rmd",
-                "calc-wavelength-given-harmonic-closed-pipe.Rmd",
-                "calc-pipe-length-given-interval.Rmd",
-                "calc-speed-given-resonances.Rmd")
+my_exam <- c("calc-lorentz-factor.Rmd")
 exams2pdf(my_exam, edir = "exercises",template = "templates/solution.tex", 
-          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"))
+          header = list(Course = "Physics 11/12", Title = "Practice Test Solutions"), usepackage = c("siunitx"))
 # Generate different PDFs
 s <- 2025*11*7
 set.seed(s)

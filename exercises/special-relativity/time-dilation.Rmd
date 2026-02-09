@@ -1,0 +1,23 @@
+Question
+========
+Time dilation means that
+
+Answerlist
+----------
+* moving clocks run slower than clocks at rest.
+* moving clocks run faster than clocks at rest.
+* moving clocks run at the same rate as clocks at rest.
+* time flies when you're having fun.
+
+Solution
+========
+Time dilation is the effect that moving clocks run slower than clocks at rest.
+
+
+Meta-information
+================
+exname: Time dilation
+extype: schoice
+exsolution: 1000
+exshuffle: 4
+

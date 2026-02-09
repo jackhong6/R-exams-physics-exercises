@@ -1,0 +1,26 @@
+Question
+========
+Which of the following is the correct expression for the Lorentz factor?
+
+Answerlist
+----------
+* $(1 - v^2 / c^2)^{-1/2}$
+* $(1 - v^2 / c^2)^{1/2}$
+* $(1 + v^2 / c^2)^{-1/2}$
+* $(1 + v^2 / c^2)^{1/2}$
+
+
+Solution
+========
+The Lorentz factor is defined to be
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} = (1 - v^2 / c^2)^{-1/2} $$
+
+
+Meta-information
+================
+exname: Lorentz factor expression
+extype: schoice
+exsolution: 1000
+exshuffle: 4
+

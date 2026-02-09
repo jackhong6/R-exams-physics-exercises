@@ -1,0 +1,28 @@
+Question
+========
+An astronaut goes on a long space voyage near the speed of light. When he returns
+home, how will his age compare to the age of his twin who stayed on Earth?
+
+Answerlist
+----------
+* Both will be the same age because each can claim that it was the other who was moving.
+* The astronaut will be older than his twin because of time dilation.
+* The astronaut will be younger than his twin because of time dilation.
+* This is a paradox in special relativity that does not have a clear answer.
+
+Solution
+========
+Time dilation means that moving clocks run slow. The astronaut is moving and so his
+clock runs slow. Therefore, the astronaut will be younger than his twin.
+Note that since the astronaut must turn around to travel back to the Earth, 
+he cannot analyze the situation with the time dilation formula that only applies
+for an observer in a single inertial reference frame.
+
+
+Meta-information
+================
+exname: Twin paradox
+extype: schoice
+exsolution: 0010
+exshuffle: 4
+

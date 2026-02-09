@@ -1,0 +1,27 @@
+Question
+========
+Why did Michelson and Morley orient light beams at right angles to each other?
+
+Answerlist
+----------
+* To observe the wave-particle duality of light.
+* To obtain an interference pattern that would indicate how much the speed of
+  light differs when moving in different directions.
+* To obtain a diffraction pattern that would indicate if the speed of light 
+  is constant in all frames of reference regardless of their motion.
+* To observe the scattering of photons at 90 degrees that could be analyzed to   see if light is an electromagnetic wave.
+
+Solution
+========
+The two light beams form an interferometer. When the light beams recombine, they
+make an interference pattern that would indicate if the speed of light is different
+in each direction.
+
+
+Meta-information
+================
+exname: Michelson-Morley Light Beams
+extype: schoice
+exsolution: 0100
+exshuffle: 4
+

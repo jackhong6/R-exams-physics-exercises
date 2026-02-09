@@ -1,0 +1,29 @@
+Question
+========
+What best describes the Lorentz factor in the nonrelativistic limit?
+
+Answerlist
+----------
+* $\gamma \approx 1$
+* $\gamma \approx 0$
+* $\gamma \approx c$
+* $\gamma \rightarrow \infty$
+
+
+Solution
+========
+The Lorentz factor is defined to be
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} $$
+In the nonrelativisitc limit, $v \ll c$ so $v^2 / c^2 \approx 0$ and
+
+$$ \gamma \approx \frac{1}{\sqrt{1 - 0}} = 1 $$
+
+
+Meta-information
+================
+exname: Lorentz factor nonrelativistic limit
+extype: schoice
+exsolution: 1000
+exshuffle: 4
+

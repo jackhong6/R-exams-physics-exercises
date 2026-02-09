@@ -1,0 +1,39 @@
+```{r, echo = FALSE, results = "hide"}
+v <- signif(runif(1, 1, 2.9), 3) # x 10^8 m/s
+L0 <- sample(50:100, 1) # contracted length (m)
+g <- 1 / sqrt(1 - (v / 3)^2)
+
+ans <- L0 / g
+dis <- c(L0 * g)
+
+sc <- num_to_schoice(ans, wrong = dis, range = c(0, 2) * ans, delta = ans/100, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%.1f \\,\\mathsf{ly}$", signif(sc$questions, 3))
+```
+
+Question
+========
+If you were to travel to a star $`r fmt(L0, 1)`$ light-years from Earth at a speed of $`r fmt(v, 3)` \times 10^8 \,\mathsf{m/s}$, what would you measure this distance to be?
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The distance is contracted in your frame, so it would be shorter than when the Earth and star are at rest.
+
+The Lorentz factor is
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} = `r fmt(g, 3)` $$
+Therefore, the contracted distance to the star is
+
+$$ L = \frac{L_0}{\gamma} = \frac{`r L0` \,\mathsf{ly}}{`r g`} = `r fmt(ans, 1)` \,\mathsf{ly} $$
+
+
+Meta-information
+================
+exname: Calculate Contracted Length
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

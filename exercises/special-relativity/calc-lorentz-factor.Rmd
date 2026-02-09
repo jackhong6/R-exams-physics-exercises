@@ -1,0 +1,30 @@
+```{r, echo = FALSE, results = "hide"}
+v <- signif(runif(1, 0.1, 0.99), 2)
+
+ans <- 1 / sqrt(1 - v^2)
+
+sc <- num_to_schoice(ans, delta = 0.1, range = c(1, 10*ans), format = TRUE, digits = 2)
+```
+
+Question
+========
+Calculate the Lorentz factor when $v = `r fmt(v, 3)` c$.
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The Lorentz factor is
+
+$$ \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}} = \frac{1}{\sqrt{1 - `r v`^2}} = `r fmt(ans, 2)` $$
+
+
+Meta-information
+================
+exname: Calculate Lorentz Factor
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

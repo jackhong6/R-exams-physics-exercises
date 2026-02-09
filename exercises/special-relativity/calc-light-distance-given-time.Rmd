@@ -1,0 +1,32 @@
+```{r, echo = FALSE, results = "hide"}
+v <- signif(runif(1, 0.1, 0.9), 3)
+t <- signif(runif(1, 1, 9.99), 3) # time (10^(-8) s)
+
+ans <- 3 * t
+
+sc <- num_to_schoice(ans, range = c(0, 10) * ans, delta = ans/100, format = FALSE, digits = 6)
+sc$questions <- sprintf("$%.1f \\,\\mathsf{m}$", signif(sc$questions, 3))
+```
+
+Question
+========
+A car moving at $v = `r fmt(v, 3)` c$ turns on its headlights. In the car's reference frame, 
+what distance does the light cover in $`r fmt(t, 2)` \times 10^{-8} \,\mathsf{s}$? 
+
+```{r, echo = FALSE, results = "asis"}
+answerlist(sc$questions, markup = "markdown")
+```
+
+Solution
+========
+The speed of light in any frame is $3.00 \times 10^8 \,\mathsf{m/s}$. Therefore the distance the light traveled is
+
+$$ d = (3.00 \times 10^8 \,\mathsf{m/s})(`r t` \times 10^{-8} \,\mathsf{s}) = `r fmt(ans, 1)` \,\mathsf{m} $$
+
+Meta-information
+================
+exname: Calculate light distance given time
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exshuffle: 4
+

@@ -1,0 +1,25 @@
+```{r, echo = FALSE, results = "hide"}
+v <- runif(1, 0.1, 0.99)
+```
+
+Question
+========
+In your spaceship, you see an alien spaceship moving at $`r fmt(v, 2)`c$. Considering the effects of time dilation and length contraction, the aliens would see your spaceship moving
+
+Answerlist
+----------
+* faster than $`r fmt(v, 2)`c$
+* at $`r fmt(v, 2)`c$
+* slower than $`r fmt(v, 2)`c$
+* not enough information to determine
+
+Solution
+========
+Relative speeds are not affected under Lorentz transformations. The aliens would see your spaceship moving at $`r fmt(v, 2)`c$ (but in the opposite direction).
+
+
+Meta-information
+================
+exname: Relative Speeds
+extype: schoice
+exsolution: 0100

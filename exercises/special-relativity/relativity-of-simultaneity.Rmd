@@ -1,0 +1,23 @@
+Question
+========
+Which statement accurately describes the relativity of simultaneity?
+
+Answerlist
+----------
+* All observers in inertial reference frames agree on which events are simultaneous.
+* Events simultaneous in one frame may not be simultaneous in another.
+* Only events at the same location can be simultaneous.
+* Simultaneity is absolute.
+
+Solution
+========
+The relativity of simultaneity says that events that are simultaneous in one inertial reference frame may not be simultaneous in another inertial reference frame.
+
+
+Meta-information
+================
+exname: Relativity of Simultaneity
+extype: schoice
+exsolution: 0100
+exshuffle: 4
+

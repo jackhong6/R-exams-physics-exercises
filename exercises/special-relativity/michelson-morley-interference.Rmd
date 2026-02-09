@@ -1,0 +1,23 @@
+Question
+========
+If Michelson and Morley had observed the interference pattern shift in their interferometer, what would that have indicated?
+
+Answerlist
+----------
+* The speed of light is the same in all frames of reference.
+* The speed of light depends on the motion relative to the ether.
+* The speed of light changes upon reflection from a surface.
+* The speed of light is boosted in the direction of Earth's motion.
+
+Solution
+========
+If Michelson and Morley had observed the interference pattern shift, then they would conclude that the speed of light depends on the motion relative to the ether, and that the Earth is moving relative to the ether. They did not observe this and their null result was key to the rejection of the ether hypothesis.
+
+
+Meta-information
+================
+exname: Michelson-Morley Interference
+extype: schoice
+exsolution: 0100
+exshuffle: 4
+

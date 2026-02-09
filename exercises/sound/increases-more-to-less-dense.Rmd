@@ -15,7 +15,7 @@ Solution
 ========
 When moving from a more dense medium to a less dense one, the speed and the wavelength
 are greater for the transmitted wave than the incident wave. The frequency and the
-period remain the same and the amplitude decreases.
+period remain the same.
 
 
 Meta-information
