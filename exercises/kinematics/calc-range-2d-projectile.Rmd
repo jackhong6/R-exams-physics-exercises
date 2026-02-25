@@ -7,12 +7,12 @@ t <- 2 * vi * sin(angle * pi / 180) / g # time for golf ball to hit the ground
 r <- vi * cos(angle * pi / 180) * t # horizontal range of the rock in m
   
 sc <- num_to_schoice(r, delta = 1, digits = 0, format = FALSE)
-sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+sc$questions <- sprintf("%g m", sc$questions)
 ```
 
 Question
 ========
-A golf ball is hit with an initial velocity of \SI{`r vi`}{m/s} at an angle of \ang{`r angle`} above the horizontal. What is its range (horizontal distance before hitting the ground)? Ignore air resistance and assume a flat golf course.
+A golf ball is hit with an initial velocity of `r fmt(vi,1)` m/s at an angle of `r fmt(angle,1)`° above the horizontal. What is its range (horizontal distance before hitting the ground)? Ignore air resistance and assume a flat golf course.
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -22,10 +22,10 @@ Solution
 ========
 First, analyze the vertical motion to find the time it takes the ball to hit the ground using the formula $v_f = v_i + at$ with $v_f = -v_i$:
 
-$$t = -\frac{2v_i}{a} = -\frac{2 (\SI{`r vi`}{m/s}) \sin(\ang{`r angle`})}{\SI{`r -g`}{m/s^2}} = \SI{`r t`}{s}$$
+$$t = -\frac{2v_i}{a} = -\frac{2 (`r vi` \,\mathsf{m/s}) \sin(`r angle`^\circ)}{`r -g` \,\mathsf{m/s^2}} = `r t` \,\mathsf{s}$$
 Then, use the time to figure out how far the ball travels horizontally (recall that the horizontal velocity is constant).
 
-$$d_x = v_x t = (\SI{`r vi`}{m/s})(\cos(\ang{`r angle`}))(\SI{`r t`}{s}) = \SI{`r signif(r, 3)`}{m}$$
+$$d_x = v_x t = (`r vi` \,\mathsf{m/s})(\cos(`r angle`^\circ))(`r t` \,\mathsf{s}) = `r signif(r, 3)` \,\mathsf{m}$$
 
 Meta-information
 ================

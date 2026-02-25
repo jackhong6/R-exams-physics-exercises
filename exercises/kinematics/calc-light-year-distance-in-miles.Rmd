@@ -5,18 +5,16 @@ options(scipen=999)
 
 Question
 ========
-A light-year (\si{ly}) is the distance that light travels in vacuum in one year.  
-The speed of light is \SI{3.00E8}{m/s}. How many miles are there in a light-year?
-
-($\SI{1}{mile} = \SI{1.609E3}{\meter}$, $\SI{1}{year} = \SI{365}{days}$)
+A light-year (ly) is the distance that light travels in vacuum in one year.  
+The speed of light is $3 \times 10^8 \,\mathsf{m/s}$. How many miles are there in a light-year?
 
 
 Answerlist
 ----------
-* \SI{5.88E12}{mi}
-* \SI{9.46E12}{mi}
-* \SI{5.88E15}{mi}
-* \SI{9.46E15}{mi}
+* $5.88 \times 10^{12} \,\mathsf{mi}$
+* $9.46 \times 10^{12} \,\mathsf{mi}$
+* $5.88 \times 10^{15} \,\mathsf{mi}$
+* $9.46 \times 10^{15} \,\mathsf{mi}$
 
 
 Solution
@@ -37,3 +35,4 @@ Meta-information
 exname: light year distance in miles
 extype: schoice
 exsolution: 1000
+exshuffle: 4

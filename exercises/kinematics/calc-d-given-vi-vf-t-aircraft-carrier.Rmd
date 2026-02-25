@@ -9,12 +9,12 @@ distractors <- c(vf / 3.6 * t, vf / 2 * t)
 sc <- num_to_schoice(d, wrong = distractors, format = FALSE)
 
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+sc$questions <- sprintf("%g m", sc$questions)
 ```
 
 Question
 ========
-A fighter plane is launched from a catapult on an aircraft carrier. Starting from rest, it reaches a speed of \SI{`r vf`}{km/h} in \SI{`r t`}{s}. Assuming constant acceleration, what is the length of the aircraft catapult?
+A fighter plane is launched from a catapult on an aircraft carrier. Starting from rest, it reaches a speed of `r vf` km/h in `r t` s. Assuming constant acceleration, what is the length of the aircraft catapult?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -24,9 +24,9 @@ Solution
 ========
 First, convert the final speed to \unit{m/s}:
 
-$$v_f = \SI{`r vf`}{km/h} \times \frac{\SI{1000}{m}}{\SI{1}{km}} \times \frac{\SI{1}{h}}{\SI{3600}{s}} = \SI{`r signif(vf/3.6, sf)`}{m/s}$$
+$$v_f = `r vf` \,\mathsf{km/h} \times \frac{1000 \,\mathsf{m}}{1 \,\mathsf{km}} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} = `r signif(vf/3.6, sf)` \,\mathsf{m/s}$$
 Then, use the formula for constant acceleration:
-$$d = \frac{1}{2}(v_i + v_f)t = \frac{1}{2} (0 + \SI{`r signif(vf/3.6, sf)`}{m/s})(\SI{`r t`}{s}) = \SI{`r signif(d, sf)`}{m}$$ 
+$$d = \frac{1}{2}(v_i + v_f)t = \frac{1}{2} (0 + `r signif(vf/3.6, sf)` \,\mathsf{m/s})(`r t` \,\mathsf{s}) = `r signif(d, sf)` \,\mathsf{m}$$ 
 
 Meta-information
 ================

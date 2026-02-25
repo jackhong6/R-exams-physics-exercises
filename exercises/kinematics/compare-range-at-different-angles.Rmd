@@ -1,13 +1,13 @@
 Question
 ========
-An athlete throws a javelin at four different angles above the horizontal, each with the same speed: \ang{30}, \ang{40}, \ang{60}, \ang{80}. Which two throws cause the javelin to land the same distance away?
+An athlete throws a javelin at four different angles above the horizontal, each with the same speed: 30°, 40°, 60°, 80°. Which two throws cause the javelin to land the same distance away?
 
 Answerlist
 ----------
-* \ang{30} and \ang{80}
-* \ang{40} and \ang{60}
-* \ang{40} and \ang{80}
-* \ang{30} and \ang{60}
+* 30° and 80°
+* 40° and 60°
+* 40° and 80°
+* 30° and 60°
 
 Solution
 ========

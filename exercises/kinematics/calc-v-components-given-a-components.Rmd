@@ -1,20 +1,20 @@
 Question
 ========
-A particle initially moving with a velocity of \SI{2}{m/s} in the $x$-direction experiences a constant acceleration of \SI{1}{m/s^2} in the $x$-direction and \SI{-2}{m/s^2} in the $y$-direction. What are the velocity components of the particle after \SI{4}{s}?
+A particle initially moving with a velocity of 2 m/s in the $x$-direction experiences a constant acceleration of $1 \,\mathsf{m/s^2}$ in the $x$-direction and $-2 \,\mathsf{m/s^2}$ in the $y$-direction. What are the velocity components of the particle after 4 s?
 
 Answerlist
 ----------
-* $v_x = \SI{6}{m/s}, v_y = \SI{-8}{m/s}$
-* $v_x = \SI{-6}{m/s}, v_y = \SI{4}{m/s}$
-* $v_x = \SI{3}{m/s}, v_y = \SI{-2}{m/s}$
-* $v_x = \SI{4}{m/s}, v_y = \SI{-8}{m/s}$
+* $v_x = 6 \,\mathsf{m/s}, v_y = -8 \,\mathsf{m/s}$
+* $v_x = -6 \,\mathsf{m/s}, v_y = 4 \,\mathsf{m/s}$
+* $v_x = 3 \,\mathsf{m/s}, v_y = -2 \,\mathsf{m/s}$
+* $v_x = 4 \,\mathsf{m/s}, v_y = -8 \,\mathsf{m/s}$
 
 Solution
 ========
 The velocities can be calculated separately.
 
-$$v_x = \SI{2}{m/s} + (\SI{1}{m/s^2})(\SI{4}{s}) = \SI{6}{m/s}$$
-$$v_y = \SI{0}{m/s} + (\SI{-2}{m/s^2})(\SI{4}{s}) = \SI{8}{m/s}$$
+$$v_x = 2 \,\mathsf{m/s} + (1 \,\mathsf{m/s^2})(4 \,\mathsf{s}) = 6 \,\mathsf{m/s}$$
+$$v_y = 0 \,\mathsf{m/s} + (-2 \,\mathsf{m/s^2})(4 \,\mathsf{s}) = 8 \,\mathsf{m/s}$$
 
 
 Meta-information

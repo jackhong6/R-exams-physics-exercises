@@ -8,12 +8,12 @@ dis <- c(v/d, v*d)
 
 sc <- num_to_schoice(ans, wrong = dis, delta = 0.5, format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
+sc$questions <- sprintf("%g s", sc$questions)
 ```
 
 Question
 ========
-Suppose an object travels at a constant velocity of \SI{`r v`}{m/s}. How much time would it take for the object to travel a distance of \SI{`r d`}{m}?
+Suppose an object travels at a constant velocity of `r v` m/s. How much time would it take for the object to travel a distance of `r d` m?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -23,7 +23,7 @@ Solution
 ========
 Use the formula for constant velocity motion.
 
-$$ t = \frac{d}{v} = \frac{\SI{`r d`}{m}}{\SI{`r v`}{m/s}} = \SI{`r signif(d/v, 3)`}{s}$$ 
+$$ t = \frac{d}{v} = \frac{`r d` \,\mathsf{m}}{`r v` \,\mathsf{m/s}} = `r signif(d/v, 3)` \,\mathsf{s}$$ 
 
 Meta-information
 ================

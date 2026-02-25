@@ -1,13 +1,13 @@
 Question
 ========
-What is the magnitude of the average velocity of a runner who completes one lap around an outdoor track ($\SI{400}{m}$) in $\SI{100}{s}$?
+What is the magnitude of the average velocity of a runner who completes one lap around an outdoor track (400 m) in 100 s?
 
 Answerlist
 ----------
-* $\SI{0}{m/s}$
-* $\SI{0.25}{m/s}$
-* $\SI{4.0}{m/s}$
-* $\SI{4.0E4}{m/s}$
+* 0 m/s
+* 0.25 m/s
+* 4.0 m/s
+* 400 m/s
 
 Solution
 ========

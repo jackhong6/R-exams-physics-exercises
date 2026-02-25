@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 01</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q01 : tf-zero-acc-at-top-1d </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>True or false? When a ball is thrown straight up, its acceleration at the top is zero.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>False. The acceleration of the ball is always  down.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 02</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q02 : tf-zero-acc-still-moving </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>True or false? It is possible to have zero acceleration and still be moving.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>True. An object with a constant nonzero velocity has zero acceleration and is still moving.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 03</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q03 : tf-zero-vel-at-top-1d </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>True or false? When a ball is thrown straight up, its velocity at the top is zero.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>True. The velocity must be zero for an instant at the top as the velocity changes from up to down.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 04</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q04 : free-fall-acc-vel-directions-going-down </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A ball is thrown straight up, reaches a maximum height, then falls back down to its initial height. Which of the following is true while the ball is going down?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Both velocity and acceleration point down when the ball is going down.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+Its velocity and acceleration both point up.
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Its velocity and acceleration both point down.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+Its velocity points up while its acceleration points down.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+Its velocity points down while its acceleration points up.
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 05</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q05 : free-fall-vertical-launch-vel </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Consider a ball that is thrown upwards and which then falls back down. If up is the positive direction, then the ball’s velocity</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>When the ball is moving upwards, its velocity is positive. When the ball is moving downwards, its velocity is negative.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+is always positive.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+is always negative.
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+starts positive, then becomes negative.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+starts negative, then becomes positive.
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 06</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q06 : change-vel-direction-const-acc </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Can an object’s velocity change direction when its acceleration is constant?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Yes, a rock thrown straight up is an example. The direction of the rock’s velocity changes from up to down while its acceleration is always  down.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+No, because the object is always speeding up.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+No, because the object is always speeding up or slowing down, but it can never turn around.
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Yes, a rock thrown straight up is an example.
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+Yes, a car that starts from rest, speeds up, slows to a stop, and then backs up is an example.
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 07</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q07 : free-fall-vertical-launch-max-height-scaling-with-vi </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Two balls are launched straight up. The first ball is launched with 6 times the initial speed of the second. Ignore air resistance. How many times higher does the first ball rise compared to the second?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Use the formula <span class="math inline">\(v_f^2 = v_i^2 + 2ad\)</span> with <span class="math inline">\(v_f = 0\)</span> and solve for <span class="math inline">\(d\)</span>:</p>
+<p><span class="math display">\[d = -\frac{v_i^2}{2a}\]</span>
+The distance scales with the square of the initial velocity. Therefore, the first ball rises <span class="math inline">\(6^2 = 36\)</span> times as high as the second ball.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(\sqrt{6}\)</span> times as high
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(6\)</span> times as high
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(6^2\)</span> times as high
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+Impossible to determine without knowing the initial speeds
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 08</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q08 : calc-d-given-vi-vf-t-aircraft-carrier </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A fighter plane is launched from a catapult on an aircraft carrier. Starting from rest, it reaches a speed of 299 km/h in 2.49 s. Assuming constant acceleration, what is the length of the aircraft catapult?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, convert the final speed to :</p>
+<p><span class="math display">\[v_f = 299 \,\mathsf{km/h} \times \frac{1000 \,\mathsf{m}}{1 \,\mathsf{km}} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} = 83.1 \,\mathsf{m/s}\]</span>
+Then, use the formula for constant acceleration:
+<span class="math display">\[d = \frac{1}{2}(v_i + v_f)t = \frac{1}{2} (0 + 83.1 \,\mathsf{m/s})(2.49 \,\mathsf{s}) = 103 \,\mathsf{m}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+89.9 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+69.6 m
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+103 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+372 m
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 09</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q09 : calc-t-given-a-vi-vf-kmh </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A car accelerates from 19 km/h to 105 km/h, at an average rate of <span class="math inline">\(1 \,\mathsf{m/s^2}\)</span>. How much time does it take to complete this speed increase?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, convert the speeds from km/h to m/s:</p>
+<p><span class="math display">\[v_i = 19 \,\mathsf{km/h} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} \times \frac{1000 \,\mathsf{m}}{1 \,\mathsf{km}} = 5.28 \,\mathsf{m/s}\]</span>
+<span class="math display">\[v_f = 105 \,\mathsf{km/h} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} \times \frac{1000 \,\mathsf{m}}{1 \,\mathsf{km}} = 29.2 \,\mathsf{m/s}\]</span></p>
+<p>Then, use the formula for constant acceleration motion.</p>
+<p><span class="math display">\[t = \frac{v_f - v_i}{a} = \frac{29.2 \,\mathsf{m/s} - 5.28 \,\mathsf{m/s}}{1 \,\mathsf{m/s^2}} = 23.9 \,\mathsf{s}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+23.9 s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+86 s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+18.4 s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+4.87 s
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 10</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q10 : calc-a-given-0-to-60 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>An F1 car accelerates from <span class="math inline">\(0\)</span> to <span class="math inline">\(60\)</span> miles per hour in 2.83 s. What is the acceleration of the car in SI units? (1 mile = 1609.34 m)</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, convert 60 mph to m/s.</p>
+<p><span class="math display">\[60 \,\mathsf{mph} \times \frac{1609.34 \,\mathsf{m}}{1 \,\mathsf{mi}} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} = 26.8223 \,\mathsf{m/s}\]</span>
+Then, divide by the time.</p>
+<p><span class="math display">\[a = \frac{v_f - v_i}{t} = \frac{26.8223 \,\mathsf{m/s} - 0}{2.83 \,\mathsf{s}} = 9.48 \,\mathsf{m/s^2}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(7.62 \,\mathsf{m/s^2}\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(21.2 \,\mathsf{m/s^2}\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(4.88 \,\mathsf{m/s^2}\)</span>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(9.48 \,\mathsf{m/s^2}\)</span>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 11</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q11 : calc-car-braking-distance </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A car with good tires on a dry road can decelerate at about <span class="math inline">\(5.0 \,\mathsf{m/s^2}\)</span> when braking. If the car travels with an initial velocity of <span class="math inline">\(35 \,\mathsf{km/h}\)</span> and brakes under such conditions, what distance would it travel before it stops?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, convert the initial velocity to m/s:</p>
+<p><span class="math display">\[35 \,\mathsf{km/h} \times \frac{1000 \,\mathsf{m}}{1 \,\mathsf{km}} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} = 9.7222222 \,\mathsf{m/s}\]</span></p>
+<p>Then, use the formula <span class="math inline">\(v_f^2 = v_i^2 + 2ad\)</span> with <span class="math inline">\(v_f = 0\)</span> and <span class="math inline">\(a = -5 \,\mathsf{m/s^2}\)</span>.</p>
+<p><span class="math display">\[d = \frac{-v_i^2}{2a} = \frac{-(9.7222222 \,\mathsf{m/s})^2}{2(-5.0 \,\mathsf{m/s^2})} = 9.5 \,\mathsf{m}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+62 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+1 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+123 m
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+9 m
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 12</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q12 : calc-a-given-t-v-avg-car-stopping </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A car slows down uniformly and comes to a stop after 6 s. The car’s average velocity during this motion was 34 km/h. What was the car’s acceleration while slowing down?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Since the car’s acceleration was uniform and the final velocity was zero, the initial velocity is double the average velocity.</p>
+<p><span class="math display">\[v_{avg} = \frac{v_i + v_f}{2} = \frac{v_i}{2}\]</span>
+<span class="math display">\[v_i = 2 v_{avg} = 68 \,\mathsf{km/h}\]</span></p>
+<p>The acceleration is the change in speed divided by the time.
+<span class="math display">\[a = \frac{v_f - v_i}{t} = \frac{0 - 68 \,\mathsf{km/h}}{6 \,\mathsf{s}} = -11.3 \,\mathsf{km/h/s}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+-5.67 km/h/s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+-15 km/h/s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+-12.6 km/h/s
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+-11.3 km/h/s
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 13</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q13 : calc-vi-given-t-1d-projectile </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A ball tossed straight up returns to its starting point in 6.2 s. What was its initial speed? Ignore air resistance.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The final velocity is equal to the initial velocity, but in the opposite direction (<span class="math inline">\(v_f = -v_i\)</span>). Substitute this into the equation <span class="math inline">\(v_f = v_i + at\)</span> and solve for <span class="math inline">\(vi\)</span>:</p>
+<p><span class="math display">\[-v_i = v_i + at\]</span>
+<span class="math display">\[-2v_i = at\]</span>
+<span class="math display">\[vi = -\frac{at}{2} = -\frac{(-9.8 \,\mathsf{m/s^2})(6.2 \,\mathsf{s})}{2} = 30.4 \,\mathsf{m/s}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+30.4 m/s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+40.6 m/s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+37.3 m/s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+42.2 m/s
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 14</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q14 : calc-t-given-vi-h-1d-projectile </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>A person throws a rock straight down from a bridge with an initial speed of 13.7 m/s. It falls 31.4 m to the water below. How much time does it take for the rock to hit the water?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Use the quadratic formula to solve the equation <span class="math inline">\(h = \frac{1}{2} g t^2 + v_i t\)</span> for <span class="math inline">\(t\)</span>.</p>
+<p><span class="math display">\[\frac{1}{2} g t^2 + v_i t - h = 0\]</span>
+<span class="math display">\[a = \frac{1}{2} g = \frac{1}{2} (9.8 \,\mathsf{m/s^2}) = 4.9 \,\mathsf{m/s^2}, b = v_i = 13.7 \,\mathsf{m/s}, c = -h = -31.4 \,\mathsf{m}\]</span></p>
+<p><span class="math display">\[t = \frac{-b + \sqrt{b^2 - 4ac}}{2a} = 1.49 \,\mathsf{s}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+1.73 s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+1.8 s
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+1.52 s
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+1.49 s
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 15</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q15 : calc-max-h-given-vi-projectile-1d </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>What is the maximum height reached by a ball thrown straight up with an initial velocity of 38.2 m/s? Assume that the ball is thrown on the surface of the Earth and that it undergoes constant acceleration due to gravity (ignore air resistance).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Use the formula <span class="math inline">\(v_f^2=v_i^2 + 2ad\)</span> with <span class="math inline">\(a = g = -9.8 \,\mathsf{m/s^2}\)</span> and <span class="math inline">\(v_f = 0\)</span> (the velocity of the ball at its maximum height is zero). Solve for <span class="math inline">\(d\)</span>:</p>
+<p><span class="math display">\[d = \frac{- v_i}{2a} = \frac{-38.2 \,\mathsf{m/s}}{2(-9.8 \,\mathsf{m/s^2})} = 74.5 \,\mathsf{m}\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+141 m
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+74.5 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+57.9 m
+</p>]]></text>
+</answer>
+<answer fraction="0" format="html">
+<text><![CDATA[<p>
+68.9 m
+</p>]]></text>
+</answer>
+</question>
+
+</quiz>

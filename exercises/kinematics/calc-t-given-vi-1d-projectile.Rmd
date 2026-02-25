@@ -7,12 +7,12 @@ t <- 2 * vi / g
 
 sc <- num_to_schoice(t, delta = 0.1, range = c(t/10, 2*t), format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
+sc$questions <- sprintf("%g s", sc$questions)
 ```
 
 Question
 ========
-A ball is thrown straight up with an initial velocity of \SI{`r vi`}{m/s}. How long does it take the ball to return to its starting point? Assume that the ball is thrown on the surface of the Earth and that it is undergoing constant acceleration due to gravity (ignore air resistance).
+A ball is thrown straight up with an initial velocity of `r vi` m/s. How long does it take the ball to return to its starting point? Assume that the ball is thrown on the surface of the Earth and that it is undergoing constant acceleration due to gravity (ignore air resistance).
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -20,9 +20,9 @@ answerlist(sc$questions, markup = "markdown")
 
 Solution
 ========
-Use the formula for constant acceleration motion using $a = g = \SI{-9.8}{m/s^2}$. Also, since the motion is symmetric, the final speed is equal to the initial speed (but the velocity points in the opposite direction) so $v_f = -v_i$.
+Use the formula for constant acceleration motion using $a = g = -9.8 \,\mathsf{m/s^2}$. Also, since the motion is symmetric, the final speed is equal to the initial speed (but the velocity points in the opposite direction) so $v_f = -v_i$.
 
-$$t = \frac{v_f - v_i}{a} = \frac{-v_i - v_i}{g} = \frac{\SI{-`r vi`}{m/s} -\SI{`r vi`}{m/s}}{\SI{`r -g`}{m/s^2}} = \SI{`r signif(t, 3)`}{ s}$$
+$$t = \frac{v_f - v_i}{a} = \frac{-v_i - v_i}{g} = \frac{`r -vi` \,\mathsf{m/s} - `r vi` \,\mathsf{m/s}}{`r -g` \,\mathsf{m/s^2}} = `r signif(t, 3)` \,\mathsf{s}$$
 
 Meta-information
 ================

@@ -6,12 +6,12 @@ g <- 9.8 # acceleration due to gravity in m/s^2
 vi <- g * t / 2
 
 sc <- num_to_schoice(vi, format = FALSE, digits = 1)
-sc$questions <- sprintf("\\SI{%g}{m/s}", sc$questions)
+sc$questions <- sprintf("%g m/s", sc$questions)
 ```
 
 Question
 ========
-A ball tossed straight up returns to its starting point in \SI{`r t`}{s}. What was its initial speed? Ignore air resistance.
+A ball tossed straight up returns to its starting point in `r t` s. What was its initial speed? Ignore air resistance.
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -23,7 +23,7 @@ The final velocity is equal to the initial velocity, but in the opposite directi
 
 $$-v_i = v_i + at$$
 $$-2v_i = at$$
-$$vi = -\frac{at}{2} = -\frac{(\SI{-9.8}{m/s^2})(\SI{`r t`}{s})}{2} = \SI{`r signif(vi, 3)`}{m/s}$$
+$$vi = -\frac{at}{2} = -\frac{(-9.8 \,\mathsf{m/s^2})(`r t` \,\mathsf{s})}{2} = `r signif(vi, 3)` \,\mathsf{m/s}$$
 
 
 Meta-information

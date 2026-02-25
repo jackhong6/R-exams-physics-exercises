@@ -5,7 +5,7 @@ The acceleration of gravity on the Moon is one-sixth of that on Earth. If you hi
 Answerlist
 ----------
 * the same distance away
-* one-sixth as far
+* 1/6 times as far
 * 6 times as far
 * 36 times as far
 

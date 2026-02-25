@@ -18,7 +18,7 @@ The hang time of the ball can be calculated from the formula $v_f = v_i + at$ wi
 $$t = -\frac{2v_i}{a}$$
 On Earth, the time is $t_{Earth} = -2 v_i / g_{Earth}$. On the Moon, $g_{Moon} = g_{Earth} / 6$ so
 
-$$t_{Moon} = -\frac{2 v_i}{g_{Earth} / 6} = 6 \times \frac{-2 v_i}{g_{Earth}} = 3 t_{Earth}$$
+$$t_{Moon} = -\frac{2 v_i}{g_{Earth} / 6} = 6 \times \frac{-2 v_i}{g_{Earth}} = 6 t_{Earth}$$
 
 The ball would be in the air 6 times longer on the Moon than on Earth.
 

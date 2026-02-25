@@ -8,12 +8,12 @@ d2 <- sample(100:300, 1) # distance of second phase in km
 ans <- signif((d1 + d2)/(d1/v1 + d2/v2), 2)
 sc <- num_to_schoice(ans, delta = 2, digits = 0, range = c(v1, v2), format = FALSE)
 
-sc$questions <- sprintf("\\SI{%g}{km/h}", sc$questions)
+sc$questions <- sprintf("%g km/h", sc$questions)
 ```
 
 Question
 ========
-A car travels \SI{`r d1`}{km} at \SI{`r v1`}{km/h} and \SI{`r d2`}{km} at \SI{`r v2`}{km/h}. What is the average speed for this trip?
+A car travels `r d1` km at `r v1` km/h and `r d2` km at `r v2` km/h. What is the average speed for this trip?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

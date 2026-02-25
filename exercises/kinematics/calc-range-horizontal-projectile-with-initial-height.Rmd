@@ -7,12 +7,12 @@ t <- sqrt(2 * h / g) # time to fall in the water in s
 r <- vi * t # horizontal range of the rock in m
   
 sc <- num_to_schoice(r, delta = 0.1, digits = 1, format = FALSE)
-sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+sc$questions <- sprintf("%g m", sc$questions)
 ```
 
 Question
 ========
-A person throws a rock horizontally, with an initial velocity of \SI{`r vi`}{m/s}, from a bridge. It falls \SI{`r h`}{m} to the water below. How far does it travel horizontally before striking the water?
+A person throws a rock horizontally, with an initial velocity of `r vi` m/s, from a bridge. It falls `r h` m to the water below. How far does it travel horizontally before striking the water?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -22,10 +22,10 @@ Solution
 ========
 First analyze the vertical motion to find the time it takes the rock to hit the water using the formula $d = \frac{1}{2} a t^2$
 
-$$t = \sqrt{\frac{2d}{a}} = \sqrt{\frac{2(\SI{`r h`}{m})}{\SI{`r g`}{m/s^2}}} = \SI{`r t`}{s}$$
+$$t = \sqrt{\frac{2d}{a}} = \sqrt{\frac{2(`r h` \,\mathsf{m})}{`r g` \,\mathsf{m/s^2}}} = `r t` \,\mathsf{s}$$
 Then, use the time to figure out how far the rock travels horizontally (recall that the horizontal velocity is constant).
 
-$$d_x = v_x t = (\SI{`r vi`}{m/s})(\SI{`r t`}{s}) = \SI{`r signif(r, 3)`}{m}$$
+$$d_x = v_x t = (`r vi` \,\mathsf{m/s})(`r t` \,\mathsf{s}) = `r signif(r, 3)` \,\mathsf{m}$$
 
 Meta-information
 ================

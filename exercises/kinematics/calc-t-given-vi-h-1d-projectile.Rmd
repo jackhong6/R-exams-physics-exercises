@@ -11,12 +11,12 @@ c <- -h
 t <- (-b + sqrt(b^2 - 4*a*c)) / (2 * a)
 
 sc <- num_to_schoice(t, delta = 0.01, digits = 2, format = FALSE)
-sc$questions <- sprintf("\\SI{%g}{s}", sc$questions)
+sc$questions <- sprintf("%g s", sc$questions)
 ```
 
 Question
 ========
-A person throws a rock straight down from a bridge with an initial speed of \SI{`r vi`}{m/s}. It falls \SI{`r h`}{m} to the water below. How much time does it take for the rock to hit the water?
+A person throws a rock straight down from a bridge with an initial speed of `r vi` m/s. It falls `r h` m to the water below. How much time does it take for the rock to hit the water?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -27,9 +27,9 @@ Solution
 Use the quadratic formula to solve the equation $h = \frac{1}{2} g t^2 + v_i t$ for $t$.
 
 $$\frac{1}{2} g t^2 + v_i t - h = 0$$
-$$a = \frac{1}{2} g = \frac{1}{2} (\SI{`r g`}{m/s^2}) = \SI{`r a`}{m/s^2}, b = v_i = \SI{`r vi`}{m/s}, c = -h = \SI{`r -h`}{m}$$
+$$a = \frac{1}{2} g = \frac{1}{2} (`r g` \,\mathsf{m/s^2}) = `r a` \,\mathsf{m/s^2}, b = v_i = `r vi` \,\mathsf{m/s}, c = -h = `r -h` \,\mathsf{m}$$
 
-$$t = \frac{-b + \sqrt{b^2 - 4ac}}{2a} = \SI{`r fmt(t)`}{s}$$
+$$t = \frac{-b + \sqrt{b^2 - 4ac}}{2a} = `r fmt(t)` \,\mathsf{s}$$
 
 
 Meta-information

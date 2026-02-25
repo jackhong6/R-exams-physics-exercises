@@ -12,12 +12,12 @@ sc <- num_to_schoice(a, wrong = distractors, format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
 
 # Format numbers
-sc$questions <- sprintf("\\SI{%g}{m/s^2}", sc$questions)
+sc$questions <- sprintf("$%g \\,\\mathsf{m/s^2}$", sc$questions)
 ```
 
 Question
 ========
-An F1 car accelerates from $0$ to $60$ miles per hour in $\SI{`r t`}{s}$. What is the acceleration of the car in SI units? ($\SI{1}{mile} = \SI{1609.34}{m}$)
+An F1 car accelerates from $0$ to $60$ miles per hour in `r t` s. What is the acceleration of the car in SI units? (1 mile = 1609.34 m)
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -25,12 +25,12 @@ answerlist(sc$questions, markup = "markdown")
 
 Solution
 ========
-First, convert \SI{60}{mph} to \si{m/s}.
+First, convert 60 mph to m/s.
 
-$$\SI{60}{mph} \times \frac{\SI{1609.34}{m}}{\SI{1}{mi}} \times \frac{\SI{1}{h}}{\SI{3600}{s}} = \SI{26.8223}{m/s}$$
+$$60 \,\mathsf{mph} \times \frac{1609.34 \,\mathsf{m}}{1 \,\mathsf{mi}} \times \frac{1 \,\mathsf{h}}{3600 \,\mathsf{s}} = 26.8223 \,\mathsf{m/s}$$
 Then, divide by the time.
 
-$$a = \frac{v_f - v_i}{t} = \frac{\SI{26.8223}{m/s} - 0}{\SI{`r t`}{s}} = \SI{`r a`}{m/s^2}$$
+$$a = \frac{v_f - v_i}{t} = \frac{26.8223 \,\mathsf{m/s} - 0}{`r t` \,\mathsf{s}} = `r a` \,\mathsf{m/s^2}$$
 
 Meta-information
 ================

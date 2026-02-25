@@ -10,12 +10,12 @@ t <- round(d * (pace_minutes * 60 + pace_seconds)) # time in seconds to finish t
 
 sc <- num_to_schoice(t, delta = 10, format = FALSE)
 sc$questions <- sapply(sc$questions, round)
-sc$questions <- sprintf("\\si{%02d:%02d:%02d}", sc$questions %/% 3600, (sc$questions %/% 60) %% 60, sc$questions %% 60)
+sc$questions <- sprintf("%02d:%02d:%02d", sc$questions %/% 3600, (sc$questions %/% 60) %% 60, sc$questions %% 60)
 ```
 
 Question
 ========
-A runner completes a marathon (\SI{42.195}{km}) with an average pace of \SI{`r pace_minutes`}{minutes} and \SI{`r pace_seconds`}{seconds} per \si{kilometre}. What is the runner's time for the marathon? (Answers are formatted as \si{hours:minutes:seconds})
+A runner completes a marathon (42.195 km) with an average pace of `r pace_minutes` minutes and `r pace_seconds` seconds per kilometre. What is the runner's time for the marathon? (Answers are formatted as hours:minutes:seconds)
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

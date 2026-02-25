@@ -8,12 +8,12 @@ distractors <- c(v/t)
 sc <- num_to_schoice(answer, wrong = distractors, delta = 0.1, range = c(min(v/t, t/v), 2*v*t), format = FALSE)
 
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- sprintf("\\SI{%g}{m}", sc$questions)
+sc$questions <- sprintf("%g m", sc$questions)
 ```
 
 Question
 ========
-Suppose an object travels at a constant velocity of $\SI{`r v`}{m/s}$. What distance would it travel in $\SI{`r t`}{s}$?
+Suppose an object travels at a constant velocity of `r v` m/s. What distance would it travel in `r t` s?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
@@ -23,7 +23,7 @@ Solution
 ========
 Use the formula for constant velocity motion.
 
-$$ d = vt = (\SI{`r v`}{m/s})(\SI{`r t`}{s}) = \SI{`r signif(v*t, 3)`}{m}$$ 
+$$ d = vt = (`r v` \,\mathsf{m/s})(`r t` \,\mathsf{s}) = `r signif(v*t, 3)` \,\mathsf{m}$$ 
 
 Meta-information
 ================

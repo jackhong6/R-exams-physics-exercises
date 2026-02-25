@@ -11,12 +11,12 @@ dis <- c((v1 + v2)/2)
 
 sc <- num_to_schoice(ans, wrong = dis, delta = 0.6, range = c(v1, v2), format = FALSE)
 sc$questions <- sapply(sc$questions, signif, sf)
-sc$questions <- sprintf("\\SI{%g}{km/h}", sc$questions)
+sc$questions <- sprintf("%g km/h", sc$questions)
 ```
 
 Question
 ========
-A truck travels at \SI{`r v1`}{km/h} for \SI{`r t1`}{hours} and at \SI{`r v2`}{km/h} for \SI{`r t2`}{hours}. What is the average speed for the trip?
+A truck travels at `r v1` km/h for `r t1` hours and at `r v2` km/h for `r t2` hours. What is the average speed for the trip?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")

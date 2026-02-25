@@ -7,12 +7,12 @@ d <- 42.195 # marathon distance in km
 v <- signif(d * 1000 / (th*3600 + tm*60 + ts), 3)
 
 sc <- num_to_schoice(v, delta = 0.1, range = c(0, 2*v), format = FALSE)
-sc$questions <- sprintf("\\SI{%g}{m/s}", sc$questions)
+sc$questions <- sprintf("%g m/s", sc$questions)
 ```
 
 Question
 ========
-A runner completes a marathon (\SI{42.195}{km}) in \SI{`r th`}{hours}, \SI{`r tm`}{minutes}, and \SI{`r ts`}{seconds}. What is the runner's average speed for the marathon in \si{m/s}?
+A runner completes a marathon (42.195 km) in `r th` hours, `r tm` minutes, and `r ts` seconds. What is the runner's average speed for the marathon in m/s?
 
 ```{r questionlist, echo = FALSE, results = "asis"}
 answerlist(sc$questions, markup = "markdown")
